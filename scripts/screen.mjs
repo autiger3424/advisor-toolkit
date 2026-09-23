@@ -60,12 +60,15 @@ const CFG = {
     Utilities: 2,
   },
   maxAiSleeve: 8,
+  minTotal: 42,                // never fewer than this; backfilled from the best remaining names in any sector
+  maxTotal: 50,
   coreMaxPE: 60,               // valuation guardrail for core only; the AI sleeve is exempt
+  maxPS: 18,                   // trailing price/sales cap for every name, AI sleeve included
   tdCallsPerMin: Number(process.env.TD_CALLS_PER_MIN) || 8,
   gradeWindowDays: 45,
   momentumWatchBand: -0.05,   // between -5% and 0% below the 200-day → Watch
   incumbentBonus: 15,          // a challenger must outscore a holding by this much to take its slot
-  maxSwapsPerWeek: 4,          // score-based swaps are capped; hard-rule removals always go through
+  maxSwapsPerWeek: 2,          // score-based swaps are capped; hard-rule removals always go through
   quality: {
     default: { minRoe: 0.12, minMargin: 0.08, maxDebtEq: 3.0 },
     "Financial Services": { minRoe: 0.08 },
@@ -231,6 +234,7 @@ async function enrichFundamentals(c) {
   c.margin = pick(r, ["netProfitMarginTTM", "netProfitMargin"]);
   c.debtEq = pick(r, ["debtToEquityRatioTTM", "debtEquityRatioTTM", "debtToEquity"]);
   c.pe = pick(r, ["priceToEarningsRatioTTM", "peRatioTTM", "priceEarningsRatioTTM"]);
+  c.ps = pick(r, ["priceToSalesRatioTTM", "priceSalesRatioTTM", "priceToSalesRatio"]);
 
   const cutoff = Date.now() - CFG.gradeWindowDays * 86_400_000;
   let up = 0, down = 0;
@@ -260,6 +264,7 @@ function qualityCheck(c) {
   if (q.minRoe != null && c.roe != null && c.roe < q.minRoe) return `ROE ${(c.roe * 100).toFixed(0)}% below ${(q.minRoe * 100).toFixed(0)}%`;
   if (q.minMargin != null && c.margin != null && c.margin < q.minMargin) return `net margin ${(c.margin * 100).toFixed(0)}% below ${(q.minMargin * 100).toFixed(0)}%`;
   if (q.maxDebtEq != null && c.debtEq != null && c.debtEq > q.maxDebtEq) return `debt/equity ${c.debtEq.toFixed(1)} above ${q.maxDebtEq}`;
+  if (c.ps != null && c.ps > CFG.maxPS) return `price/sales ${c.ps.toFixed(1)} above ${CFG.maxPS}`;
   return null;
 }
 
@@ -350,7 +355,7 @@ async function main() {
   // slots freely, and take an occupied slot only by clearing the bonus and the swap cap.
   function fill(pool, slots, scoreOf) {
     const ranked = [...pool].sort((a, b) => scoreOf(b) - scoreOf(a));
-    const keep = ranked.filter(isIncumbent).slice(0, slots);
+    const keep = ranked.filter(isIncumbent); // every passing incumbent stays; sector caps only limit additions
     const challengers = ranked.filter((c) => !isIncumbent(c));
     const out = [...keep];
     while (out.length < slots && challengers.length) out.push(challengers.shift());
@@ -383,13 +388,27 @@ async function main() {
   const ai = fill(aiPool, CFG.maxAiSleeve, (c) => c.momentumScore);
   ai.forEach((c) => { c.sleeve = "ai"; });
   chosen.push(...ai);
+  // Floor: if sectors came up short, backfill with the best remaining names from any sector.
+  if (chosen.length < CFG.minTotal) {
+    const have = new Set(chosen.map((c) => c.ticker));
+    const bench = passing
+      .filter((c) => !have.has(c.ticker) && (c.pe == null || (c.pe > 0 && c.pe <= CFG.coreMaxPE)))
+      .sort((a, b) => b.score - a.score);
+    while (chosen.length < CFG.minTotal && bench.length) { const c = bench.shift(); c.sleeve = "core"; c.backfilled = true; chosen.push(c); }
+  }
+  // Ceiling: trim lowest-scoring non-incumbents first, never a holding that still passes.
+  while (chosen.length > CFG.maxTotal) {
+    const idx = chosen.map((c, i) => [c, i]).filter(([c]) => !isIncumbent(c)).sort((a, b) => a[0].score - b[0].score)[0];
+    if (!idx) break;
+    chosen.splice(idx[1], 1);
+  }
   const chosenSet = new Set(chosen.map((c) => c.ticker));
-  console.log(`  ${swapped.length} score-based swap(s), cap ${CFG.maxSwapsPerWeek}`);
+  console.log(`  ${chosen.length} selected, ${swapped.length} score-based swap(s) (cap ${CFG.maxSwapsPerWeek})`);
 
   console.log("Step 7: diff and tag");
   const tagFor = (c) => {
     const reasons = [];
-    if (!prevTag.has(c.ticker)) reasons.push("added by screen");
+    if (!prevTag.has(c.ticker)) reasons.push(c.backfilled ? "added to keep the list at 42+ names" : "added by screen");
     if (c.vs200 < 0) reasons.push(`${(c.vs200 * 100).toFixed(1)}% below 200-day; remove if >5% below or below two weeks`);
     if (c.lastSurprise != null && c.lastSurprise < 0) reasons.push(`missed last earnings by ${(Math.abs(c.lastSurprise) * 100).toFixed(0)}%`);
     if (c.nextEarnings) { const d = (new Date(c.nextEarnings) - Date.now()) / 86_400_000; if (d >= 0 && d <= 10) reasons.push(`reports ${c.nextEarnings}`); }
@@ -435,7 +454,7 @@ async function main() {
     if (c) {
       const sw = swapped.find((s) => s.ticker === h.ticker);
       reason = c.qualityFail || c.revisionFail || c.momentumFail
-        || (sw ? `replaced by ${sw.by}, which outscored it by ${sw.gap.toFixed(0)} points` : "moved between core and the AI sleeve or edged out at the sector cap");
+        || (sw ? `replaced by ${sw.by}, which outscored it by ${sw.gap.toFixed(0)} points` : "trimmed at the 50-name ceiling");
     }
     removed.push({ ...h, tag: "Removed", reason, vs200: c?.vs200 != null ? fmtPct(c.vs200) : h.vs200, price: c?.price ?? h.price });
   }
@@ -452,9 +471,9 @@ async function main() {
       earnings: "a miss on the last report puts a name on Watch",
       momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below two straight weeks",
       scoring: "percentile ranks across the pool: 35% quality (ROE, margin, size), 35% 12-month trend (capped), 15% revisions and last surprise, 15% above 200-day",
-      valuation: `core names need positive earnings and trailing P/E at or below ${CFG.coreMaxPE}; the AI sleeve is exempt`,
+      valuation: `every name needs trailing price/sales at or below ${CFG.maxPS}; core names also need positive earnings and trailing P/E at or below ${CFG.coreMaxPE}`,
       sizing: `sector slots weighted like the S&P (tech ${CFG.slots.Technology}, financials ${CFG.slots["Financial Services"]}, others 2–4) plus ${CFG.maxAiSleeve} pure-momentum AI names not already in core; sectors are left empty if nothing passes`,
-      stability: `current holdings always stay in the pool and keep their slot while they pass the hard rules; a challenger must outscore one by ${CFG.incumbentBonus}+ points, and score-based swaps are capped at ${CFG.maxSwapsPerWeek} per week (hard-rule removals are not capped)`,
+      stability: `${CFG.minTotal}–${CFG.maxTotal} names at all times; a holding leaves only when it fails a hard rule (its replacement is the best name in its sector) or, at most ${CFG.maxSwapsPerWeek} times a week, when a challenger outscores it by ${CFG.incumbentBonus}+ points; sector weights never remove a name`,
     },
     sectorsEmpty,
     holdings,
