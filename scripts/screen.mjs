@@ -64,7 +64,8 @@ const CFG = {
   tdCallsPerMin: Number(process.env.TD_CALLS_PER_MIN) || 8,
   gradeWindowDays: 45,
   momentumWatchBand: -0.05,   // between -5% and 0% below the 200-day → Watch
-  incumbentBonus: 10,          // score bonus so a holding isn't swapped for a marginal upgrade
+  incumbentBonus: 15,          // a challenger must outscore a holding by this much to take its slot
+  maxSwapsPerWeek: 4,          // score-based swaps are capped; hard-rule removals always go through
   quality: {
     default: { minRoe: 0.12, minMargin: 0.08, maxDebtEq: 3.0 },
     "Financial Services": { minRoe: 0.08 },
@@ -162,7 +163,7 @@ const pick = (obj, keys) => {
 };
 
 // ── Step 1: universe ───────────────────────────────────────────
-async function buildUniverse() {
+async function buildUniverse(incumbents = []) {
   const universe = new Map(); // ticker → { ticker, name, sector, marketCap }
   for (const sector of SECTORS) {
     const rows = await fmp("company-screener", {
@@ -192,6 +193,15 @@ async function buildUniverse() {
     const p = Array.isArray(prof) ? prof[0] : prof;
     if (!p) continue;
     universe.set(t, { ticker: t, name: p.companyName || t, sector: p.sector || "Technology", marketCap: p.marketCap || p.mktCap || null, sleeve: "core", aiWatch: true });
+    await sleep(250);
+  }
+  // Current holdings always stay in the pool, even if they slipped outside the top-N by size.
+  for (const t of incumbents) {
+    if (universe.has(t)) continue;
+    const prof = await fmp("profile", { symbol: t });
+    const p = Array.isArray(prof) ? prof[0] : prof;
+    if (!p) continue;
+    universe.set(t, { ticker: t, name: p.companyName || t, sector: p.sector || "Technology", marketCap: p.marketCap || p.mktCap || null, sleeve: "core", aiWatch: AI_WATCHLIST.includes(t) });
     await sleep(250);
   }
   // Dual share classes (GOOG/GOOGL, FOX/FOXA): keep one ticker per company.
@@ -308,7 +318,7 @@ async function main() {
   const prevRank = new Map((prev.holdings || []).map((h) => [h.ticker, h.zacksRank ?? null]));
 
   console.log("Step 1: universe");
-  const universe = await buildUniverse();
+  const universe = await buildUniverse([...prevTag.keys()]);
   const cands = [...universe.values()];
   console.log(`  ${cands.length} candidates`);
 
@@ -331,29 +341,50 @@ async function main() {
   console.log("Step 6: select");
   const passing = survivors.filter((c) => !c.momentumFail && !c.momentumMissing);
   assignScores(passing);
-  const rankKey = (c) => c.score + (prevTag.has(c.ticker) ? CFG.incumbentBonus : 0);
+  const isIncumbent = (c) => prevTag.has(c.ticker);
+  const prevSleeve = new Map((prev.holdings || []).map((h) => [h.ticker, h.sleeve]));
+  let swapsLeft = CFG.maxSwapsPerWeek;
+  const swapped = []; // incumbents replaced on score, for the removal reasons
+
+  // Fill a bucket: incumbents that still pass keep their slots; challengers fill empty
+  // slots freely, and take an occupied slot only by clearing the bonus and the swap cap.
+  function fill(pool, slots, scoreOf) {
+    const ranked = [...pool].sort((a, b) => scoreOf(b) - scoreOf(a));
+    const keep = ranked.filter(isIncumbent).slice(0, slots);
+    const challengers = ranked.filter((c) => !isIncumbent(c));
+    const out = [...keep];
+    while (out.length < slots && challengers.length) out.push(challengers.shift());
+    for (const ch of challengers) {
+      if (swapsLeft <= 0) break;
+      const weakest = out.filter(isIncumbent).sort((a, b) => scoreOf(a) - scoreOf(b))[0];
+      if (!weakest || scoreOf(ch) < scoreOf(weakest) + CFG.incumbentBonus) break;
+      out.splice(out.indexOf(weakest), 1, ch);
+      swapped.push({ ticker: weakest.ticker, by: ch.ticker, gap: scoreOf(ch) - scoreOf(weakest) });
+      swapsLeft--;
+    }
+    return out;
+  }
+
   const chosen = [];
   const sectorsEmpty = [];
-  // Core first: sector slots, quality-weighted score, valuation guardrail.
+  // Core first: sector slots, quality-weighted score, valuation guardrail (incumbents exempt from the cap).
   for (const sector of SECTORS) {
     const pool = passing
-      .filter((c) => c.sector === sector)
-      .filter((c) => c.pe == null || (c.pe > 0 && c.pe <= CFG.coreMaxPE))
-      .sort((a, b) => rankKey(b) - rankKey(a));
-    const take = pool.slice(0, CFG.slots[sector] ?? 2);
+      .filter((c) => c.sector === sector && prevSleeve.get(c.ticker) !== "ai")
+      .filter((c) => isIncumbent(c) || c.pe == null || (c.pe > 0 && c.pe <= CFG.coreMaxPE));
+    const take = fill(pool, CFG.slots[sector] ?? 2, (c) => c.score);
     if (take.length === 0) sectorsEmpty.push(sector);
     take.forEach((c) => { c.sleeve = "core"; });
     chosen.push(...take);
   }
   const coreSet = new Set(chosen.map((c) => c.ticker));
   // Then the AI sleeve: pure momentum among watchlist names that did not make core.
-  const ai = passing
-    .filter((c) => c.aiWatch && !coreSet.has(c.ticker))
-    .sort((a, b) => (b.momentumScore + (prevTag.has(b.ticker) ? CFG.incumbentBonus : 0)) - (a.momentumScore + (prevTag.has(a.ticker) ? CFG.incumbentBonus : 0)))
-    .slice(0, CFG.maxAiSleeve);
+  const aiPool = passing.filter((c) => c.aiWatch && !coreSet.has(c.ticker));
+  const ai = fill(aiPool, CFG.maxAiSleeve, (c) => c.momentumScore);
   ai.forEach((c) => { c.sleeve = "ai"; });
   chosen.push(...ai);
   const chosenSet = new Set(chosen.map((c) => c.ticker));
+  console.log(`  ${swapped.length} score-based swap(s), cap ${CFG.maxSwapsPerWeek}`);
 
   console.log("Step 7: diff and tag");
   const tagFor = (c) => {
@@ -401,7 +432,11 @@ async function main() {
     if (chosenSet.has(h.ticker)) continue;
     const c = universe.get(h.ticker);
     let reason = "no longer in screen universe";
-    if (c) reason = c.qualityFail || c.revisionFail || c.momentumFail || (c.pe > CFG.coreMaxPE ? `P/E ${c.pe.toFixed(0)} above core cap of ${CFG.coreMaxPE}` : "outscored by another name in its sector");
+    if (c) {
+      const sw = swapped.find((s) => s.ticker === h.ticker);
+      reason = c.qualityFail || c.revisionFail || c.momentumFail
+        || (sw ? `replaced by ${sw.by}, which outscored it by ${sw.gap.toFixed(0)} points` : "moved between core and the AI sleeve or edged out at the sector cap");
+    }
     removed.push({ ...h, tag: "Removed", reason, vs200: c?.vs200 != null ? fmtPct(c.vs200) : h.vs200, price: c?.price ?? h.price });
   }
 
@@ -418,7 +453,8 @@ async function main() {
       momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below two straight weeks",
       scoring: "percentile ranks across the pool: 35% quality (ROE, margin, size), 35% 12-month trend (capped), 15% revisions and last surprise, 15% above 200-day",
       valuation: `core names need positive earnings and trailing P/E at or below ${CFG.coreMaxPE}; the AI sleeve is exempt`,
-      sizing: `sector slots weighted like the S&P (tech ${CFG.slots.Technology}, financials ${CFG.slots["Financial Services"]}, others 2–4) plus ${CFG.maxAiSleeve} pure-momentum AI names not already in core; incumbents keep their slot unless a challenger outscores them by ${CFG.incumbentBonus}+ points; sectors are left empty if nothing passes`,
+      sizing: `sector slots weighted like the S&P (tech ${CFG.slots.Technology}, financials ${CFG.slots["Financial Services"]}, others 2–4) plus ${CFG.maxAiSleeve} pure-momentum AI names not already in core; sectors are left empty if nothing passes`,
+      stability: `current holdings always stay in the pool and keep their slot while they pass the hard rules; a challenger must outscore one by ${CFG.incumbentBonus}+ points, and score-based swaps are capped at ${CFG.maxSwapsPerWeek} per week (hard-rule removals are not capped)`,
     },
     sectorsEmpty,
     holdings,
