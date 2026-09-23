@@ -63,7 +63,7 @@ const CFG = {
   minTotal: 42,                // never fewer than this; backfilled from the best remaining names in any sector
   maxTotal: 50,
   coreMaxPE: 60,               // valuation guardrail for core only; the AI sleeve is exempt
-  maxPS: 18,                   // trailing price/sales cap for every name, AI sleeve included
+  maxPS: 20,                   // trailing price/sales cap for every name, AI sleeve included
   tdCallsPerMin: Number(process.env.TD_CALLS_PER_MIN) || 8,
   gradeWindowDays: 45,
   momentumWatchBand: -0.05,   // between -5% and 0% below the 200-day → Watch
