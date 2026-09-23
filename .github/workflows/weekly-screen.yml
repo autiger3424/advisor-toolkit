@@ -1,0 +1,53 @@
+name: Weekly ideas screen
+
+on:
+  schedule:
+    # Sundays at 23:00 UTC (6 pm Central). Markets are closed, Friday data is final.
+    - cron: "0 23 * * 0"
+  workflow_dispatch:
+    inputs:
+      screen_limit:
+        description: "Candidates per sector (lower for a quick test run)"
+        required: false
+        default: "15"
+
+permissions:
+  contents: write
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check secrets
+        run: |
+          if [ -z "${{ secrets.FMP_API_KEY }}" ] || [ -z "${{ secrets.TWELVE_DATA_API_KEY }}" ]; then
+            echo "Add FMP_API_KEY and TWELVE_DATA_API_KEY under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Run screen
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+          TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
+          SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '15' }}
+        run: node scripts/screen.mjs
+
+      - name: Commit updated list
+        run: |
+          git config user.name "weekly-screen[bot]"
+          git config user.email "weekly-screen@users.noreply.github.com"
+          if git diff --quiet -- src/data/weekly-ideas.json; then
+            echo "No changes this week."
+            exit 0
+          fi
+          git add src/data/weekly-ideas.json
+          git commit -m "Weekly ideas: $(date -u +%Y-%m-%d)"
+          git push

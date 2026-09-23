@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import WeeklyIdeas from "./WeeklyIdeas";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -419,6 +420,7 @@ function AdvisorToolkit() {
     { id: "estate", label: "Estate", icon: "⚰️" },
     { id: "checklist", label: "Lists", icon: "✅" },
     { id: "calc", label: "Calc", icon: "🧮" },
+    { id: "ideas", label: "Ideas", icon: "📈" },
   ];
 
   const s = {
@@ -946,6 +948,9 @@ function AdvisorToolkit() {
           </>
         )}
 
+        {/* ════════ WEEKLY IDEAS ════════ */}
+        {activeTab === "ideas" && <WeeklyIdeas />}
+
         {/* ════════ CALCULATORS ════════ */}
         {activeTab === "calc" && (
           <>
@@ -1025,7 +1030,6 @@ function AdvisorToolkit() {
               const tey = muniYield / (1 - combinedRate / 100);
               const fedOnlyTey = muniYield / (1 - fedRate / 100);
               const taxSavingsPer100k = (tey - muniYield) / 100 * 100000;
-              const breakEvenTaxable = muniYield / (1 - fedRate / 100);
 
               // Build comparison table for different brackets
               const bracketComparisons = [

@@ -1,3 +1,20 @@
+# Advisor Toolkit
+
+## Weekly ideas screen
+
+The **Ideas** tab shows a 40–50 name idea list that covers every sector plus an AI momentum sleeve. It reads `src/data/weekly-ideas.json`, which is rebuilt automatically every Sunday night by `.github/workflows/weekly-screen.yml` running `scripts/screen.mjs` (FMP for universe, quality, analyst grades and earnings; Twelve Data for price vs 200-day). Ideas only: every name still goes through the firm's own screeners and compliance review before it is considered for a client account.
+
+Setup (one time):
+
+1. Repo → Settings → Secrets and variables → Actions → add `FMP_API_KEY` and `TWELVE_DATA_API_KEY`.
+2. Optional: add a repository variable `TD_CALLS_PER_MIN` if you move Twelve Data off the free tier (default 8).
+3. Connect this repo to the Vercel project (Vercel → Project → Settings → Git) so each Sunday commit redeploys the app.
+4. Actions → "Weekly ideas screen" → Run workflow to test it. Set candidates per sector to `5` for a quick first run.
+
+Run it locally: `FMP_API_KEY=... TWELVE_DATA_API_KEY=... node scripts/screen.mjs` (add `DRY_RUN=1` to print instead of write).
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
