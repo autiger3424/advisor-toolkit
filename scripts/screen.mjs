@@ -44,9 +44,23 @@ if (!FMP_KEY || !TD_KEY) {
 // ── Configuration ──────────────────────────────────────────────
 const CFG = {
   minMarketCap: 25_000_000_000,
-  candidatesPerSector: Number(process.env.SCREEN_LIMIT) || 15, // by market cap, before momentum check
-  maxPerSector: 4,
-  maxAiSleeve: 12,
+  candidatesPerSector: Number(process.env.SCREEN_LIMIT) || 15, // by market cap, before momentum check (tech gets 2x)
+  // Slots per sector, weighted roughly like the S&P 500 so tech carries its real weight.
+  slots: {
+    Technology: 9,
+    "Financial Services": 5,
+    Healthcare: 4,
+    "Consumer Cyclical": 4,
+    Industrials: 4,
+    "Communication Services": 3,
+    Energy: 2,
+    "Consumer Defensive": 2,
+    "Basic Materials": 2,
+    "Real Estate": 2,
+    Utilities: 2,
+  },
+  maxAiSleeve: 8,
+  coreMaxPE: 60,               // valuation guardrail for core only; the AI sleeve is exempt
   tdCallsPerMin: Number(process.env.TD_CALLS_PER_MIN) || 8,
   gradeWindowDays: 45,
   momentumWatchBand: -0.05,   // between -5% and 0% below the 200-day → Watch
@@ -79,8 +93,9 @@ const SECTORS = [
   "Utilities",
 ];
 
-// Pure-play AI names. Hyperscalers and power names (MSFT, GOOGL, AMZN, GEV, ETN)
-// compete in their own sectors instead so the core stays balanced.
+// AI momentum watchlist. Every one of these also competes for a core slot in its own
+// sector on quality; the sleeve only holds names that did NOT make core, so a megacap
+// like NVDA or AVGO lands in core tech and the sleeve stays the pure momentum bucket.
 const AI_WATCHLIST = [
   "NVDA", "AVGO", "AMD", "TSM", "MU", "MRVL", "ANET", "VRT", "DELL", "SMCI",
   "AMAT", "LRCX", "KLAC", "TER", "ONTO", "COHR", "CIEN", "CRDO", "ALAB",
@@ -163,7 +178,7 @@ async function buildUniverse() {
       .filter((r) => r.symbol && (TICKER_EXCEPTIONS.has(r.symbol) || !/[-.]/.test(r.symbol)))
       .filter((r) => !r.exchangeShortName || ALLOWED_EXCHANGES.has(String(r.exchangeShortName).toUpperCase()))
       .sort((a, b) => (b.marketCap || 0) - (a.marketCap || 0))
-      .slice(0, CFG.candidatesPerSector);
+      .slice(0, sector === "Technology" ? CFG.candidatesPerSector * 2 : CFG.candidatesPerSector);
     for (const r of clean) {
       universe.set(r.symbol, { ticker: r.symbol, name: r.companyName || r.symbol, sector, marketCap: r.marketCap || null, sleeve: "core" });
     }
@@ -172,11 +187,11 @@ async function buildUniverse() {
   }
   // AI watchlist: fetch profiles for anything the screener didn't return.
   for (const t of AI_WATCHLIST) {
-    if (universe.has(t)) { universe.get(t).sleeve = "ai"; continue; }
+    if (universe.has(t)) { universe.get(t).aiWatch = true; continue; }
     const prof = await fmp("profile", { symbol: t });
     const p = Array.isArray(prof) ? prof[0] : prof;
     if (!p) continue;
-    universe.set(t, { ticker: t, name: p.companyName || t, sector: p.sector || "Technology", marketCap: p.marketCap || p.mktCap || null, sleeve: "ai" });
+    universe.set(t, { ticker: t, name: p.companyName || t, sector: p.sector || "Technology", marketCap: p.marketCap || p.mktCap || null, sleeve: "core", aiWatch: true });
     await sleep(250);
   }
   // Dual share classes (GOOG/GOOGL, FOX/FOXA): keep one ticker per company.
@@ -205,6 +220,7 @@ async function enrichFundamentals(c) {
   c.roe = pick(r, ["returnOnEquityTTM", "returnOnEquity"]);
   c.margin = pick(r, ["netProfitMarginTTM", "netProfitMargin"]);
   c.debtEq = pick(r, ["debtToEquityRatioTTM", "debtEquityRatioTTM", "debtToEquity"]);
+  c.pe = pick(r, ["priceToEarningsRatioTTM", "peRatioTTM", "priceEarningsRatioTTM"]);
 
   const cutoff = Date.now() - CFG.gradeWindowDays * 86_400_000;
   let up = 0, down = 0;
@@ -263,16 +279,26 @@ function momentumCheck(c, prevTag) {
   return null;
 }
 
-function score(c) {
+// Percentile-rank scoring across the pool, so one extreme mover can't dominate.
+function assignScores(pool) {
   const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x ?? 0));
-  let s = 0;
-  s += clamp(c.ret52w, -0.5, 1.0) * 100 * 0.5; // cap 52-week credit at +100%
-  s += clamp(c.ret12w, -0.3, 0.5) * 100 * 0.5; // cap 12-week credit at +50%
-  s += c.vs200 >= 0 ? 15 : -15;
-  s += (c.upgrades - c.downgrades) * 5;
-  if (c.roe != null && c.roe >= 0.15) s += 5;
-  if (c.lastSurprise != null) s += c.lastSurprise > 0 ? 5 : -10;
-  return s;
+  const pctRank = (key) => {
+    const vals = pool.map(key).filter((v) => v != null).sort((a, b) => a - b);
+    return (v) => (v == null || vals.length === 0 ? 0.5 : vals.filter((x) => x <= v).length / vals.length);
+  };
+  const rRoe = pctRank((c) => c.roe);
+  const rMargin = pctRank((c) => c.margin);
+  const rSize = pctRank((c) => (c.marketCap ? Math.log(c.marketCap) : null));
+  const rTrend = pctRank((c) => clamp(c.ret52w, -0.5, 0.6));
+  const rRev = pctRank((c) => (c.upgrades - c.downgrades) + (c.lastSurprise != null ? Math.sign(c.lastSurprise) : 0));
+  for (const c of pool) {
+    const quality = (rRoe(c.roe) + rMargin(c.margin) + rSize(c.marketCap ? Math.log(c.marketCap) : null)) / 3;
+    const trend = rTrend(clamp(c.ret52w, -0.5, 0.6));
+    const revisions = rRev((c.upgrades - c.downgrades) + (c.lastSurprise != null ? Math.sign(c.lastSurprise) : 0));
+    const confirm = c.vs200 >= 0 ? 1 : 0;
+    c.score = 100 * (0.35 * quality + 0.35 * trend + 0.15 * revisions + 0.15 * confirm);
+    c.momentumScore = 100 * (0.6 * trend + 0.2 * (rTrend(clamp(c.ret12w, -0.3, 0.5))) + 0.2 * confirm);
+  }
 }
 
 // ── Main ───────────────────────────────────────────────────────
@@ -300,22 +326,33 @@ async function main() {
   for (const c of survivors) {
     await enrichMomentum(c);
     c.momentumFail = momentumCheck(c, prevTag.get(c.ticker));
-    c.score = c.momentumMissing ? -Infinity : score(c);
   }
 
   console.log("Step 6: select");
-  const passing = survivors.filter((c) => !c.momentumFail);
+  const passing = survivors.filter((c) => !c.momentumFail && !c.momentumMissing);
+  assignScores(passing);
   const rankKey = (c) => c.score + (prevTag.has(c.ticker) ? CFG.incumbentBonus : 0);
   const chosen = [];
-  const ai = passing.filter((c) => c.sleeve === "ai").sort((a, b) => rankKey(b) - rankKey(a)).slice(0, CFG.maxAiSleeve);
-  chosen.push(...ai);
   const sectorsEmpty = [];
+  // Core first: sector slots, quality-weighted score, valuation guardrail.
   for (const sector of SECTORS) {
-    const pool = passing.filter((c) => c.sleeve === "core" && c.sector === sector && c.score > 0).sort((a, b) => rankKey(b) - rankKey(a));
-    const take = pool.slice(0, CFG.maxPerSector);
+    const pool = passing
+      .filter((c) => c.sector === sector)
+      .filter((c) => c.pe == null || (c.pe > 0 && c.pe <= CFG.coreMaxPE))
+      .sort((a, b) => rankKey(b) - rankKey(a));
+    const take = pool.slice(0, CFG.slots[sector] ?? 2);
     if (take.length === 0) sectorsEmpty.push(sector);
+    take.forEach((c) => { c.sleeve = "core"; });
     chosen.push(...take);
   }
+  const coreSet = new Set(chosen.map((c) => c.ticker));
+  // Then the AI sleeve: pure momentum among watchlist names that did not make core.
+  const ai = passing
+    .filter((c) => c.aiWatch && !coreSet.has(c.ticker))
+    .sort((a, b) => (b.momentumScore + (prevTag.has(b.ticker) ? CFG.incumbentBonus : 0)) - (a.momentumScore + (prevTag.has(a.ticker) ? CFG.incumbentBonus : 0)))
+    .slice(0, CFG.maxAiSleeve);
+  ai.forEach((c) => { c.sleeve = "ai"; });
+  chosen.push(...ai);
   const chosenSet = new Set(chosen.map((c) => c.ticker));
 
   console.log("Step 7: diff and tag");
@@ -350,6 +387,7 @@ async function main() {
     upgrades: c.upgrades,
     downgrades: c.downgrades,
     lastSurprise: fmtPct(c.lastSurprise),
+    pe: c.pe != null ? Number(c.pe.toFixed(1)) : null,
     score: Number.isFinite(c.score) ? Number(c.score.toFixed(1)) : null,
     tag,
     reason,
@@ -363,7 +401,7 @@ async function main() {
     if (chosenSet.has(h.ticker)) continue;
     const c = universe.get(h.ticker);
     let reason = "no longer in screen universe";
-    if (c) reason = c.qualityFail || c.revisionFail || c.momentumFail || "outscored by another name in its sector";
+    if (c) reason = c.qualityFail || c.revisionFail || c.momentumFail || (c.pe > CFG.coreMaxPE ? `P/E ${c.pe.toFixed(0)} above core cap of ${CFG.coreMaxPE}` : "outscored by another name in its sector");
     removed.push({ ...h, tag: "Removed", reason, vs200: c?.vs200 != null ? fmtPct(c.vs200) : h.vs200, price: c?.price ?? h.price });
   }
 
@@ -378,7 +416,9 @@ async function main() {
       revisions: `net analyst downgrades of 2 or more in ${CFG.gradeWindowDays} days removes a name`,
       earnings: "a miss on the last report puts a name on Watch",
       momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below two straight weeks",
-      sizing: `up to ${CFG.maxPerSector} per sector and ${CFG.maxAiSleeve} in the AI sleeve; incumbents keep their slot unless a challenger outscores them by ${CFG.incumbentBonus}+ points; sectors are left empty if nothing passes`,
+      scoring: "percentile ranks across the pool: 35% quality (ROE, margin, size), 35% 12-month trend (capped), 15% revisions and last surprise, 15% above 200-day",
+      valuation: `core names need positive earnings and trailing P/E at or below ${CFG.coreMaxPE}; the AI sleeve is exempt`,
+      sizing: `sector slots weighted like the S&P (tech ${CFG.slots.Technology}, financials ${CFG.slots["Financial Services"]}, others 2–4) plus ${CFG.maxAiSleeve} pure-momentum AI names not already in core; incumbents keep their slot unless a challenger outscores them by ${CFG.incumbentBonus}+ points; sectors are left empty if nothing passes`,
     },
     sectorsEmpty,
     holdings,

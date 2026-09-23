@@ -2,7 +2,7 @@
 
 ## Weekly ideas screen
 
-The **Ideas** tab shows a 40–50 name idea list that covers every sector plus an AI momentum sleeve. It reads `src/data/weekly-ideas.json`, which is rebuilt automatically every Sunday night by `.github/workflows/weekly-screen.yml` running `scripts/screen.mjs` (FMP for universe, quality, analyst grades and earnings; Twelve Data for price vs 200-day). Ideas only: every name still goes through the firm's own screeners and compliance review before it is considered for a client account.
+The **Ideas** tab shows a 40–50 name idea list that covers every sector plus an AI momentum sleeve. Sector slots are weighted like the S&P 500 (tech 9, financials 5, others 2–4) plus an 8-name pure-momentum AI sleeve. It reads `src/data/weekly-ideas.json`, which is rebuilt automatically every Sunday night by `.github/workflows/weekly-screen.yml` running `scripts/screen.mjs` (FMP for universe, quality, analyst grades and earnings; Twelve Data for price vs 200-day). Ideas only: every name still goes through the firm's own screeners and compliance review before it is considered for a client account.
 
 Setup (one time):
 
