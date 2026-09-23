@@ -57,6 +57,11 @@ const CFG = {
     "Real Estate": {},
     Utilities: { minRoe: 0.07 },
     Energy: { minRoe: 0.10, minMargin: 0.06, maxDebtEq: 1.5 },
+    Healthcare: { minRoe: 0.12, minMargin: 0.03, maxDebtEq: 3.0 },        // managed care runs 3–5% margins
+    "Consumer Cyclical": { minRoe: 0.12, minMargin: 0.04, maxDebtEq: 3.0 },
+    "Consumer Defensive": { minRoe: 0.12, minMargin: 0.02, maxDebtEq: 3.0 }, // retailers run 2–4%
+    Industrials: { minRoe: 0.12, minMargin: 0.06, maxDebtEq: 3.0 },
+    Technology: { minRoe: 0.12, minMargin: 0.06, maxDebtEq: 3.0 },         // hardware/servers run thinner than software
   },
 };
 
@@ -174,6 +179,18 @@ async function buildUniverse() {
     universe.set(t, { ticker: t, name: p.companyName || t, sector: p.sector || "Technology", marketCap: p.marketCap || p.mktCap || null, sleeve: "ai" });
     await sleep(250);
   }
+  // Dual share classes (GOOG/GOOGL, FOX/FOXA): keep one ticker per company.
+  const byName = new Map();
+  for (const c of universe.values()) {
+    const key = (c.name || c.ticker).toLowerCase().replace(/[^a-z]/g, "").slice(0, 12);
+    const held = byName.get(key);
+    if (!held || (c.marketCap || 0) > (held.marketCap || 0) || (c.ticker.length > held.ticker.length)) {
+      if (held) universe.delete(held.ticker);
+      byName.set(key, c);
+    } else {
+      universe.delete(c.ticker);
+    }
+  }
   return universe;
 }
 
@@ -247,9 +264,10 @@ function momentumCheck(c, prevTag) {
 }
 
 function score(c) {
+  const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x ?? 0));
   let s = 0;
-  s += (c.ret52w ?? 0) * 100 * 0.5;
-  s += (c.ret12w ?? 0) * 100 * 0.5;
+  s += clamp(c.ret52w, -0.5, 1.0) * 100 * 0.5; // cap 52-week credit at +100%
+  s += clamp(c.ret12w, -0.3, 0.5) * 100 * 0.5; // cap 12-week credit at +50%
   s += c.vs200 >= 0 ? 15 : -15;
   s += (c.upgrades - c.downgrades) * 5;
   if (c.roe != null && c.roe >= 0.15) s += 5;
