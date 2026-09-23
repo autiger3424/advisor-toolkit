@@ -50,4 +50,15 @@ jobs:
           fi
           git add src/data/weekly-ideas.json
           git commit -m "Weekly ideas: $(date -u +%Y-%m-%d)"
-          git push
+          # GitHub occasionally rejects a push with a transient "fatal error in commit_refs";
+          # retry a few times before giving up.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --quiet origin main && git push origin HEAD:main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt), retrying in 30s..."
+            sleep 30
+          done
+          echo "Push failed after 5 attempts."
+          exit 1
