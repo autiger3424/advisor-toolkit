@@ -155,7 +155,7 @@ function Group({ title, items, open, toggle, showSector, emptyText }) {
 }
 
 export default function WeeklyIdeas() {
-  const [view, setView] = useState("changes");
+  const [view, setView] = useState("all");
   const [open, setOpen] = useState(null);
   const toggle = (t) => setOpen((p) => (p === t ? null : t));
 
@@ -171,10 +171,10 @@ export default function WeeklyIdeas() {
   const sectors = SECTOR_ORDER.map((sec) => ({ sec, items: core.filter((h) => h.sector === sec) }));
 
   const views = [
+    { id: "all", label: "All" },
     { id: "changes", label: "This Week" },
     { id: "ai", label: "AI Sleeve" },
     { id: "sectors", label: "By Sector" },
-    { id: "all", label: "All" },
   ];
 
   return (

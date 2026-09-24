@@ -125,46 +125,46 @@ const trustCategories = {
 };
 
 const taxData = {
-  incomeBrackets2025: [
-    { rate: "10%", single: "$0 – $11,925", mfj: "$0 – $23,850" },
-    { rate: "12%", single: "$11,926 – $48,475", mfj: "$23,851 – $96,950" },
-    { rate: "22%", single: "$48,476 – $103,350", mfj: "$96,951 – $206,700" },
-    { rate: "24%", single: "$103,351 – $197,300", mfj: "$206,701 – $394,600" },
-    { rate: "32%", single: "$197,301 – $250,525", mfj: "$394,601 – $501,050" },
-    { rate: "35%", single: "$250,526 – $626,350", mfj: "$501,051 – $751,600" },
-    { rate: "37%", single: "Over $626,350", mfj: "Over $751,600" },
+  incomeBrackets2026: [
+    { rate: "10%", single: "$0 – $12,400", mfj: "$0 – $24,800" },
+    { rate: "12%", single: "$12,401 – $50,400", mfj: "$24,801 – $100,800" },
+    { rate: "22%", single: "$50,401 – $105,700", mfj: "$100,801 – $211,400" },
+    { rate: "24%", single: "$105,701 – $201,775", mfj: "$211,401 – $403,550" },
+    { rate: "32%", single: "$201,776 – $256,225", mfj: "$403,551 – $512,450" },
+    { rate: "35%", single: "$256,226 – $640,600", mfj: "$512,451 – $768,700" },
+    { rate: "37%", single: "Over $640,600", mfj: "Over $768,700" },
   ],
-  capitalGains2025: [
-    { rate: "0%", single: "Up to $48,350", mfj: "Up to $96,700" },
-    { rate: "15%", single: "$48,351 – $533,400", mfj: "$96,701 – $600,050" },
-    { rate: "20%", single: "Over $533,400", mfj: "Over $600,050" },
+  capitalGains2026: [
+    { rate: "0%", single: "Up to $49,450", mfj: "Up to $98,900" },
+    { rate: "15%", single: "$49,451 – $545,500", mfj: "$98,901 – $613,700" },
+    { rate: "20%", single: "Over $545,500", mfj: "Over $613,700" },
   ],
-  keyLimits2025: [
-    { item: "Federal Estate Tax Exemption", value: "$13.99M / person" },
+  keyLimits2026: [
+    { item: "Federal Estate Tax Exemption", value: "$15M / person" },
     { item: "Annual Gift Tax Exclusion", value: "$19,000 / recipient" },
-    { item: "GST Tax Exemption", value: "$13.99M" },
-    { item: "Standard Deduction (Single)", value: "$15,000" },
-    { item: "Standard Deduction (MFJ)", value: "$30,000" },
-    { item: "AMT Exemption (Single)", value: "$88,100" },
-    { item: "AMT Exemption (MFJ)", value: "$137,000" },
-    { item: "SALT Deduction Cap", value: "$10,000" },
-    { item: "Section 199A QBI Threshold (Single)", value: "$197,300" },
-    { item: "Section 199A QBI Threshold (MFJ)", value: "$394,600" },
+    { item: "GST Tax Exemption", value: "$15M" },
+    { item: "Standard Deduction (Single)", value: "$16,100" },
+    { item: "Standard Deduction (MFJ)", value: "$32,200" },
+    { item: "AMT Exemption (Single)", value: "$90,100" },
+    { item: "AMT Exemption (MFJ)", value: "$140,200" },
+    { item: "SALT Deduction Cap", value: "$40,400 (phases to $10K above ~$505K MAGI)" },
+    { item: "Section 199A QBI Threshold (Single)", value: "$201,775" },
+    { item: "Section 199A QBI Threshold (MFJ)", value: "$403,500" },
     { item: "Net Investment Income Tax (NIIT)", value: "3.8% above $200K/$250K" },
-    { item: "Social Security Wage Base", value: "$176,100" },
+    { item: "Social Security Wage Base", value: "$184,500" },
     { item: "Medicare Surtax Threshold", value: "$200K Single / $250K MFJ" },
   ],
 };
 
 const retirementData = {
-  contributionLimits2025: [
-    { account: "Traditional / Roth IRA", under50: "$7,000", over50: "$8,000", note: "Roth phase-out: $150K–$165K (S) / $236K–$246K (MFJ)" },
-    { account: "401(k) / 403(b) / 457", under50: "$23,500", over50: "$31,000", note: "Ages 60-63: $34,750 catch-up" },
-    { account: "SIMPLE IRA", under50: "$16,500", over50: "$20,000", note: "Ages 60-63: $21,750" },
-    { account: "SEP IRA", under50: "25% comp or $70,000", over50: "Same", note: "No catch-up provision" },
-    { account: "Solo 401(k)", under50: "$70,000 total", over50: "$77,500 total", note: "Employee + employer contributions" },
-    { account: "HSA (Self-only)", under50: "$4,300", over50: "$5,300", note: "Must have HDHP; age 55+ catch-up" },
-    { account: "HSA (Family)", under50: "$8,550", over50: "$9,550", note: "Must have HDHP; age 55+ catch-up" },
+  contributionLimits2026: [
+    { account: "Traditional / Roth IRA", under50: "$7,500", over50: "$8,600", note: "Roth phase-out: $153K–$168K (S) / $242K–$252K (MFJ)" },
+    { account: "401(k) / 403(b) / 457", under50: "$24,500", over50: "$32,500", note: "Ages 60-63: $35,750 total. Catch-ups must be Roth if prior-yr wages > $150K" },
+    { account: "SIMPLE IRA", under50: "$17,000", over50: "$21,000", note: "Ages 60-63: $22,250" },
+    { account: "SEP IRA", under50: "25% comp or $72,000", over50: "Same", note: "No catch-up provision" },
+    { account: "Solo 401(k)", under50: "$72,000 total", over50: "$80,000 total", note: "Ages 60-63: $83,250 total" },
+    { account: "HSA (Self-only)", under50: "$4,400", over50: "$5,400", note: "Must have HDHP; age 55+ catch-up $1,000" },
+    { account: "HSA (Family)", under50: "$8,750", over50: "$9,750", note: "Must have HDHP; age 55+ catch-up $1,000" },
   ],
   rmdRules: [
     { item: "RMD Start Age", value: "73 (born 1951-1959) / 75 (born 1960+)" },
@@ -175,7 +175,7 @@ const retirementData = {
     { item: "Inherited IRA (EDB)", value: "Stretch allowed for eligible designated beneficiaries" },
     { item: "Roth Conversions", value: "No income limits; taxable as ordinary income" },
     { item: "72(t) / SEPP", value: "Penalty-free early access via substantially equal payments" },
-    { item: "Qualified Charitable Distribution", value: "Up to $105,000/year from IRA; age 70½+" },
+    { item: "Qualified Charitable Distribution", value: "Up to $111,000/year from IRA; age 70½+" },
   ],
 };
 
@@ -205,7 +205,7 @@ const checklistData = [
   {
     title: "Tax & Wealth Transfer Planning",
     items: [
-      { text: "Assess estate size relative to federal exemption ($13.99M)", critical: true },
+      { text: "Assess estate size relative to federal exemption ($15M)", critical: true },
       { text: "Evaluate need for irrevocable trust strategies (ILIT, GRAT, etc.)", critical: false },
       { text: "Review annual gifting strategy using $19,000 exclusion", critical: false },
       { text: "Consider charitable giving vehicles (CRT, CLT, DAF)", critical: false },
@@ -245,6 +245,33 @@ const checklistData = [
     ],
   },
 ];
+
+// ─── Roth Conversion Data (TY2026, IRS Rev. Proc. 2025-32) ───
+// Update these each year alongside the other tax-year constants.
+const rothBrackets2026 = {
+  single: [
+    { rate: 0.10, top: 12400 }, { rate: 0.12, top: 50400 }, { rate: 0.22, top: 105700 },
+    { rate: 0.24, top: 201775 }, { rate: 0.32, top: 256225 }, { rate: 0.35, top: 640600 },
+    { rate: 0.37, top: Infinity },
+  ],
+  mfj: [
+    { rate: 0.10, top: 24800 }, { rate: 0.12, top: 100800 }, { rate: 0.22, top: 211400 },
+    { rate: 0.24, top: 403550 }, { rate: 0.32, top: 512450 }, { rate: 0.35, top: 768700 },
+    { rate: 0.37, top: Infinity },
+  ],
+  hoh: [
+    { rate: 0.10, top: 17700 }, { rate: 0.12, top: 67450 }, { rate: 0.22, top: 105700 },
+    { rate: 0.24, top: 201775 }, { rate: 0.32, top: 256200 }, { rate: 0.35, top: 640600 },
+    { rate: 0.37, top: Infinity },
+  ],
+};
+const rothStdDeduction = { single: 16100, mfj: 32200, hoh: 24150 };
+const rothAge65Addon = { single: 2050, mfj: 1650, hoh: 2050 }; // per qualifying person
+// Numeric IRMAA MAGI tier ceilings (single & HoH share a table); premium $ come from irmaaData below
+const rothIrmaaTiers = {
+  single: [109000, 137000, 171000, 205000, 500000],
+  mfj: [218000, 274000, 342000, 410000, 750000],
+};
 
 const irmaaData = {
   year: 2026,
@@ -363,7 +390,7 @@ const giftTaxData = {
     { item: "Annual Exclusion", value: "$19,000 per donee", detail: "Per donor, per recipient. Married couples can split gifts: $38,000/donee." },
     { item: "Lifetime Exemption", value: "$15M per person", detail: "Unified with estate tax exemption. Gifts above annual exclusion count against this." },
     { item: "Gift Tax Rate", value: "Up to 40%", detail: "Applied to taxable gifts exceeding the lifetime exemption." },
-    { item: "Annual Exclusion for Spouses (Non-citizen)", value: "$190,000", detail: "Special higher annual exclusion for gifts to non-citizen spouses." },
+    { item: "Annual Exclusion for Spouses (Non-citizen)", value: "$194,000", detail: "Special higher annual exclusion for gifts to non-citizen spouses." },
     { item: "529 Superfunding", value: "$95,000 lump sum", detail: "5 years of annual exclusions at once ($19K × 5). No additional gifts to same donee for 5 years." },
     { item: "Tuition & Medical Exclusion", value: "Unlimited", detail: "Direct payments to institutions for tuition or medical providers — no limit, doesn't use exclusion." },
     { item: "Charitable Gifts", value: "Unlimited", detail: "No gift tax on charitable donations. Income tax deduction limits may apply." },
@@ -406,6 +433,7 @@ function AdvisorToolkit() {
   const [teyInputs, setTeyInputs] = useState({ muniYield: 3.5, fedRate: 35, stateRate: 5 });
   const [mortgageInputs, setMortgageInputs] = useState({ price: 350000, down: 70000, rate: 6.5, term: 30, tax: 3000, insurance: 1500, pmi: 0 });
   const [carInputs, setCarInputs] = useState({ price: 35000, down: 5000, rate: 5.9, term: 60, tradeIn: 0 });
+  const [rothInputs, setRothInputs] = useState({ status: "mfj", agi: "", muni: "", ltcg: "", age65: 0, dedOverride: "" });
   const [taxSubTab, setTaxSubTab] = useState("brackets");
   const [retireSubTab, setRetireSubTab] = useState("limits");
   const [checkStates, setCheckStates] = useState({});
@@ -444,6 +472,44 @@ function AdvisorToolkit() {
   };
 
   // ─ Calculators ──
+
+  const rothResult = () => {
+    const p = (v) => { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) || n < 0 ? 0 : n; };
+    const { status, age65 } = rothInputs;
+    const AGI = p(rothInputs.agi), MUNI = p(rothInputs.muni), LTCG = Math.min(p(rothInputs.ltcg), AGI);
+    const stdDed = rothStdDeduction[status] + Math.min(age65, status === "mfj" ? 2 : 1) * rothAge65Addon[status];
+    const deduction = String(rothInputs.dedOverride).trim() !== "" ? p(rothInputs.dedOverride) : stdDed;
+    // LTCG/qualified dividends stack on top at cap-gains rates; exclude from ordinary bracket position
+    const ordTaxable = Math.max(0, AGI - LTCG - deduction);
+    const magi = AGI + MUNI; // tax-exempt muni interest counts toward IRMAA MAGI
+    const brackets = rothBrackets2026[status];
+    const taxOf = (t) => { let x = 0, prev = 0; for (const b of brackets) { if (t <= prev) break; x += (Math.min(t, b.top) - prev) * b.rate; prev = b.top; } return x; };
+    const baseTax = taxOf(ordTaxable);
+    const cur = brackets.find(b => ordTaxable <= b.top) || brackets[brackets.length - 1];
+    const tiers = rothIrmaaTiers[status === "mfj" ? "mfj" : "single"];
+    const tierOf = (m) => { for (let i = 0; i < tiers.length; i++) if (m <= tiers[i]) return i; return tiers.length; };
+    const tierNow = tierOf(magi);
+    const surcharge = (t) => { const b = irmaaData.brackets[Math.min(t, irmaaData.brackets.length - 1)]; return b.partBSurcharge + b.partDSurcharge; };
+    const windows = brackets.filter(b => b.top !== Infinity && b.top > ordTaxable).map(b => {
+      const conversion = b.top - ordTaxable;
+      const convTax = taxOf(b.top) - baseTax;
+      const newMagi = magi + conversion;
+      const tierAfter = tierOf(newMagi);
+      return {
+        rate: b.rate, top: b.top, conversion, convTax,
+        eff: conversion > 0 ? convTax / conversion : 0,
+        newMagi, tierAfter,
+        addedAnnual: tierAfter > tierNow ? (surcharge(tierAfter) - surcharge(tierNow)) * 12 : 0,
+      };
+    });
+    const nextLine = tierNow < tiers.length ? tiers[tierNow] : null;
+    return {
+      AGI, stdDed, deduction, ordTaxable, magi, cur, tierNow, windows, nextLine,
+      irmaaRoom: nextLine !== null ? Math.max(0, nextLine - magi) : null,
+      chartMax: windows.length ? windows[windows.length - 1].top : 100000,
+      brackets,
+    };
+  };
 
   const compoundResult = () => {
     const { principal, rate, years, monthly } = calcInputs;
@@ -563,11 +629,11 @@ function AdvisorToolkit() {
 
             {taxSubTab === "brackets" && (
               <div style={{ ...s.card, cursor: "default", overflowX: "auto" }}>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2025 Federal Income Tax Brackets</div>
+                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2026 Federal Income Tax Brackets</div>
                 <table style={s.table}>
                   <thead><tr><th style={s.th}>Rate</th><th style={s.th}>Single</th><th style={s.th}>Married Filing Jointly</th></tr></thead>
                   <tbody>
-                    {taxData.incomeBrackets2025.map((r, i) => (
+                    {taxData.incomeBrackets2026.map((r, i) => (
                       <tr key={i}><td style={{ ...s.td, fontWeight: 700, color: palette.accent, fontFamily: fonts.mono }}>{r.rate}</td><td style={s.td}>{r.single}</td><td style={s.td}>{r.mfj}</td></tr>
                     ))}
                   </tbody>
@@ -577,11 +643,11 @@ function AdvisorToolkit() {
 
             {taxSubTab === "capgains" && (
               <div style={{ ...s.card, cursor: "default", overflowX: "auto" }}>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2025 Long-Term Capital Gains Rates</div>
+                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2026 Long-Term Capital Gains Rates</div>
                 <table style={s.table}>
                   <thead><tr><th style={s.th}>Rate</th><th style={s.th}>Single</th><th style={s.th}>MFJ</th></tr></thead>
                   <tbody>
-                    {taxData.capitalGains2025.map((r, i) => (
+                    {taxData.capitalGains2026.map((r, i) => (
                       <tr key={i}><td style={{ ...s.td, fontWeight: 700, color: palette.accent, fontFamily: fonts.mono }}>{r.rate}</td><td style={s.td}>{r.single}</td><td style={s.td}>{r.mfj}</td></tr>
                     ))}
                   </tbody>
@@ -592,9 +658,9 @@ function AdvisorToolkit() {
 
             {taxSubTab === "limits" && (
               <div style={{ ...s.card, cursor: "default" }}>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2025 Key Tax & Estate Limits</div>
-                {taxData.keyLimits2025.map((r, i) => (
-                  <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", borderBottom: i < taxData.keyLimits2025.length - 1 ? `1px solid ${palette.border}` : "none" }}>
+                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2026 Key Tax & Estate Limits</div>
+                {taxData.keyLimits2026.map((r, i) => (
+                  <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", borderBottom: i < taxData.keyLimits2026.length - 1 ? `1px solid ${palette.border}` : "none" }}>
                     <span style={{ fontSize: "0.78rem", color: palette.textDim, flex: 1, paddingRight: 10 }}>{r.item}</span>
                     <span style={{ fontSize: "0.78rem", fontWeight: 700, color: palette.white, fontFamily: fonts.mono, whiteSpace: "nowrap" }}>{r.value}</span>
                   </div>
@@ -615,9 +681,9 @@ function AdvisorToolkit() {
 
             {retireSubTab === "limits" && (
               <div style={{ ...s.card, cursor: "default" }}>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2025 Contribution Limits</div>
-                {retirementData.contributionLimits2025.map((r, i) => (
-                  <div key={i} style={{ padding: "10px 0", borderBottom: i < retirementData.contributionLimits2025.length - 1 ? `1px solid ${palette.border}` : "none" }}>
+                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 10 }}>2026 Contribution Limits</div>
+                {retirementData.contributionLimits2026.map((r, i) => (
+                  <div key={i} style={{ padding: "10px 0", borderBottom: i < retirementData.contributionLimits2026.length - 1 ? `1px solid ${palette.border}` : "none" }}>
                     <div style={{ fontWeight: 700, fontSize: "0.82rem", color: palette.white, marginBottom: 4 }}>{r.account}</div>
                     <div style={{ display: "flex", gap: 12 }}>
                       <div><span style={{ fontSize: "0.65rem", color: palette.textMuted }}>Under 50: </span><span style={{ fontSize: "0.78rem", color: palette.accent, fontFamily: fonts.mono, fontWeight: 600 }}>{r.under50}</span></div>
@@ -806,7 +872,7 @@ function AdvisorToolkit() {
                 </table>
                 <div style={{ background: palette.bg, borderRadius: 8, padding: 12 }}>
                   <div style={{ fontSize: "0.72rem", fontWeight: 700, color: palette.white, marginBottom: 6 }}>Planning Strategies to Reduce Taxation</div>
-                  {["Roth conversions before claiming — Roth withdrawals don't count in combined income", "Qualified Charitable Distributions (QCDs) — reduce AGI, up to $105K/yr from IRA (age 70½+)", "Time income sources to stay below thresholds", "Consider municipal bond income — tax-exempt but DOES count in SS combined income", "Senior bonus deduction (2025–2028): extra $6K standard deduction for 65+ ($12K joint), phases out above $75K/$150K MAGI"].map((tip, i) => (
+                  {["Roth conversions before claiming — Roth withdrawals don't count in combined income", "Qualified Charitable Distributions (QCDs) — reduce AGI, up to $111K/yr from IRA (age 70½+)", "Time income sources to stay below thresholds", "Consider municipal bond income — tax-exempt but DOES count in SS combined income", "Senior bonus deduction (2025–2028): extra $6K standard deduction for 65+ ($12K joint), phases out above $75K/$150K MAGI"].map((tip, i) => (
                     <div key={i} style={{ fontSize: "0.72rem", color: palette.textDim, padding: "4px 0", borderBottom: i < 4 ? `1px solid ${palette.border}` : "none", lineHeight: 1.5 }}>• {tip}</div>
                   ))}
                 </div>
@@ -955,7 +1021,7 @@ function AdvisorToolkit() {
         {activeTab === "calc" && (
           <>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 14 }}>
-              {[{ id: "compound", label: "Compound Growth" }, { id: "rmdcalc", label: "RMD Estimator" }, { id: "tey", label: "Tax-Equiv Yield" }, { id: "mortgage", label: "Mortgage" }, { id: "carloan", label: "Car Loan" }].map(t => (
+              {[{ id: "compound", label: "Compound Growth" }, { id: "rmdcalc", label: "RMD Estimator" }, { id: "tey", label: "Tax-Equiv Yield" }, { id: "mortgage", label: "Mortgage" }, { id: "carloan", label: "Car Loan" }, { id: "roth", label: "Roth Conversion" }].map(t => (
                 <button key={t.id} style={s.pill(calcMode === t.id)} onClick={() => setCalcMode(t.id)}>{t.label}</button>
               ))}
             </div>
@@ -1311,6 +1377,113 @@ function AdvisorToolkit() {
                       </tbody>
                     </table>
                   </div>
+                </div>
+              );
+            })()}
+
+            {calcMode === "roth" && (() => {
+              const res = rothResult();
+              const hasInput = res.AGI > 0;
+              const upd = (k) => (e) => setRothInputs(p => ({ ...p, [k]: e.target.value }));
+              return (
+                <div style={{ ...s.card, cursor: "default" }}>
+                  <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 4 }}>Roth Conversion Window</div>
+                  <div style={{ fontSize: "0.7rem", color: palette.textMuted, marginBottom: 12, lineHeight: 1.5 }}>TY2026 bracket-fill amounts with tax cost and IRMAA impact. Pull AGI from Form 1040 line 11 and tax-exempt muni interest from line 2a.</div>
+
+                  <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
+                    {[{ id: "single", label: "Single" }, { id: "mfj", label: "MFJ" }, { id: "hoh", label: "HoH" }].map(f => (
+                      <button key={f.id} style={s.pill(rothInputs.status === f.id)} onClick={() => setRothInputs(p => ({ ...p, status: f.id, age65: 0 }))}>{f.label}</button>
+                    ))}
+                  </div>
+
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
+                    <div><label style={s.label}>AGI (1040 Line 11)</label><input style={s.input} inputMode="decimal" placeholder="185,000" value={rothInputs.agi} onChange={upd("agi")} /></div>
+                    <div><label style={s.label}>Muni Interest (Line 2a)</label><input style={s.input} inputMode="decimal" placeholder="0" value={rothInputs.muni} onChange={upd("muni")} /></div>
+                    <div><label style={s.label}>LTCG + Qual Divs in AGI</label><input style={s.input} inputMode="decimal" placeholder="0" value={rothInputs.ltcg} onChange={upd("ltcg")} /></div>
+                    <div><label style={s.label}>Age 65+ Taxpayers</label>
+                      <select style={s.input} value={rothInputs.age65} onChange={e => setRothInputs(p => ({ ...p, age65: +e.target.value }))}>
+                        <option value={0}>None</option><option value={1}>One</option>
+                        {rothInputs.status === "mfj" && <option value={2}>Both</option>}
+                      </select>
+                    </div>
+                    <div style={{ gridColumn: "1 / -1" }}><label style={s.label}>Deduction — blank uses standard {fmt(res.stdDed)}</label><input style={s.input} inputMode="decimal" placeholder={"Standard: " + fmt(res.stdDed)} value={rothInputs.dedOverride} onChange={upd("dedOverride")} /></div>
+                  </div>
+
+                  {!hasInput && (
+                    <div style={{ textAlign: "center", color: palette.textMuted, fontSize: "0.78rem", padding: "14px 0" }}>Enter the client's AGI to see conversion windows.</div>
+                  )}
+
+                  {hasInput && (
+                    <>
+                      <div style={{ background: palette.bg, borderRadius: 8, padding: 14, marginBottom: 12 }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
+                          <span style={{ fontSize: "0.72rem", color: palette.textMuted }}>Ordinary Taxable Income</span>
+                          <span style={{ fontSize: "0.82rem", color: palette.text, fontFamily: fonts.mono }}>{fmt(res.ordTaxable)}</span>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
+                          <span style={{ fontSize: "0.72rem", color: palette.textMuted }}>Current Marginal Bracket</span>
+                          <span style={{ fontSize: "0.9rem", fontWeight: 700, color: palette.accent, fontFamily: fonts.mono }}>{Math.round(res.cur.rate * 100)}%</span>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
+                          <span style={{ fontSize: "0.72rem", color: palette.textMuted }}>MAGI (AGI + Muni)</span>
+                          <span style={{ fontSize: "0.82rem", color: palette.text, fontFamily: fonts.mono }}>{fmt(res.magi)}</span>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between" }}>
+                          <span style={{ fontSize: "0.72rem", color: palette.textMuted }}>IRMAA Tier Today</span>
+                          <span style={{ fontSize: "0.82rem", color: res.tierNow === 0 ? palette.success : palette.warn, fontFamily: fonts.mono }}>{res.tierNow === 0 ? "Standard" : "Tier " + res.tierNow}</span>
+                        </div>
+                        {res.irmaaRoom !== null && (
+                          <div style={{ marginTop: 8, paddingTop: 8, borderTop: `1px solid ${palette.border}`, fontSize: "0.7rem", color: palette.textDim, lineHeight: 1.5 }}>
+                            <span style={{ color: palette.accent, fontWeight: 700, fontFamily: fonts.mono }}>{fmt(res.irmaaRoom)}</span> of MAGI headroom before the next IRMAA line at {fmt(res.nextLine)}
+                          </div>
+                        )}
+                      </div>
+
+                      <div style={{ display: "flex", height: 34, borderRadius: 6, overflow: "hidden", border: `1px solid ${palette.borderLight}`, marginBottom: 4 }}>
+                        {res.brackets.filter(b => b.top !== Infinity && b.top <= res.chartMax).map((b, i, arr) => {
+                          const prev = i === 0 ? 0 : arr[i - 1].top;
+                          const width = ((b.top - prev) / res.chartMax) * 100;
+                          const fill = Math.min(Math.max(res.ordTaxable - prev, 0), b.top - prev);
+                          const fillPct = (fill / (b.top - prev)) * 100 || 0;
+                          return (
+                            <div key={b.rate} style={{ position: "relative", width: width + "%", background: palette.border, borderRight: `1px solid ${palette.card}` }}>
+                              <div style={{ position: "absolute", top: 0, bottom: 0, left: 0, width: fillPct + "%", background: palette.accent }} />
+                              <span style={{ position: "absolute", bottom: 2, right: 4, fontSize: "0.55rem", fontFamily: fonts.mono, color: palette.textDim }}>{Math.round(b.rate * 100)}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div style={{ fontSize: "0.62rem", color: palette.textMuted, marginBottom: 12 }}>Gold = income already taxed · Dark = conversion headroom</div>
+
+                      {res.windows.map(w => (
+                        <div key={w.rate} style={{ background: palette.bg, borderRadius: 8, padding: "12px 14px", marginBottom: 8 }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 6 }}>
+                            <div>
+                              <div style={{ fontSize: "0.82rem", fontWeight: 700, color: palette.text }}>Fill the {Math.round(w.rate * 100)}% bracket</div>
+                              <div style={{ fontSize: "0.65rem", color: palette.textMuted }}>to {fmt(w.top)} taxable</div>
+                            </div>
+                            <div style={{ fontSize: "1.05rem", fontWeight: 700, color: palette.accent, fontFamily: fonts.mono, whiteSpace: "nowrap" }}>{fmt(w.conversion)}</div>
+                          </div>
+                          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", fontSize: "0.68rem", color: palette.textMuted }}>
+                            <span>Fed tax <span style={{ color: palette.text, fontFamily: fonts.mono }}>{fmt(w.convTax)}</span></span>
+                            <span>Eff. rate <span style={{ color: palette.text, fontFamily: fonts.mono }}>{(w.eff * 100).toFixed(1)}%</span></span>
+                            <span>New MAGI <span style={{ color: palette.text, fontFamily: fonts.mono }}>{fmt(w.newMagi)}</span></span>
+                          </div>
+                          {w.tierAfter > res.tierNow ? (
+                            <div style={{ marginTop: 8, fontSize: "0.68rem", lineHeight: 1.5, borderRadius: 6, padding: "7px 10px", background: "rgba(251,191,36,0.09)", border: "1px solid rgba(251,191,36,0.35)", color: palette.warn }}>
+                              ⚠ Crosses to IRMAA Tier {w.tierAfter} — ≈{fmt(w.addedAnnual)}/yr more in Part B + D per person, assessed two years later
+                            </div>
+                          ) : (
+                            <div style={{ marginTop: 8, fontSize: "0.68rem", color: palette.success }}>✓ Stays in current IRMAA tier</div>
+                          )}
+                        </div>
+                      ))}
+
+                      <div style={{ marginTop: 10, fontSize: "0.65rem", color: palette.textMuted, lineHeight: 1.55 }}>
+                        Federal only, TY2026 brackets (Rev. Proc. 2025-32). LTCG/qualified dividends stack on top at capital-gains rates and are excluded from the ordinary bracket position. Not modeled: state tax, 0%→15% LTCG bump, Social Security taxation, NIIT, ACA cliffs, and the 65+ bonus deduction phase-out. IRMAA uses the 2026 table as a planning proxy — actual surcharges are based on MAGI from two years prior. Verify in tax software before recommending.
+                      </div>
+                    </>
+                  )}
                 </div>
               );
             })()}
