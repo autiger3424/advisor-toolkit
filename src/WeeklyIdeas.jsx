@@ -1,15 +1,19 @@
 /* ────────────────────────────────────────────────────────────────
    WEEKLY IDEAS — Advisor Toolkit module
 
-   Renders src/data/weekly-ideas.json: a 40–50 name idea list that
-   covers every sector plus an AI momentum sleeve. The JSON is
-   rewritten every Sunday night by .github/workflows/weekly-screen.yml
-   (see scripts/screen.mjs). Ideas only — everything here still goes
-   through the firm's own screeners before it touches a client account.
+   Renders two idea lists, switchable at the top:
+     Core  — src/data/weekly-ideas.json, 40–50 names across every sector
+             plus an AI momentum sleeve (scripts/screen.mjs, Sundays).
+     Halal — src/data/halal-ideas.json, 50–75 Shariah-screened names,
+             all equity, momentum-tilted (scripts/halal-screen.mjs,
+             Sundays). Zoya is the compliance source of truth.
+   Ideas only — everything here still goes through the firm's own
+   screeners before it touches a client account.
 ──────────────────────────────────────────────────────────────── */
 
 import { useState } from "react";
-import ideas from "./data/weekly-ideas.json";
+import coreIdeas from "./data/weekly-ideas.json";
+import halalIdeas from "./data/halal-ideas.json";
 
 const palette = {
   bg: "#0B1120",
@@ -79,6 +83,8 @@ const s = {
 
 const pct = (n, digits = 0) => (n == null ? "—" : `${n > 0 ? "+" : ""}${n.toFixed(digits)}%`);
 const trendColor = (n) => (n == null ? palette.textMuted : n >= 0 ? palette.success : palette.danger);
+// Shariah ratios: green with room to spare, amber within ~15% of the limit.
+const ratioColor = (n, limit) => (n == null ? palette.textMuted : n > limit ? palette.danger : n > limit * 0.85 ? palette.warn : palette.success);
 
 function fmtDate(iso) {
   if (!iso) return null;
@@ -133,6 +139,14 @@ function Row({ h, open, onToggle, showSector }) {
             {h.price != null && <span>${h.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>}
             {h.nextEarnings && <span>earnings {fmtDate(h.nextEarnings)}</span>}
           </div>
+          {h.debtToCap != null && (
+            <div style={{ display: "flex", gap: 14, marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted, flexWrap: "wrap" }}>
+              <span>debt/cap <span style={{ color: ratioColor(h.debtToCap, 33) }}>{h.debtToCap}%</span></span>
+              <span>cash/cap <span style={{ color: ratioColor(h.cashToCap, 33) }}>{h.cashToCap}%</span></span>
+              {h.interestToRev != null && <span>int/rev <span style={{ color: ratioColor(h.interestToRev, 5) }}>{h.interestToRev}%</span></span>}
+              {h.filingDate && <span>filed {fmtDate(h.filingDate)}</span>}
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -154,10 +168,18 @@ function Group({ title, items, open, toggle, showSector, emptyText }) {
   );
 }
 
+const LISTS = [
+  { id: "core", label: "Core", data: coreIdeas },
+  { id: "halal", label: "Halal", data: halalIdeas },
+];
+
 export default function WeeklyIdeas() {
+  const [list, setList] = useState("core");
   const [view, setView] = useState("all");
   const [open, setOpen] = useState(null);
   const toggle = (t) => setOpen((p) => (p === t ? null : t));
+  const isHalal = list === "halal";
+  const ideas = LISTS.find((l) => l.id === list).data;
 
   const holdings = ideas.holdings || [];
   const removed = ideas.removed || [];
@@ -168,23 +190,48 @@ export default function WeeklyIdeas() {
     .filter((h) => { const d = daysUntil(h.nextEarnings); return d != null && d >= 0 && d <= 14; })
     .sort((a, b) => a.nextEarnings.localeCompare(b.nextEarnings));
 
-  const sectors = SECTOR_ORDER.map((sec) => ({ sec, items: core.filter((h) => h.sector === sec) }));
+  const sectors = SECTOR_ORDER
+    .filter((sec) => !(isHalal && sec === "Financial Services")) // conventional finance is out of the halal universe
+    .map((sec) => ({ sec, items: core.filter((h) => h.sector === sec) }));
 
   const views = [
     { id: "all", label: "All" },
     { id: "changes", label: "This Week" },
-    { id: "ai", label: "AI Sleeve" },
+    ...(isHalal ? [] : [{ id: "ai", label: "AI Sleeve" }]),
     { id: "sectors", label: "By Sector" },
   ];
 
   return (
     <>
-      <div style={s.meta}>
-        Week of {fmtDate(ideas.asOf)}, {ideas.asOf?.slice(0, 4)}. {holdings.length} ideas across {sectors.filter((x) => x.items.length).length} sectors plus a {ai.length}-name AI sleeve.
-        {ideas.priceDate && ` Prices as of ${fmtDate(ideas.priceDate)}.`}
+      <div style={{ display: "flex", gap: 0, marginBottom: 12, border: `1px solid ${palette.borderLight}`, borderRadius: 8, overflow: "hidden" }}>
+        {LISTS.map((l) => (
+          <button
+            key={l.id}
+            onClick={() => { setList(l.id); setView("all"); setOpen(null); }}
+            style={{
+              flex: 1, padding: "8px 0", border: "none", cursor: "pointer", fontFamily: fonts.display, fontSize: "0.85rem", fontWeight: 700,
+              background: list === l.id ? palette.accent : "transparent", color: list === l.id ? palette.bg : palette.textDim,
+            }}
+          >
+            {l.label}
+          </button>
+        ))}
       </div>
 
-      <div style={s.note}>Idea list only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account.</div>
+      {!ideas.asOf ? (
+        <div style={s.empty}>The {isHalal ? "halal" : "core"} list hasn't been generated yet. It fills in after the first Sunday screen run (or a manual run of the workflow in GitHub Actions).</div>
+      ) : (
+        <div style={s.meta}>
+          Week of {fmtDate(ideas.asOf)}, {ideas.asOf?.slice(0, 4)}. {holdings.length} ideas across {sectors.filter((x) => x.items.length).length} sectors{isHalal ? "" : ` plus a ${ai.length}-name AI sleeve`}.
+          {ideas.priceDate && ` Prices as of ${fmtDate(ideas.priceDate)}.`}
+        </div>
+      )}
+
+      {isHalal ? (
+        <div style={s.note}>Shariah idea list, all equity, higher risk. Business screen by industry plus AAOIFI ratios (debt, cash, interest income vs market cap and revenue) on the latest filing. Confirm every name in Zoya before use: Zoya's status governs, and purification comes from its per-holding figure.</div>
+      ) : (
+        <div style={s.note}>Idea list only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account.</div>
+      )}
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 14 }}>
         {views.map((v) => (

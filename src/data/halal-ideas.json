@@ -1,0 +1,10 @@
+{
+  "asOf": null,
+  "generatedBy": "scripts/halal-screen.mjs (FMP + Twelve Data)",
+  "priceDate": null,
+  "standard": "AAOIFI ratio screen on the latest quarterly filing; Zoya is the compliance source of truth",
+  "rules": {},
+  "sectorsEmpty": [],
+  "holdings": [],
+  "removed": []
+}
