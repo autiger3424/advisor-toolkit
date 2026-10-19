@@ -345,7 +345,7 @@ function revisionFromHistory(c, history) {
 // ── Quality gate ───────────────────────────────────────────────
 function qualityCheck(c) {
   const q = { ...CFG.quality.default, ...(CFG.quality[c.sector] || {}) };
-  const p = (x) => `${(x * 100).toFixed(0)}%`;
+  const p = (x) => `${(x * 100).toFixed(1)}%`;
   if (q.minRoic != null && c.roic != null && c.roic < q.minRoic) return `ROIC ${p(c.roic)} below ${p(q.minRoic)}`;
   if (q.minRoe != null && c.roe != null && c.roe < q.minRoe) return `ROE ${p(c.roe)} below ${p(q.minRoe)}`;
   if (q.minOpMargin != null && c.opMargin != null && c.opMargin < q.minOpMargin) return `operating margin ${p(c.opMargin)} below ${p(q.minOpMargin)}`;
