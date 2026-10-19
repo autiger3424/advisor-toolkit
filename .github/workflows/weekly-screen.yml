@@ -27,19 +27,25 @@ jobs:
 
       - name: Check secrets
         run: |
-          if [ -z "${{ secrets.FMP_API_KEY }}" ] || [ -z "${{ secrets.TWELVE_DATA_API_KEY }}" ]; then
-            echo "Add FMP_API_KEY and TWELVE_DATA_API_KEY under Settings → Secrets and variables → Actions."
+          if [ -z "${{ secrets.FMP_API_KEY }}" ]; then
+            echo "Add FMP_API_KEY under Settings → Secrets and variables → Actions."
             exit 1
           fi
 
       - name: Run screen
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
-          TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
           SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '15' }}
         run: node scripts/screen.mjs
 
+      - name: Upload list as a run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-ideas
+          path: src/data/weekly-ideas.json
+
+      # Commits to whichever branch the run started from: main on the Sunday schedule,
+      # a feature branch when dispatched there (so a trial run never touches main).
       - name: Commit updated list
         run: |
           git config user.name "weekly-screen[bot]"
@@ -53,7 +59,7 @@ jobs:
           # GitHub occasionally rejects a push with a transient "fatal error in commit_refs";
           # retry a few times before giving up.
           for attempt in 1 2 3 4 5; do
-            if git pull --rebase --quiet origin main && git push origin HEAD:main; then
+            if git pull --rebase --quiet origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}"; then
               echo "Pushed on attempt $attempt."
               exit 0
             fi
