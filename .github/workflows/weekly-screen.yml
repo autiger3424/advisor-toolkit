@@ -10,10 +10,6 @@ on:
         description: "Candidates per sector (lower for a quick test run)"
         required: false
         default: "15"
-      commit:
-        description: "Commit the updated list to main (set false for a dry run on a branch)"
-        required: false
-        default: "true"
 
 permissions:
   contents: write
@@ -48,8 +44,9 @@ jobs:
           name: weekly-ideas
           path: src/data/weekly-ideas.json
 
+      # Commits to whichever branch the run started from: main on the Sunday schedule,
+      # a feature branch when dispatched there (so a trial run never touches main).
       - name: Commit updated list
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.commit != 'false' }}
         run: |
           git config user.name "weekly-screen[bot]"
           git config user.email "weekly-screen@users.noreply.github.com"
@@ -62,7 +59,7 @@ jobs:
           # GitHub occasionally rejects a push with a transient "fatal error in commit_refs";
           # retry a few times before giving up.
           for attempt in 1 2 3 4 5; do
-            if git pull --rebase --quiet origin main && git push origin HEAD:main; then
+            if git pull --rebase --quiet origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}"; then
               echo "Pushed on attempt $attempt."
               exit 0
             fi
