@@ -82,20 +82,23 @@ const CFG = {
 
   // Quality gate. Default applies unless a sector overrides a key; a key set to null is skipped.
   quality: {
-    default: { minRoic: 0.12, minOpMargin: 0.10, maxMarginDrop: 0.03, minCashConv: 0.80, maxNetDebtEbitda: 3.0 },
+    default: { minRoic: 0.10, minOpMargin: 0.10, maxMarginDrop: 0.03, minCashConv: 0.80, maxNetDebtEbitda: 3.0 },
     "Financial Services": { minRoic: null, minRoe: 0.12, minOpMargin: null, maxMarginDrop: null, minCashConv: null, maxNetDebtEbitda: null },
-    "Real Estate":        { minRoic: null, minRoe: 0.05, minOpMargin: 0.20, maxMarginDrop: 0.05, minCashConv: null, maxNetDebtEbitda: 7.0 },
-    Utilities:            { minRoic: 0.05, minOpMargin: 0.15, maxMarginDrop: 0.05, minCashConv: null, maxNetDebtEbitda: 6.0 },
-    Energy:               { minRoic: 0.10, minOpMargin: 0.10, maxMarginDrop: 0.06, maxNetDebtEbitda: 2.0 },
-    Healthcare:           { minOpMargin: 0.06 },                    // managed care / distributors run thin
-    "Consumer Defensive": { minOpMargin: 0.05 },                    // retailers run thin
-    "Consumer Cyclical":  { minOpMargin: 0.08 },
-    Industrials:          { minOpMargin: 0.10 },
-    Technology:           { minOpMargin: 0.10 },
+    "Real Estate":        { minRoic: null, minRoe: 0.04, minOpMargin: 0.20, maxMarginDrop: 0.05, minCashConv: null, maxNetDebtEbitda: 7.0 },
+    Utilities:            { minRoic: 0.03, minOpMargin: 0.15, maxMarginDrop: 0.05, minCashConv: null, maxNetDebtEbitda: 6.0 },   // regulated returns run 3–5% on FMP's ROIC
+    Energy:               { minRoic: 0.07, minOpMargin: 0.10, maxMarginDrop: 0.08, maxNetDebtEbitda: 2.0 },                   // cyclical; margins swing with crude
+    Healthcare:           { minRoic: 0.08, minOpMargin: 0.06, maxNetDebtEbitda: 3.5 },                                        // acquirers carry goodwill; managed care runs thin
+    "Consumer Defensive": { minOpMargin: 0.05 },                                                                               // retailers run thin
+    "Consumer Cyclical":  { minRoic: 0.08, minOpMargin: 0.08, maxNetDebtEbitda: 3.5 },                                        // leases inflate invested capital (AMZN, hotels)
+    Industrials:          { minRoic: 0.09, minOpMargin: 0.10 },
+    "Basic Materials":    { minRoic: 0.08, maxMarginDrop: 0.06 },
+    Technology:           { minRoic: 0.10, minOpMargin: 0.10 },
   },
-  // Cash conversion is operating cash flow / net income (not free cash flow): a company
-  // spending heavily on growth capex (TSM, the hyperscalers) still has real cash earnings.
-  // FCF/NI is recorded on every row for review but is not a gate.
+  // ROIC thresholds are calibrated to FMP's definition (NOPAT / invested capital including
+  // goodwill and leases), which runs lower than most broker ROIC figures.
+  // Cash conversion is operating cash flow / net income (not free cash flow), averaged over
+  // three fiscal years: a company spending heavily on growth capex (TSM, the hyperscalers)
+  // still has real cash earnings. FCF/NI is recorded on every row for review but is not a gate.
 
   // Growth score weights (percentile ranks across the eligible pool).
   weights: { fwdEps: 0.40, fwdRev: 0.25, trailEps: 0.20, revisions: 0.15 },
@@ -256,7 +259,7 @@ async function enrich(c) {
   c.roe = pick(k, ["returnOnEquityTTM", "roeTTM"]) ?? pick(r, ["returnOnEquityTTM"]);
   c.opMargin = pick(r, ["operatingProfitMarginTTM", "operatingMarginTTM"]);
   c.netMargin = pick(r, ["netProfitMarginTTM", "netMarginTTM"]);
-  c.cashConv = pick(k, ["incomeQualityTTM"]);                     // operating cash flow / net income
+  c.cashConvTtm = pick(k, ["incomeQualityTTM"]);                  // operating cash flow / net income, trailing 12 months
   c.netDebtEbitda = pick(k, ["netDebtToEBITDATTM"]);
   c.pe = pick(r, ["priceToEarningsRatioTTM", "peRatioTTM"]);
   c.ps = pick(r, ["priceToSalesRatioTTM", "priceSalesRatioTTM"]);
@@ -275,6 +278,9 @@ async function enrich(c) {
   const niSum = cfs.reduce((a, y) => a + num(y.netIncome), 0);
   const fcfSum = cfs.reduce((a, y) => a + (num(y.freeCashFlow) ?? 0), 0);
   c.fcfToNi = cfs.length && niSum > 0 ? fcfSum / niSum : null;
+  const ocfSum = cfs.reduce((a, y) => a + (num(y.operatingCashFlow ?? y.netCashProvidedByOperatingActivities) ?? 0), 0);
+  // 3-year average, so one year of receivables build (NVDA, GOOG in 2025) doesn't fail a great business.
+  c.cashConv = cfs.length && niSum > 0 ? ocfSum / niSum : c.cashConvTtm;
 
   // Forward consensus: the two fiscal years after the last reported one.
   const fwd = (Array.isArray(est) ? est : [])
@@ -558,7 +564,7 @@ async function main() {
     priceDate,
     rules: {
       universe: `US stocks over $${CFG.minMarketCap / 1e9}B by sector (FMP screener), top ${CFG.candidatesPerSector} per sector by market cap, plus an AI watchlist; current holdings always re-screened`,
-      quality: `gate: ROIC ≥ ${q.minRoic * 100}% (financials ROE ≥ 12%), operating margin ≥ ${q.minOpMargin * 100}% and not down more than ${q.maxMarginDrop * 100} pts over 2 years, operating cash flow ≥ ${q.minCashConv * 100}% of net income, net debt ≤ ${q.maxNetDebtEbitda}x EBITDA; relaxed for financials, REITs, utilities and thin-margin sectors`,
+      quality: `gate: ROIC ≥ ${q.minRoic * 100}% (financials ROE ≥ 12%), operating margin ≥ ${q.minOpMargin * 100}% and not down more than ${q.maxMarginDrop * 100} pts over 2 years, 3-yr operating cash flow ≥ ${q.minCashConv * 100}% of net income, net debt ≤ ${q.maxNetDebtEbitda}x EBITDA; relaxed for financials, REITs, utilities and thin-margin sectors`,
       growth: `score = percentile ranks: ${CFG.weights.fwdEps * 100}% forward 2-yr EPS growth, ${CFG.weights.fwdRev * 100}% forward revenue growth, ${CFG.weights.trailEps * 100}% trailing 3-yr EPS growth, ${CFG.weights.revisions * 100}% estimate revisions and analyst grades`,
       valuation: `new entrants need price/sales ≤ ${CFG.maxPS}, trailing P/E between 0 and ${CFG.maxPE}, PEG ≤ ${CFG.maxPEG}; a holding leaves only if price/sales passes ${CFG.maxPS * CFG.incumbentPSBuffer}`,
       removal: `fundamental only: next-FY EPS consensus cut more than ${Math.abs(CFG.revisionCutRemove) * 100}% in ~${CFG.revisionLookbackDays} days, two straight earnings misses, or failing the quality gate ${CFG.gateStrikesToRemove} runs in a row; no price-based removals`,
