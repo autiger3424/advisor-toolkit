@@ -3,7 +3,8 @@
 
    Renders two idea lists, switchable at the top:
      Core  — src/data/weekly-ideas.json, 40–50 names across every sector
-             plus an AI momentum sleeve (scripts/screen.mjs, Sundays).
+             plus an AI sleeve. Quality gate + growth ranking, removals on
+             fundamentals only, no 200-day rule (scripts/screen.mjs, Sundays).
      Halal — src/data/halal-ideas.json, 50–75 Shariah-screened names,
              all equity, momentum-tilted (scripts/halal-screen.mjs,
              Sundays). Zoya is the compliance source of truth.
@@ -124,8 +125,17 @@ function Row({ h, open, onToggle, showSector }) {
           </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
-          <div style={{ fontFamily: fonts.mono, fontSize: "0.8rem", color: trendColor(h.vs200) }}>{pct(h.vs200, 1)}</div>
-          <div style={{ fontSize: "0.58rem", color: palette.textMuted }}>vs 200-day</div>
+          {h.fwdEpsGrowth !== undefined ? (
+            <>
+              <div style={{ fontFamily: fonts.mono, fontSize: "0.8rem", color: trendColor(h.fwdEpsGrowth) }}>{pct(h.fwdEpsGrowth)}</div>
+              <div style={{ fontSize: "0.58rem", color: palette.textMuted }}>EPS growth/yr</div>
+            </>
+          ) : (
+            <>
+              <div style={{ fontFamily: fonts.mono, fontSize: "0.8rem", color: trendColor(h.vs200) }}>{pct(h.vs200, 1)}</div>
+              <div style={{ fontSize: "0.58rem", color: palette.textMuted }}>vs 200-day</div>
+            </>
+          )}
         </div>
         <span style={s.badge(tag.color)}>{tag.label}</span>
       </div>
@@ -139,6 +149,17 @@ function Row({ h, open, onToggle, showSector }) {
             {h.price != null && <span>${h.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>}
             {h.nextEarnings && <span>earnings {fmtDate(h.nextEarnings)}</span>}
           </div>
+          {h.fwdEpsGrowth !== undefined && (
+            <div style={{ display: "flex", gap: 14, marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted, flexWrap: "wrap" }}>
+              {h.fwdRevGrowth != null && <span>rev <span style={{ color: trendColor(h.fwdRevGrowth) }}>{pct(h.fwdRevGrowth)}</span>/yr</span>}
+              {h.roic != null ? <span>ROIC {h.roic.toFixed(0)}%</span> : h.roe != null && <span>ROE {h.roe.toFixed(0)}%</span>}
+              {h.opMargin != null && <span>op margin {h.opMargin.toFixed(0)}%</span>}
+              {h.pe != null && <span>P/E {h.pe.toFixed(0)}</span>}
+              {h.peg != null && <span>PEG {h.peg.toFixed(1)}</span>}
+              {h.revision != null && <span>est <span style={{ color: trendColor(h.revision) }}>{pct(h.revision, 1)}</span></span>}
+              {h.vsHigh != null && <span>vs high <span style={{ color: trendColor(h.vsHigh) }}>{pct(h.vsHigh)}</span></span>}
+            </div>
+          )}
           {h.debtToCap != null && (
             <div style={{ display: "flex", gap: 14, marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted, flexWrap: "wrap" }}>
               <span>debt/cap <span style={{ color: ratioColor(h.debtToCap, 33) }}>{h.debtToCap}%</span></span>
@@ -256,7 +277,7 @@ export default function WeeklyIdeas() {
       )}
 
       {view === "ai" && (
-        <Group title="AI momentum sleeve" items={ai} open={open} toggle={toggle} showSector emptyText="No AI names pass this week." />
+        <Group title="AI sleeve" items={ai} open={open} toggle={toggle} showSector emptyText="No AI names pass this week." />
       )}
 
       {view === "sectors" && sectors.map(({ sec, items }) => (

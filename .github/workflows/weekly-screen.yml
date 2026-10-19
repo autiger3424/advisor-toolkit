@@ -10,6 +10,10 @@ on:
         description: "Candidates per sector (lower for a quick test run)"
         required: false
         default: "15"
+      commit:
+        description: "Commit the updated list to main (set false for a dry run on a branch)"
+        required: false
+        default: "true"
 
 permissions:
   contents: write
@@ -27,20 +31,25 @@ jobs:
 
       - name: Check secrets
         run: |
-          if [ -z "${{ secrets.FMP_API_KEY }}" ] || [ -z "${{ secrets.TWELVE_DATA_API_KEY }}" ]; then
-            echo "Add FMP_API_KEY and TWELVE_DATA_API_KEY under Settings → Secrets and variables → Actions."
+          if [ -z "${{ secrets.FMP_API_KEY }}" ]; then
+            echo "Add FMP_API_KEY under Settings → Secrets and variables → Actions."
             exit 1
           fi
 
       - name: Run screen
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
-          TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
           SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '15' }}
         run: node scripts/screen.mjs
 
+      - name: Upload list as a run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-ideas
+          path: src/data/weekly-ideas.json
+
       - name: Commit updated list
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.commit != 'false' }}
         run: |
           git config user.name "weekly-screen[bot]"
           git config user.email "weekly-screen@users.noreply.github.com"
