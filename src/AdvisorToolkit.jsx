@@ -508,6 +508,11 @@ function AdvisorToolkit() {
   };
 
   // ─ Calculators ──
+  // Inputs hold whatever the person typed (including an empty field, so
+  // backspace clears cleanly); the math reads them through num()/nums().
+  const num = (v) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const nums = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, num(v)]));
+
 
   const rothResult = () => {
     const p = (v) => { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) || n < 0 ? 0 : n; };
@@ -548,7 +553,7 @@ function AdvisorToolkit() {
   };
 
   const compoundResult = () => {
-    const { principal, rate, years, monthly } = calcInputs;
+    const { principal, rate, years, monthly } = nums(calcInputs);
     const r = (rate / 100) / 12;
     const n = years * 12;
     const fvPrincipal = principal * Math.pow(1 + r, n);
@@ -559,9 +564,9 @@ function AdvisorToolkit() {
   const rmdLifeTable = { 73: 26.5, 74: 25.5, 75: 24.6, 76: 23.7, 77: 22.9, 78: 22.0, 79: 21.1, 80: 20.2, 81: 19.4, 82: 18.5, 83: 17.7, 84: 16.8, 85: 16.0, 86: 15.2, 87: 14.4, 88: 13.7, 89: 12.9, 90: 12.2, 91: 11.5, 92: 10.8, 93: 10.1, 94: 9.5, 95: 8.9 };
 
   const rmdResult = () => {
-    const age = Math.max(73, Math.min(95, rmdInputs.age));
+    const age = Math.max(73, Math.min(95, num(rmdInputs.age)));
     const factor = rmdLifeTable[age] || 8.9;
-    const rmd = rmdInputs.balance / factor;
+    const rmd = num(rmdInputs.balance) / factor;
     return { rmd, factor, monthlyEquiv: rmd / 12 };
   };
 
@@ -1144,10 +1149,10 @@ function AdvisorToolkit() {
                 <div style={{ ...s.card, cursor: "default" }}>
                   <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 14 }}>Compound Growth Calculator</div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-                    <div><label style={s.label}>Initial Investment</label><input style={s.input} type="number" value={calcInputs.principal} onChange={e => setCalcInputs(p => ({ ...p, principal: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Annual Return %</label><input style={s.input} type="number" step="0.1" value={calcInputs.rate} onChange={e => setCalcInputs(p => ({ ...p, rate: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Years</label><input style={s.input} type="number" value={calcInputs.years} onChange={e => setCalcInputs(p => ({ ...p, years: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Monthly Addition</label><input style={s.input} type="number" value={calcInputs.monthly} onChange={e => setCalcInputs(p => ({ ...p, monthly: +e.target.value }))} /></div>
+                    <div><label style={s.label}>Initial Investment</label><input style={s.input} type="number" value={calcInputs.principal} onChange={e => setCalcInputs(p => ({ ...p, principal: e.target.value }))} /></div>
+                    <div><label style={s.label}>Annual Return %</label><input style={s.input} type="number" step="0.1" value={calcInputs.rate} onChange={e => setCalcInputs(p => ({ ...p, rate: e.target.value }))} /></div>
+                    <div><label style={s.label}>Years</label><input style={s.input} type="number" value={calcInputs.years} onChange={e => setCalcInputs(p => ({ ...p, years: e.target.value }))} /></div>
+                    <div><label style={s.label}>Monthly Addition</label><input style={s.input} type="number" value={calcInputs.monthly} onChange={e => setCalcInputs(p => ({ ...p, monthly: e.target.value }))} /></div>
                   </div>
                   <div style={{ background: palette.bg, borderRadius: 8, padding: 14 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
@@ -1180,8 +1185,8 @@ function AdvisorToolkit() {
                 <div style={{ ...s.card, cursor: "default" }}>
                   <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 14 }}>RMD Estimator</div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-                    <div><label style={s.label}>Account Balance</label><input style={s.input} type="number" value={rmdInputs.balance} onChange={e => setRmdInputs(p => ({ ...p, balance: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Age (73–95)</label><input style={s.input} type="number" min="73" max="95" value={rmdInputs.age} onChange={e => setRmdInputs(p => ({ ...p, age: +e.target.value }))} /></div>
+                    <div><label style={s.label}>Account Balance</label><input style={s.input} type="number" value={rmdInputs.balance} onChange={e => setRmdInputs(p => ({ ...p, balance: e.target.value }))} /></div>
+                    <div><label style={s.label}>Age (73–95)</label><input style={s.input} type="number" min="73" max="95" value={rmdInputs.age} onChange={e => setRmdInputs(p => ({ ...p, age: e.target.value }))} /></div>
                   </div>
                   <div style={{ background: palette.bg, borderRadius: 8, padding: 14 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
@@ -1203,7 +1208,7 @@ function AdvisorToolkit() {
             })()}
 
             {calcMode === "tey" && (() => {
-              const { muniYield, fedRate, stateRate } = teyInputs;
+              const { muniYield, fedRate, stateRate } = nums(teyInputs);
               const combinedRate = fedRate + stateRate - (fedRate * stateRate / 100);
               const tey = muniYield / (1 - combinedRate / 100);
               const fedOnlyTey = muniYield / (1 - fedRate / 100);
@@ -1229,15 +1234,15 @@ function AdvisorToolkit() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
                     <div>
                       <label style={s.label}>Muni Yield %</label>
-                      <input style={s.input} type="number" step="0.05" value={teyInputs.muniYield} onChange={e => setTeyInputs(p => ({ ...p, muniYield: +e.target.value }))} />
+                      <input style={s.input} type="number" step="0.05" value={teyInputs.muniYield} onChange={e => setTeyInputs(p => ({ ...p, muniYield: e.target.value }))} />
                     </div>
                     <div>
                       <label style={s.label}>Federal Rate %</label>
-                      <input style={s.input} type="number" step="1" value={teyInputs.fedRate} onChange={e => setTeyInputs(p => ({ ...p, fedRate: +e.target.value }))} />
+                      <input style={s.input} type="number" step="1" value={teyInputs.fedRate} onChange={e => setTeyInputs(p => ({ ...p, fedRate: e.target.value }))} />
                     </div>
                     <div>
                       <label style={s.label}>State Rate %</label>
-                      <input style={s.input} type="number" step="0.1" value={teyInputs.stateRate} onChange={e => setTeyInputs(p => ({ ...p, stateRate: +e.target.value }))} />
+                      <input style={s.input} type="number" step="0.1" value={teyInputs.stateRate} onChange={e => setTeyInputs(p => ({ ...p, stateRate: e.target.value }))} />
                     </div>
                   </div>
 
@@ -1309,20 +1314,21 @@ function AdvisorToolkit() {
             })()}
 
             {calcMode === "mortgage" && (() => {
-              const loanAmt = mortgageInputs.price - mortgageInputs.down;
-              const r = (mortgageInputs.rate / 100) / 12;
-              const n = mortgageInputs.term * 12;
+              const mi = nums(mortgageInputs);
+              const loanAmt = mi.price - mi.down;
+              const r = (mi.rate / 100) / 12;
+              const n = mi.term * 12;
               const monthlyPI = r > 0 ? loanAmt * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1) : loanAmt / n;
-              const monthlyTax = mortgageInputs.tax / 12;
-              const monthlyIns = mortgageInputs.insurance / 12;
+              const monthlyTax = mi.tax / 12;
+              const monthlyIns = mi.insurance / 12;
               const totalMonthly = monthlyPI + monthlyTax + monthlyIns;
               const totalPaid = monthlyPI * n;
               const totalInterest = totalPaid - loanAmt;
-              const ltv = (loanAmt / mortgageInputs.price) * 100;
+              const ltv = (loanAmt / mi.price) * 100;
 
               let balance = loanAmt;
               const milestones = [];
-              const milestoneYears = [1, 5, 10, 15, 20, 25, 30].filter(y => y <= mortgageInputs.term);
+              const milestoneYears = [1, 5, 10, 15, 20, 25, 30].filter(y => y <= mi.term);
               let totalIntPaid = 0;
               for (let m = 1; m <= n; m++) {
                 const intPayment = balance * r;
@@ -1330,7 +1336,7 @@ function AdvisorToolkit() {
                 totalIntPaid += intPayment;
                 balance -= princPayment;
                 if (milestoneYears.includes(m / 12)) {
-                  milestones.push({ year: m / 12, balance: Math.max(0, balance), equity: mortgageInputs.price - Math.max(0, balance), intPaid: totalIntPaid });
+                  milestones.push({ year: m / 12, balance: Math.max(0, balance), equity: mi.price - Math.max(0, balance), intPaid: totalIntPaid });
                 }
               }
 
@@ -1338,12 +1344,12 @@ function AdvisorToolkit() {
                 <div style={{ ...s.card, cursor: "default" }}>
                   <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 14 }}>Mortgage Calculator</div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-                    <div><label style={s.label}>Home Price</label><input style={s.input} type="number" value={mortgageInputs.price} onChange={e => setMortgageInputs(p => ({ ...p, price: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Down Payment</label><input style={s.input} type="number" value={mortgageInputs.down} onChange={e => setMortgageInputs(p => ({ ...p, down: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Interest Rate %</label><input style={s.input} type="number" step="0.125" value={mortgageInputs.rate} onChange={e => setMortgageInputs(p => ({ ...p, rate: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Term (Years)</label><input style={s.input} type="number" value={mortgageInputs.term} onChange={e => setMortgageInputs(p => ({ ...p, term: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Annual Tax</label><input style={s.input} type="number" value={mortgageInputs.tax} onChange={e => setMortgageInputs(p => ({ ...p, tax: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Annual Insurance</label><input style={s.input} type="number" value={mortgageInputs.insurance} onChange={e => setMortgageInputs(p => ({ ...p, insurance: +e.target.value }))} /></div>
+                    <div><label style={s.label}>Home Price</label><input style={s.input} type="number" value={mortgageInputs.price} onChange={e => setMortgageInputs(p => ({ ...p, price: e.target.value }))} /></div>
+                    <div><label style={s.label}>Down Payment</label><input style={s.input} type="number" value={mortgageInputs.down} onChange={e => setMortgageInputs(p => ({ ...p, down: e.target.value }))} /></div>
+                    <div><label style={s.label}>Interest Rate %</label><input style={s.input} type="number" step="0.125" value={mortgageInputs.rate} onChange={e => setMortgageInputs(p => ({ ...p, rate: e.target.value }))} /></div>
+                    <div><label style={s.label}>Term (Years)</label><input style={s.input} type="number" value={mortgageInputs.term} onChange={e => setMortgageInputs(p => ({ ...p, term: e.target.value }))} /></div>
+                    <div><label style={s.label}>Annual Tax</label><input style={s.input} type="number" value={mortgageInputs.tax} onChange={e => setMortgageInputs(p => ({ ...p, tax: e.target.value }))} /></div>
+                    <div><label style={s.label}>Annual Insurance</label><input style={s.input} type="number" value={mortgageInputs.insurance} onChange={e => setMortgageInputs(p => ({ ...p, insurance: e.target.value }))} /></div>
                   </div>
 
                   <div style={{ background: palette.bg, borderRadius: 8, padding: 14, marginBottom: 12 }}>
@@ -1403,16 +1409,17 @@ function AdvisorToolkit() {
             })()}
 
             {calcMode === "carloan" && (() => {
-              const loanAmt = carInputs.price - carInputs.down - carInputs.tradeIn;
-              const r = (carInputs.rate / 100) / 12;
-              const n = carInputs.term;
+              const ci = nums(carInputs);
+              const loanAmt = ci.price - ci.down - ci.tradeIn;
+              const r = (ci.rate / 100) / 12;
+              const n = ci.term;
               const monthlyPayment = r > 0 ? loanAmt * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1) : loanAmt / n;
               const totalPaid = monthlyPayment * n;
               const totalInterest = totalPaid - loanAmt;
-              const totalCost = carInputs.price + totalInterest - carInputs.tradeIn;
+              const totalCost = ci.price + totalInterest - ci.tradeIn;
 
               const depreciationSchedule = [];
-              let carValue = carInputs.price;
+              let carValue = ci.price;
               let loanBalance = loanAmt;
               for (let yr = 1; yr <= Math.ceil(n / 12); yr++) {
                 const depRate = yr === 1 ? 0.20 : 0.15;
@@ -1430,11 +1437,11 @@ function AdvisorToolkit() {
                 <div style={{ ...s.card, cursor: "default" }}>
                   <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.accent, marginBottom: 14 }}>Car Loan Calculator</div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-                    <div><label style={s.label}>Vehicle Price</label><input style={s.input} type="number" value={carInputs.price} onChange={e => setCarInputs(p => ({ ...p, price: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Down Payment</label><input style={s.input} type="number" value={carInputs.down} onChange={e => setCarInputs(p => ({ ...p, down: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Interest Rate %</label><input style={s.input} type="number" step="0.1" value={carInputs.rate} onChange={e => setCarInputs(p => ({ ...p, rate: +e.target.value }))} /></div>
-                    <div><label style={s.label}>Term (Months)</label><input style={s.input} type="number" value={carInputs.term} onChange={e => setCarInputs(p => ({ ...p, term: +e.target.value }))} /></div>
-                    <div style={{ gridColumn: "1 / -1" }}><label style={s.label}>Trade-In Value</label><input style={s.input} type="number" value={carInputs.tradeIn} onChange={e => setCarInputs(p => ({ ...p, tradeIn: +e.target.value }))} /></div>
+                    <div><label style={s.label}>Vehicle Price</label><input style={s.input} type="number" value={carInputs.price} onChange={e => setCarInputs(p => ({ ...p, price: e.target.value }))} /></div>
+                    <div><label style={s.label}>Down Payment</label><input style={s.input} type="number" value={carInputs.down} onChange={e => setCarInputs(p => ({ ...p, down: e.target.value }))} /></div>
+                    <div><label style={s.label}>Interest Rate %</label><input style={s.input} type="number" step="0.1" value={carInputs.rate} onChange={e => setCarInputs(p => ({ ...p, rate: e.target.value }))} /></div>
+                    <div><label style={s.label}>Term (Months)</label><input style={s.input} type="number" value={carInputs.term} onChange={e => setCarInputs(p => ({ ...p, term: e.target.value }))} /></div>
+                    <div style={{ gridColumn: "1 / -1" }}><label style={s.label}>Trade-In Value</label><input style={s.input} type="number" value={carInputs.tradeIn} onChange={e => setCarInputs(p => ({ ...p, tradeIn: e.target.value }))} /></div>
                   </div>
 
                   <div style={{ background: palette.bg, borderRadius: 8, padding: 14, marginBottom: 12 }}>
