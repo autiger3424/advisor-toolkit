@@ -3,6 +3,278 @@
   "briefs": [
     {
       "date": "2026-10-22",
+      "session": "afternoon",
+      "generatedAt": "2026-10-22T20:34:00Z",
+      "headline": "Nasdaq fell 2.6% (worst day since June) and the S&P 500 lost 1.2% as Meta's bigger AI spending plan and first cash burn since 2012 reignited AI-funding fears and crushed chip stocks, yet most stocks rose, the Dow finished flat, and a flight into Treasuries pushed the 10-year back below 5%.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,663",
+          "change": "-1.2%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "26,009",
+          "change": "-2.6%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,868",
+          "change": "+0.02%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,784",
+          "change": "+0.1%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.96%",
+          "change": "-16 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "18.96",
+          "change": "+14%"
+        },
+        {
+          "label": "WTI crude",
+          "value": "$99.29",
+          "change": "+2.2%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,041",
+          "change": "-2.6%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$81,257",
+          "change": "-3.3%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Initial jobless claims (wk Oct 17)",
+          "actual": "194K",
+          "consensus": "200K",
+          "prior": "200K",
+          "read": "firmer; near 57-year low",
+          "reaction": "yields fell anyway on safe-haven buying"
+        }
+      ],
+      "drivers": [
+        "Meta (-7%) set the tone: revenue beat, but it raised the floor of 2026 capex to $135-145B, posted negative $2.1B free cash flow, and approved a new non-voting Class C share class to fund AI. Its credit-default swaps hit a record. Semis followed: Philly Semi index -5.6% to its lowest since late July (about 25% off the June peak), AMD -8%, Lam Research -10%, Nvidia -4.4%, CoreWeave -10%.",
+        "Oil at 5-month highs (WTI ~$99, Brent $113): Iran claimed seven tankers were hit in the Strait of Hormuz overnight, Houthi drones struck Saudi Arabia's Shaybah field and Dammam airport, and a NYT report said the US and Israel have drawn up post-midterm strike plans on Iran. Energy stocks still fell, with oil services down ~5%.",
+        "Flight to Treasuries, not gold: yields plunged across the curve (10-yr -16 bp to 4.96%, biggest one-day drop since March 2023; 2-yr -15 bp to 4.65%) even though jobless claims came in at 194K vs 200K expected. Breakevens barely moved, so this was a real-rate/safe-haven move; gold and silver sold off with it.",
+        "Rotation, not panic: the majority of stocks rose. Staples +3.3% (P&G rally), utilities +2.1%, health care +1.3%, financials +1.1%; value and small caps beat growth by 1.5-2 points. Spotify and Lockheed rallied on raised guidance; Blackstone +8%. The Dow clawed back a ~300-point early loss to finish unchanged. Session sold off from the open and never reversed."
+      ],
+      "sectors": {
+        "leaders": "Staples, Utilities, Health Care, Financials, Real Estate",
+        "laggards": "Technology, Communication Services, Industrials, Energy"
+      },
+      "afterHours": [
+        {
+          "ticker": "WDC",
+          "move": "+0.5% AH",
+          "why": "Beat ($4.64 vs $4.11 EPS; rev $4.38B vs $4.14B) and guided Q2 well above Street ($5.80 EPS vs $4.84; rev $5.1B vs $4.57B); raised dividend. Muted reaction after a -7% regular session."
+        },
+        {
+          "ticker": "DECK",
+          "move": "n/a",
+          "why": "Reports after the close; no reaction posted yet."
+        },
+        {
+          "ticker": "INTC",
+          "move": "-5% (regular)",
+          "why": "Does not report tonight; earnings are Oct 29. Fell with the chip group ahead of the print."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global flash PMIs (Oct)",
+          "consensus": "Mfg 55.6, Services 57.9"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "UMich consumer sentiment (Oct final)",
+          "consensus": "46.3; 1-yr inflation exp 4.7%, 5-yr 3.5%"
+        },
+        {
+          "time": "Pre-open",
+          "item": "Earnings: American Express (AXP), SLB, Booz Allen (BAH), Autoliv (ALV), Gentex (GNTX), First Citizens (FCNCA)",
+          "consensus": ""
+        },
+        {
+          "time": "All day",
+          "item": "Fed blackout ahead of Oct 28 FOMC (consensus hold at 4.0%; markets price a December hike near 90%). No Fed speakers.",
+          "consensus": ""
+        },
+        {
+          "time": "After Europe close",
+          "item": "Moody's review of France's sovereign rating; a downgrade is widely expected",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "META",
+          "move": "-7%",
+          "why": "Raised 2026 capex floor, negative free cash flow, new non-voting share class; CDS at record. Zacks (10/22) framed the pullback to the 10-week moving average as a buy-the-dip setup, their view."
+        },
+        {
+          "ticker": "AMD",
+          "move": "-8%",
+          "why": "Chip rout as AI-funding fears spread from Meta's results; Philly Semi index at lowest since late July."
+        },
+        {
+          "ticker": "LRCX",
+          "move": "-10%",
+          "why": "Fell despite a record quarter reported Wednesday night; limited upside surprise plus the semi selloff."
+        },
+        {
+          "ticker": "MRNA",
+          "move": "-18%",
+          "why": "Leaked cancer-vaccine trial data fell short of investor hopes; worst day since its IPO."
+        },
+        {
+          "ticker": "BX",
+          "move": "+8%",
+          "why": "Upbeat outlook for investment exits; sees wider spreads on AI-related debt as an opportunity."
+        },
+        {
+          "ticker": "TSLA",
+          "move": "-3%",
+          "why": "Beat and cut 2026 capex, but flat revenue and higher 2027-28 spending plans; SpaceX merger talk continues (SPCX -9%)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance: Stock market today, Nasdaq tanks as tech sinks, Meta plummets",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
+        },
+        {
+          "title": "The Economic Times - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/EF78F1B2E2D1F11F171D17A18787465F?cnum=1"
+        },
+        {
+          "title": "MSN/AP - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/0D0EA12409079DFA802E2FACE42A2532?cnum=1"
+        },
+        {
+          "title": "The Globe and Mail/AP - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/615BA05E651C44B6868A6426039F6184?cnum=5"
+        },
+        {
+          "title": "MT Newswires - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8B3FF9B9A1823B1DC2BA66E178137A47?cnum=1"
+        },
+        {
+          "title": "Nasdaq/RTTNews - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/7751F7D5E572A3FCF78C888128B3DE6C?cnum=4"
+        },
+        {
+          "title": "Benzinga: Meta tumbles, 10-year below 5% - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/2439EAE0793688734CF89CED21180382?cnum=4"
+        },
+        {
+          "title": "InfoQuanta: Philly Semi plunges - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8D03B3FC38786A2BC3E902EBE05F7DCA?cnum=1"
+        },
+        {
+          "title": "FXStreet: gold slides, claims 194K - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/60E4F9F7118BD49FDFFAF68D39966956?cnum=2"
+        },
+        {
+          "title": "CNBC.com: 10-year yield tumbles below 5% - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8838873AFBEB48D452F82C83F1D7F1AB?cnum=1"
+        },
+        {
+          "title": "CNBC.com: Meta sinks as free cash flow turns negative - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B6BF2D16191838084570784833F956B1?cnum=1"
+        },
+        {
+          "title": "Benzinga: Meta CDS warning - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B6048CA4CB8289E63DEAC8327A2CFB35?cnum=2"
+        },
+        {
+          "title": "Benzinga: oil higher on Hormuz tanker damage - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/518F3277B959FAD2AF53A6D23B742A9E?cnum=1"
+        },
+        {
+          "title": "Alliance News: Iran says seven tankers damaged - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/DA3E186FCF59C343D02D87142EAA59DE?cnum=1"
+        },
+        {
+          "title": "Benzinga: Western Digital Q1 beat - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/84ED257BAD8589F31F7047569FFDF25D?cnum=1"
+        },
+        {
+          "title": "MT Newswires: Western Digital results and guidance - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/66914EDE55BB8C3D1050D48245CFC0D3?cnum=1"
+        },
+        {
+          "title": "Yahoo Finance: Intel tumbles ahead of Q3 - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/F3C4561720449E28970CE84E773E3C59?cnum=1"
+        },
+        {
+          "title": "CNBC Pro: BMO on Treasury yields and Fed - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/67CAE17B21B98259352B523496DB9D52?cnum=2"
+        },
+        {
+          "title": "FXStreet: Euro, French yields, Moody's review - Oct 22, 2026 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/38D772A2C120AE273C003C87AC266F2E?cnum=2"
+        },
+        {
+          "title": "Bigdata.com market, country and portfolio tearsheets; economic and corporate calendars",
+          "url": "https://bigdata.com"
+        },
+        {
+          "title": "Meta: 5 Reasons to Buy the Dip - Zacks, 10/22/2026",
+          "url": "https://www.zacks.com/commentary/3013240/meta:-5-reasons-to-buy-the-dip?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Why a Tesla & SpaceX Merger Makes Strategic Sense - Zacks, 10/22/2026",
+          "url": "https://www.zacks.com/commentary/3013201/why-a-tesla-&-spacex-merger-makes-strategic-sense?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Here is Why Growth Investors Should Buy Lam Research - Zacks, 10/22/2026",
+          "url": "https://www.zacks.com/stock/news/3013209/here-is-why-growth-investors-should-buy-lam-research-(lrcx)-now-?utm_source=zacks_mcp"
+        },
+        {
+          "title": "META - Zacks",
+          "url": "https://www.zacks.com/stock/quote/META?utm_source=zacks_mcp"
+        },
+        {
+          "title": "TSLA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/TSLA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "LRCX - Zacks",
+          "url": "https://www.zacks.com/stock/quote/LRCX?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MRNA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MRNA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "BX - Zacks",
+          "url": "https://www.zacks.com/stock/quote/BX?utm_source=zacks_mcp"
+        },
+        {
+          "title": "WDC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/WDC?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-22-afternoon"
+    },
+    {
+      "date": "2026-10-22",
       "session": "morning",
       "generatedAt": "2026-10-22T14:30:00Z",
       "headline": "Risk-off: stocks lower, led by chips and AI names, as Tesla, Meta and Lam Research earnings failed to impress and oil pushed toward $100 on Saudi attacks and reports of planned US-Israel strikes on Iran.",
