@@ -1,4 +1,241 @@
 {
   "keepDays": 15,
-  "briefs": []
+  "briefs": [
+    {
+      "date": "2026-10-22",
+      "session": "morning",
+      "generatedAt": "2026-10-22T14:30:00Z",
+      "headline": "Risk-off: stocks lower, led by chips and AI names, as Tesla, Meta and Lam Research earnings failed to impress and oil pushed toward $100 on Saudi attacks and reports of planned US-Israel strikes on Iran.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,670",
+          "change": "-1.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "29,232",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,664",
+          "change": "-0.4%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,772",
+          "change": "-0.3%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.05%",
+          "change": "-8 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "18.6",
+          "change": "+12%"
+        },
+        {
+          "label": "WTI",
+          "value": "$98.9",
+          "change": "+1.8%"
+        },
+        {
+          "label": "Brent",
+          "value": "$111.8",
+          "change": "+2.7%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,067",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$81,646",
+          "change": "-2.8%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Initial jobless claims (wk 10/17)",
+          "actual": "194K",
+          "consensus": "200K",
+          "prior": "200K (rev.)",
+          "read": "lowest since July; low-fire labor market",
+          "reaction": "futures held ~-1% S&P / -1.6% NDX; 10-yr kept sliding to ~5.05% on risk-off"
+        },
+        {
+          "name": "Continuing claims (wk 10/10)",
+          "actual": "1.728M",
+          "consensus": "1.72M",
+          "prior": "1.703M (rev.)",
+          "read": "slightly firmer; still historically low",
+          "reaction": "no incremental move"
+        }
+      ],
+      "drivers": [
+        "AI-trade fatigue: Tesla cut 2026 capex to about $20B from about $25B and fell about 5% pre-market before paring; Meta beat on revenue but booked a roughly $10B legal charge and narrowed capex to $135-145B, shares down about 6% early. Lam Research fell 7-10% on a supply-constrained outlook; SOX -3% with NVDA, AMD, INTC and MRVL all lower.",
+        "Oil: Houthi strikes on Saudi oil infrastructure, the State Dept ordering non-emergency staff out of Saudi Arabia, and a NYT report of a short but intensive US-Israel operation against Iran after the midterms. Brent hit a five-month high near $112; WTI near $99.",
+        "Rates and Fed: FOMC is in blackout ahead of Oct 27-28; FedWatch prices about 87% odds of a hold, with a December hike widely expected. Yields are falling today on risk-off flows, not on the data.",
+        "Overseas: Asia sold off hard (Nikkei -2.7%, Hang Seng -3.0%, KOSPI -3.5%, Taiwan -1.8%); Europe lower (Stoxx 600 -0.6%, CAC -1.3%, DAX -0.5%) after a hot UK CPI print of 3.5%."
+      ],
+      "calendar": [
+        {
+          "time": "9:00 CT",
+          "item": "Leading Index (Sep) - released",
+          "consensus": "0.0% actual vs -0.1% cons."
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA natural gas storage",
+          "consensus": "+80 Bcf"
+        },
+        {
+          "time": "10:00 CT",
+          "item": "Kansas City Fed manufacturing (Oct)",
+          "consensus": "18 (prior 20)"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "4-week and 8-week bill auctions",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "5-year TIPS auction",
+          "consensus": "prior 1.955%"
+        },
+        {
+          "time": "All day",
+          "item": "Fed: no speakers - FOMC blackout ahead of Oct 27-28 meeting",
+          "consensus": "~87% hold priced"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "PG beat ($2.00 vs $1.88), LMT beat ($7.97 vs $7.52), CMCSA beat ($1.07 vs $0.99), HON, UNP, NSC, DOW, BX, VLO beat; SPOT EPS miss but shares up; AAL cut Q4 outlook on fuel; SNA missed",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Newmont (NEM), Bloom Energy (BE), Deckers (DECK), Omnicom (OMC), Western Digital (WDC)",
+          "consensus": "NEM $1.95, BE $0.69, DECK $1.79, OMC $2.67, WDC $4.11"
+        },
+        {
+          "time": "Fri 8:45 CT",
+          "item": "S&P Global flash PMIs; Michigan sentiment 9:00 CT; AXP earnings pre-bell",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "TSLA",
+          "move": "-2% (was -5% pre-mkt)",
+          "why": "EPS beat ($0.48 vs $0.45), revenue flat y/y at $28.05B; 2026 capex cut to ~$20B read as a slower AI/robotics pivot"
+        },
+        {
+          "ticker": "META",
+          "move": "-6%",
+          "why": "Revenue beat and 2-for-1 split via non-voting Class C dividend, but ~$10B legal charge and capex narrowed higher to $135-145B"
+        },
+        {
+          "ticker": "LRCX",
+          "move": "-7% to -10%",
+          "why": "Record quarter ($8.22B rev, $2.20 EPS) but supply constraints cap December guide; China revenue to fall meaningfully"
+        },
+        {
+          "ticker": "IBM",
+          "move": "-4.6%",
+          "why": "Results underwhelmed despite a sales beat"
+        },
+        {
+          "ticker": "LMT",
+          "move": "+5%",
+          "why": "Q3 beat ($7.97 vs $7.52) and a US deal for a minimum of 850 F-35 jets; defense bid on Middle East headlines"
+        },
+        {
+          "ticker": "PG",
+          "move": "+3%",
+          "why": "Fiscal Q1 beat ($2.00 vs $1.88) on $23.28B revenue; limited price hikes still drawing customers"
+        }
+      ],
+      "sources": [
+        {
+          "title": "MT Newswires - ETFs, equity futures lower pre-bell amid jobless claims",
+          "url": "https://app.bigdata.com/documents/8FB44DE27D46EF7C9175FB79FB5B24C2?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Tech, oil worries undercut Wall Street pre-bell",
+          "url": "https://app.bigdata.com/documents/FE9DEB0C546138604948A934DA1B781A?cnum=1"
+        },
+        {
+          "title": "CNBC - Treasury yields fall as investors weigh Middle East tensions and jobs data",
+          "url": "https://app.bigdata.com/documents/9682E8403751C45F90E59F559313D879?cnum=2"
+        },
+        {
+          "title": "CNBC - Jobless claims near the lowest since the 1960s",
+          "url": "https://app.bigdata.com/documents/4C7DADA08181E6B3B1BC59612B60E715?cnum=1"
+        },
+        {
+          "title": "CNBC - Sellers are back in tech, bear market grips Chinese stocks",
+          "url": "https://app.bigdata.com/documents/D6DF57F897535CE67068DD6C8A673043?cnum=3"
+        },
+        {
+          "title": "CNBC - Brent crude tops $112 after Trump says no negotiations with Iran",
+          "url": "https://app.bigdata.com/documents/A26E0F19D1AA8A12C63D96358C20D98A?cnum=3"
+        },
+        {
+          "title": "MT Newswires - Tesla Q3 adjusted earnings, revenue fall",
+          "url": "https://app.bigdata.com/documents/A8BFA1A74BFA2290CCDAF37D606FFE9E?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Stocks fall pre-bell as traders digest Meta, Tesla earnings",
+          "url": "https://app.bigdata.com/documents/85B2FEECAF9CE9EA6B8CF85134414C46?cnum=2"
+        },
+        {
+          "title": "Yahoo Finance - Chip stocks break a bear trap after a $2.6 trillion rout",
+          "url": "https://app.bigdata.com/documents/263140F28E035FC794A624ED00B454C1?cnum=1"
+        },
+        {
+          "title": "Yahoo Finance - Meta and chip stocks decline as AI trade comes under pressure",
+          "url": "https://app.bigdata.com/documents/57086BB51DC5C2313B944ABE65E78450?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Oil prices climb as fears mount over Middle East escalation",
+          "url": "https://app.bigdata.com/documents/CA88DC73D2CE41F77078D639548060EA?cnum=1"
+        },
+        {
+          "title": "Zero Hedge - Futures slide as market runs out of AI patience, oil jumps on Saudi attacks",
+          "url": "https://app.bigdata.com/documents/672EB059E970D9B7F67DC7A53353E1D0?cnum=4"
+        },
+        {
+          "title": "Benzinga - Stock market today: futures drop following Asian sell-off, Middle East tensions",
+          "url": "https://app.bigdata.com/documents/5469A0E49F233412E5CB37B53D5708D7?cnum=2"
+        },
+        {
+          "title": "Perpetual - Weekly economic update (FOMC blackout)",
+          "url": "https://app.bigdata.com/documents/F471FE8C7F09C87EA902CEBEEF50C5E3?cnum=7"
+        },
+        {
+          "title": "Meta Platforms Q3 2026 earnings call transcript (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/AD6027617962E3E6AD3ECFD93A00E8D8?cnum=28"
+        },
+        {
+          "title": "Zacks - Inflamed oil prices send pre-markets lower",
+          "url": "https://www.zacks.com/stock/news/3013001/inflamed-oil-prices-send-pre-markets-lower?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Lam Research Q1 earnings beat on systems sales and margin gains",
+          "url": "https://www.zacks.com/stock/news/3012800/lam-research-q1-earnings-beat-on-systems-sales-and-margin-gains?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Bigdata.com market tearsheet (FMP data)",
+          "url": "https://bigdata.com"
+        }
+      ],
+      "id": "2026-10-22-morning"
+    }
+  ]
 }
