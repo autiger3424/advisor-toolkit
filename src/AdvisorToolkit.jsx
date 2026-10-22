@@ -1,5 +1,6 @@
 import { useState } from "react";
 import WeeklyIdeas from "./WeeklyIdeas";
+import MarketBrief, { latestBrief } from "./MarketBrief";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -424,7 +425,7 @@ const palette = {
 };
 
 function AdvisorToolkit() {
-  const [activeTab, setActiveTab] = useState("trusts");
+  const [activeTab, setActiveTab] = useState(null);
   const [trustFilter, setTrustFilter] = useState("all");
   const [selectedTrust, setSelectedTrust] = useState(null);
   const [calcMode, setCalcMode] = useState("compound");
@@ -440,16 +441,44 @@ function AdvisorToolkit() {
   const [ssSubTab, setSsSubTab] = useState("keyfigs");
   const [estateSubTab, setEstateSubTab] = useState("statemap");
 
-  const tabs = [
-    { id: "trusts", label: "Trusts", icon: "📜" },
-    { id: "tax", label: "Tax Ref", icon: "📊" },
-    { id: "retire", label: "Retire", icon: "🏦" },
-    { id: "ss", label: "Soc Sec", icon: "🏛️" },
-    { id: "estate", label: "Estate", icon: "⚰️" },
-    { id: "checklist", label: "Lists", icon: "✅" },
-    { id: "calc", label: "Calc", icon: "🧮" },
-    { id: "ideas", label: "Ideas", icon: "📈" },
+  // ─ Navigation ──
+  // Five bottom tabs. Reference, Tools and Markets each hold a group of
+  // modules, switched with a pill row at the top of the section; the
+  // last module opened in each group is remembered for the session.
+  const modules = {
+    trusts:    { label: "Trusts",     icon: "📜", group: "reference", blurb: "11 trust types, benefits, considerations" },
+    tax:       { label: "Tax Ref",    icon: "📊", group: "reference", blurb: "2026 brackets, rates, form guide" },
+    retire:    { label: "Retire",     icon: "🏦", group: "reference", blurb: "Contribution limits, RMDs, IRMAA" },
+    ss:        { label: "Soc Sec",    icon: "🏛️", group: "reference", blurb: "FRA, claiming, taxation, Medicare" },
+    estate:    { label: "Estate",     icon: "⚰️", group: "reference", blurb: "State death tax map, gift rules" },
+    calc:      { label: "Calculators", icon: "🧮", group: "tools",    blurb: "Growth, RMD, TEY, Roth window, loans" },
+    checklist: { label: "Checklists", icon: "✅", group: "tools",     blurb: "Meeting prep and planning lists" },
+    ideas:     { label: "Ideas",      icon: "📈", group: "markets",   blurb: "Weekly core and halal idea lists" },
+    brief:     { label: "Brief",      icon: "📰", group: "markets",   blurb: "Morning and afternoon market briefs" },
+  };
+  const sections = [
+    { id: "home",      label: "Home",      icon: "⌂" },
+    { id: "reference", label: "Reference", icon: "📚" },
+    { id: "tools",     label: "Tools",     icon: "🧮" },
+    { id: "markets",   label: "Markets",   icon: "📈" },
+    { id: "more",      label: "More",      icon: "•••" },
   ];
+  const [section, setSection] = useState("home");
+  const [lastModule, setLastModule] = useState({ reference: "trusts", tools: "calc", markets: "brief" });
+  const groupModules = (g) => Object.entries(modules).filter(([, m]) => m.group === g).map(([id, m]) => ({ id, ...m }));
+  const openModule = (id) => {
+    const g = modules[id].group;
+    setSection(g);
+    setLastModule((p) => ({ ...p, [g]: id }));
+    setActiveTab(id);
+    setSelectedTrust(null);
+  };
+  const openSection = (id) => {
+    setSection(id);
+    setSelectedTrust(null);
+    if (lastModule[id]) setActiveTab(lastModule[id]); else setActiveTab(null);
+  };
+  const todayBrief = latestBrief();
 
   const s = {
     root: { fontFamily: fonts.body, background: palette.bg, color: palette.text, minHeight: "100vh", maxWidth: 480, margin: "0 auto", paddingBottom: 80, fontSize: 14 },
@@ -458,7 +487,14 @@ function AdvisorToolkit() {
     headerSub: { fontSize: "0.7rem", color: palette.textMuted, margin: "2px 0 0", letterSpacing: "0.15em", textTransform: "uppercase" },
     nav: { position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: palette.card, borderTop: `1px solid ${palette.border}`, display: "flex", zIndex: 100, padding: "6px 0 env(safe-area-inset-bottom, 8px)" },
     navBtn: (active) => ({ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, padding: "6px 4px", border: "none", background: "none", color: active ? palette.accent : palette.textMuted, cursor: "pointer", fontSize: "0.65rem", fontWeight: active ? 700 : 500, fontFamily: fonts.body, transition: "color 0.2s" }),
-    navIcon: { fontSize: "1.1rem" },
+    navIcon: { fontSize: "1.1rem", lineHeight: 1.2, height: 20, display: "flex", alignItems: "center" },
+    moduleRow: { display: "flex", gap: 6, marginBottom: 14, overflowX: "auto", paddingBottom: 2, scrollbarWidth: "none" },
+    homeGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 },
+    homeCard: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "12px", cursor: "pointer", minHeight: 78 },
+    homeIcon: { fontSize: "1.3rem", marginBottom: 4 },
+    homeLabel: { fontFamily: fonts.display, fontSize: "0.9rem", fontWeight: 700, color: palette.text },
+    homeBlurb: { fontSize: "0.66rem", color: palette.textMuted, marginTop: 2, lineHeight: 1.4 },
+    groupLabel: { fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, margin: "14px 0 8px" },
     section: { padding: "16px" },
     card: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "14px", marginBottom: 10, cursor: "pointer", transition: "all 0.2s" },
     pill: (active, color) => ({ padding: "5px 12px", borderRadius: 16, border: `1px solid ${active ? (color || palette.accent) : palette.border}`, background: active ? (color || palette.accent) : "transparent", color: active ? (color ? "#fff" : palette.bg) : palette.textDim, fontSize: "0.7rem", fontWeight: 600, cursor: "pointer", fontFamily: fonts.body, whiteSpace: "nowrap" }),
@@ -547,7 +583,80 @@ function AdvisorToolkit() {
       </div>
 
       <div style={s.section}>
-        <div style={s.disclaimer}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
+        {section !== "home" && (
+          <div style={s.disclaimer}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
+        )}
+
+        {/* ════════ HOME ════════ */}
+        {section === "home" && (
+          <>
+            {todayBrief && (
+              <div style={{ ...s.card, cursor: "pointer" }} onClick={() => openModule("brief")}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+                  <span style={s.badge(todayBrief.session === "morning" ? palette.warn : palette.accent)}>{todayBrief.session === "morning" ? "Pre-market" : "Post-close"}</span>
+                  <span style={{ fontSize: "0.66rem", color: palette.textMuted }}>{(() => { const [y, m, d] = todayBrief.date.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })()}</span>
+                </div>
+                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.text, lineHeight: 1.4 }}>{todayBrief.headline}</div>
+                <div style={{ fontSize: "0.66rem", color: palette.accent, marginTop: 6 }}>Open the brief →</div>
+              </div>
+            )}
+
+            {["reference", "tools", "markets"].map((g) => (
+              <div key={g}>
+                <div style={s.groupLabel}>{sections.find((x) => x.id === g).label}</div>
+                <div style={s.homeGrid}>
+                  {groupModules(g).map((m) => (
+                    <div key={m.id} style={s.homeCard} onClick={() => openModule(m.id)}>
+                      <div style={s.homeIcon}>{m.icon}</div>
+                      <div style={s.homeLabel}>{m.label}</div>
+                      <div style={s.homeBlurb}>{m.blurb}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div style={{ ...s.disclaimer, marginTop: 18, marginBottom: 0 }}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
+          </>
+        )}
+
+        {/* ════════ MODULE PILLS (Reference / Tools / Markets) ════════ */}
+        {["reference", "tools", "markets"].includes(section) && (
+          <div style={s.moduleRow}>
+            {groupModules(section).map((m) => (
+              <button key={m.id} style={s.pill(activeTab === m.id)} onClick={() => openModule(m.id)}>{m.icon} {m.label}</button>
+            ))}
+          </div>
+        )}
+
+        {/* ════════ MORE ════════ */}
+        {section === "more" && (
+          <>
+            <div style={{ ...s.card, cursor: "default" }}>
+              <div style={{ fontFamily: fonts.display, fontSize: "1rem", fontWeight: 700, color: palette.accent, marginBottom: 6 }}>About this app</div>
+              <div style={{ fontSize: "0.78rem", color: palette.textDim, lineHeight: 1.6 }}>
+                A reference and calculator hub for advisor–client conversations: trusts, tax, retirement, Social Security, estate and gift rules, planning checklists, and a markets corner with weekly idea lists and twice-daily briefs.
+              </div>
+            </div>
+            <div style={{ ...s.card, cursor: "default" }}>
+              <div style={{ fontFamily: fonts.display, fontSize: "1rem", fontWeight: 700, color: palette.accent, marginBottom: 6 }}>Data vintage</div>
+              <div style={{ fontSize: "0.78rem", color: palette.textDim, lineHeight: 1.7 }}>
+                <div>Tax year <span style={{ fontFamily: fonts.mono, color: palette.text }}>2026</span> — IRS Rev. Proc. 2025-32, Notice 2025-67</div>
+                <div>Estate exemption <span style={{ fontFamily: fonts.mono, color: palette.text }}>$15M</span> per person</div>
+                <div>Medicare IRMAA tiers — 2026 table</div>
+                <div>Weekly ideas — regenerated Sundays (FMP, Twelve Data)</div>
+                <div>Market briefs — weekdays 7:45 am and 3:20 pm CT (CNBC, Bigdata.com, FMP, Zacks)</div>
+              </div>
+            </div>
+            <div style={{ ...s.card, cursor: "default" }}>
+              <div style={{ fontFamily: fonts.display, fontSize: "1rem", fontWeight: 700, color: palette.accent, marginBottom: 6 }}>Using the markets corner</div>
+              <div style={{ fontSize: "0.78rem", color: palette.textDim, lineHeight: 1.6 }}>
+                Idea lists and briefs are reference material only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account. Nothing here is investment advice.
+              </div>
+            </div>
+            <div style={{ fontSize: "0.66rem", color: palette.textMuted, textAlign: "center", marginTop: 8 }}>Advisor Toolkit v2.1</div>
+          </>
+        )}
 
         {/* ════════ TRUSTS ════════ */}
         {activeTab === "trusts" && !selectedTrust && (
@@ -1016,6 +1125,9 @@ function AdvisorToolkit() {
 
         {/* ════════ WEEKLY IDEAS ════════ */}
         {activeTab === "ideas" && <WeeklyIdeas />}
+
+        {/* ════════ MARKET BRIEF ════════ */}
+        {activeTab === "brief" && <MarketBrief />}
 
         {/* ════════ CALCULATORS ════════ */}
         {activeTab === "calc" && (
@@ -1491,9 +1603,9 @@ function AdvisorToolkit() {
         )}
       </div>
       <div style={s.nav}>
-        {tabs.map(t => (
-          <button key={t.id} style={s.navBtn(activeTab === t.id)} onClick={() => { setActiveTab(t.id); setSelectedTrust(null); }}>
-            <span style={s.navIcon}>{t.icon}</span>
+        {sections.map(t => (
+          <button key={t.id} style={s.navBtn(section === t.id)} onClick={() => openSection(t.id)}>
+            <span style={{ ...s.navIcon, ...(t.id === "home" || t.id === "more" ? { fontSize: t.id === "home" ? "1.25rem" : "0.9rem", fontWeight: 700, letterSpacing: t.id === "more" ? "0.05em" : 0 } : {}) }}>{t.icon}</span>
             {t.label}
           </button>
         ))}
