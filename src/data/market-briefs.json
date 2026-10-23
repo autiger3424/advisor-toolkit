@@ -3,6 +3,269 @@
   "briefs": [
     {
       "date": "2026-10-23",
+      "session": "afternoon",
+      "generatedAt": "2026-10-23T20:35:00Z",
+      "headline": "Stocks closed lower and the Dow dropped 653 points as oil jumped back above $100 on fresh U.S.-Iran escalation fears, spreading Thursday's AI selloff into cyclicals and consumer names; the Nasdaq briefly turned positive on a chip bounce before fading, and the S&P and Nasdaq logged a second straight weekly loss.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,623",
+          "change": "-0.5%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,955",
+          "change": "-0.2%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,215",
+          "change": "-1.2%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,776",
+          "change": "-0.3%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.00%",
+          "change": "+4bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.7",
+          "change": "+3.4%"
+        },
+        {
+          "label": "WTI",
+          "value": "$103.24",
+          "change": "+3.8%"
+        },
+        {
+          "label": "Brent",
+          "value": "$116.67",
+          "change": "+3.1%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,010",
+          "change": "-1.2%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$81,250",
+          "change": "-0.1%"
+        }
+      ],
+      "data": [
+        {
+          "name": "S&P Global flash mfg PMI (Oct)",
+          "actual": "56.0",
+          "consensus": "55.5",
+          "prior": "55.9",
+          "read": "firmer, 53-month high; selling prices rising fastest since Aug 2022",
+          "reaction": "yields +4bp"
+        },
+        {
+          "name": "S&P Global flash services PMI (Oct)",
+          "actual": "57.9",
+          "consensus": "58.0",
+          "prior": "58.8",
+          "read": "in line, slower",
+          "reaction": "muted"
+        },
+        {
+          "name": "UMich sentiment final (Oct)",
+          "actual": "48.0",
+          "consensus": "46.3",
+          "prior": "48.1",
+          "read": "revised up but still a 5-month low; 1-yr inflation expectations 4.7%, 5-10yr 3.5% (highest since May)",
+          "reaction": "staples sold off"
+        }
+      ],
+      "drivers": [
+        "Oil/Iran: Iran said it is ready for asymmetric warfare and has plans to target Gulf undersea cables; Aramco reportedly evacuated its Dhahran HQ amid Houthi strikes; reports persist of U.S./Israel strike plans after the Nov 3 midterms. WTI back above $100, Brent at a six-month high, energy ETF at a record; airlines fell 4%+. Versus the morning read, the Dow drop was twice what futures implied and yields rose instead of easing.",
+        "AI trade, day two: semis rebounded (Micron +2-4%, AMD +1.7%, Qualcomm +1.8%) and tech was one of only three green sectors, but selling broadened into financials, industrials and staples. SK hynix shelved its U.S. Solidigm IPO; Meta CDS spreads at records.",
+        "American Express -3.5%: EPS $4.68 beat (~$4.48 est.), revenue $20.06B slightly light; raised full-year EPS guidance but announced a 5% workforce cut (~3,500 jobs) and a $336M restructuring charge.",
+        "Data: flash manufacturing PMI 56.0 vs 55.5 expected (53-month high, selling prices rising fastest since Aug 2022); UMich final sentiment 48.0 vs 46.3 prelim but still a five-month low with inflation expectations at the highest since May. Firm growth plus sticky inflation offered no relief on rates ahead of Wednesday's Fed decision."
+      ],
+      "sectors": {
+        "leaders": "Energy (+2.6-3%), Technology (+0.5%), Real Estate (flat)",
+        "laggards": "Consumer Staples (-1.9%), Communication Services (-1.8%), Consumer Discretionary (-1.7%), Financials (-1.3%), Industrials (-1.3%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "n/a",
+          "move": "",
+          "why": "No major companies report after Friday's close."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Mon: Chicago Fed National Activity Index (Sep) - low impact; no market-moving 7:30 CT print Monday",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Mon: 2-year Treasury note auction",
+          "consensus": ""
+        },
+        {
+          "time": "Mon",
+          "item": "Earnings: Verizon (pre-market); Cadence Design, Amkor, Rambus, BioMarin (after close)",
+          "consensus": ""
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Tue: Durable goods orders (Sep); Boeing earnings pre-market",
+          "consensus": "+0.6%"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Tue: Conference Board consumer confidence (Oct); new home sales",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "Wed: Fed rate decision (hold expected; hike odds ~5%); press conference 1:30 CT; Alphabet and Microsoft report after close",
+          "consensus": "4.00%"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Thu: Q3 GDP advance; Sept core PCE (0.3% m/m, 3.1% y/y est.); initial jobless claims (196K est.); Amazon reports after close",
+          "consensus": "GDP 3.0%"
+        },
+        {
+          "time": "Nov 3",
+          "item": "U.S. midterm elections",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "RHI",
+          "move": "+21.7%",
+          "why": "Q3 beat; talent-solutions unit returned to growth."
+        },
+        {
+          "ticker": "LKQ",
+          "move": "-22%",
+          "why": "Preannounced Q3 miss, withdrew full-year guidance, CEO out; Europe ERP disruption drove the shortfall."
+        },
+        {
+          "ticker": "CCI",
+          "move": "+10.7%",
+          "why": "Reports SpaceX is seeking leases on roughly 80,000 U.S. cell sites."
+        },
+        {
+          "ticker": "CORT",
+          "move": "-12% to -20%",
+          "why": "Rival Genmab posted strong Phase 3 ovarian-cancer data."
+        },
+        {
+          "ticker": "SLM",
+          "move": "-9%",
+          "why": "Cut full-year EPS guidance on higher charge-offs."
+        },
+        {
+          "ticker": "AXP",
+          "move": "-3.5%",
+          "why": "Revenue slightly light; 5% workforce cut and $336M charge overshadowed an EPS beat."
+        },
+        {
+          "ticker": "PANW",
+          "move": "+5% to +7%",
+          "why": "Cybersecurity group (also NET, SAIL) rallied on an Evercore security-budget survey."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance: Stock market today, Dow sinks 600 points to cap a volatile week",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html"
+        },
+        {
+          "title": "MT Newswires via Bigdata.com: US equity markets end lower as oil, yields gain",
+          "url": "https://app.bigdata.com/documents/848AF6A3E42F19381E4DA0FD3E836D11?cnum=1"
+        },
+        {
+          "title": "MT Newswires via Bigdata.com: Oil rises as Iran says ready for asymmetric warfare",
+          "url": "https://app.bigdata.com/documents/1A306241D33BF7C9F722DB58340F3F0A?cnum=1"
+        },
+        {
+          "title": "Nikkei via Bigdata.com: Dow falls; selling in cyclical and consumer sectors",
+          "url": "https://app.bigdata.com/documents/44905273130BA2E8106E58B75603B807?cnum=1&cnum=2"
+        },
+        {
+          "title": "Benzinga via Bigdata.com: Oil tops $100, XLE record, Russell 1000 movers",
+          "url": "https://app.bigdata.com/documents/059876294F0ADB582C9CBB007D29AC2C?cnum=1"
+        },
+        {
+          "title": "Benzinga via Bigdata.com: LKQ tumbles after Europe slump, leadership shakeup",
+          "url": "https://app.bigdata.com/documents/291618D29AC20BC5FF1B8D5A462D66FE?cnum=1"
+        },
+        {
+          "title": "Benzinga via Bigdata.com: Micron, semis rebound",
+          "url": "https://app.bigdata.com/documents/AC0EF03DE76B45F04176A978DEAACDF1?cnum=1"
+        },
+        {
+          "title": "CNBC via Bigdata.com: American Express cutting 5% of workforce",
+          "url": "https://app.bigdata.com/documents/17B8AFEAF0CDC4F7B399ADBA64768F58?cnum=1"
+        },
+        {
+          "title": "MT Newswires via Bigdata.com: AmEx misses revenue views, raises EPS guide",
+          "url": "https://app.bigdata.com/documents/304E7C9F9421219ADB920A5E824839DF?cnum=3"
+        },
+        {
+          "title": "MT Newswires via Bigdata.com: Daily roundup of US economic data, Oct 23",
+          "url": "https://app.bigdata.com/documents/56D6E43BB5D42D58F5D6412E3B8347C4?cnum=1"
+        },
+        {
+          "title": "MT Newswires via Bigdata.com: Consumer sentiment at five-month low",
+          "url": "https://app.bigdata.com/documents/1489F868A26F171F1288E70A033A0535?cnum=1"
+        },
+        {
+          "title": "CNBC Pro via Bigdata.com: Next week brings major risks for the stock market",
+          "url": "https://app.bigdata.com/documents/AF355473B65806C04CDC791B30E4CAC2?cnum=1"
+        },
+        {
+          "title": "Alliance News via Bigdata.com: Week ahead, Fed and PCE",
+          "url": "https://app.bigdata.com/documents/63E699867E2667E19C2CDBE1CBD0FD84?cnum=26"
+        },
+        {
+          "title": "Yahoo Finance via Bigdata.com: Genmab surges, Corcept falls",
+          "url": "https://app.bigdata.com/documents/9D7D081201D05469B05F76671BDE312F?cnum=1"
+        },
+        {
+          "title": "Bigdata.com market and country tearsheets",
+          "url": "https://bigdata.com"
+        },
+        {
+          "title": "Zacks: Pre-Markets Remain Spooked by AI Investment Capacity",
+          "url": "https://www.zacks.com/stock/news/3014005/pre-markets-remain-spooked-by-ai-investment-capacity?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: Robert Half Reports Q3 Earnings",
+          "url": "https://www.zacks.com/stock/news/3013400/robert-half-(rhi)-reports-q3-earnings:-what-key-metrics-have-to-say?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AXP - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AXP?utm_source=zacks_mcp"
+        },
+        {
+          "title": "RHI - Zacks",
+          "url": "https://www.zacks.com/stock/quote/RHI?utm_source=zacks_mcp"
+        },
+        {
+          "title": "LKQ - Zacks",
+          "url": "https://www.zacks.com/stock/quote/LKQ?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-23-afternoon"
+    },
+    {
+      "date": "2026-10-23",
       "session": "morning",
       "generatedAt": "2026-10-23T12:50:00Z",
       "headline": "Futures modestly lower after Thursday's AI-led rout (Nasdaq -2.6%, worst day since June), with oil above $100 on Houthi strikes on Saudi infrastructure keeping inflation worries alive ahead of next week's Fed meeting; tech is trying to stabilize pre-bell while the Dow lags.",
