@@ -2,6 +2,261 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-10-23",
+      "session": "morning",
+      "generatedAt": "2026-10-23T12:50:00Z",
+      "headline": "Futures modestly lower after Thursday's AI-led rout (Nasdaq -2.6%, worst day since June), with oil above $100 on Houthi strikes on Saudi infrastructure keeping inflation worries alive ahead of next week's Fed meeting; tech is trying to stabilize pre-bell while the Dow lags.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "~7,680",
+          "change": "-0.3%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "~28,930",
+          "change": "-0.1%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,749",
+          "change": "-0.6%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "~2,778",
+          "change": "-0.2%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.98%",
+          "change": "+2bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.9",
+          "change": "+4.8%"
+        },
+        {
+          "label": "WTI",
+          "value": "$101.22",
+          "change": "+1.8%"
+        },
+        {
+          "label": "Brent",
+          "value": "$114.87",
+          "change": "+1.5%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,039",
+          "change": "-0.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$81,700",
+          "change": "+0.5%"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "AI financing fears: Meta (-7% Thursday) raised 2026 capex to $135-145B, posted its first negative free-cash-flow quarter and will issue nonvoting shares; Nvidia's Huang said capital for the AI buildout is scarce. NVDA -4.4%, AMD -8%, MU -6% Thursday; all inching higher pre-bell.",
+        "Oil: Houthi attacks on Saudi's Shaybah field and Red Sea ports, an Aramco HQ evacuation, and talk of renewed US strikes on Iran after the Nov 3 midterms pushed Brent to a five-month high; tanker rates are spiking.",
+        "Fed: blackout in effect ahead of the Oct 27-28 FOMC. Markets price a hold (roughly 83-85%), with another hike still expected by December. Next week also brings Microsoft, Alphabet and Amazon earnings.",
+        "Treasuries caught a haven bid Thursday: the 10-year fell to 4.96% from 5.13% Wednesday and sits near 4.98% this morning. Defensives (staples, utilities, health care) led while tech lagged.",
+        "Overseas: Europe lower (DAX -0.8%, CAC -0.7%, FTSE -0.5%) on French yield stress and Kering/Volvo Cars earnings misses; Asia mixed as tech clawed back early losses (Hang Seng +0.7%, Kospi +0.3%, Nikkei -0.3%)."
+      ],
+      "calendar": [
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global flash Manufacturing PMI (Oct)",
+          "consensus": "55.6 (prior 55.9)"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global flash Services PMI (Oct)",
+          "consensus": "57.9 (prior 58.8)"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global flash Composite PMI (Oct)",
+          "consensus": "~57.6 (prior 58.4)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "UMich consumer sentiment, final Oct",
+          "consensus": "46.3 (prior 46.3)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "UMich 1-yr / 5-yr inflation expectations",
+          "consensus": "4.7% / 3.5%"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Baker Hughes rig count",
+          "consensus": "prior 459"
+        },
+        {
+          "time": "All day",
+          "item": "Fed speakers: none (FOMC blackout; meeting Oct 27-28)",
+          "consensus": "Hold ~83-85% priced"
+        },
+        {
+          "time": "All day",
+          "item": "Treasury coupon auctions: none on the calendar",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell (out)",
+          "item": "AXP Q3: EPS $4.68 vs $4.50 est, rev $20.06B vs $20.12B; FY EPS guide raised to $18.30-18.60",
+          "consensus": "Stock -2% pre"
+        },
+        {
+          "time": "Pre-bell (out)",
+          "item": "SLB Q3: EPS $0.64 vs $0.62 est, rev $9.45B vs $9.27B",
+          "consensus": "Beat"
+        },
+        {
+          "time": "Pre-bell (out)",
+          "item": "BAH FQ2: EPS $1.76 vs $1.48 est; FCNCA Q3: EPS $55.37 vs $46.18 est",
+          "consensus": "Beats"
+        },
+        {
+          "time": "Pre-bell (out)",
+          "item": "Autoliv Q3: EPS $2.19 vs $2.23 est; Volvo Cars swung to a loss, cutting 2,500 jobs",
+          "consensus": "Misses"
+        },
+        {
+          "time": "After bell",
+          "item": "No major reports scheduled",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "CCI",
+          "move": "+8%",
+          "why": "SpaceX reportedly in talks to lease ~80,000 US cell sites; AMT +5.6%, while AT&T, Verizon and T-Mobile fell 3%+ on carrier-competition fears."
+        },
+        {
+          "ticker": "AXP",
+          "move": "-2%",
+          "why": "Beat on EPS and raised full-year guidance, but revenue and billed business ($454B) came in a touch light vs estimates."
+        },
+        {
+          "ticker": "NEM",
+          "move": "-1% to -3%",
+          "why": "Beat (EPS $2.20 vs $2.11) but warned unit costs will trend higher in 2027; gold also lower."
+        },
+        {
+          "ticker": "WDC",
+          "move": "-1%",
+          "why": "Big beat, 17% dividend hike and strong guide, but management said HDD price growth will eventually cool; fell 6.4% Thursday."
+        },
+        {
+          "ticker": "MRNA",
+          "move": "-4.5%",
+          "why": "Extending Thursday's 17.6% drop on a reported leak of personalized melanoma-vaccine trial data (with Merck)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "MT Newswires - Tech Regains Footing Pre-Bell (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/9A8217BD1D49C031A8D9A3340C8D2DE1?cnum=1"
+        },
+        {
+          "title": "BNN Bloomberg - US futures under pressure as crude hits May levels (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/7DBC36573131CE949B5BE6D590AE7B38?cnum=1"
+        },
+        {
+          "title": "Benzinga - Will S&P 500 Open Up or Down Today? (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/29DDCB8D8DC14580649F82C5868463BC?cnum=1"
+        },
+        {
+          "title": "Benzinga - Stock Market Today: WDC, NEM, CCI in Focus (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/A3EF55B56A8AFCFA435EC08096B9B9E3?cnum=4&cnum=3"
+        },
+        {
+          "title": "Reuters via US News - Futures dip after AI rout, telecoms slide (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/F5FDE86A971CB2AA8E89B4DD18717C55?cnum=1"
+        },
+        {
+          "title": "Reuters via Sun Herald - Futures edge lower after AI selloff (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B999999C2BD29305165FF1491A23F64B?cnum=3"
+        },
+        {
+          "title": "MT Newswires - Social Buzz premarket movers (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/335A3F90BC68989B3FD45E2F0E1A511C?cnum=1"
+        },
+        {
+          "title": "Nasdaq/Zacks - Stock Market News for Oct 23, 2026 (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B9E5FF90C3EDFF186592E175FABBF426?cnum=1&cnum=3"
+        },
+        {
+          "title": "AOL/Reuters - Hedge fund returns worsen as tech selloff deepens (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/A306BC17606AF833AED2D3A2810CD44C?cnum=2"
+        },
+        {
+          "title": "Yahoo Finance - Futures drop premarket: NVDA, AMD, META in focus (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/3C4E8273DC545A9D98F3F9F649C3A061?cnum=3"
+        },
+        {
+          "title": "MT Newswires - Oil Update: Crude rallies on Middle East supply threat (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/6939A1C3C8A9A114994D4C85EA7B3ECF?cnum=1"
+        },
+        {
+          "title": "Alliance News - Oil rises on fears of fresh Iran strikes (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/764A9103FD6D66ECACE14CEE6351B8CE?cnum=1"
+        },
+        {
+          "title": "MT Newswires - American Express Q3 results (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/747BC404C97B8678AAE59CC9A0B6CEF0?cnum=1"
+        },
+        {
+          "title": "Yahoo Finance - Premarket movers: Crown Castle jumps on SpaceX talks (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B915251FFC89C8FA1E7780BCB0DFF5AD?cnum=3"
+        },
+        {
+          "title": "Alliance News - Week Ahead: ECB, Fed and BoJ to hold (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/63E699867E2667E19C2CDBE1CBD0FD84?cnum=28&cnum=16"
+        },
+        {
+          "title": "FXStreet - Dollar Index weakens as traders assess Fed outlook (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/69BE0212A6A5C41F8F1282502E76E591?cnum=2"
+        },
+        {
+          "title": "Yahoo Finance - Earnings, oil prices damp European bourses midday (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8C9C4977CB5885CE28BEC5658A8B3FC7?cnum=1"
+        },
+        {
+          "title": "Ambito - Oil rises to $115, Wall Street futures without defined trend (Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/C99065DBFB0581E1C531BB9CABDC712F?cnum=2"
+        },
+        {
+          "title": "Zacks - Stock Market News for Oct 23, 2026",
+          "url": "https://www.zacks.com/stock/news/3013461/stock-market-news-for-oct-23,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - American Express (AXP) Reports Q3 Earnings",
+          "url": "https://www.zacks.com/stock/news/3013787/american-express-(axp)-reports-q3-earnings:-what-key-metrics-have-to-say?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - SLB Q3 Earnings and Revenues Surpass Estimates",
+          "url": "https://www.zacks.com/stock/news/3013555/slb-(slb)-q3-earnings-and-revenues-surpass-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Western Digital Q1 Earnings & Revenues Beat",
+          "url": "https://www.zacks.com/stock/news/3013799/western-digital's-q1-earnings-&-revenues-beat,-dividend-hiked-by-17?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Bigdata.com market tearsheet and economic calendar",
+          "url": "https://bigdata.com"
+        }
+      ],
+      "id": "2026-10-23-morning"
+    },
+    {
       "date": "2026-10-22",
       "session": "afternoon",
       "generatedAt": "2026-10-22T20:34:00Z",
