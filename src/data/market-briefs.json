@@ -2,6 +2,253 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-10-26",
+      "session": "morning",
+      "generatedAt": "2026-10-26T13:04:25Z",
+      "headline": "Futures modestly higher after two losing weeks as oil pulls back from six-month highs on Iran diplomacy ahead of a Fed-and-Big-Tech week; Brazilian ADRs are down 20-45% pre-market after Lula won a fourth term.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "~7,640",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "~29,050",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "~52,400",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "~2,790",
+          "change": "+0.4%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.99%",
+          "change": "+1 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.2",
+          "change": "-1.1%"
+        },
+        {
+          "label": "WTI",
+          "value": "$101.31",
+          "change": "-1.9%"
+        },
+        {
+          "label": "Brent",
+          "value": "$115.17",
+          "change": "-1.3%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,034",
+          "change": "+0.7%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$80,230",
+          "change": "+0.2%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Chicago Fed National Activity Index (Sep)",
+          "actual": "+0.07",
+          "consensus": "-0.10",
+          "prior": "-0.04",
+          "read": "modestly firmer activity; low-impact print",
+          "reaction": "little reaction: S&P futures held ~+0.2%, 10-yr steady near 4.99%"
+        }
+      ],
+      "drivers": [
+        "Oil down about 2% after Trump ruled out an immediate strike on Iran and Qatari and Mecca-Pact mediators arrived in Tehran; Houthi strikes on Riyadh and Saudi pumping stations keep the risk premium alive after Brent closed Friday at a near six-month high.",
+        "Fed meets Tuesday-Wednesday with roughly 90% odds of a hold at 3.75-4.00%, but after hot inflation data markets lean toward a hawkish pause and a real chance of a December hike. ECB decides Thursday, Bank of Japan Friday.",
+        "AI and chip stocks remain fragile after last week's Meta capex-driven selloff; Microsoft, Alphabet and Amazon report Wednesday. Meta's new share sale drew Nvidia, AMD and Broadcom as $5B participants, helping the stock turn positive pre-market.",
+        "Brazil shock: EWZ -27% pre-market, Petrobras -20%, Itau -26%, Nu -24%, MercadoLibre -11% after Lula's upset win; Bolsonaro refuses to concede and the real is under pressure.",
+        "Overseas: Europe mixed (DAX about -0.8%, CAC +0.4%, Stoxx 600 flat); Asia mixed with the Nikkei -0.8% on chip selling, Kospi -1.5%, Hang Seng +0.5%."
+      ],
+      "calendar": [
+        {
+          "time": "9:30 CT",
+          "item": "Dallas Fed Manufacturing Index (Oct)",
+          "consensus": "7.0 (prior 9.8)"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "3-month and 6-month bill auctions",
+          "consensus": "prior 4.095% / 4.22%"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "2-year note auction",
+          "consensus": "prior 4.787%"
+        },
+        {
+          "time": "All day",
+          "item": "Fed speakers: none, FOMC blackout in effect ahead of Wednesday's decision",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Verizon (VZ) reported: EPS $1.31 vs $1.27 est, revenue $34.3B vs $34.8B est, guidance raised",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Earnings: Cadence (CDNS), Amkor (AMKR), Rambus (RMBS), Greenbrier (GBX), Simpson Mfg (SSD), Kforce (KFRC)",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "VZ",
+          "move": "flat to -1%",
+          "why": "Q3 EPS $1.31 beat $1.27 est, revenue $34.3B light vs $34.8B; raised 2026 EPS and postpaid-phone guidance, best Q3 phone adds in five years."
+        },
+        {
+          "ticker": "PBR",
+          "move": "-20%",
+          "why": "Brazil election shock after Lula's fourth-term win; state-controlled names hit hardest, EWZ on track for its worst day ever."
+        },
+        {
+          "ticker": "ITUB",
+          "move": "-26%",
+          "why": "Brazilian banks and fintechs (NU -24%, PAGS -29%, STNE -34%) slide as markets unwind Bolsonaro-victory positioning."
+        },
+        {
+          "ticker": "MELI",
+          "move": "-11%",
+          "why": "Brazil is its largest market; sold with the broader Brazil complex."
+        },
+        {
+          "ticker": "SGRY",
+          "move": "+21%",
+          "why": "FT reports Bon Secours Mercy Health in late-stage talks to buy a majority stake in a deal valued near $6B."
+        },
+        {
+          "ticker": "XNCR",
+          "move": "+27%",
+          "why": "Phase 1 XmAb819 data in kidney cancer at ESMO showed a 45.5% confirmed response rate."
+        },
+        {
+          "ticker": "META",
+          "move": "turned positive pre-market",
+          "why": "Dilution worries from its new share sale offset by Nvidia, AMD and Broadcom agreeing to buy $5B of the offering."
+        }
+      ],
+      "sources": [
+        {
+          "title": "MT Newswires - Oct 26, 2026 - US equity futures rise pre-bell, oil, Fed (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/5DF9371B918CB2B475711C4B7A72BA82?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Oct 26, 2026 - Earnings, central bank, oil views lift Wall Street (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/5A30A32A37E2CB608F7AA66CE229CF19?cnum=1"
+        },
+        {
+          "title": "Yahoo Finance - Oct 26, 2026 - Futures rise ahead of Fed decision and tech earnings (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/0F095D094374F23985CD91CB28558D52?cnum=1"
+        },
+        {
+          "title": "Yahoo News - Oct 26, 2026 - TSX futures climb, US futures 7:42 ET (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/47AA6E345935E5BEB71A9F98B7630F9F?cnum=2"
+        },
+        {
+          "title": "Benzinga - Oct 26, 2026 - Will S&P 500 open up or down (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/84554FE1D7E294BEBF71A965D49377AE?cnum=1"
+        },
+        {
+          "title": "Benzinga - Oct 26, 2026 - Stock market today, week's economic calendar (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/989B07DDF8180C0D67C58C09670D1292?cnum=6"
+        },
+        {
+          "title": "CNBC.com - Oct 26, 2026 - Treasury yields little changed ahead of Fed (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/3A68CE4650D30017F6949F4B69B06D5F?cnum=1"
+        },
+        {
+          "title": "Yahoo Finance / WSJ - Oct 26, 2026 - Oil falls as traders weigh US-Iran diplomacy (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/B118CB994E509B783BDAF08EF9E65705?cnum=1"
+        },
+        {
+          "title": "Nasdaq / RTTNews - Oct 26, 2026 - Oil retreats from six-month highs (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/69C5D6F11D595EB13891FFC4BC47DF82?cnum=1"
+        },
+        {
+          "title": "FXStreet - Oct 26, 2026 - Gold consolidates near $4,000 (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/BC90BEDB3F06A356EECB3AC36F9C2113?cnum=1"
+        },
+        {
+          "title": "ShareCast - Oct 26, 2026 - Europe open, central-bank decisions loom (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8DC486C06980AFF048968C9F0A2A0073?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Oct 26, 2026 - Central bank, oil, tech outlooks roil Asian markets (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/8349DF759F15457D078B7F40F5E88013?cnum=1"
+        },
+        {
+          "title": "BNN Bloomberg / AP - Oct 26, 2026 - World shares mostly advance (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/4CF3FAD8FC5F5CE39DE4E76211767C2D?cnum=2"
+        },
+        {
+          "title": "Benzinga - Oct 26, 2026 - Brazil ETFs crash more than 20% after Lula win (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/9A6EA0B89A6E7AA91EA6418D4F819083?cnum=1"
+        },
+        {
+          "title": "CNBC.com - Oct 26, 2026 - A shock in Brazil sends stocks plunging (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/A0025193F8D7DA75A116B22EAA09172B?cnum=2"
+        },
+        {
+          "title": "Benzinga - Oct 26, 2026 - MercadoLibre, Bradesco, Itau moving lower pre-market (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/402B944677E8BFE1E70C1F86FBC6B785?cnum=2"
+        },
+        {
+          "title": "Benzinga - Oct 26, 2026 - Surgery Partners up 20%, 20 stocks moving premarket (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/79FD69B49601B65754B38E7D48240242?cnum=1"
+        },
+        {
+          "title": "MT Newswires - Oct 26, 2026 - Verizon Q3 adjusted earnings, guidance lifted (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/FEEEFD72912184A70EF6574BBC52F9E4?cnum=1"
+        },
+        {
+          "title": "Alliance News - Oct 26, 2026 - Verizon lifts annual view (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/63251D886773EF68A7829BE5F3E348B5?cnum=1"
+        },
+        {
+          "title": "Edaily - Oct 26, 2026 - Meta turns upward pre-market, Nvidia, AMD, Broadcom participate (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/6D34C26EBF7C0333FD2724D952421319?cnum=2"
+        },
+        {
+          "title": "Reuters via AOL - Oct 26, 2026 - Futures edge up as oil falls (via Bigdata.com)",
+          "url": "https://app.bigdata.com/documents/81F6FA9390B0D89DA9142D21C343326B?cnum=1"
+        },
+        {
+          "title": "Bigdata.com market tearsheet and calendars",
+          "url": "https://bigdata.com"
+        },
+        {
+          "title": "Verizon Beats Q3 Earnings Estimates - Zacks, 10/26/2026",
+          "url": "https://www.zacks.com/stock/news/3014882/verizon-beats-q3-earnings-estimates-on-strong-margins,-revenues-miss?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Oct 26, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3014444/stock-market-news-for-oct-26,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "VZ - Zacks",
+          "url": "https://www.zacks.com/stock/quote/VZ?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-26-morning"
+    },
+    {
       "date": "2026-10-23",
       "session": "afternoon",
       "generatedAt": "2026-10-23T20:35:00Z",
