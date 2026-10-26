@@ -3,6 +3,257 @@
   "briefs": [
     {
       "date": "2026-10-26",
+      "session": "afternoon",
+      "generatedAt": "2026-10-26T20:32:00Z",
+      "headline": "Stocks closed higher and more than recovered Friday's losses, led by chips and AI names after Anthropic filed publicly for its IPO, while oil eased as Trump ruled out an immediate Iran strike.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,677",
+          "change": "+0.70%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "26,169",
+          "change": "+0.82%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,362",
+          "change": "+0.28%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,786",
+          "change": "+0.38%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.00%",
+          "change": "+0bp"
+        },
+        {
+          "label": "VIX",
+          "value": "18.49",
+          "change": "-4.9%"
+        },
+        {
+          "label": "WTI",
+          "value": "$101.46",
+          "change": "-1.8%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,026",
+          "change": "+0.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$79,800",
+          "change": "-0.3%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Dallas Fed manufacturing (Oct)",
+          "actual": "13.4",
+          "consensus": "7.0",
+          "prior": "9.8",
+          "read": "firmer",
+          "reaction": "muted"
+        },
+        {
+          "name": "Chicago Fed National Activity Index (Sep)",
+          "actual": "0.07",
+          "consensus": "-0.10",
+          "prior": "-0.08",
+          "read": "firmer",
+          "reaction": "muted"
+        },
+        {
+          "name": "2-yr note auction",
+          "actual": "4.708%",
+          "consensus": "",
+          "prior": "4.787%",
+          "read": "solid",
+          "reaction": "2-yr -1bp"
+        }
+      ],
+      "drivers": [
+        "AI trade bounced: Anthropic's public S-1 (ticker ANT) plus Meta's $95B equity-raise plan, with NVDA, AMD and AVGO signaling interest in up to $5B of it, re-energized semiconductors. Intel rose 4% on a New Street upgrade. Meta closed roughly flat.",
+        "Oil relief: WTI slipped back toward $101 after Trump said there would be no strike on Iran that day and Gulf mediators headed to Tehran. Crude remains above $100 with Houthi and Hormuz risks intact.",
+        "Brazil shock: Lula's surprise runoff win sent Brazilian assets into freefall. Bovespa fell 14%, the real dropped about 9%, and US-listed names XP (-48%), ITUB (-20%), NU (-17%) and PBR (-14%) plunged. Damage stayed contained to Brazil-linked names.",
+        "Fed week setup: the FOMC meets Tuesday and Wednesday with a hold at 3.75-4.00% expected Wednesday at 1pm CT; markets price roughly 78% odds of a December hike. Dallas Fed manufacturing beat and the Chicago Fed index turned positive."
+      ],
+      "sectors": {
+        "leaders": "Technology, Industrials, Consumer Discretionary",
+        "laggards": "Communication Services, Consumer Staples, Utilities"
+      },
+      "afterHours": [
+        {
+          "ticker": "CDNS",
+          "move": "pending",
+          "why": "Beat: EPS $2.11 vs $2.05 est., revenue $1.63B vs $1.61B; after-hours print not yet available"
+        },
+        {
+          "ticker": "CINF",
+          "move": "pending",
+          "why": "Big beat: EPS $2.86 vs $2.05 est., revenue $3.05B vs $2.64B"
+        },
+        {
+          "ticker": "HIG",
+          "move": "pending",
+          "why": "EPS $3.50 vs $3.17 est.; revenue $7.22B slightly below $7.37B"
+        },
+        {
+          "ticker": "WHR",
+          "move": "pending",
+          "why": "Big miss: EPS -$0.21 vs +$0.73 est.; revenue $3.68B vs $3.93B"
+        },
+        {
+          "ticker": "AMKR",
+          "move": "pending",
+          "why": "Slight miss: EPS $0.76 vs $0.78 est.; revenue $1.99B vs $2.04B"
+        },
+        {
+          "ticker": "CLS",
+          "move": "-5.1% into close",
+          "why": "Fell ahead of its after-close report; results still pending"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Durable goods orders (Sep)",
+          "consensus": "+0.6% to +1.5% headline (sources differ); ex-transport +0.6%"
+        },
+        {
+          "time": "8:00 CT",
+          "item": "S&P Case-Shiller home prices (Aug)",
+          "consensus": "+2.5% y/y"
+        },
+        {
+          "time": "8:00 CT",
+          "item": "FHFA house price index (Aug)",
+          "consensus": "+0.1% m/m"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "New home sales (Sep)",
+          "consensus": "650K vs 684K prior"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Conference Board consumer confidence (Oct)",
+          "consensus": "81.0 vs 81.9 prior"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Richmond Fed manufacturing (Oct)",
+          "consensus": "1 vs -2 prior"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "5-year note auction",
+          "consensus": "prior 5.033%"
+        },
+        {
+          "time": "All day",
+          "item": "FOMC meeting begins (decision Wed 1:00 CT)",
+          "consensus": "Hold at 3.75-4.00%"
+        },
+        {
+          "time": "Before open",
+          "item": "Earnings: BA, KO, UPS, PYPL, SPGI, HCA, SHW, ECL, PCAR, RCL, HLT, JCI, ITW, GLW, AMT, FCX, SOFI, NVS, HSBC",
+          "consensus": ""
+        },
+        {
+          "time": "After close",
+          "item": "Earnings: V, NXPI, FFIV, TER, STX, QRVO, LOGI, ENPH, EQT, WM, PPG, HOOD, CSGP, LPLA, BKR",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "TSLA",
+          "move": "+5.2%",
+          "why": "Barclays upgrade to Overweight with $450 target citing SpaceX merger upside; broke above its 200-day"
+        },
+        {
+          "ticker": "INTC",
+          "move": "+4.0%",
+          "why": "New Street upgrade to Buy, $125 target, on a server-CPU shortage thesis; reports Thursday"
+        },
+        {
+          "ticker": "RRC",
+          "move": "+17.7%",
+          "why": "EQT agreed to buy Range Resources in an all-stock deal; EQT fell 3.4%"
+        },
+        {
+          "ticker": "XP",
+          "move": "-48%",
+          "why": "Brazil election fallout after Lula's win; NU -17%, ITUB -20%, EWZ -20%"
+        },
+        {
+          "ticker": "FICO",
+          "move": "-14%",
+          "why": "Analyst downgrades tied to pricing strategy"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock Market Today (Oct. 26, 2026) - TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-26-2026"
+        },
+        {
+          "title": "Stock market today: Anthropic IPO buzz reignites AI trade - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-26-dow-sp-500-nasdaq-101153035.html"
+        },
+        {
+          "title": "Stocks close higher as excitement over Anthropic IPO filing propels tech - CNBC",
+          "url": "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html"
+        },
+        {
+          "title": "FOMC Preview: To Hike Or Not To Hike? - Seeking Alpha (via FMP)",
+          "url": "https://seekingalpha.com/article/4957576-fomc-preview-to-hike-or-not-to-hike-thats-the-trap"
+        },
+        {
+          "title": "How major US stock indexes fared Monday - Yahoo! Finance (AP) via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/FA31C6B8E6095A2778A26760663ACDB5?cnum=1"
+        },
+        {
+          "title": "Stocks end higher on Anthropic IPO filing - Reuters via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/932F94BB44E531A30B7613137D862633?cnum=1"
+        },
+        {
+          "title": "Brazil's stock market plunges after Lula's election victory - Finwire via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/3FEBA7D28DE2D8446B17A3C01B28D0EB?cnum=1"
+        },
+        {
+          "title": "Oil Update: Futures slide as traders weigh Middle East diplomacy - MT Newswires via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/7418622F8612AF3A14A1830D8A7FC18D?cnum=1"
+        },
+        {
+          "title": "Meta seeks about $95 billion for AI buildout - Benzinga via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/F3F3544F1D247B58815179C041033A30?cnum=1"
+        },
+        {
+          "title": "What Is Going on with Intel Stock on Monday? - Benzinga via Bigdata.com",
+          "url": "https://app.bigdata.com/documents/CF6300E96E898251BDC9D9C8582252E2?cnum=1"
+        },
+        {
+          "title": "Why SpaceX Will Have to Pay a Premium for Tesla - Zacks",
+          "url": "https://www.zacks.com/commentary/3015065/why-spacex-will-have-to-pay-a-premium-for-tesla?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Bigdata.com",
+          "url": "https://bigdata.com"
+        }
+      ],
+      "id": "2026-10-26-afternoon"
+    },
+    {
+      "date": "2026-10-26",
       "session": "morning",
       "generatedAt": "2026-10-26T13:04:25Z",
       "headline": "Futures modestly higher after two losing weeks as oil pulls back from six-month highs on Iran diplomacy ahead of a Fed-and-Big-Tech week; Brazilian ADRs are down 20-45% pre-market after Lula won a fourth term.",
