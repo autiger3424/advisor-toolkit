@@ -3,6 +3,254 @@
   "briefs": [
     {
       "date": "2026-10-27",
+      "session": "afternoon",
+      "generatedAt": "2026-10-27T20:35:00Z",
+      "headline": "Stocks closed higher, Nasdaq +1.2%, as a Broadcom-arranged $63B financing package for Anthropic's AI chips reignited the semiconductor trade ahead of Wednesday's Fed decision; the S&P climbed steadily all day with no reversal.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,722.65",
+          "change": "+0.60%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "26,477.81",
+          "change": "+1.18%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,377.57",
+          "change": "+0.03%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,818.87",
+          "change": "+1.16%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.99%",
+          "change": "-1 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "17.51",
+          "change": "-4.8%"
+        },
+        {
+          "label": "WTI",
+          "value": "$100.08",
+          "change": "-1.7%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,075",
+          "change": "+0.9%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$80,600",
+          "change": "+0.7%"
+        }
+      ],
+      "data": [
+        {
+          "name": "CB Consumer Confidence (Oct)",
+          "actual": "91.7",
+          "consensus": "81.0",
+          "prior": "84.2",
+          "read": "much firmer; first rise in four months",
+          "reaction": "supported risk appetite"
+        },
+        {
+          "name": "Durable goods orders (Sep)",
+          "actual": "+1.8%",
+          "consensus": "+1.5%",
+          "prior": "+0.1%",
+          "read": "firmer",
+          "reaction": "growth looks resilient into the Fed"
+        },
+        {
+          "name": "New home sales (Sep)",
+          "actual": "676K",
+          "consensus": "650K",
+          "prior": "680K",
+          "read": "better than feared",
+          "reaction": "muted"
+        },
+        {
+          "name": "Case-Shiller 20-city home prices y/y (Aug)",
+          "actual": "+2.7%",
+          "consensus": "+2.5%",
+          "prior": "+2.5%",
+          "read": "slightly firmer",
+          "reaction": "muted"
+        }
+      ],
+      "drivers": [
+        "AI financing relief: Broadcom (+4%) unveiled a $63B special-purpose vehicle, funded by Bank of America, BlackRock, Citi and Morgan Stanley, that leases its AI hardware to Anthropic, easing worries about who pays for the buildout a day after Anthropic's IPO filing. Meta's plan to raise up to $95B (Nvidia committing $3B) added fuel; AMD +5.5%, Intel +3.6%, Micron +2.8%.",
+        "Firmer data: Conference Board confidence jumped to 91.7 vs 81 expected, durable goods rose 1.8% vs 1.5%, and new home sales beat at 676K. Growth looks resilient heading into the Fed decision.",
+        "Earnings split the tape: Boeing fell 10.7% on a wider loss and a 737 MAX ramp pushed to the second half of 2027, sinking the Dow; SoFi +13%, JetBlue +19% and UPS +2% on raised guidance; Coca-Cola -1.6% despite a beat on slower North American demand.",
+        "Fed day one: the decision comes Wednesday at 1:00 CT, with a hold at 4.00% the base case and roughly 10% odds of a hike after the hot CPI. Oil eased, with WTI near $100 and Brent below $110, on Middle East de-escalation hopes.",
+        "Changed since morning: Boeing was only down about 2% premarket and finished down 10.7%; the rotation back into AI flagged in the morning held all session."
+      ],
+      "sectors": {
+        "leaders": "Healthcare, Consumer Cyclical, Real Estate",
+        "laggards": "Consumer Staples, Financials, Communication Services (flat)"
+      },
+      "afterHours": [
+        {
+          "ticker": "V",
+          "move": "-1%",
+          "why": "EPS $3.48 vs $3.44 est; revenue $12.1B in line"
+        },
+        {
+          "ticker": "HOOD",
+          "move": "-5%",
+          "why": "Record revenue $1.42B (+12% y/y) but crypto revenue -55%; adj EPS $0.60 vs $0.56 est"
+        },
+        {
+          "ticker": "STX",
+          "move": "-7%",
+          "why": "EPS $7.68 vs $7.45 est; sold off on the print despite the beat"
+        },
+        {
+          "ticker": "NXPI",
+          "move": "-7%",
+          "why": "EPS $4.20 vs $4.12 est; shares slid after hours despite the beat"
+        },
+        {
+          "ticker": "CZR",
+          "move": "flat",
+          "why": "Loss of $0.61/share vs -$0.12 est; little after-hours move yet"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Goods trade balance (Sep)",
+          "consensus": "-$130B (prior -$132.1B)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Wholesale inventories (Sep)",
+          "consensus": "+0.5%"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "Bank of Canada rate decision",
+          "consensus": "hike to 2.50%"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "+0.8M bbl"
+        },
+        {
+          "time": "1:00 CT",
+          "item": "FOMC decision (Powell presser 1:30 CT)",
+          "consensus": "hold at 4.00%"
+        },
+        {
+          "time": "Before open",
+          "item": "Earnings: T-Mobile, GE Vernova, ADP, Vertiv, Biogen, TE Connectivity, Garmin, Phillips 66",
+          "consensus": ""
+        },
+        {
+          "time": "After close",
+          "item": "Earnings: Alphabet, Microsoft, Ford, ServiceNow, KLA, Chipotle, eBay, Equinix, O'Reilly, Carvana, MGM",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "BA",
+          "move": "-10.7%",
+          "why": "Worst day since 2020: wider Q3 loss and 737 MAX production ramp delayed to 2H 2027"
+        },
+        {
+          "ticker": "SOFI",
+          "move": "+13.4%",
+          "why": "Revenue +44% y/y; beat and raised guidance"
+        },
+        {
+          "ticker": "JBLU",
+          "move": "+19%",
+          "why": "Loss wider than feared but Q4 unit revenue guided up as much as 22%"
+        },
+        {
+          "ticker": "AVGO",
+          "move": "+4%",
+          "why": "$63B SPV to finance Anthropic's AI hardware; Zacks rates it Hold citing margin pressure"
+        },
+        {
+          "ticker": "META",
+          "move": "-1.6%",
+          "why": "Digesting a planned capital raise of up to $95B for the AI buildout"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq rise as tech gains for second day, chip stocks rally (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-27-dow-sp-500-nasdaq-081901995.html"
+        },
+        {
+          "title": "Nasdaq Jumps 308 Points on Broadcom's Big Anthropic Deal (Kiplinger)",
+          "url": "https://www.kiplinger.com/investing/stocks/nasdaq-jumps-308-points-on-broadcoms-big-gains-stock-market-today"
+        },
+        {
+          "title": "Robinhood Reports Third Quarter 2026 Results (GlobeNewswire)",
+          "url": "https://www.globenewswire.com/news-release/2026/10/27/3389611/0/en/robinhood-reports-third-quarter-2026-results.html"
+        },
+        {
+          "title": "U.S. Consumer Confidence Improved in October, Conference Board Says (WSJ via FMP)",
+          "url": "https://www.wsj.com/economy/central-banking/u-s-consumer-confidence-improved-in-october-conference-board-says-746458b3"
+        },
+        {
+          "title": "US new home sales fall in September (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/us-new-home-sales-fall-september-median-house-price-drops-year-ago-2026-10-27/"
+        },
+        {
+          "title": "Federal Reserve expected to hold interest rates steady (Fox Business via FMP)",
+          "url": "https://www.foxbusiness.com/economy/federal-reserve-expected-hold-interest-rates-steady-midterm-elections-week-away"
+        },
+        {
+          "title": "Early third-quarter earnings show a resilient U.S. consumer (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/10/27/q3-earnings-resilient-consumer.html"
+        },
+        {
+          "title": "Pre-Markets Up on Rotation Back into AI (Zacks, 10/27/2026)",
+          "url": "https://www.zacks.com/stock/news/3016133/pre-markets-up-on-rotation-back-into-ai?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Broadcom Drops 6% in a Month: Buy, Sell or Hold the AVGO Stock? (Zacks, 10/27/2026)",
+          "url": "https://www.zacks.com/stock/news/3016422/broadcom-drops-6-in-a-month:-buy,-sell-or-hold-the-avgo-stock?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SoFi Technologies Q3 Earnings: Key Metrics (Zacks, 10/27/2026)",
+          "url": "https://www.zacks.com/stock/news/3015807/sofi-technologies-(sofi)-q3-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "BA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/BA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SOFI - Zacks",
+          "url": "https://www.zacks.com/stock/quote/SOFI?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AVGO - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AVGO?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Index, yield, sector, calendar and price data: Financial Modeling Prep",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-10-27-afternoon"
+    },
+    {
+      "date": "2026-10-27",
       "session": "morning",
       "generatedAt": "2026-10-27T12:55:00Z",
       "headline": "Futures point modestly higher (+0.2% to +0.4%) ahead of the Fed as the AI rebound extends on Anthropic's S-1 and Nvidia's $3B stake in Meta's raise, and a mostly solid earnings morning offsets a wider Boeing loss; the FOMC starts its two-day meeting today with a hold expected Wednesday.",
