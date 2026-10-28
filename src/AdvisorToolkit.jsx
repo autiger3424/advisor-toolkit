@@ -493,18 +493,21 @@ function AdvisorToolkit() {
     // left between the header and the bottom nav, so it never scrolls.
     homeRoot: { height: "100dvh", minHeight: 0, display: "flex", flexDirection: "column", paddingBottom: 0, overflow: "hidden" },
     homeWrap: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column", padding: "10px 14px calc(72px + env(safe-area-inset-bottom, 8px))", boxSizing: "border-box" },
-    homeBrief: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "9px 12px", cursor: "pointer", marginBottom: 2, flexShrink: 0 },
-    homeBriefHead: { fontFamily: fonts.display, fontSize: "0.85rem", fontWeight: 700, color: palette.text, lineHeight: 1.35, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 1, WebkitBoxOrient: "vertical", marginTop: 4 },
-    homeList: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column" },
-    homeSection: { display: "flex", flexDirection: "column", flex: 1, minHeight: 0 },
-    homeSectionHead: { display: "flex", alignItems: "center", gap: 8, fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, padding: "8px 2px 3px" },
-    homeSectionRule: { flex: 1, height: 1, background: palette.border },
-    homeRows: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column", background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, overflow: "hidden" },
-    homeRow: (last) => ({ flex: 1, minHeight: 0, display: "flex", alignItems: "center", gap: 10, padding: "0 12px", borderBottom: last ? "none" : `1px solid ${palette.border}`, cursor: "pointer" }),
-    homeIcon: { fontSize: "0.95rem", lineHeight: 1, width: 20, textAlign: "center", flexShrink: 0 },
-    homeLabel: { fontFamily: fonts.display, fontSize: "0.84rem", fontWeight: 700, color: palette.text, whiteSpace: "nowrap" },
-    homeBlurb: { flex: 1, minWidth: 0, fontSize: "0.62rem", color: palette.textMuted, textAlign: "right", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
-    homeChevron: { color: palette.textMuted, fontSize: "0.85rem", flexShrink: 0 },
+    homeBrief: { flex: "1 1 0", minHeight: 0, overflow: "hidden", display: "flex", flexDirection: "column", background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 12, padding: "12px 14px", cursor: "pointer", marginBottom: 12 },
+    homeBriefHead: { fontFamily: fonts.display, fontSize: "0.9rem", fontWeight: 700, color: palette.text, lineHeight: 1.4, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", marginTop: 6 },
+    homeLevels: { flexShrink: 0, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "9px 10px", marginTop: 10, paddingTop: 10, borderTop: `1px solid ${palette.border}` },
+    homeLevelLabel: { fontSize: "0.56rem", letterSpacing: "0.08em", textTransform: "uppercase", color: palette.textMuted, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
+    homeLevelValue: { fontFamily: fonts.mono, fontSize: "0.8rem", color: palette.text, marginTop: 1 },
+    homeLevelChg: (up) => ({ fontFamily: fonts.mono, fontSize: "0.62rem", color: up === null ? palette.textDim : up ? palette.success : "#f87171", marginLeft: 5 }),
+    homeMovers: { flex: 1, minHeight: 0, overflow: "hidden", marginTop: 10, paddingTop: 8, borderTop: `1px solid ${palette.border}` },
+    homeMoverRow: { display: "flex", alignItems: "baseline", gap: 8, padding: "4px 0", fontSize: "0.66rem", lineHeight: 1.35 },
+    homeMoverTicker: { fontFamily: fonts.mono, fontWeight: 500, color: palette.text, width: 44, flexShrink: 0 },
+    homeMoverMove: (up) => ({ fontFamily: fonts.mono, color: up === null ? palette.textDim : up ? palette.success : "#f87171", width: 44, flexShrink: 0, whiteSpace: "nowrap", overflow: "hidden" }),
+    homeMoverWhy: { flex: 1, minWidth: 0, color: palette.textMuted, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
+    homeGrid: { flex: "0 1 230px", minHeight: 176, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "1fr", gap: 8 },
+    homeCard: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "0 8px", cursor: "pointer", display: "flex", alignItems: "center", gap: 6, minHeight: 0, overflow: "hidden" },
+    homeIcon: { fontSize: "0.95rem", lineHeight: 1, flexShrink: 0 },
+    homeLabel: { fontFamily: fonts.display, fontSize: "0.76rem", fontWeight: 700, letterSpacing: "-0.01em", color: palette.text, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
     homeFoot: { fontSize: "0.58rem", color: palette.textMuted, textAlign: "center", lineHeight: 1.4, marginTop: 8, flexShrink: 0 },
     groupLabel: { fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, margin: "14px 0 8px" },
     section: { padding: "16px" },
@@ -609,28 +612,46 @@ function AdvisorToolkit() {
                 <span style={{ fontSize: "0.64rem", color: palette.textMuted }}>{(() => { const [y, m, d] = todayBrief.date.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })()} · <span style={{ color: palette.accent }}>Open →</span></span>
               </div>
               <div style={s.homeBriefHead}>{todayBrief.headline}</div>
+              {Array.isArray(todayBrief.levels) && todayBrief.levels.length > 0 && (
+                <div style={s.homeLevels}>
+                  {todayBrief.levels.filter((l) => l.value && !/^n\/?a$/i.test(String(l.value).trim())).slice(0, 9).map((l) => {
+                    const c = String(l.change || "").trim();
+                    const up = c.startsWith("+") ? true : c.startsWith("-") ? false : null;
+                    return (
+                      <div key={l.label}>
+                        <div style={s.homeLevelLabel}>{l.label}</div>
+                        <div style={s.homeLevelValue}>{l.value}<span style={s.homeLevelChg(up)}>{c}</span></div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+              {Array.isArray(todayBrief.movers) && todayBrief.movers.length > 0 && (
+                <div style={s.homeMovers}>
+                  <div style={{ ...s.homeLevelLabel, marginBottom: 2 }}>Movers</div>
+                  {todayBrief.movers.slice(0, 8).map((mv) => {
+                    const mstr = String(mv.move || "").trim();
+                    const up = mstr.startsWith("+") ? true : mstr.startsWith("-") ? false : null;
+                    return (
+                      <div key={mv.ticker} style={s.homeMoverRow}>
+                        <span style={s.homeMoverTicker}>{mv.ticker}</span>
+                        <span style={s.homeMoverMove(up)}>{up === null ? "—" : mstr.split(" ")[0]}</span>
+                        <span style={s.homeMoverWhy}>{mv.why}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           )}
 
-          <div style={s.homeList}>
-            {["reference", "tools", "markets"].map((g) => {
-              const mods = groupModules(g);
-              return (
-                <div key={g} style={{ ...s.homeSection, flex: mods.length }}>
-                  <div style={s.homeSectionHead}>{sections.find((x) => x.id === g).label}<span style={s.homeSectionRule} /></div>
-                  <div style={s.homeRows}>
-                    {mods.map((m, i) => (
-                      <div key={m.id} style={s.homeRow(i === mods.length - 1)} onClick={() => openModule(m.id)}>
-                        <span style={s.homeIcon}>{m.icon}</span>
-                        <span style={s.homeLabel}>{m.label}</span>
-                        <span style={s.homeBlurb}>{m.blurb}</span>
-                        <span style={s.homeChevron}>›</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+          <div style={s.homeGrid}>
+            {Object.entries(modules).map(([id, m]) => (
+              <div key={id} style={s.homeCard} onClick={() => openModule(id)}>
+                <span style={s.homeIcon}>{m.icon}</span>
+                <span style={s.homeLabel}>{m.label}</span>
+              </div>
+            ))}
           </div>
 
           <div style={s.homeFoot}>For educational and reference use only. Not legal, tax, or investment advice.</div>
