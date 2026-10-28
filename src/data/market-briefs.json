@@ -2,6 +2,216 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-10-28",
+      "session": "morning",
+      "generatedAt": "2026-10-28T13:05:00Z",
+      "headline": "Mixed, cautious open shaping up: Nasdaq futures bid on a chip rally after SK Hynix's record quarter, Dow lagging, with everything on hold until Chair Warsh's Fed decision at 1:00 CT and Microsoft/Alphabet after the bell; oil back above $100 after a Saudi refinery attack.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,765",
+          "change": "+0.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "29,921",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,453",
+          "change": "-0.2%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,824",
+          "change": "-0.2%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.99%",
+          "change": "+1bp"
+        },
+        {
+          "label": "VIX",
+          "value": "17.5",
+          "change": "+0.0"
+        },
+        {
+          "label": "WTI",
+          "value": "$102",
+          "change": "+2.2%"
+        },
+        {
+          "label": "Brent",
+          "value": "$116",
+          "change": "+2.0%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,066",
+          "change": "-0.2%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$81,400",
+          "change": "+2.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Goods trade balance (Sep, adv.)",
+          "actual": "-$134.9B",
+          "consensus": "-$130.0B",
+          "prior": "-$132.1B",
+          "read": "wider than expected; imports +2.4% on capital goods",
+          "reaction": "futures/yield reaction not yet captured"
+        },
+        {
+          "name": "Wholesale inventories (Sep)",
+          "actual": "+0.6%",
+          "consensus": "+0.5%",
+          "prior": "+0.5%",
+          "read": "slight build",
+          "reaction": "muted"
+        },
+        {
+          "name": "Retail inventories ex-autos (Sep)",
+          "actual": "+0.4%",
+          "consensus": "-0.1%",
+          "prior": "+0.1%",
+          "read": "inventory build, not demand",
+          "reaction": "muted"
+        }
+      ],
+      "drivers": [
+        "Fed day: FOMC expected to hold at 3.75-4.00% (about 90% odds) after September's hike. Focus is Warsh's tone at the 1:30 CT presser; a hawkish pause that keeps a December hike live is the base case, six days before the midterms. September CPI ran 3.7% y/y with core hotter than expected; PCE lands tomorrow.",
+        "Chips bid: SK Hynix posted a record quarter, says DRAM/HBM output is sold out through 2029 and announced $23B+ in dividends and buybacks; Kospi up about 6%, Micron and Broadcom higher premarket, extending Tuesday's chip-led gains on Broadcom's $63B Anthropic financing.",
+        "Oil: Houthis reportedly struck Saudi Arabia's Ras Tanura refinery; WTI back above $100 and Brent near $116, weighing on sentiment and keeping the 10-year pinned near 5%.",
+        "Overseas: Europe lower (Stoxx 600 -0.3%; banks -1% on UBS and Santander, Deutsche Bank and Stellantis higher, Adyen -11%). Asia mostly higher led by tech (Nikkei +1.1%, Shanghai +0.9%, Hang Seng +0.2%)."
+      ],
+      "calendar": [
+        {
+          "time": "8:45 CT",
+          "item": "Bank of Canada rate decision",
+          "consensus": "2.50% (from 2.25%)"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "flat (prior -3.1M)"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "17-week bill and 2-year FRN auctions",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "FOMC decision (blackout in effect, no other Fed speakers)",
+          "consensus": "hold 3.75-4.00%"
+        },
+        {
+          "time": "1:30 CT",
+          "item": "Chair Warsh press conference",
+          "consensus": "hawkish pause expected"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "GE Vernova $4.81 vs $4.03 est; Phillips 66 $14.08 vs $11.73; Vertiv $2.21 vs $1.82; Amphenol, ADP, Otis, Etsy, Wingstop beats",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Microsoft (EPS $4.72 / rev $90.6B est), Alphabet ($2.97 / $128B), ServiceNow, Ford, T-Mobile, eBay, Chipotle, Carvana, KLA, Align, Teladoc, O'Reilly",
+          "consensus": ""
+        },
+        {
+          "time": "Tomorrow 7:30 CT",
+          "item": "PCE inflation; ECB decision",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "HOOD",
+          "move": "-8%",
+          "why": "Q3 EPS beat but revenue missed ($1.42B vs $1.44B); crypto revenue -55%, net interest down, plus a filing warning on its AI trading agents. Prior close $94.56."
+        },
+        {
+          "ticker": "SKHY",
+          "move": "+8%",
+          "why": "Record profit, memory sold out through 2029, $23B+ capital return; lifting MU, AVGO and the memory complex."
+        },
+        {
+          "ticker": "GEV",
+          "move": "n/a",
+          "why": "Big Q3 beat on EPS ($4.81 vs $4.03) and revenue ($12.64B); shares already +10% this week into the print at $895.08. Watch the call."
+        },
+        {
+          "ticker": "V",
+          "move": "-1.4%",
+          "why": "Q4 beat overshadowed by FY27 low-double-digit revenue growth guidance."
+        },
+        {
+          "ticker": "GOOGL",
+          "move": "+1.2%",
+          "why": "Report that OpenAI is weighing Google TPU purchases; earnings after the close. Prior close $320.58."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance - Stock market today: Dow futures fall, S&P 500 and Nasdaq futures climb ahead of Fed decision",
+          "url": "https://ca.finance.yahoo.com/news/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-080642111.html"
+        },
+        {
+          "title": "Yahoo Finance - S&P 500, Nasdaq futures mixed ahead of Fed, Big Tech earnings",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-mixed-094836107.html"
+        },
+        {
+          "title": "TipRanks - Stock Market Today, Oct. 28",
+          "url": "https://www.tipranks.com/news/stock-market-today-oct-28-futures-mixed-as-investors-await-mega-cap-earnings-and-the-feds-policy-decision"
+        },
+        {
+          "title": "Yahoo Finance - Fed meeting live updates",
+          "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html"
+        },
+        {
+          "title": "ActionForex - US goods trade deficit widens to $134.9B",
+          "url": "https://www.actionforex.com/live-comments/659036-us-goods-trade-deficit-widens-to-134-9b-as-capital-goods-imports-surge/"
+        },
+        {
+          "title": "Reuters via AOL - STOXX 600 inches lower as investors sift through earnings, higher oil",
+          "url": "https://www.aol.com/articles/stoxx-600-inches-lower-investors-082608000.html"
+        },
+        {
+          "title": "CNBC - Stocks making the biggest moves premarket: Ultralife, SK Hynix, Robinhood, Enphase",
+          "url": "https://www.cnbc.com/2026/10/28/stocks-making-the-biggest-moves-premarket-ulbi-slhy-hood-enph.html"
+        },
+        {
+          "title": "Zacks - HOOD Q3 Earnings Beat on Trading Strength, Stock Dips on Revenue Miss",
+          "url": "https://www.zacks.com/stock/news/3016807/hood-q3-earnings-beat-on-trading-strength,-stock-dips-on-revenue-miss?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - GE Vernova (GEV) Q3 Earnings and Revenues Top Estimates",
+          "url": "https://www.zacks.com/stock/news/3016743/ge-vernova-(gev)-q3-earnings-and-revenues-top-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HOOD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/HOOD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "GEV - Zacks",
+          "url": "https://www.zacks.com/stock/quote/GEV?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SOFI - Zacks",
+          "url": "https://www.zacks.com/stock/quote/SOFI?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-28-morning"
+    },
+    {
       "date": "2026-10-27",
       "session": "afternoon",
       "generatedAt": "2026-10-27T20:35:00Z",
