@@ -463,6 +463,7 @@ function AdvisorToolkit() {
     { id: "markets",   label: "Markets",   icon: "📈" },
     { id: "more",      label: "More",      icon: "•••" },
   ];
+  const groupColors = { reference: palette.accent, tools: "#60a5fa", markets: palette.success };
   const [section, setSection] = useState("home");
   const [lastModule, setLastModule] = useState({ reference: "trusts", tools: "calc", markets: "brief" });
   const groupModules = (g) => Object.entries(modules).filter(([, m]) => m.group === g).map(([id, m]) => ({ id, ...m }));
@@ -489,11 +490,18 @@ function AdvisorToolkit() {
     navBtn: (active) => ({ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, padding: "6px 4px", border: "none", background: "none", color: active ? palette.accent : palette.textMuted, cursor: "pointer", fontSize: "0.65rem", fontWeight: active ? 700 : 500, fontFamily: fonts.body, transition: "color 0.2s" }),
     navIcon: { fontSize: "1.1rem", lineHeight: 1.2, height: 20, display: "flex", alignItems: "center" },
     moduleRow: { display: "flex", gap: 6, marginBottom: 14, overflowX: "auto", paddingBottom: 2, scrollbarWidth: "none" },
-    homeGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 },
-    homeCard: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "12px", cursor: "pointer", minHeight: 78 },
-    homeIcon: { fontSize: "1.3rem", marginBottom: 4 },
-    homeLabel: { fontFamily: fonts.display, fontSize: "0.9rem", fontWeight: 700, color: palette.text },
-    homeBlurb: { fontSize: "0.66rem", color: palette.textMuted, marginTop: 2, lineHeight: 1.4 },
+    // Home is sized to the viewport: a 3×3 tile grid fills whatever height is
+    // left between the header and the bottom nav, so it never scrolls.
+    homeRoot: { height: "100dvh", minHeight: 0, display: "flex", flexDirection: "column", paddingBottom: 0, overflow: "hidden" },
+    homeWrap: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column", padding: "10px 14px calc(72px + env(safe-area-inset-bottom, 8px))", boxSizing: "border-box" },
+    homeBriefStrip: { display: "flex", alignItems: "center", gap: 10, background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "8px 12px", cursor: "pointer", marginBottom: 10, flexShrink: 0 },
+    homeBriefText: { flex: 1, minWidth: 0, fontFamily: fonts.display, fontSize: "0.8rem", fontWeight: 600, color: palette.text, lineHeight: 1.3, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" },
+    homeGrid: { flex: 1, minHeight: 0, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "1fr", gap: 8 },
+    homeCard: (color) => ({ background: palette.card, border: `1px solid ${palette.border}`, borderTop: `3px solid ${color}`, borderRadius: 10, padding: "8px 6px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", minHeight: 0, gap: 3 }),
+    homeIcon: { fontSize: "1.5rem", lineHeight: 1 },
+    homeLabel: { fontFamily: fonts.display, fontSize: "0.82rem", fontWeight: 700, color: palette.text, lineHeight: 1.15 },
+    homeGroup: (color) => ({ fontSize: "0.5rem", letterSpacing: "0.12em", textTransform: "uppercase", color: color, fontWeight: 700 }),
+    homeFoot: { fontSize: "0.6rem", color: palette.textMuted, textAlign: "center", lineHeight: 1.35, marginTop: 8, flexShrink: 0 },
     groupLabel: { fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, margin: "14px 0 8px" },
     section: { padding: "16px" },
     card: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "14px", marginBottom: 10, cursor: "pointer", transition: "all 0.2s" },
@@ -579,50 +587,45 @@ function AdvisorToolkit() {
   // ─ Render ──
 
   return (
-    <div style={s.root}>
+    <div style={section === "home" ? { ...s.root, ...s.homeRoot } : s.root}>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-      <div style={s.header}>
+      <div style={{ ...s.header, flexShrink: 0 }}>
         <h1 style={s.headerTitle}>Advisor Toolkit</h1>
         <p style={s.headerSub}>Financial Planning Resource Hub</p>
       </div>
 
-      <div style={s.section}>
+      {/* ════════ HOME ════════ */}
+      {section === "home" && (
+        <div style={s.homeWrap}>
+          {todayBrief && (
+            <div style={s.homeBriefStrip} onClick={() => openModule("brief")}>
+              <span style={s.badge(todayBrief.session === "morning" ? palette.warn : palette.accent)}>{todayBrief.session === "morning" ? "Pre-mkt" : "Close"}</span>
+              <div style={s.homeBriefText}>{todayBrief.headline}</div>
+              <span style={{ fontSize: "0.9rem", color: palette.accent, flexShrink: 0 }}>›</span>
+            </div>
+          )}
+
+          <div style={s.homeGrid}>
+            {Object.entries(modules).map(([id, m]) => {
+              const color = groupColors[m.group];
+              return (
+                <div key={id} style={s.homeCard(color)} onClick={() => openModule(id)}>
+                  <div style={s.homeIcon}>{m.icon}</div>
+                  <div style={s.homeLabel}>{m.label}</div>
+                  <div style={s.homeGroup(color)}>{sections.find((x) => x.id === m.group).label}</div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div style={s.homeFoot}>Educational reference only — not legal, tax, or investment advice. Verify figures with current IRS publications.</div>
+        </div>
+      )}
+
+      <div style={section === "home" ? { display: "none" } : s.section}>
         {section !== "home" && (
           <div style={s.disclaimer}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
-        )}
-
-        {/* ════════ HOME ════════ */}
-        {section === "home" && (
-          <>
-            {todayBrief && (
-              <div style={{ ...s.card, cursor: "pointer" }} onClick={() => openModule("brief")}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                  <span style={s.badge(todayBrief.session === "morning" ? palette.warn : palette.accent)}>{todayBrief.session === "morning" ? "Pre-market" : "Post-close"}</span>
-                  <span style={{ fontSize: "0.66rem", color: palette.textMuted }}>{(() => { const [y, m, d] = todayBrief.date.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); })()}</span>
-                </div>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.95rem", fontWeight: 700, color: palette.text, lineHeight: 1.4 }}>{todayBrief.headline}</div>
-                <div style={{ fontSize: "0.66rem", color: palette.accent, marginTop: 6 }}>Open the brief →</div>
-              </div>
-            )}
-
-            {["reference", "tools", "markets"].map((g) => (
-              <div key={g}>
-                <div style={s.groupLabel}>{sections.find((x) => x.id === g).label}</div>
-                <div style={s.homeGrid}>
-                  {groupModules(g).map((m) => (
-                    <div key={m.id} style={s.homeCard} onClick={() => openModule(m.id)}>
-                      <div style={s.homeIcon}>{m.icon}</div>
-                      <div style={s.homeLabel}>{m.label}</div>
-                      <div style={s.homeBlurb}>{m.blurb}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            <div style={{ ...s.disclaimer, marginTop: 18, marginBottom: 0 }}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
-          </>
         )}
 
         {/* ════════ MODULE PILLS (Reference / Tools / Markets) ════════ */}
