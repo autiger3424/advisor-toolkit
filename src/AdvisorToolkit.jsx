@@ -493,15 +493,19 @@ function AdvisorToolkit() {
     // left between the header and the bottom nav, so it never scrolls.
     homeRoot: { height: "100dvh", minHeight: 0, display: "flex", flexDirection: "column", paddingBottom: 0, overflow: "hidden" },
     homeWrap: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column", padding: "10px 14px calc(72px + env(safe-area-inset-bottom, 8px))", boxSizing: "border-box" },
-    homeBrief: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "10px 12px", cursor: "pointer", marginBottom: 10, flexShrink: 0 },
-    homeBriefHead: { fontFamily: fonts.display, fontSize: "0.85rem", fontWeight: 700, color: palette.text, lineHeight: 1.35, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", marginTop: 5 },
-    homeGrid: { flex: 1, minHeight: 0, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "1fr", gap: 8 },
-    homeCard: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "10px 10px", cursor: "pointer", display: "flex", flexDirection: "column", minHeight: 0, overflow: "hidden" },
-    homeIcon: { fontSize: "1.1rem", lineHeight: 1, marginBottom: 6 },
-    homeLabel: { fontFamily: fonts.display, fontSize: "0.82rem", fontWeight: 700, color: palette.text, lineHeight: 1.2 },
-    homeBlurb: { fontSize: "0.6rem", color: palette.textMuted, marginTop: 3, lineHeight: 1.35, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" },
-    homeGroup: { fontSize: "0.5rem", letterSpacing: "0.12em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, marginTop: "auto", paddingTop: 5, opacity: 0.85 },
-    homeFoot: { ...{ background: palette.accentDim, border: `1px solid ${palette.accent}44`, borderRadius: 8, padding: "7px 10px", fontSize: "0.6rem", color: palette.warn, lineHeight: 1.4 }, marginTop: 10, flexShrink: 0 },
+    homeBrief: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "9px 12px", cursor: "pointer", marginBottom: 2, flexShrink: 0 },
+    homeBriefHead: { fontFamily: fonts.display, fontSize: "0.85rem", fontWeight: 700, color: palette.text, lineHeight: 1.35, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 1, WebkitBoxOrient: "vertical", marginTop: 4 },
+    homeList: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column" },
+    homeSection: { display: "flex", flexDirection: "column", flex: 1, minHeight: 0 },
+    homeSectionHead: { display: "flex", alignItems: "center", gap: 8, fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, padding: "8px 2px 3px" },
+    homeSectionRule: { flex: 1, height: 1, background: palette.border },
+    homeRows: { flex: 1, minHeight: 0, display: "flex", flexDirection: "column", background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, overflow: "hidden" },
+    homeRow: (last) => ({ flex: 1, minHeight: 0, display: "flex", alignItems: "center", gap: 10, padding: "0 12px", borderBottom: last ? "none" : `1px solid ${palette.border}`, cursor: "pointer" }),
+    homeIcon: { fontSize: "0.95rem", lineHeight: 1, width: 20, textAlign: "center", flexShrink: 0 },
+    homeLabel: { fontFamily: fonts.display, fontSize: "0.84rem", fontWeight: 700, color: palette.text, whiteSpace: "nowrap" },
+    homeBlurb: { flex: 1, minWidth: 0, fontSize: "0.62rem", color: palette.textMuted, textAlign: "right", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
+    homeChevron: { color: palette.textMuted, fontSize: "0.85rem", flexShrink: 0 },
+    homeFoot: { fontSize: "0.58rem", color: palette.textMuted, textAlign: "center", lineHeight: 1.4, marginTop: 8, flexShrink: 0 },
     groupLabel: { fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: palette.accent, fontWeight: 700, margin: "14px 0 8px" },
     section: { padding: "16px" },
     card: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "14px", marginBottom: 10, cursor: "pointer", transition: "all 0.2s" },
@@ -608,18 +612,28 @@ function AdvisorToolkit() {
             </div>
           )}
 
-          <div style={s.homeGrid}>
-            {Object.entries(modules).map(([id, m]) => (
-              <div key={id} style={s.homeCard} onClick={() => openModule(id)}>
-                <div style={s.homeIcon}>{m.icon}</div>
-                <div style={s.homeLabel}>{m.label}</div>
-                <div style={s.homeBlurb}>{m.blurb}</div>
-                <div style={s.homeGroup}>{sections.find((x) => x.id === m.group).label}</div>
-              </div>
-            ))}
+          <div style={s.homeList}>
+            {["reference", "tools", "markets"].map((g) => {
+              const mods = groupModules(g);
+              return (
+                <div key={g} style={{ ...s.homeSection, flex: mods.length }}>
+                  <div style={s.homeSectionHead}>{sections.find((x) => x.id === g).label}<span style={s.homeSectionRule} /></div>
+                  <div style={s.homeRows}>
+                    {mods.map((m, i) => (
+                      <div key={m.id} style={s.homeRow(i === mods.length - 1)} onClick={() => openModule(m.id)}>
+                        <span style={s.homeIcon}>{m.icon}</span>
+                        <span style={s.homeLabel}>{m.label}</span>
+                        <span style={s.homeBlurb}>{m.blurb}</span>
+                        <span style={s.homeChevron}>›</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          <div style={s.homeFoot}>⚠️ For educational and reference use only. Not legal, tax, or investment advice. Verify all figures with current IRS publications and qualified counsel.</div>
+          <div style={s.homeFoot}>For educational and reference use only. Not legal, tax, or investment advice.</div>
         </div>
       )}
 
