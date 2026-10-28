@@ -482,7 +482,7 @@ function AdvisorToolkit() {
 
   const s = {
     root: { fontFamily: fonts.body, background: palette.bg, color: palette.text, minHeight: "100vh", maxWidth: 480, margin: "0 auto", paddingBottom: 80, fontSize: 14 },
-    header: { padding: "20px 16px 12px", borderBottom: `1px solid ${palette.border}` },
+    header: { padding: "calc(16px + env(safe-area-inset-top, 0px)) 16px 12px", borderBottom: `1px solid ${palette.border}` },
     headerTitle: { fontFamily: fonts.display, fontSize: "1.35rem", fontWeight: 700, color: palette.accent, margin: 0, letterSpacing: "0.02em" },
     headerSub: { fontSize: "0.7rem", color: palette.textMuted, margin: "2px 0 0", letterSpacing: "0.15em", textTransform: "uppercase" },
     nav: { position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: palette.card, borderTop: `1px solid ${palette.border}`, display: "flex", zIndex: 100, padding: "6px 0 env(safe-area-inset-bottom, 8px)" },
