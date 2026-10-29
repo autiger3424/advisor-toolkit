@@ -3,6 +3,253 @@
   "briefs": [
     {
       "date": "2026-10-29",
+      "session": "afternoon",
+      "generatedAt": "2026-10-29T20:35:00Z",
+      "headline": "Stocks closed lower in a split tape: the Nasdaq fell 1.4% as Alphabet's worst day on record (-12%) and a software rout hit mega-cap tech, while the Russell 2000 gained 1% and most stocks rose; in-line PCE and hot GDP kept a December hike in play, yet yields fell.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,720",
+          "change": "-0.3%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "26,185",
+          "change": "-1.4%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,343",
+          "change": "-0.3%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,859",
+          "change": "+1.0%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.98%",
+          "change": "-7 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "17.1",
+          "change": "+0.2"
+        },
+        {
+          "label": "WTI",
+          "value": "~$102",
+          "change": "+0.0%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,037",
+          "change": "-0.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "~$80,300",
+          "change": "-1.2%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Q3 GDP (advance, q/q ann.)",
+          "actual": "+3.4%",
+          "consensus": "+3.2%",
+          "prior": "+2.2%",
+          "read": "hotter",
+          "reaction": "hike odds stayed live; GDP price index soft at 2.2% vs 3.2%"
+        },
+        {
+          "name": "Sept core PCE (m/m)",
+          "actual": "+0.3%",
+          "consensus": "+0.3%",
+          "prior": "+0.3%",
+          "read": "in line",
+          "reaction": "3.1% y/y, up a tenth; little reaction"
+        },
+        {
+          "name": "Sept PCE (y/y)",
+          "actual": "+3.6%",
+          "consensus": "+3.6%",
+          "prior": "+3.4%",
+          "read": "in line",
+          "reaction": "headline still drifting higher"
+        },
+        {
+          "name": "Initial jobless claims",
+          "actual": "194K",
+          "consensus": "199K",
+          "prior": "195K",
+          "read": "firmer",
+          "reaction": "continuing claims 1.70M, multi-year lows"
+        }
+      ],
+      "drivers": [
+        "Alphabet (GOOGL -12.7%, GOOG -12.4%): EPS $2.12 vs ~$3.01 expected on unrealized losses on its SpaceX stake, Search and YouTube ad revenue light, free cash flow negative $9B on $51B of quarterly capex, and 2027 spending guided higher again; Cloud +103% was not enough.",
+        "Software/AI-disruption selloff: ServiceNow -26%, Fortinet -21%, software ETF (IGV) -4%; Marvell -13% on reports it is buying Lumentum. Microsoft's beat (Azure +49%, capex below forecast) faded from a +2% open to flat.",
+        "Data in line to hot: Q3 GDP +3.4% vs 3.2% est; Sept PCE +0.5% m/m, 3.6% y/y and core +0.3% / 3.1%, all as expected; claims 194K vs 199K. December hike odds stayed live, but the softer GDP price index (2.2% vs 3.2%) and a strong 7-yr auction pulled the 10-yr to 4.98% from 5.05%.",
+        "Rotation, not panic: Caterpillar -9% on unchanged guidance was the other big industrial drag, but money moved into utilities, financials, health care and small caps; breadth was positive all day."
+      ],
+      "sectors": {
+        "leaders": "Utilities (+1.4%), Industrials (+1.2%), Financials (+0.6%)",
+        "laggards": "Materials (-0.9%), Consumer Cyclical (-0.7%), Technology (-0.5%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "AMZN",
+          "move": "-7%",
+          "why": "EPS $1.89 vs $1.97, revenue $201.9B vs $202.2B, 2026 capex held at $220B, trailing free cash flow deeply negative; was down ~10% at the lows"
+        },
+        {
+          "ticker": "INTC",
+          "move": "-18%",
+          "why": "Q3 beat ($0.52 vs $0.41) but Q4 revenue guide of $15-16B is well below the ~$17B expected"
+        },
+        {
+          "ticker": "RIVN",
+          "move": "+5%",
+          "why": "Revenue beat, smaller-than-expected loss, raised full-year guidance"
+        },
+        {
+          "ticker": "SBUX",
+          "move": "-2%",
+          "why": "EPS beat ($0.80 vs $0.72) but revenue a touch light"
+        },
+        {
+          "ticker": "LHX",
+          "move": "+5.5%",
+          "why": "Q3 beat plus a reported U.S. government equity stake"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Q3 Employment Cost Index (q/q)",
+          "consensus": "+0.8% (prior 0.9%)"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "Chicago PMI (Oct)",
+          "consensus": "56.1 (prior 58.8)"
+        },
+        {
+          "time": "11:30 CT",
+          "item": "Fed's Musalem speaks",
+          "consensus": ""
+        },
+        {
+          "time": "Overnight",
+          "item": "Bank of Japan rate decision",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-market",
+          "item": "Earnings: XOM, CVX, ABBV, GD, AZN, BP, SNY, REGN, CL, D, EXC, CBOE",
+          "consensus": "XOM $4.12, CVX $4.87, ABBV $3.73, GD $4.12"
+        },
+        {
+          "time": "Next week",
+          "item": "Apple earnings Mon Nov 2; ISM Manufacturing Mon; midterm elections Tue Nov 3",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "GOOGL",
+          "move": "-12.7%",
+          "why": "Earnings miss on SpaceX mark, soft ad revenue, rising capex; roughly $500B of market cap erased"
+        },
+        {
+          "ticker": "NOW",
+          "move": "-26.5%",
+          "why": "Results reignited AI-disruption fears across software; Fortinet -21% alongside"
+        },
+        {
+          "ticker": "CAT",
+          "move": "-9.3%",
+          "why": "Beat but did not raise guidance; read as AI-infrastructure buildout cooling"
+        },
+        {
+          "ticker": "CROX",
+          "move": "+25.5%",
+          "why": "Big Q3 beat on EPS and revenue; now up about 40% year to date"
+        },
+        {
+          "ticker": "LLY",
+          "move": "+6.7%",
+          "why": "EPS $7.48 vs $5.68 on Mounjaro and Zepbound demand; the S&P's standout"
+        },
+        {
+          "ticker": "ADT",
+          "move": "+33%",
+          "why": "$10/share all-cash buyout by Thrive Holdings"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq slip as Alphabet stock sinks 12% and AI jitters return (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-29-dow-sp-500-nasdaq-alphabet-microsoft-earnings-130305714.html"
+        },
+        {
+          "title": "Stock Market Today (Oct. 29, 2026): S&P 500 falls after Alphabet and Microsoft issue divergent earnings (Yahoo Finance/TheStreet)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-29-134623155.html"
+        },
+        {
+          "title": "Stocks Dip on Mixed Microsoft, Alphabet, PCE Data (Schwab)",
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open"
+        },
+        {
+          "title": "S&P 500 Closes Down 0.5% as Nasdaq Leads the Selling Into Amazon Earnings (24/7 Wall St.)",
+          "url": "https://247wallst.com/cards/the-nasdaq-s-1-57-drop-was-triple-the-dow-s-concentrating-gspc-market-bell-01m64m5jtya3f2cehqh2qnm9az"
+        },
+        {
+          "title": "Record Increase In Computer Equipment Drives 2026Q3 GDP Above Expectations (Seeking Alpha via FMP)",
+          "url": "https://seekingalpha.com/article/4959620-record-increase-in-computer-equipment-drives-2026q3-gdp-above-expectations"
+        },
+        {
+          "title": "Big Tech Earnings Couldn't Ignite Chip Stocks. What The Semis Need Now. (Barron's via FMP)",
+          "url": "https://www.barrons.com/articles/big-tech-earnings-couldnt-ignite-chip-stocks-what-semis-need-now-4c261976"
+        },
+        {
+          "title": "Did the Fed make a mistake with its October rate pause? (MarketWatch via FMP)",
+          "url": "https://www.marketwatch.com/story/did-the-fed-make-a-mistake-with-its-october-rate-pause-the-treasury-could-help-save-the-day-77d84993"
+        },
+        {
+          "title": "GOOGL Q3 Earnings Miss Estimates, Cloud & Search Aid Top-Line Growth (Zacks, 10/29/2026)",
+          "url": "https://www.zacks.com/stock/news/3018973/googl-q3-earnings-miss-estimates,-cloud-&-search-aid-top-line-growth?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Intel (INTC) Q3 Earnings and Revenues Surpass Estimates (Zacks, 10/29/2026)",
+          "url": "https://www.zacks.com/stock/news/3019020/intel-(intc)-q3-earnings-and-revenues-surpass-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "GDP, PCE, Jobless Claims and Q3 Earnings - Busy Morning! (Zacks, 10/29/2026)",
+          "url": "https://www.zacks.com/stock/news/3018678/gdp,-pce,-jobless-claims-and-q3-earnings---busy-morning!?utm_source=zacks_mcp"
+        },
+        {
+          "title": "GOOGL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/GOOGL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMZN - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMZN?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FTNT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/FTNT?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-29-afternoon"
+    },
+    {
+      "date": "2026-10-29",
       "session": "morning",
       "generatedAt": "2026-10-29T13:02:00Z",
       "headline": "Tech-led soft open ahead: Alphabet's revenue miss and negative free cash flow revived the AI-payoff worry overnight, outweighing a hot Q3 GDP print and a hold-steady Fed. Nasdaq 100 futures -1.2%, S&P -0.4%, Dow -0.2%, small caps slightly green.",
