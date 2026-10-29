@@ -2,6 +2,337 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-10-29",
+      "session": "morning",
+      "generatedAt": "2026-10-29T13:02:00Z",
+      "headline": "Tech-led soft open ahead: Alphabet's revenue miss and negative free cash flow revived the AI-payoff worry overnight, outweighing a hot Q3 GDP print and a hold-steady Fed. Nasdaq 100 futures -1.2%, S&P -0.4%, Dow -0.2%, small caps slightly green.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,752",
+          "change": "-0.4%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "29,606",
+          "change": "-1.25%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,578",
+          "change": "-0.2%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,848",
+          "change": "+0.3%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.01%",
+          "change": "-3bp"
+        },
+        {
+          "label": "VIX",
+          "value": "17.1",
+          "change": "+0.2"
+        },
+        {
+          "label": "WTI",
+          "value": "$101.5",
+          "change": "-1.3%"
+        },
+        {
+          "label": "Brent",
+          "value": "$110.5",
+          "change": "-4.2%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,036",
+          "change": "-0.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$79,900",
+          "change": "-1.6%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Q3 GDP (advance, ann.)",
+          "actual": "+3.4%",
+          "consensus": "+3.2%",
+          "prior": "+2.2%",
+          "read": "fastest in about 3 years; AI capex and consumer spending",
+          "reaction": "futures little changed, still tech-led lower"
+        },
+        {
+          "name": "Initial jobless claims (wk Oct 24)",
+          "actual": "194K",
+          "consensus": "199K",
+          "prior": "195K",
+          "read": "labor market still tight; continuing claims 1.701M vs 1.720M",
+          "reaction": "muted"
+        },
+        {
+          "name": "Sept PCE price index (y/y)",
+          "actual": "3.6%",
+          "consensus": "3.6%",
+          "prior": "3.4%",
+          "read": "in line but accelerating; +0.5% m/m",
+          "reaction": "10-yr eased about 3bp to 5.01%"
+        },
+        {
+          "name": "Sept core PCE (y/y)",
+          "actual": "3.1%",
+          "consensus": "3.1%",
+          "prior": "3.0%",
+          "read": "sticky; +0.3% m/m; keeps a December hike live",
+          "reaction": "Dec hike odds near 85% unchanged"
+        },
+        {
+          "name": "Sept personal income / spending (m/m)",
+          "actual": "+0.2% / +0.5%",
+          "consensus": "+0.3% / +0.6%",
+          "prior": "+0.3% / +0.9%",
+          "read": "slight miss on both",
+          "reaction": "muted"
+        }
+      ],
+      "drivers": [
+        "Alphabet -9% pre-market: Q3 revenue $127.6B and EPS $2.12 both missed, free cash flow -$9.1B, capex guide held at $195-205B; Cloud +103% was not enough. Chips (NVDA, AMD, MU) and software ETFs sold off in sympathy after hours.",
+        "Microsoft +3% after hours: beat on both lines (revenue $92.3B, +19%; Azure +48%), Q2 guide $96-97.1B, capex above $50B per quarter.",
+        "Fed held at 3.75-4.00% in a 10-2 vote (Cook and Hammack dissented for a hike); statement called activity strong and inflation elevated, Warsh gave no forward guidance. Markets price roughly 85% odds of a Dec 9 hike and today's GDP/PCE do nothing to lower that.",
+        "Oil lower on reported US-Iran contacts via intermediaries despite a Houthi claim of a strike on a Saudi refinery; Brent also reflects the December contract roll.",
+        "Overseas: Europe flat to slightly higher ahead of the ECB (Stoxx 600 +0.1%, DAX +0.4%); Asia mixed with Nikkei +0.4%, Kospi down more than 2% on Samsung, CSI 300 -1.2%."
+      ],
+      "calendar": [
+        {
+          "time": "8:15 CT",
+          "item": "ECB rate decision",
+          "consensus": "hold; deposit rate 2.50%"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "ECB Lagarde press conference",
+          "consensus": "December guidance in focus"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA natural gas storage",
+          "consensus": "+75 bcf"
+        },
+        {
+          "time": "10:00 CT",
+          "item": "Atlanta Fed GDPNow (Q4) first estimate",
+          "consensus": "n/a"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Treasury 7-year note auction",
+          "consensus": "prior 5.085%"
+        },
+        {
+          "time": "All day",
+          "item": "Fed speakers: none scheduled (day after FOMC)",
+          "consensus": "n/a"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "LLY beat ($7.48 vs $5.68; rev $24.4B) and raised guide a third time",
+          "consensus": "EPS $5.68"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "CAT $7.20 vs $7.06; MRK $2.49 vs $2.09; MA $5.31 vs $5.17; BMY $1.35 vs $1.10; PWR $6.06 vs $5.02",
+          "consensus": "beats"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "DHI missed ($2.67 vs $2.99); SHEL, TTE, BUD, LIN also reported",
+          "consensus": "DHI EPS $2.99"
+        },
+        {
+          "time": "After bell",
+          "item": "AMZN (AWS growth and AI capex in focus)",
+          "consensus": "EPS $1.97; rev $202.2B"
+        },
+        {
+          "time": "After bell",
+          "item": "INTC",
+          "consensus": "EPS $0.41; rev $16.5B"
+        },
+        {
+          "time": "After bell",
+          "item": "SBUX, GILD, MDLZ, SNDK, COIN, RBLX",
+          "consensus": "SBUX $0.72; GILD $2.19; MDLZ $0.71"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "GOOGL",
+          "move": "-9%",
+          "why": "Q3 revenue and EPS miss, negative free cash flow, heavy capex; prior close $324.89"
+        },
+        {
+          "ticker": "LLY",
+          "move": "+4%",
+          "why": "Zepbound-driven beat ($7.48 vs $5.68), guidance raised for a third time; prior close $1,288"
+        },
+        {
+          "ticker": "DASH",
+          "move": "+5%",
+          "why": "Agreed to buy Instacart for about $17B ($65/sh, 26% premium); CART slightly lower; prior close $169"
+        },
+        {
+          "ticker": "MRVL",
+          "move": "-11%",
+          "why": "Reports of advanced talks to acquire Lumentum (LITE +5%); prior close $252"
+        },
+        {
+          "ticker": "NOW",
+          "move": "-16%",
+          "why": "First-ever EPS miss ($1.00 vs $1.02) despite revenue beat and new OpenAI deal; FTNT also down double digits, software complex hit"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance: Stock market today - Dow rises, S&P 500 and Nasdaq futures fall as Alphabet sells off",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-29-dow-sp-500-nasdaq-alphabet-microsoft-081708101.html"
+        },
+        {
+          "title": "Saxo Morning Brew Oct 29, 2026",
+          "url": "https://www.home.saxo/en-ch/content/articles/morning-brew/morning-brew-october-29-2026-29102026"
+        },
+        {
+          "title": "IC Markets: U.S. Futures Fall as Microsoft, Alphabet Earnings Put AI Trade in Focus",
+          "url": "https://www.icmarkets-vno.com/blog/thursday-29th-oct-2026-u-s-futures-fall-as-microsoft-alphabet-earnings-put-ai-trade-in-focus/"
+        },
+        {
+          "title": "Rio Times: Fed Holds US Rate as S&P 500 Gains 0.3%",
+          "url": "https://www.riotimesonline.com/global-economy-briefing-october-29-2026/"
+        },
+        {
+          "title": "XTB: ECB Decision, PCE Inflation, and Amazon Earnings in the Spotlight",
+          "url": "https://www.xtb.com/en/market-analysis/economic-calendar-ecb-decision-pce-inflation-and-amazon-earnings-in-the-spotlight"
+        },
+        {
+          "title": "Trading Economics: US 10-Year Treasury Yield",
+          "url": "https://tradingeconomics.com/united-states/government-bond-yield"
+        },
+        {
+          "title": "Pomegra: US Q3 GDP, PCE Data Land With 10-Year Yield at 5%",
+          "url": "https://pomegra.io/news/us-q3-gdp-pce-data-land-with-10-year-yield-at-5"
+        },
+        {
+          "title": "Yahoo Finance: The 10-Year Yield Just Fell Below 5%",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/10-yield-just-fell-below-111507754.html"
+        },
+        {
+          "title": "Kiplinger: October Fed Meeting Updates",
+          "url": "https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-october-2026"
+        },
+        {
+          "title": "CNBC: Third-quarter GDP increases a better-than-expected 3.4% as September inflation accelerates (via FMP)",
+          "url": "https://www.cnbc.com/2026/10/29/pce-inflation-report-september-2026-.html"
+        },
+        {
+          "title": "MarketWatch: Inflation surges, PCE shows (via FMP)",
+          "url": "https://www.marketwatch.com/story/inflation-surges-pce-shows-fed-pause-on-rate-hikes-unlikely-to-last-long-with-prices-still-rising-79128886"
+        },
+        {
+          "title": "MarketWatch: U.S. economy grows at fastest pace in almost three years (via FMP)",
+          "url": "https://www.marketwatch.com/story/u-s-economy-grows-at-fastest-pace-in-almost-three-years-third-quarter-gdp-shows-0e15b810"
+        },
+        {
+          "title": "WSJ: GDP rose at a 3.4% annual rate in Q3 (via FMP)",
+          "url": "https://www.wsj.com/economy/us-gdp-report-q3-2026-87eb755d"
+        },
+        {
+          "title": "NYT: U.S. G.D.P. Increased in Third Quarter (via FMP)",
+          "url": "https://www.nytimes.com/2026/10/29/business/economy/us-economy-gdp.html"
+        },
+        {
+          "title": "Invezz: Nasdaq futures plunge 260 points: 5 things to know (via FMP)",
+          "url": "https://invezz.com/news/2026/10/29/nasdaq-futures-plunge-260-points-5-things-to-know-before-wall-street-opens/"
+        },
+        {
+          "title": "MarketWatch: Lilly raises outlook for third time this year (via FMP)",
+          "url": "https://www.marketwatch.com/story/lilly-raises-outlook-for-third-time-this-year-as-zepbound-sales-soar-6d987407"
+        },
+        {
+          "title": "Seeking Alpha: Kevin Warsh Calmed AI Fears, Then Alphabet's Jaw-Dropper Arrived (via FMP)",
+          "url": "https://seekingalpha.com/article/4959179-kevin-warsh-calmed-ai-fears-then-alphabets-jaw-dropper-arrived"
+        },
+        {
+          "title": "Zacks: Stock Market News for Oct 29, 2026",
+          "url": "https://www.zacks.com/stock/news/3017932/stock-market-news-for-oct-29,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: Notes on FOMC Decision and Earnings After the Close",
+          "url": "https://www.zacks.com/stock/news/3017791/notes-on-fomc-decision-and-earnings-after-the-close?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: Eli Lilly (LLY) Surpasses Q3 Earnings and Revenue Estimates",
+          "url": "https://www.zacks.com/stock/news/3018066/eli-lilly-(lly)-surpasses-q3-earnings-and-revenue-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: Caterpillar (CAT) Q3 Earnings and Revenues Beat Estimates (via FMP)",
+          "url": "https://www.zacks.com/stock/news/3018013/caterpillar-cat-q3-earnings-and-revenues-beat-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: Merck (MRK) Surpasses Q3 Earnings and Revenue Estimates (via FMP)",
+          "url": "https://www.zacks.com/stock/news/3017999/merck-mrk-surpasses-q3-earnings-and-revenue-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks: D.R. Horton (DHI) Misses Q4 Earnings Estimates (via FMP)",
+          "url": "https://www.zacks.com/stock/news/3018005/d-r-horton-dhi-misses-q4-earnings-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "GOOGL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/GOOGL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "LLY - Zacks",
+          "url": "https://www.zacks.com/stock/quote/LLY?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MSFT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MSFT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NU - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NU?utm_source=zacks_mcp"
+        },
+        {
+          "title": "BA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/BA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SOFI - Zacks",
+          "url": "https://www.zacks.com/stock/quote/SOFI?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HOOD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/HOOD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CLS - Zacks",
+          "url": "https://www.zacks.com/stock/quote/CLS?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FTNT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/FTNT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "TER - Zacks",
+          "url": "https://www.zacks.com/stock/quote/TER?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-29-morning"
+    },
+    {
       "date": "2026-10-28",
       "session": "afternoon",
       "generatedAt": "2026-10-28T20:29:45Z",
