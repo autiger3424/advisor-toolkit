@@ -3,6 +3,213 @@
   "briefs": [
     {
       "date": "2026-10-30",
+      "session": "afternoon",
+      "generatedAt": "2026-10-30T20:30:00Z",
+      "headline": "Stocks closed sharply lower to end October, with the Nasdaq down nearly 3%, as Intel's worst day ever (-29%) and Amazon's cash-burn miss turned the AI-capex scare into a full semiconductor selloff; hawkish Fed talk from Dallas Fed's Logan added pressure, and only energy and biopharma offered shelter.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,560.68",
+          "change": "-2.07%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,437",
+          "change": "-2.86%"
+        },
+        {
+          "label": "Dow",
+          "value": "51,770",
+          "change": "-1.09%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,812",
+          "change": "-1.66%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.94%",
+          "change": "-4 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.8",
+          "change": "+15%"
+        },
+        {
+          "label": "WTI",
+          "value": "$104",
+          "change": "+2.3%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,895",
+          "change": "-3.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$76.8K",
+          "change": "-1.3%"
+        }
+      ],
+      "drivers": [
+        "Intel -28.6% to $65.76: Q3 beat ($0.52 vs $0.39) but a Q4 guide of $15-16B revenue and $0.25 EPS plus a PC slump tied to memory prices overwhelmed it. Chips followed: AMD -11%, Marvell -10%, Nvidia -4%, CoreWeave -9.5%.",
+        "Amazon finished only -1.4% at $240 (far better than -7.6% premarket), but the read-through stuck: about $77B of quarterly capex and -$42B trailing free cash flow, on top of Alphabet's negative FCF Wednesday, framed the week as AI spending without payoff.",
+        "Fed: Dallas Fed's Logan said at least two more 25 bp hikes are needed; Musalem and Barkin also leaned hawkish. Data was mixed: Q3 employment cost index +0.8% (in line), Chicago PMI 55.3 vs 56.1 est. December hike odds stayed elevated, yet Treasuries rallied on the risk-off bid.",
+        "Reddit -29% on a soft Q4 daily-user outlook (search-referral traffic falling) despite a Q3 beat; Binance's $6.3B hack kept crypto and crypto miners under pressure (IREN -9%, MARA -5.5%). Gold fell 3.4% to a one-year low."
+      ],
+      "sectors": {
+        "leaders": "Energy (XOM/CVX record highs on refining margins), Utilities, biopharma",
+        "laggards": "Tech/semiconductors, Real Estate, Industrials"
+      },
+      "afterHours": [
+        {
+          "ticker": "None",
+          "move": "",
+          "why": "No major earnings due after Friday's bell; after-hours session not yet printing at 3:20 CT."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "Mon 9:00 CT",
+          "item": "ISM Manufacturing PMI (Oct) and construction spending (Sep)",
+          "consensus": "ISM 54.7 (prior 54.5); construction +0.6%"
+        },
+        {
+          "time": "Mon 10:15 CT",
+          "item": "Fed's Goolsbee speaks",
+          "consensus": ""
+        },
+        {
+          "time": "Mon",
+          "item": "Earnings (per FMP calendar): AAPL, PLTR, VRTX, MAR, CLX, ON, FANG, WMB, PEG, NBIX, ROKU",
+          "consensus": ""
+        },
+        {
+          "time": "Tue",
+          "item": "US midterm elections; JOLTS job openings (Sep) 9:00 CT",
+          "consensus": "JOLTS 7.1M"
+        },
+        {
+          "time": "Wed",
+          "item": "ADP payrolls (Oct) 7:15 CT; ISM Services (Oct) 9:00 CT",
+          "consensus": "ADP +65K; ISM 54.8"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Thu: Initial jobless claims (week of Oct 31)",
+          "consensus": "197K (prior 194K)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Fri: October jobs report",
+          "consensus": "NFP +65K (prior +29K); unemployment 4.2%; AHE +0.3% m/m"
+        },
+        {
+          "time": "Week",
+          "item": "Fed speakers: Barkin, Hammack (Thu); Logan, Williams, Musalem, Bowman (Fri)",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "INTC",
+          "move": "-28.6%",
+          "why": "Weak Q4 guide, PC slump, Israel fab disruption; worst day on record."
+        },
+        {
+          "ticker": "RDDT",
+          "move": "-29.3%",
+          "why": "Q4 daily-user warning on falling search referrals despite a Q3 beat."
+        },
+        {
+          "ticker": "MRVL",
+          "move": "-10.0%",
+          "why": "Sympathy selling across AI silicon after Intel."
+        },
+        {
+          "ticker": "FMC",
+          "move": "+30.5%",
+          "why": "Sharp rally in the beaten-down ag-chem name."
+        },
+        {
+          "ticker": "CPRI",
+          "move": "+16.2%",
+          "why": "Q3 EPS $0.42 vs $0.21 est."
+        },
+        {
+          "ticker": "REGN",
+          "move": "about +11%",
+          "why": "EPS $20.07 vs $16.42 est; outlook raised."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Nasdaq, Dow, S&P 500 clobbered as October closes with brutal sell-off (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
+        },
+        {
+          "title": "Stock Market Today (Oct. 30, 2026): Intel, Reddit are latest tech earnings casualties (TheStreet)",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+        },
+        {
+          "title": "Fed needs at least two more rate hikes, Logan says (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/fed-needs-least-two-more-rate-hikes-logan-says-2026-10-30/"
+        },
+        {
+          "title": "The Week the Cracks in the AI Trade Grew Deeper (WSJ via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/the-week-the-cracks-in-the-ai-trade-grew-deeper-9e25b20f"
+        },
+        {
+          "title": "Why bitcoin held up better after the record Binance hack (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/10/30/binance-hack-bitcoin-price.html"
+        },
+        {
+          "title": "Tankers defy sharp escalation of Iranian attacks to keep crude flowing (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html"
+        },
+        {
+          "title": "The big winners of the tech wreck are biopharma stocks (MarketWatch via FMP)",
+          "url": "https://www.marketwatch.com/story/the-big-winners-of-the-tech-wreck-are-biopharma-stocks-2ac4d175"
+        },
+        {
+          "title": "Week Ahead for FX, Bonds: U.S. Midterms, Jobs Data in Focus (WSJ via FMP)",
+          "url": "https://www.wsj.com/economy/week-ahead-for-fx-bonds-u-s-midterms-jobs-data-in-focus-boe-expected-to-raise-rates-aa39e25d"
+        },
+        {
+          "title": "Intel Surpasses Q3 Earnings Estimates on Robust Data Center Demand (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3019377/intel-surpasses-q3-earnings-estimates-on-robust-data-center-demand?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Reddit Q3 Earnings Beat on Ad Growth and Strong Monetization (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3019902/reddit-q3-earnings-beat-on-ad-growth-and-strong-monetization?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Amazon (AMZN) Stock After Q3 Earnings: Buy the Dip, Sell, or Hold? (Zacks)",
+          "url": "https://www.zacks.com/commentary/3019984/amazon-(amzn)-stock-after-q3-earnings:-buy-the-dip,-sell,-or-hold?&utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Oct 30, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3019265/stock-market-news-for-oct-30,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC (Zacks)",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "RDDT (Zacks)",
+          "url": "https://www.zacks.com/stock/quote/RDDT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMZN (Zacks)",
+          "url": "https://www.zacks.com/stock/quote/AMZN?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-30-afternoon"
+    },
+    {
+      "date": "2026-10-30",
       "session": "morning",
       "generatedAt": "2026-10-30T12:59:54Z",
       "headline": "Risk-off, tech-led: Nasdaq futures down about 2.5% as Amazon and Intel extend the AI-capex scare that Alphabet started Wednesday; money is rotating into energy, bonds and the Dow, which is flat.",
