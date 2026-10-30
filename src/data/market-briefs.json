@@ -2,6 +2,200 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-10-30",
+      "session": "morning",
+      "generatedAt": "2026-10-30T12:59:54Z",
+      "headline": "Risk-off, tech-led: Nasdaq futures down about 2.5% as Amazon and Intel extend the AI-capex scare that Alphabet started Wednesday; money is rotating into energy, bonds and the Dow, which is flat.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,666",
+          "change": "-1.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "28,789",
+          "change": "-2.6%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,521",
+          "change": "+0.0%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,851",
+          "change": "-0.6%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.99%",
+          "change": "-6 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "18.6",
+          "change": "+1.4"
+        },
+        {
+          "label": "WTI",
+          "value": "$104.06",
+          "change": "+2.0%"
+        },
+        {
+          "label": "Brent",
+          "value": "$113.39",
+          "change": "+2.3%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,971",
+          "change": "-1.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$77,353",
+          "change": "-0.6%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Employment Cost Index (Q3, q/q)",
+          "actual": "+0.8%",
+          "consensus": "+0.8%",
+          "prior": "+0.9%",
+          "read": "Labor costs cooling slowly; wages +0.7% (est 0.8%), benefits +0.9% (est 0.7%). No new inflation alarm.",
+          "reaction": "Muted; futures and the 10-yr little changed versus pre-print levels (post-print tick not separately captured)."
+        }
+      ],
+      "drivers": [
+        "Amazon -7.6% pre-market: EPS $1.89 vs $2.01 est with revenue a hair light; AWS +39% and a record margin did not matter as Q3 capex of about $77B and trailing free cash flow of -$42B put AI spending front and center.",
+        "Intel -25%: beat on Q3 ($0.52 vs $0.39) but guided Q4 to $15-16B revenue and $0.25 EPS, below estimates, and flagged a PC slowdown tied to memory prices. Dragging the chip complex: AMD -9%, Broadcom -4%, Nvidia -2.5%.",
+        "Fed: Chair Warsh's first FOMC held at 3.75-4.00% Wednesday on a 10-2 vote with Cook and Hammack dissenting for a hike; futures price roughly 85% odds of a December hike after Thursday's 3.4% GDP print and 3.1% core PCE.",
+        "Crypto and geopolitics: Binance hacked for about $6.3B, the largest crypto theft ever, with withdrawals suspended; oil up 2% on reports Trump was briefed on renewed Iran strike options and tanker attacks near the Strait of Hormuz.",
+        "Overseas: Europe lower, led by tech, after hot Italian and French CPI prints and ECB's Panetta floating more hikes; Asia tech and chips sold off in sympathy while the BOJ held at 1.25% but raised its inflation outlook and signaled more hikes."
+      ],
+      "calendar": [
+        {
+          "time": "8:30 CT",
+          "item": "Fed's Barkin speaks (blackout over; FOMC met Wednesday)",
+          "consensus": ""
+        },
+        {
+          "time": "8:45 CT",
+          "item": "Chicago PMI (Oct)",
+          "consensus": "~56 (prior 58.8)"
+        },
+        {
+          "time": "11:00 CT",
+          "item": "Fed's Daly speaks",
+          "consensus": ""
+        },
+        {
+          "time": "11:30 CT",
+          "item": "Fed's Musalem speaks",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Baker Hughes rig count",
+          "consensus": "prior 460"
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Earnings in: XOM $4.23 vs $4.12 est, CVX $5.28 vs $4.87, ABBV $3.82 vs $3.73, REGN $20.07 vs $16.42, GD $4.49 vs $4.12; AZN, BP, SNY, CL, CHD beat; LYB missed",
+          "consensus": ""
+        },
+        {
+          "time": "After-bell",
+          "item": "No major reports Friday. Next week: midterms Tuesday; AAPL, AMD, PLTR earnings",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "INTC",
+          "move": "-25%",
+          "why": "Strong Q3 but weak Q4 guide; PC demand hit by memory shortage and pricing."
+        },
+        {
+          "ticker": "AMZN",
+          "move": "-7.6%",
+          "why": "EPS miss; AI capex and negative free cash flow overshadow AWS +39%."
+        },
+        {
+          "ticker": "GOOGL",
+          "move": "-1.2%",
+          "why": "Follow-through after Thursday's -12.6%, its worst day in 20+ years, on a search miss and negative FCF."
+        },
+        {
+          "ticker": "XOM",
+          "move": "+1.8%",
+          "why": "Beat on refining margins; oil bid on Iran risk. Chevron +1.5% on a similar beat."
+        },
+        {
+          "ticker": "SNDK",
+          "move": "-8%",
+          "why": "Beat and an 8-for-1 split, but memory-pricing-peak fears hit the stock."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Nasdaq futures dive as Amazon, Intel earnings rattle investors - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-083236552.html"
+        },
+        {
+          "title": "Stock Market Today (Oct. 30, 2026) - TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+        },
+        {
+          "title": "FOMC October 2026: Fed Holds Rates in a 10-2 Vote - Admiral Markets",
+          "url": "https://admiralmarkets.com/analytics/traders-blog/fomc-october-2026-fed-holds-rates"
+        },
+        {
+          "title": "Tech scare trade hits Nasdaq futures while crypto reels - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/10/30/tech-trade-nasdaq-futures-crypto-hack.html"
+        },
+        {
+          "title": "AI Selloff Deepens, Oil Jumps and Crypto Falls - WSJ (via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/ai-selloff-deepens-oil-jumps-and-crypto-falls-4703d21b"
+        },
+        {
+          "title": "Binance Suspends Withdrawals After Hackers Steal $6.3 Billion - NYT (via FMP)",
+          "url": "https://www.nytimes.com/2026/10/29/technology/binance-hack-crypto.html"
+        },
+        {
+          "title": "New economic data challenges Fed chief's not-too-hot perspective - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/new-economic-data-challenges-fed-chiefs-not-too-hot-perspective-2026-10-30/"
+        },
+        {
+          "title": "European shares ease as AI-driven tech selloff deepens - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/european-shares-ease-ai-driven-tech-selloff-deepens-2026-10-30/"
+        },
+        {
+          "title": "More ECB hikes may be needed, Panetta says - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/finance/more-ecb-hikes-may-be-needed-stop-inflation-panetta-says-2026-10-30/"
+        },
+        {
+          "title": "AMD Shares Feel the Heat as Intel Drags Chip Stocks Lower - Benzinga (via FMP)",
+          "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62731451/amd-shares-feel-the-heat-as-intel-drags-chip-stocks-lower-whats-going-on"
+        },
+        {
+          "title": "Stock Market News for Oct 30, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3019265/stock-market-news-for-oct-30,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Amazon the Latest Mag 7 to Miss Q3 Estimates - Zacks",
+          "url": "https://www.zacks.com/stock/news/3019092/amazon-the-latest-mag-7-to-miss-q3-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Intel Surpasses Q3 Earnings Estimates on Robust Data Center Demand - Zacks",
+          "url": "https://www.zacks.com/stock/news/3019377/intel-surpasses-q3-earnings-estimates-on-robust-data-center-demand?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-10-30-morning"
+    },
+    {
       "date": "2026-10-29",
       "session": "afternoon",
       "generatedAt": "2026-10-29T20:35:00Z",
