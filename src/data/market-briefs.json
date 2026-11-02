@@ -3,6 +3,233 @@
   "briefs": [
     {
       "date": "2026-11-02",
+      "session": "afternoon",
+      "generatedAt": "2026-11-02T21:35:00Z",
+      "headline": "A morning rally on a 7%-plus oil plunge faded into a second day of AI and chip selling: S&P 500 closed -0.5% and Nasdaq -1.1% while the Dow rose +0.4% on rotation into staples, financials and industrials, with the VIX back above 21.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,542",
+          "change": "-0.50%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,164",
+          "change": "-1.07%"
+        },
+        {
+          "label": "Dow",
+          "value": "51,984",
+          "change": "+0.41%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,806",
+          "change": "-0.21%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.90%",
+          "change": "-3 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "21.2",
+          "change": "+9.2%"
+        },
+        {
+          "label": "WTI",
+          "value": "$96.2",
+          "change": "-7.6%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,957",
+          "change": "+1.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$76,678",
+          "change": "-2.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "ISM Manufacturing PMI (Oct)",
+          "actual": "55.5",
+          "consensus": "54.6",
+          "prior": "54.5",
+          "read": "firmer",
+          "reaction": "yields eased ~3bp, prices index fell to 75.2"
+        },
+        {
+          "name": "Construction spending (Sep)",
+          "actual": "-1.9%",
+          "consensus": "+0.4%",
+          "prior": "+2.0%",
+          "read": "softer",
+          "reaction": "little market impact"
+        }
+      ],
+      "drivers": [
+        "AI and chip selling resumed after a morning bounce: Oracle -8.9% on a $10B stock sale plus $10B of bonds to fund its AI buildout; Marvell -12.7% and Lumentum -18.6% on their roughly $115B all-stock merger; Intel -8.8% extending last week's post-earnings drop; technology sector -3.5%.",
+        "Oil cracked on reports that Iran's supreme leader authorized the government to pursue peace talks and Rubio saying Trump wants a diplomatic end; WTI fell about $8 to the mid-$90s, energy (XLE -4%) was the second-worst sector, airlines rallied.",
+        "Data held up: ISM Manufacturing 55.5 vs 54.6 expected with the prices index easing to 75.2 from 77.9; construction spending -1.9% vs +0.4% expected. Yields drifted lower; futures still price roughly 3-in-4 odds of a December hike.",
+        "Midterm elections are tomorrow; prediction markets put about 74% odds on Democrats taking the Senate. Fed's Goolsbee spoke this afternoon with no market-moving headlines seen. Session reversed: the S&P was up about 1% early (high 7,662) before selling off into the close."
+      ],
+      "sectors": {
+        "leaders": "Consumer staples (+2.4%), financials (+0.8%), consumer discretionary (+0.5%)",
+        "laggards": "Technology (-3.5%), energy (-2.3%), real estate (-1.7%), utilities (-1.4%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "PLTR",
+          "move": "+1%",
+          "why": "Q3 revenue $2.31B (+96% y/y), adj. EPS $0.44 vs $0.40 est, FY revenue guidance raised to about $8.53B; spiked then settled around +1% early after hours."
+        },
+        {
+          "ticker": "AAPL",
+          "move": "-0.6% pre-report",
+          "why": "Reports about 4:30pm ET, first call under CEO John Ternus; consensus EPS about $2.00 on about $113.4B revenue. Fell 1.8% in the regular session."
+        },
+        {
+          "ticker": "LSCC",
+          "move": "n/a",
+          "why": "EPS $0.72 vs $0.55 estimate per FMP's earnings calendar; after-hours reaction not yet available. Roku also due tonight."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "All day",
+          "item": "US midterm elections",
+          "consensus": "Prediction markets ~74% odds Democrats take the Senate"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "JOLTS job openings (Sep)",
+          "consensus": "7.13M (prior 7.08M)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Factory orders (Sep)",
+          "consensus": "+1.2% (prior +0.1%)"
+        },
+        {
+          "time": "After close",
+          "item": "AMD earnings",
+          "consensus": "Also PFE, AMGN, ETN, SHOP, BKNG, ANET, SMCI, DD, FISV, APO, AIG, PRU, YUM, KDP, ADM, MPC, RACE report Tuesday"
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "October jobs report",
+          "consensus": "about +55K payrolls"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "ORCL",
+          "move": "-8.9%",
+          "why": "$20B combined stock and bond raise to fund AI data centers."
+        },
+        {
+          "ticker": "MRVL",
+          "move": "-12.7%",
+          "why": "Buying Lumentum in an all-stock deal, 4.5 MRVL shares per LITE share, about $115B enterprise value; LITE -18.6%."
+        },
+        {
+          "ticker": "INTC",
+          "move": "-8.8%",
+          "why": "Second leg down after last week's weak PC-driven outlook."
+        },
+        {
+          "ticker": "IDXX",
+          "move": "+21.8%",
+          "why": "Q3 EPS $3.96 vs $3.73 estimate and a raised 2026 outlook."
+        },
+        {
+          "ticker": "AMZN",
+          "move": "+2.2%",
+          "why": "Rebound from last week's post-earnings slide on a Morgan Stanley note."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: S&P 500 and Nasdaq extend tech sell-off, Dow gains as oil prices plunge - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html"
+        },
+        {
+          "title": "Stock Market Today (Nov. 2, 2026) - TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
+        },
+        {
+          "title": "Tech Stocks Pull the Nasdaq Lower - StockTitan",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+        },
+        {
+          "title": "Apple to report Q4 earnings Monday - Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/article/apple-to-report-q4-earnings-monday-with-iphone-18-sales-in-the-spotlight-190138409.html"
+        },
+        {
+          "title": "Apple (AAPL) Q4 2026 Earnings - MarketBeat",
+          "url": "https://www.marketbeat.com/earnings/reports/2026-11-2-apple-inc-stock/"
+        },
+        {
+          "title": "Prediction market traders now see nearly 75% chance of Democrats winning the Senate - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/02/prediction-market-traders-now-see-nearly-75percent-chance-of-democrats-winning-the-senate.html"
+        },
+        {
+          "title": "Chip stocks are suffering from a crisis of confidence - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/chip-stocks-are-suffering-from-a-crisis-of-confidence-but-things-arent-as-gloomy-as-they-seem-6ed14ea9"
+        },
+        {
+          "title": "Big Tech's AI Binge Is Sinking the Market - Barron's (via FMP)",
+          "url": "https://www.barrons.com/articles/tech-stocks-ai-spending-borrowing-earnings-1c844c1c"
+        },
+        {
+          "title": "Earnings Results Wrap with Apple After the Close - Zacks, 11/02/2026",
+          "url": "https://www.zacks.com/stock/news/3020709/earnings-results-wrap-with-apple-after-the-close?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Nov 2, 2026 - Zacks, 11/02/2026",
+          "url": "https://www.zacks.com/stock/news/3020468/stock-market-news-for-nov-2,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Will Top-Line Improvement Benefit Palantir in Q3 Earnings? - Zacks, 10/30/2026",
+          "url": "https://www.zacks.com/stock/news/3019977/will-top-line-improvement-benefit-palantir-in-q3-earnings?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AAPL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AAPL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "PLTR - Zacks",
+          "url": "https://www.zacks.com/stock/quote/PLTR?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MRVL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ORCL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ORCL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMZN - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMZN?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Index, sector, yield, gold, bitcoin and stock prices - Financial Modeling Prep",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-02-afternoon"
+    },
+    {
+      "date": "2026-11-02",
       "session": "morning",
       "generatedAt": "2026-11-02T14:40:00Z",
       "headline": "Stocks bounce after last week's AI-led rout, helped most by a 4-6% drop in oil on reports the US and Iran are pursuing a diplomatic track; Apple and Palantir report after the bell and midterms are tomorrow. No 7:30 CT data today; ISM Manufacturing at 9:00 CT and Fed's Goolsbee at 10:15 CT. Levels as of about 8:35am CT.",
