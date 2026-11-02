@@ -2,6 +2,257 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-02",
+      "session": "morning",
+      "generatedAt": "2026-11-02T14:10:00Z",
+      "headline": "Futures firmer as the AI selloff pauses and oil drops 4-6% on U.S.-Iran talks; Apple reports after the bell and midterms are tomorrow. No 7:30 CT data today; ISM Manufacturing at 9:00 CT and Fed's Goolsbee at 10:15 CT.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,640",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "28,699",
+          "change": "+0.6%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,148",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,835",
+          "change": "+0.5%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.93%",
+          "change": "-1 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "18.9",
+          "change": "-0.5"
+        },
+        {
+          "label": "WTI",
+          "value": "$99.40",
+          "change": "-4.5%"
+        },
+        {
+          "label": "Brent",
+          "value": "$106.74",
+          "change": "-5.9%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,957",
+          "change": "+1.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$77.8K",
+          "change": "-0.6%"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "AI trade catching its breath: chips and megacap tech are bouncing pre-market after Intel (-29%), Alphabet and Amazon misses turned the AI-capex scare into a semiconductor rout last week. The Nasdaq's -5.3% October was its worst month since March 2025 and the Nasdaq 100 briefly dipped into correction. Deutsche Bank is calling for an overweight on tech while Citi has backed away from the hyperscaler trade.",
+        "Oil unwinds war premium: Secretary Rubio said the President prefers negotiations over more strikes and Iran said a deal is still possible after Qatar-mediated talks, sending Brent and WTI down 4-6%. Reports that both sides are preparing for possible military action after the midterms keep a floor under crude; energy, Friday's leader, may give some back.",
+        "Midterm elections tomorrow (Nov 3): Morgan Stanley's Mike Wilson frames the vote as a clearing event regardless of outcome; Democrats are favored to take at least one chamber.",
+        "Rates, Fed and crypto: the 10-year has eased from about 5.35% in early October to 4.93%, but Fed speakers stayed hawkish last week (Dallas Fed's Logan said two more hikes are needed). Chicago Fed's Goolsbee speaks today; the FOMC blackout is not in effect. Binance's reported $6.3B hack keeps crypto heavy near $78K. Friday's jobs report is the week's key print.",
+        "Overseas: Europe opened higher on upbeat manufacturing PMIs (UK fastest growth in over two years, eurozone 52.7). Asia closed mixed: Shanghai +1.1%, Shenzhen +2.4%, Hang Seng +0.4%, Nikkei -0.3%."
+      ],
+      "calendar": [
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global US Manufacturing PMI, Oct final",
+          "consensus": "prior 56.0 (flash)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "ISM Manufacturing PMI (Oct)",
+          "consensus": "54.6-54.7 vs 54.5 prior"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "ISM Prices Paid / New Orders / Employment (Oct)",
+          "consensus": "~77 / 55.4 / 53"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Construction Spending (Sep)",
+          "consensus": "+0.4-0.5% m/m vs +0.9%"
+        },
+        {
+          "time": "10:15 CT",
+          "item": "Fed's Goolsbee speaks (FOMC blackout not in effect)",
+          "consensus": ""
+        },
+        {
+          "time": "10:30 CT",
+          "item": "Treasury 3- and 6-month bill auctions",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "Fed Senior Loan Officer Survey",
+          "consensus": ""
+        },
+        {
+          "time": "2:00 CT",
+          "item": "Treasury quarterly refunding financing estimates (refunding announcement Wed)",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "Fox $2.54 vs $2.02 est; Marriott $3.02 vs $2.84; Estee Lauder $0.72 vs $0.51; Entergy $1.98 vs $1.71; Idexx $3.98 vs $3.71",
+          "consensus": "all beats"
+        },
+        {
+          "time": "After bell",
+          "item": "Apple (first call under CEO John Ternus)",
+          "consensus": "EPS ~$2.00, rev ~$113.4B"
+        },
+        {
+          "time": "After bell",
+          "item": "Palantir",
+          "consensus": "EPS $0.41, rev $2.17B (+84% y/y)"
+        },
+        {
+          "time": "After bell",
+          "item": "Vertex, Williams, Diamondback, Realty Income, ON Semi, Roku, Lattice",
+          "consensus": ""
+        },
+        {
+          "time": "Tue",
+          "item": "Midterm elections; AMD and Super Micro report after the close",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "MRVL",
+          "move": "-3% pre",
+          "why": "Buying Lumentum (LITE, -6%) in a roughly $115B all-stock deal; Street weighing the price. Coherent +2%."
+        },
+        {
+          "ticker": "AAPL",
+          "move": "-1.2% pre",
+          "why": "Reports after the bell; reclaimed the most-valuable-company spot after peers were hit last week."
+        },
+        {
+          "ticker": "INTC",
+          "move": "Fri $65.76",
+          "why": "After the -29% guide-down Friday, Zacks flags it deeply oversold (RSI 25) with a #1 Rank; watch for a bounce attempt."
+        },
+        {
+          "ticker": "PLTR",
+          "move": "Fri $184.11",
+          "why": "Fell 6% Friday into tonight's print; Zacks consensus revenue $2.17B, up 84% y/y."
+        },
+        {
+          "ticker": "FOXA",
+          "move": "beat",
+          "why": "Fiscal Q1 EPS $2.54 vs $2.02 est, revenue $4.57B vs $4.32B; profit up ~57% y/y on World Cup advertising."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq futures recover from bruising sell-off ahead of busy week - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html"
+        },
+        {
+          "title": "Stock Market Today, Nov. 2: Futures Rise Ahead of Earnings and Midterm Elections; Oil Prices Fall - TipRanks",
+          "url": "https://www.tipranks.com/news/stock-market-today-nov-2-futures-rise-ahead-of-earnings-and-midterm-elections-oil-prices-fall"
+        },
+        {
+          "title": "Wall Street futures rise as AI stocks catch their breath; midterms in focus - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/media-telecom/wall-street-futures-rise-ai-stocks-catch-their-breath-midterms-focus-2026-11-02/"
+        },
+        {
+          "title": "Oil Prices Fall More Than 4% as Iran Peace Talks Ease Supply Fears - WSJ (via FMP)",
+          "url": "https://www.wsj.com/world/middle-east/oil-prices-fall-more-than-3-as-iran-peace-talks-ease-supply-fears-e2b47ca0"
+        },
+        {
+          "title": "Stock Futures Higher, Oil Lower as Investors Return to Risk - WSJ (via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/stock-futures-higher-oil-lower-as-investors-return-to-risk-17e79294"
+        },
+        {
+          "title": "Fox Profit Rises as World Cup Boosts Ad Sales - WSJ (via FMP)",
+          "url": "https://www.wsj.com/business/earnings/fox-profit-rises-as-world-cup-boosts-ad-sales-73ef3b55"
+        },
+        {
+          "title": "Marvell Slides 3%, Lumentum Drops 6% on $115 Billion All-Stock Merger Deal - 24/7 Wall St (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/02/marvell-slides-3-lumentum-drops-6-on-115-billion-all-stock-merger-deal-coherent-climbs-2/"
+        },
+        {
+          "title": "The latest market wobble sees Citi giving up on this big tech trade - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/the-latest-market-wobble-sees-citi-giving-up-on-this-big-tech-trade-181b0dea"
+        },
+        {
+          "title": "Deutsche Bank forecasts another tech bounce - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/tech-stocks-have-made-big-v-shaped-rebounds-five-times-in-30-months-and-now-deutsche-bank-forecasts-another-bounce-0a552a62"
+        },
+        {
+          "title": "Morgan Stanley's Wilson: election good news regardless of outcome - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/the-election-will-be-good-news-regardless-of-outcome-says-morgan-stanleys-chief-stock-market-strategist-ffa320ed"
+        },
+        {
+          "title": "Binance Resumes Withdrawals After Biggest-Ever Crypto Hack - WSJ (via FMP)",
+          "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-binance-resumes-withdrawals-after-suffering-biggest-ever-crypto-hack-435c0f7e"
+        },
+        {
+          "title": "Stock Market News for Nov 2, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3020468/stock-market-news-for-nov-2,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Down 44.9% in 4 Weeks, Here's Why Intel Looks Ripe for a Turnaround - Zacks",
+          "url": "https://www.zacks.com/stock/news/3020494/down-44.9-in-4-weeks,-here's-why-intel-(intc)-looks-ripe-for-a-turnaround-?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Will Top-Line Improvement Benefit Palantir in Q3 Earnings? - Zacks",
+          "url": "https://www.zacks.com/stock/news/3019977/will-top-line-improvement-benefit-palantir-in-q3-earnings?&utm_source=zacks_mcp"
+        },
+        {
+          "title": "Apple's Q4 Earnings Loom - Zacks",
+          "url": "https://www.zacks.com/stock/news/3018992/apple's-q4-earnings-loom:-buy-or-sell-aapl-stock-ahead-of-results?&utm_source=zacks_mcp"
+        },
+        {
+          "title": "AAPL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AAPL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "PLTR - Zacks",
+          "url": "https://www.zacks.com/stock/quote/PLTR?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FOXA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/FOXA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MRVL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "LITE - Zacks",
+          "url": "https://www.zacks.com/stock/quote/LITE?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Index, treasury, commodity, crypto and earnings-calendar data via FMP",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-02-morning"
+    },
+    {
       "date": "2026-10-30",
       "session": "afternoon",
       "generatedAt": "2026-10-30T20:30:00Z",
