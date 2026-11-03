@@ -3,6 +3,283 @@
   "briefs": [
     {
       "date": "2026-11-03",
+      "session": "afternoon",
+      "generatedAt": "2026-11-03T21:40:00Z",
+      "headline": "A mixed Election Day close: the S&P 500 (+0.4%) and Nasdaq (+0.8%) bounced on a chip rebound led by AMD and Nvidia ahead of AMD's print, while Apple's margin warning dragged the Dow (-0.4%); AMD is up about 7% after hours on a $17B Q4 revenue guide.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,568.71",
+          "change": "+0.36%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,372",
+          "change": "+0.83%"
+        },
+        {
+          "label": "Dow",
+          "value": "51,786.72",
+          "change": "-0.38%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,812",
+          "change": "+0.23%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.95%",
+          "change": "+4 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "20.82",
+          "change": "-1.6%"
+        },
+        {
+          "label": "WTI",
+          "value": "$96.6",
+          "change": "+0.1%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,932",
+          "change": "-0.9%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$77,826",
+          "change": "+1.5%"
+        }
+      ],
+      "data": [
+        {
+          "name": "JOLTS job openings (Sep)",
+          "actual": "7.52M",
+          "consensus": "7.1M",
+          "prior": "7.19M",
+          "read": "firmer",
+          "reaction": "10-yr yield +4bp to 4.95%"
+        },
+        {
+          "name": "Factory orders (Sep)",
+          "actual": "+1.8%",
+          "consensus": "+1.2%",
+          "prior": "+0.3%",
+          "read": "firmer",
+          "reaction": "supported industrials"
+        }
+      ],
+      "drivers": [
+        "Chips rebounded after Monday's rout: Micron, AMD, Nvidia, Broadcom and Intel each rose about 3% and SOXL gained 7%; the semiconductor index is still about 22% below its October high.",
+        "Apple fell 1.9% and was the biggest Dow drag despite a record $114.5B quarter, after guiding December-quarter gross margin to 45-46% on rising memory costs. Palantir slipped 1.6% after a beat-and-raise and Shopify lost 6% on soft GMV and subscription metrics.",
+        "Election Day wait-and-see: prediction markets put Democrats near 75% to take both chambers and JPMorgan put a blue-wave outcome at about 66% odds; results overnight set Wednesday's tone.",
+        "Data came in firmer than expected (JOLTS 7.52M vs 7.1M, factory orders +1.8% vs +1.2%) and the 10-year yield rose 4bp. Oil spiked early on a reported U.S. strike on Iran's Qeshm Island, then faded on talk hopes; an Iranian official said the sides remain far apart. The S&P and Nasdaq gave back part of their afternoon gains into the close."
+      ],
+      "sectors": {
+        "leaders": "Industrials, Real Estate, Utilities, Tech/semis",
+        "laggards": "Materials, Consumer Staples, Financials"
+      },
+      "afterHours": [
+        {
+          "ticker": "AMD",
+          "move": "+7% AH",
+          "why": "Q3 revenue $13.38B (+45%), adj EPS $2.09 vs $1.95 est, data center $8.5B (+97%); Q4 guide about $17B (+66% y/y) with ~55% gross margin."
+        },
+        {
+          "ticker": "SMCI",
+          "move": "+5% AH",
+          "why": "FQ1 revenue $19.9B vs $5.0B a year ago, adj EPS $1.81 vs $1.23 est; FY27 sales guided to $72-82B."
+        },
+        {
+          "ticker": "ANET",
+          "move": "+7% AH",
+          "why": "EPS $1.20 vs $1.08 est; revenue $3.66B vs $3.33B est."
+        },
+        {
+          "ticker": "AMGN",
+          "move": "-2% AH",
+          "why": "EPS $6.45 vs $5.79 est and revenue $10.4B beat; thin after-hours volume."
+        },
+        {
+          "ticker": "BKNG",
+          "move": "flat AH",
+          "why": "EPS $4.66 vs $4.49 est; revenue $9.8B vs $9.5B est."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "overnight",
+          "item": "Midterm election results",
+          "consensus": "Some races may not be called tonight"
+        },
+        {
+          "time": "7:15 CT",
+          "item": "ADP private payrolls (Oct)",
+          "consensus": "+69K (prior +90K)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Trade balance (Sep) and Treasury refunding announcement",
+          "consensus": "-$108B (prior -$105.6B)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "ISM Services PMI (Oct)",
+          "consensus": "54.8 (prior 54.9); prices 75"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA weekly crude inventories",
+          "consensus": "prior -1.9M bbl"
+        },
+        {
+          "time": "pre-market",
+          "item": "Earnings: MCD, NVO, CVS, MCK, COR, EMR, ALB",
+          "consensus": "MCD EPS est $3.38; NVO $0.73; CVS $1.65"
+        },
+        {
+          "time": "after close",
+          "item": "Earnings: QCOM, ARM, UBER, DDOG, EXPE, SNAP",
+          "consensus": "QCOM EPS est $2.16; ARM $0.48; UBER $0.86"
+        },
+        {
+          "time": "no time",
+          "item": "No U.S. Fed speakers on the FMP calendar; jobs report Friday",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "FISV",
+          "move": "+13.6%",
+          "why": "Raised its cost-savings target and plans buybacks."
+        },
+        {
+          "ticker": "SHOP",
+          "move": "-6%",
+          "why": "GMV and subscription revenue missed despite an EPS beat; was down 16% early."
+        },
+        {
+          "ticker": "IT",
+          "move": "-14%",
+          "why": "Gartner beat on EPS but investors doubted the quality of growth; Dynatrace (DT) -14.7% on guidance."
+        },
+        {
+          "ticker": "AEHR",
+          "move": "+26.5%",
+          "why": "Revenue tripled to a record $33M and the full-year forecast was raised to $150M."
+        },
+        {
+          "ticker": "PFE",
+          "move": "-2.2%",
+          "why": "Beat and raised 2026 guidance but booked a $650M Innovent charge."
+        },
+        {
+          "ticker": "RIOT",
+          "move": "+18%",
+          "why": "Crypto miners rallied with bitcoin up 1.5%; IREN +11%."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance - Stock market today: Dow slips, S&P and Nasdaq gain as chip stocks rally",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html"
+        },
+        {
+          "title": "TheStreet - Stock Market Today Nov 3, 2026",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-03-2026"
+        },
+        {
+          "title": "StockTitan - Stock Market Today Live, November 3, 2026",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-3-2026"
+        },
+        {
+          "title": "StockTitan - AMD reports Q3 2026 financial results",
+          "url": "https://www.stocktitan.net/news/AMD/amd-reports-third-quarter-2026-financial-7j6jzo29buqw.html"
+        },
+        {
+          "title": "StockTitan - Supermicro announces fiscal Q1 2027 results",
+          "url": "https://www.stocktitan.net/news/SMCI/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-ww9b20j0zx3p.html"
+        },
+        {
+          "title": "Barron's - Why Are Stocks Falling When Earnings Beat the Street? (via FMP)",
+          "url": "https://www.barrons.com/articles/ai-stocks-selloff-q3-earnings-guidance-8ce9f05a"
+        },
+        {
+          "title": "CNBC - Options traders are betting heavily on these stocks ahead of election results (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/03/options-traders-are-betting-heavily-on-these-stocks-ahead-of-election-results.html"
+        },
+        {
+          "title": "Zacks - Stock Market News for Nov 3, 2026",
+          "url": "https://www.zacks.com/stock/news/3021642/stock-market-news-for-nov-3,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Q3 Earnings & JOLTS Report on Midterm Voting Day",
+          "url": "https://www.zacks.com/stock/news/3021911/q3-earnings-&-jolts-report-on-midterm-voting-day?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Apple Q4 Earnings Beat Estimates, iPhone Drives Top-Line Growth",
+          "url": "https://www.zacks.com/stock/news/3021937/apple-q4-earnings-beat-estimates,-iphone-drives-top-line-growth?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Buy the Dip in Apple or Palantir Stock After Earnings?",
+          "url": "https://www.zacks.com/commentary/3022182/buy-the-dip-in-apple-or-palantir-stock-after-earnings?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Compared to Estimates, Shopify Q3 Earnings",
+          "url": "https://www.zacks.com/stock/news/3021719/compared-to-estimates,-shopify-(shop)-q3-earnings:-a-look-at-key-metrics?utm_source=zacks_mcp"
+        },
+        {
+          "title": "RDDT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/RDDT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NOW - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NOW?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FTNT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/FTNT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "GOOGL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/GOOGL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "PWR - Zacks",
+          "url": "https://www.zacks.com/stock/quote/PWR?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MRVL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AAPL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AAPL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SHOP - Zacks",
+          "url": "https://www.zacks.com/stock/quote/SHOP?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Financial Modeling Prep (FMP) - index quotes, treasury rates, sector snapshot, economic and earnings calendars, intraday prices",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-03-afternoon"
+    },
+    {
+      "date": "2026-11-03",
       "session": "morning",
       "generatedAt": "2026-11-03T13:58:00Z",
       "headline": "Futures are mixed with tech bouncing modestly after Monday's AI-led slide; Apple's margin warning and a whipsawing oil tape are the story, with midterm results overnight and AMD after the close. (Financial Datasets and Bigdata.com were unavailable this run; levels from FMP, Yahoo Finance, TheStreet and Zacks.)",
