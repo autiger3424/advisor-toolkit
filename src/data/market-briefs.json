@@ -2,6 +2,232 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-03",
+      "session": "morning",
+      "generatedAt": "2026-11-03T13:58:00Z",
+      "headline": "Futures are mixed with tech bouncing modestly after Monday's AI-led slide; Apple's margin warning and a whipsawing oil tape are the story, with midterm results overnight and AMD after the close. (Financial Datasets and Bigdata.com were unavailable this run; levels from FMP, Yahoo Finance, TheStreet and Zacks.)",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,593",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "28,383",
+          "change": "+0.9%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,015",
+          "change": "-0.2%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,833",
+          "change": "+0.5%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.90%",
+          "change": "-1bp"
+        },
+        {
+          "label": "VIX",
+          "value": "20.6",
+          "change": "-2.6%"
+        },
+        {
+          "label": "WTI",
+          "value": "$94.6",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Brent",
+          "value": "$101.8",
+          "change": "-2.8%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,973",
+          "change": "+0.1%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$77,300",
+          "change": "+0.8%"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "Midterm Election Day: polls and prediction markets lean Democratic for both chambers, results overnight. Gridlock is the base case, but a spending showdown and AI data-center pushback remain unresolved.",
+        "Apple -4% pre-market: Q4 beat, but the December-quarter gross margin guide of 45-46% (vs 46.3% est) on memory costs plus a China miss weighed. The Nasdaq 100 entered a correction Monday; chip names (NVDA, AMD, INTC) are bouncing today.",
+        "Oil: Brent fell 7% Monday on Qatar-mediated Iran talks, rebounded overnight after a US strike on Iran's Qeshm Island and Tehran saying a deal is far off, then faded again into the open.",
+        "Fed held last week with two dissents for a hike; no Fed speakers found today. Long yields sit at their lowest since September with the 10-yr near 4.90%.",
+        "Europe lower (Stoxx 600 -0.3%, DAX -0.6%, FTSE -0.5%) as Apple's warning hit ASML, STMicro and Infineon; Bayer and Philips +6% on earnings. Asia: Tokyo closed for Culture Day, Kospi -3.3% on the chip rout, Hang Seng +0.6%, ASX +0.4%; RBA hiked 25bp to 4.85%."
+      ],
+      "calendar": [
+        {
+          "time": "9:00 CT",
+          "item": "JOLTS job openings (Sep)",
+          "consensus": "7.1M (prior 7.08M)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Factory orders (Sep)",
+          "consensus": "+1.2% (prior +0.1%)"
+        },
+        {
+          "time": "All day",
+          "item": "Total vehicle sales (Oct)",
+          "consensus": "15.9M"
+        },
+        {
+          "time": "3:30 CT",
+          "item": "API crude inventories",
+          "consensus": ""
+        },
+        {
+          "time": "Overnight",
+          "item": "Midterm election results",
+          "consensus": ""
+        },
+        {
+          "time": "Fed",
+          "item": "No Fed speakers scheduled; not in blackout (FOMC held last week, two dissents for a hike)",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "PFE $0.87 vs $0.74 est, rev $16.6B vs $15.9B; ETN $3.68 vs $3.54; DD $2.09 vs $1.87; YUM $1.56 vs $1.47; MPC $26.93 vs $25.37; ADM $1.77 vs $1.60; KDP, ZBRA, WAT, RACE beats; APO $2.07 vs $2.19 (miss)",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "AMD",
+          "consensus": "EPS $1.95, rev $13.1B"
+        },
+        {
+          "time": "After bell",
+          "item": "AMGN",
+          "consensus": "EPS $5.79, rev $10.1B"
+        },
+        {
+          "time": "After bell",
+          "item": "ANET",
+          "consensus": "EPS $1.08, rev $3.3B"
+        },
+        {
+          "time": "After bell",
+          "item": "SMCI",
+          "consensus": "EPS $1.23, rev $17.5B"
+        },
+        {
+          "time": "After bell",
+          "item": "BKNG, EA, ET, XYZ, DUOL",
+          "consensus": "BKNG EPS $4.49"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "SHOP",
+          "move": "-15%",
+          "why": "Beat on EPS and GMV, but subscription revenue came in light; sell-the-news to about $132."
+        },
+        {
+          "ticker": "DT",
+          "move": "-15%",
+          "why": "Dynatrace beat ($0.54 vs $0.49) yet is heading for its worst post-earnings drop in over three years."
+        },
+        {
+          "ticker": "PLTR",
+          "move": "-6%",
+          "why": "Beat and raised, commercial topped government for the first time, but customer count missed and bookings growth slowed."
+        },
+        {
+          "ticker": "AAPL",
+          "move": "-4%",
+          "why": "Q4 beat, but holiday-quarter gross margin guide of 45-46% on memory costs and a China miss."
+        },
+        {
+          "ticker": "PFE",
+          "move": "flat",
+          "why": "Clean beat and raise on both lines ($0.87 vs $0.74; rev $16.6B vs $15.9B), muted reaction."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: futures waver ahead of midterms, AMD - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-090846378.html"
+        },
+        {
+          "title": "Stock Market Today (Nov. 3, 2026): Dow futures fall ahead of U.S. elections - TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-03-2026"
+        },
+        {
+          "title": "The Morning Brief, November 3, 2026 - Current Logic",
+          "url": "https://currentlogic.substack.com/p/the-morning-brief-november-3-2026"
+        },
+        {
+          "title": "Markets Mixed as US Midterm Election Day Arrives - SIA Wealth",
+          "url": "https://www.siawealth.com/2026/11/03/markets-mixed-as-us-midterm-election-day-arrives/"
+        },
+        {
+          "title": "Oil Prices Rebound as US Strike on Qeshm Island Dims Peace Prospects - Yahoo Finance",
+          "url": "https://finance.yahoo.com/energy/articles/oil-prices-rebound-us-strike-100946706.html"
+        },
+        {
+          "title": "Asia Market Quick Take, 3 November 2026 - Saxo",
+          "url": "https://www.home.saxo/en-sg/content/articles/macro/asia-market-quick-take-03-november-2026-03112026"
+        },
+        {
+          "title": "European shares slide as Apple margin warning triggers tech rout - Yahoo Finance SG",
+          "url": "https://sg.finance.yahoo.com/news/european-shares-slide-apple-margin-083902572.html"
+        },
+        {
+          "title": "2 Reasons Why This AI-Powered Software Stock Is Tumbling After Earnings - Barron's (via FMP)",
+          "url": "https://www.barrons.com/articles/dynatrace-earnings-stock-price-84493f87"
+        },
+        {
+          "title": "Oil Prices Rebound as U.S. Strikes on Iran Renew Supply Concerns - WSJ (via FMP)",
+          "url": "https://www.wsj.com/world/middle-east/oil-prices-rebound-as-u-s-strikes-on-iran-renew-supply-concerns-c662f284"
+        },
+        {
+          "title": "Cumberland's Monday Memo - Seeking Alpha (via FMP)",
+          "url": "https://seekingalpha.com/article/4961424-cumberland-monday-memo"
+        },
+        {
+          "title": "The stock market loves gridlock, but midterms won't resolve two big money fights - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/the-stock-market-loves-gridlock-but-midterm-elections-wont-resolve-two-big-money-fights-97ed4f64"
+        },
+        {
+          "title": "Santoli: AI bull market needs tech stocks to recover - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/03/santoli-ai-bull-market-needs-tech-stocks.html"
+        },
+        {
+          "title": "Stock Market News for Nov 3, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3021642/stock-market-news-for-nov-3,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Big Quarterly Beats After the Close: AAPL, PLTR, LSCC, ROKU - Zacks",
+          "url": "https://www.zacks.com/stock/news/3021215/big-quarterly-beats-after-the-close:-aapl,-pltr,-lscc,-roku?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Compared to Estimates, Shopify Q3 Earnings - Zacks",
+          "url": "https://www.zacks.com/stock/news/3021719/compared-to-estimates,-shopify-(shop)-q3-earnings:-a-look-at-key-metrics?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Key Metrics: Palantir Q3 Earnings - Zacks",
+          "url": "https://www.zacks.com/stock/news/3021214/here's-what-key-metrics-tell-us-about-palantir-technologies-(pltr)-q3-earnings?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AI Earnings: 3 Reports to Watch This Week - Zacks",
+          "url": "https://www.zacks.com/stock/news/3021222/ai-earnings:-3-reports-to-watch-this-week?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-03-morning"
+    },
+    {
       "date": "2026-11-02",
       "session": "afternoon",
       "generatedAt": "2026-11-02T21:35:00Z",
