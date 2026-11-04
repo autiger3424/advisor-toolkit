@@ -6,22 +6,32 @@
      FMP_API_KEY=... node scripts/score-portfolio.mjs
 
    For every holding it pulls FMP fundamentals, estimates and the
-   latest price, then recomputes the five-factor score:
+   latest price, then recomputes the factors:
 
      Quality     ROIC (ROE for financials, REITs, utilities), operating
                  margin, net debt / EBITDA, 3-year FCF conversion
-     Growth      forward EPS growth (2-year CAGR of consensus), bumped by
-                 forward revenue growth over 20%, cut if under 7%
+     Growth      growth sleeve: forward EPS growth (2-year CAGR of
+                 consensus), bumped by forward revenue growth over 20%
+                 core sleeve: average of 3-year trailing EPS CAGR and the
+                 2-year forward CAGR, −1 if trailing is negative, capped
+                 at 4 with no 3-year history
      Valuation   PEG, penalized above 15x sales
      Estimates   Zacks Rank (set by hand in reviews, stored in the file)
                  plus the change in next-FY consensus vs ~60 days ago
      Durability  set by hand, never touched here
 
+   Two sleeves, two rubrics (Nov 4, 2026):
+     core    (1.25·Q + 1.25·D + G + V) · 25/22.5 — estimates not scored,
+             Zacks Rank 4-5 is a gate flag
+     growth  Q + G + V + E + D, the original five-factor sum
+   Each holding also carries the other sleeve's score as altScore.
+
    It never adds or removes a name. It updates prices, return since
    entry, factor inputs, the score, and flags for the monthly review:
      • score under 18
-     • Zacks Rank 4 or worse
+     • Zacks Rank 4 or worse (hard trigger in growth, gate flag in core)
      • next-FY consensus cut more than 5% in ~60 days
+     • growth sleeve down more than 20% from its high-water mark
    Membership and weights change only in the monthly review; hard
    triggers are acted on the week they fire, by hand.
 ──────────────────────────────────────────────────────────────── */
@@ -43,6 +53,7 @@ const CFG = {
   revisionLookbackDays: 60,
   revisionCutFlag: -0.05,
   aiCapexCap: 50,
+  sleeveDrawdownTrigger: -0.20,
   historyKeep: 30,
   financialSectors: new Set(["Financial Services", "Real Estate", "Utilities"]),
 };
@@ -123,6 +134,9 @@ async function enrich(h) {
   const fy0 = years[0] || null;
   const lastFyDate = fy0?.date || null;
   const epsFy0 = num(fy0?.epsDiluted ?? fy0?.eps);
+  const epsFy3 = years.length >= 4 ? num(years[3].epsDiluted ?? years[3].eps) : null;
+  // 3-year trailing EPS CAGR; null when the base year was a loss or is missing.
+  out.trailEpsGrowth = epsFy0 != null && epsFy3 != null && epsFy3 > 0 && epsFy0 > 0 ? cagr(epsFy0, epsFy3, 3) : null;
 
   const cfs = (Array.isArray(cf) ? cf : []).filter((y) => y.netIncome != null);
   const niSum = cfs.reduce((a, y) => a + num(y.netIncome), 0);
@@ -176,6 +190,20 @@ function scoreGrowth(f, prev) {
   if (f.fwdRevGrowth != null && f.fwdRevGrowth < 0.07) s -= 1;
   return clamp(s);
 }
+// Core rubric growth: blend of 3-year trailing and 2-year forward EPS CAGR.
+function scoreCoreGrowth(f, prev) {
+  const lim = (x) => Math.max(-0.30, Math.min(0.80, x));
+  const fwd = f.fwdEpsGrowth, trail = f.trailEpsGrowth;
+  if (fwd == null && trail == null) return prev ?? 3;
+  const blend = trail == null ? lim(fwd) : fwd == null ? lim(trail) : (lim(trail) + lim(fwd)) / 2;
+  let s = blend >= 0.30 ? 5 : blend >= 0.20 ? 4 : blend >= 0.12 ? 3 : blend >= 0.06 ? 2 : 1;
+  if (trail == null) s = Math.min(s, 4);
+  if (trail != null && trail < 0) s -= 1;
+  return clamp(s);
+}
+const coreScore = (f) => Number(((1.25 * f.quality + 1.25 * f.durability + f.growth + f.valuation) * 25 / 22.5).toFixed(1));
+const growthScore = (f) => f.quality + f.growth + f.valuation + f.estimates + f.durability;
+
 function scoreValuation(f, prev) {
   if (f.peg == null) return prev ?? 2;
   let s = f.peg <= 0.8 ? 5 : f.peg <= 1.2 ? 4 : f.peg <= 1.8 ? 3 : f.peg <= 2.6 ? 2 : 1;
@@ -201,25 +229,32 @@ async function main() {
     const f = await enrich(h);
     const rev = revisionFromHistory(h, f.epsFy1, f.fy1);
 
-    const factors = {
+    const isCore = h.sleeve === "core";
+    const base = {
       quality: scoreQuality(h, f),
-      growth: scoreGrowth(f, h.factors?.growth),
       valuation: scoreValuation(f, h.factors?.valuation),
       estimates: scoreEstimates(h, rev),
       durability: h.factors?.durability ?? 3,
     };
-    const score = Object.values(factors).reduce((a, b) => a + b, 0);
+    const gGrowth = scoreGrowth(f, h.factors?.growth);
+    const gCore = scoreCoreGrowth(f, h.factors?.growth);
+    const factors = { ...base, growth: isCore ? gCore : gGrowth };
+    const score = isCore ? coreScore(factors) : growthScore(factors);
+    const altScore = isCore ? growthScore({ ...base, growth: gGrowth }) : coreScore({ ...base, growth: gCore });
 
     const flags = [];
     if (score < CFG.bar) flags.push(`score ${score} under ${CFG.bar}`);
-    if (h.zacksRank >= 4) flags.push(`Zacks Rank ${h.zacksRank}`);
+    if (h.zacksRank >= 4) flags.push(isCore ? `Zacks Rank ${h.zacksRank}: gate flag, confirm firm rating` : `Zacks Rank ${h.zacksRank}: hard trigger`);
     if (rev && rev.pct <= CFG.revisionCutFlag) flags.push(`next-FY consensus cut ${(rev.pct * 100).toFixed(1)}% in ${rev.days} days`);
 
     Object.assign(h, {
-      factors, score, flags,
+      factors, score, altScore, flags,
+      scoreRubric: isCore ? "core" : "growth", altScoreRubric: isCore ? "growth" : "core",
+      zacksGate: isCore && h.zacksRank >= 4,
       roic: fmtPct(f.roic), roe: fmtPct(f.roe), opMargin: fmtPct(f.opMargin), netDebtEbitda: fmt1(f.netDebtEbitda),
       fcfToNi: fmtPct(f.fcfToNi), pe: fmt1(f.pe), ps: fmt1(f.ps), peg: fmt2(f.peg),
       fwdEpsGrowth: fmtPct(f.fwdEpsGrowth), fwdRevGrowth: fmtPct(f.fwdRevGrowth),
+      growthTrail3y: fmtPct(f.trailEpsGrowth), growthFwd2y: fmtPct(f.fwdEpsGrowth),
       epsFy1: fmt2(f.epsFy1), fy1: f.fy1, revision: rev ? fmtPct(rev.pct) : null,
     });
     if (f.price != null) {
@@ -236,6 +271,23 @@ async function main() {
 
   const aiWeight = data.holdings.filter((h) => h.aiCapex).reduce((a, h) => a + (h.weight || 0), 0);
   data.portfolioFlags = aiWeight > CFG.aiCapexCap ? [`AI-capex names at ${aiWeight}%, over the ${CFG.aiCapexCap}% cap`] : [];
+
+  // Growth-sleeve drawdown trigger: weight-averaged return since entry vs its high-water mark.
+  const growth = data.holdings.filter((h) => h.sleeve === "growth" && h.returnSinceEntry != null);
+  const gw = growth.reduce((a, h) => a + h.weight, 0);
+  if (gw > 0) {
+    const sleeveRet = growth.reduce((a, h) => a + h.weight * (h.returnSinceEntry / 100), 0) / gw;
+    const s = data.structure || (data.structure = {});
+    s.growthSleeveReturn = fmtPct(sleeveRet);
+    s.growthSleeveHighWater = Math.max(s.growthSleeveHighWater ?? 0, sleeveRet);
+    const dd = (1 + sleeveRet) / (1 + s.growthSleeveHighWater) - 1;
+    s.growthSleeveDrawdown = fmtPct(dd);
+    s.current = {
+      core: data.holdings.filter((h) => h.sleeve === "core").reduce((a, h) => a + h.weight, 0),
+      growth: data.holdings.filter((h) => h.sleeve === "growth").reduce((a, h) => a + h.weight, 0),
+    };
+    if (dd <= CFG.sleeveDrawdownTrigger) data.portfolioFlags.push(`Growth sleeve ${(dd * 100).toFixed(1)}% off its high-water mark: trim toward 25% (sleeve trigger)`);
+  }
   data.asOf = today;
   if (priceDate) data.priceDate = priceDate;
   data.generatedBy = "scripts/score-portfolio.mjs (FMP fundamentals and prices; Zacks Rank and durability by hand)";

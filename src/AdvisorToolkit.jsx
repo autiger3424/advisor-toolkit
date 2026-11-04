@@ -385,7 +385,7 @@ function AdvisorToolkit() {
     ss:        { label: "Soc Sec",    icon: "🏛️", group: "reference", blurb: "FRA, claiming, taxation, Medicare" },
     estate:    { label: "Estate",     icon: "⚰️", group: "reference", blurb: "State death tax map, gift rules" },
     calc:      { label: "Calculators", icon: "🧮", group: "tools",    blurb: "Growth, RMD, TEY, Roth window, loans" },
-    portfolio: { label: "Portfolio",  icon: "🎯", group: "markets",   blurb: "25-name model, scored and tracked" },
+    portfolio: { label: "Portfolio",  icon: "🎯", group: "markets",   blurb: "Core and growth sleeves, scored and tracked" },
     ideas:     { label: "Ideas",      icon: "📈", group: "markets",   blurb: "Weekly core and halal idea lists" },
     brief:     { label: "Brief",      icon: "📰", group: "markets",   blurb: "Morning and afternoon market briefs" },
   };

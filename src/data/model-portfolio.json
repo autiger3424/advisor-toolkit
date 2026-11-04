@@ -4,50 +4,23 @@
   "inceptionDate": "2026-11-04",
   "generatedBy": "manual (Nov 4, 2026 session); scripts/score-portfolio.mjs refreshes prices and factor inputs on Sundays",
   "rules": {
-    "scoring": "Five factors scored 1-5 each, 18 of 25 is the bar. Quality: ROIC (ROE for financials/REITs/utilities), operating margin, net debt/EBITDA, FCF conversion. Growth: long-term EPS growth, bumped by forward revenue growth over 20%. Valuation: PEG, penalized above 15x sales. Estimate momentum: Zacks Rank and 4-week change in F1/F2 consensus. Durability: moat, customer concentration, regulatory and cycle exposure (judgment, reason written next to it).",
-    "construction": "Core names need durability of 3 or better; durability 2 (commodity, extreme cycle, single-customer) only enters a 3-name cyclical sleeve. Tech capped at 9 names, wafer-fab equipment at 3, memory at 1. Scores pick the names; correlation sets the weights: a high-scoring name whose bet is already held is sized at 2%.",
-    "sizing": "Tier A 5-6%, Tier B 4%, Tier C 2%. Sector floor of 2 names where candidates score 16+. AI-capex beneficiaries capped at 50%; winners get trimmed back under the cap rather than ridden up.",
-    "cadence": "Re-score weekly (Sunday script). Hard triggers act the week they fire: Zacks Rank 4-5, F2 consensus cut more than 5% in 60 days, or the stated sell trigger. Everything else (weights, swaps, tiers) batches to the monthly review. Theses re-read quarterly; hyperscaler capex guidance (MSFT, GOOG, AMZN, META) checked at each quarterly review as the demand signal for the AI-capex half.",
-    "data": "Zacks Rank and style data come from chat reviews and are stored here; the Sunday script refreshes FMP prices, fundamentals and estimates and recomputes quality, growth and valuation. Every name still goes through the firm's research before any client sees it. Information for advisor use, not a recommendation."
+    "structure": "Two sleeves, two rubrics. Core (target 70%) holds the names that carry the book through a downturn: durability 4 or 5, scored on the 3-5 year rubric, sized 4-6%, never traded on a Zacks Rank move. Growth (target 30%) holds the names that can run: durability 2-3 allowed, scored on the original rubric with estimate momentum, sized 2-3% and never 4%, hard sell triggers acted on the week they fire. 24-25 names total.",
+    "coreScoring": "Quality and Durability ~28% each, Growth and Valuation ~22% each, on the same 25-point scale (18 is the bar). Growth blends 3-year trailing EPS CAGR with 2-year forward consensus, minus one if the trailing leg is negative, capped at 4 with no 3-year history. Estimate momentum is not scored; a Zacks Rank of 4-5 is a gate flag that sends the name to the firm research check, not a point deduction.",
+    "growthScoring": "Five factors 1-5 each, 18 of 25 is the bar; entries at 17-18 start at 2%. Quality: ROIC (ROE for financials), operating margin, net debt/EBITDA, FCF conversion. Growth: long-term EPS growth, bumped by forward revenue growth over 20%. Valuation: PEG, penalized above 15x sales. Estimate momentum: Zacks Rank and 4-week change in F1/F2 consensus. Durability: judgment, reason written next to it.",
+    "construction": "Tech capped at 9 names, wafer-fab equipment at 3, memory at 1. AI-capex beneficiaries capped at 50% of the whole book, not the sleeve, so the growth sleeve has to hold FIX/GEV/CAT-type names alongside the chips. Scores pick the names; correlation sets the weights.",
+    "sizing": "Core: Tier A (core score 20+) 5-6%, Tier B (18-20) 4%. Growth: 3% standard, 2% for 17-18 entries, never 4%. Sleeve trigger: if the growth sleeve as a group is down more than 20% from its high-water mark, trim it toward 25% and let the core absorb the weight until the theme turns.",
+    "cadence": "Re-score weekly (Sunday script), each sleeve on its own rubric. Hard triggers act the week they fire: growth-sleeve Zacks Rank 4-5, F2 consensus cut more than 5% in 60 days, the stated sell trigger, or the sleeve drawdown trigger. Core Zacks Rank 4-5 is a flag for the firm research check, not a sale. Weights, swaps and tiers batch to the monthly review. Theses re-read quarterly with hyperscaler capex guidance (MSFT, GOOG, AMZN, META) as the demand signal for the AI-capex names.",
+    "data": "Zacks Rank and style data come from chat reviews and are stored here; the Sunday script refreshes FMP prices, fundamentals and estimates and recomputes the scores. Every name still goes through the firm research before any client sees it. Information for advisor use, not a recommendation."
   },
   "holdings": [
-    {
-      "ticker": "GOOG",
-      "name": "Alphabet Inc.",
-      "sector": "Communication Services",
-      "tier": "A",
-      "weight": 6,
-      "sleeve": "core",
-      "score": 18,
-      "factors": {
-        "quality": 3,
-        "growth": 4,
-        "valuation": 4,
-        "estimates": 3,
-        "durability": 4
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 278.27,
-      "price": 278.27,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Search, YouTube, cloud; antitrust overhang",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-03",
-      "thesis": "",
-      "sellTrigger": "Search revenue growth falls below 8% for two straight quarters, or a remedies ruling forces divestiture of Chrome or the default-search payments.",
-      "flags": [],
-      "history": []
-    },
     {
       "ticker": "ASML",
       "name": "ASML Holding N.V.",
       "sector": "Technology",
       "tier": "A",
-      "weight": 5,
+      "weight": 6,
       "sleeve": "core",
-      "score": 24,
+      "score": 25.0,
       "factors": {
         "quality": 5,
         "growth": 5,
@@ -67,7 +40,103 @@
       "thesis": "",
       "sellTrigger": "EUV orders decline year over year for two quarters, or export rules extend to DUV servicing of the installed China base.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 25.0,
+          "note": "Core rubric adopted; prior rubric score 24"
+        }
+      ],
+      "growthTrail3y": 20.5,
+      "growthFwd2y": 51.3,
+      "scoreRubric": "core",
+      "altScore": 24,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "tier": "B",
+      "weight": 6,
+      "sleeve": "core",
+      "score": 18.6,
+      "factors": {
+        "quality": 3,
+        "growth": 4,
+        "valuation": 4,
+        "estimates": 3,
+        "durability": 4
+      },
+      "zacksRank": 3,
+      "entryDate": "2026-11-04",
+      "entryPrice": 278.27,
+      "price": 278.27,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Search, YouTube, cloud; antitrust overhang",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-03",
+      "thesis": "",
+      "sellTrigger": "Search revenue growth falls below 8% for two straight quarters, or a remedies ruling forces divestiture of Chrome or the default-search payments.",
+      "flags": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 18.6,
+          "note": "Core rubric adopted; prior rubric score 18"
+        }
+      ],
+      "growthTrail3y": 33.3,
+      "growthFwd2y": 18,
+      "scoreRubric": "core",
+      "altScore": 18,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "BKNG",
+      "name": "Booking Holdings Inc.",
+      "sector": "Consumer Cyclical",
+      "tier": "A",
+      "weight": 5,
+      "sleeve": "core",
+      "score": 22.5,
+      "factors": {
+        "quality": 5,
+        "growth": 5,
+        "valuation": 4,
+        "estimates": 2,
+        "durability": 4
+      },
+      "zacksRank": 4,
+      "entryDate": "2026-11-04",
+      "entryPrice": 155.67,
+      "price": 155.67,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Global OTA scale; Google dependency",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-17",
+      "thesis": "",
+      "sellTrigger": "Room-night growth turns negative outside a recession, or Google's AI travel results visibly cut direct bookings share (paid-traffic cost rising faster than revenue).",
+      "flags": [
+        "Zacks Rank 4-5: gate flag, confirm firm rating"
+      ],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 22.5,
+          "note": "Core rubric adopted; prior rubric score 18"
+        }
+      ],
+      "growthTrail3y": 29.4,
+      "growthFwd2y": 36.6,
+      "scoreRubric": "core",
+      "altScore": 18,
+      "altScoreRubric": "growth",
+      "zacksGate": true
     },
     {
       "ticker": "TSM",
@@ -76,7 +145,7 @@
       "tier": "A",
       "weight": 5,
       "sleeve": "core",
-      "score": 22,
+      "score": 21.1,
       "factors": {
         "quality": 4,
         "growth": 5,
@@ -96,7 +165,19 @@
       "thesis": "",
       "sellTrigger": "Advanced-node (3nm and below) revenue share stops growing, or a credible Taiwan-blockade escalation; also any sign Intel foundry wins a top-5 customer.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 21.1,
+          "note": "Core rubric adopted; prior rubric score 22"
+        }
+      ],
+      "growthTrail3y": 18.6,
+      "growthFwd2y": 48.6,
+      "scoreRubric": "core",
+      "altScore": 22,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
       "ticker": "APH",
@@ -105,7 +186,7 @@
       "tier": "A",
       "weight": 5,
       "sleeve": "core",
-      "score": 22,
+      "score": 21.1,
       "factors": {
         "quality": 3,
         "growth": 5,
@@ -125,36 +206,19 @@
       "thesis": "",
       "sellTrigger": "Organic growth drops below 8% while margins compress, or data-center and IT-datacom falls below 25% of sales without the other markets taking up the slack.",
       "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft Corporation",
-      "sector": "Technology",
-      "tier": "A",
-      "weight": 5,
-      "sleeve": "core",
-      "score": 19,
-      "factors": {
-        "quality": 5,
-        "growth": 3,
-        "valuation": 3,
-        "estimates": 3,
-        "durability": 5
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 520.99,
-      "price": 520.99,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Enterprise lock-in, Azure, Copilot",
-      "aiCapex": false,
-      "nextEarnings": "2027-01-27",
-      "thesis": "",
-      "sellTrigger": "Azure growth below 25% constant-currency for two quarters, or Copilot seat growth stalls while capex keeps rising (margin squeeze with no revenue).",
-      "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 21.1,
+          "note": "Core rubric adopted; prior rubric score 22"
+        }
+      ],
+      "growthTrail3y": 29.7,
+      "growthFwd2y": 46.7,
+      "scoreRubric": "core",
+      "altScore": 22,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
       "ticker": "SCHW",
@@ -163,7 +227,7 @@
       "tier": "A",
       "weight": 5,
       "sleeve": "core",
-      "score": 20,
+      "score": 21.1,
       "factors": {
         "quality": 4,
         "growth": 4,
@@ -183,77 +247,72 @@
       "thesis": "",
       "sellTrigger": "Net new assets fall below 3% annualized for two quarters, or cash sorting resumes and net interest margin contracts.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 21.1,
+          "note": "Core rubric adopted; prior rubric score 20"
+        }
+      ],
+      "growthTrail3y": 10.0,
+      "growthFwd2y": 30.0,
+      "scoreRubric": "core",
+      "altScore": 20,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
-      "ticker": "IBKR",
-      "name": "Interactive Brokers Group, Inc.",
-      "sector": "Financial Services",
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
       "tier": "A",
       "weight": 5,
       "sleeve": "core",
-      "score": 19,
+      "score": 20.6,
       "factors": {
         "quality": 5,
         "growth": 3,
         "valuation": 3,
-        "estimates": 4,
-        "durability": 4
+        "estimates": 3,
+        "durability": 5
       },
-      "zacksRank": 2,
+      "zacksRank": 3,
       "entryDate": "2026-11-04",
-      "entryPrice": 77.46,
-      "price": 77.46,
+      "entryPrice": 520.99,
+      "price": 520.99,
       "priceDate": "2026-11-03",
       "returnSinceEntry": 0.0,
-      "why": "Low-cost broker; rate-sensitive",
+      "why": "Enterprise lock-in, Azure, Copilot",
       "aiCapex": false,
-      "nextEarnings": "2027-01-19",
+      "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "Account growth below 15% year over year, or a sustained rate-cut cycle takes net interest income down more than 20% from peak.",
+      "sellTrigger": "Azure growth below 25% constant-currency for two quarters, or Copilot seat growth stalls while capex keeps rising (margin squeeze with no revenue).",
       "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "BKNG",
-      "name": "Booking Holdings Inc.",
-      "sector": "Consumer Cyclical",
-      "tier": "A",
-      "weight": 5,
-      "sleeve": "core",
-      "score": 18,
-      "factors": {
-        "quality": 5,
-        "growth": 3,
-        "valuation": 4,
-        "estimates": 2,
-        "durability": 4
-      },
-      "zacksRank": 4,
-      "entryDate": "2026-11-04",
-      "entryPrice": 155.67,
-      "price": 155.67,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Global OTA scale; Google dependency",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-17",
-      "thesis": "",
-      "sellTrigger": "Room-night growth turns negative outside a recession, or Google's AI travel results visibly cut direct bookings share (paid-traffic cost rising faster than revenue).",
-      "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 20.6,
+          "note": "Core rubric adopted; prior rubric score 19"
+        }
+      ],
+      "growthTrail3y": 22.9,
+      "growthFwd2y": 15.7,
+      "scoreRubric": "core",
+      "altScore": 19,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
       "ticker": "META",
       "name": "Meta Platforms, Inc.",
       "sector": "Communication Services",
-      "tier": "A",
+      "tier": "B",
       "weight": 5,
       "sleeve": "core",
-      "score": 17,
+      "score": 19.7,
       "factors": {
         "quality": 3,
-        "growth": 4,
+        "growth": 5,
         "valuation": 4,
         "estimates": 2,
         "durability": 4
@@ -270,19 +329,154 @@
       "thesis": "",
       "sellTrigger": "Ad impressions and price per ad both decline in the same quarter, or capex guidance rises without a matching revenue step-up for two quarters.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 19.7,
+          "note": "Core rubric adopted; prior rubric score 17"
+        }
+      ],
+      "growthTrail3y": 39.8,
+      "growthFwd2y": 20.5,
+      "scoreRubric": "core",
+      "altScore": 17,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research Corporation",
+      "sector": "Technology",
+      "tier": "A",
+      "weight": 5,
+      "sleeve": "core",
+      "score": 22.5,
+      "factors": {
+        "quality": 5,
+        "growth": 5,
+        "valuation": 4,
+        "estimates": 3,
+        "durability": 4
+      },
+      "zacksRank": 3,
+      "entryDate": "2026-11-04",
+      "entryPrice": 230.72,
+      "price": 230.72,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Etch/deposition leader; sized down, WFE cap",
+      "aiCapex": true,
+      "nextEarnings": "2027-01-27",
+      "thesis": "",
+      "sellTrigger": "NAND and DRAM capex guidance from the top-3 memory makers cut for the following year; LRCX is out at the same time MU exits the sleeve.",
+      "flags": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 22.5,
+          "note": "Core rubric adopted; prior rubric score 21"
+        }
+      ],
+      "growthTrail3y": 20.2,
+      "growthFwd2y": 45.1,
+      "scoreRubric": "core",
+      "altScore": 21,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers Group, Inc.",
+      "sector": "Financial Services",
+      "tier": "A",
+      "weight": 5,
+      "sleeve": "core",
+      "score": 20.3,
+      "factors": {
+        "quality": 5,
+        "growth": 4,
+        "valuation": 3,
+        "estimates": 4,
+        "durability": 4
+      },
+      "zacksRank": 2,
+      "entryDate": "2026-11-04",
+      "entryPrice": 77.46,
+      "price": 77.46,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Low-cost broker; rate-sensitive",
+      "aiCapex": false,
+      "nextEarnings": "2027-01-19",
+      "thesis": "",
+      "sellTrigger": "Account growth below 15% year over year, or a sustained rate-cut cycle takes net interest income down more than 20% from peak.",
+      "flags": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 20.3,
+          "note": "Core rubric adopted; prior rubric score 19"
+        }
+      ],
+      "growthTrail3y": 33.3,
+      "growthFwd2y": 22.2,
+      "scoreRubric": "core",
+      "altScore": 19,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
+      "tier": "B",
+      "weight": 5,
+      "sleeve": "core",
+      "score": 19.4,
+      "factors": {
+        "quality": 5,
+        "growth": 3,
+        "valuation": 2,
+        "estimates": 3,
+        "durability": 5
+      },
+      "zacksRank": 3,
+      "entryDate": "2026-11-04",
+      "entryPrice": 420.42,
+      "price": 420.42,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Payments duopoly",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-04",
+      "thesis": "",
+      "sellTrigger": "Same as MA: cross-border growth below 10%, or an interchange cap in a major market; also a stablecoin or account-to-account rail taking visible US volume share.",
+      "flags": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 19.4,
+          "note": "Core rubric adopted; prior rubric score 18"
+        }
+      ],
+      "growthTrail3y": 14.2,
+      "growthFwd2y": 17.9,
+      "scoreRubric": "core",
+      "altScore": 18,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "sector": "Technology",
-      "tier": "B",
+      "tier": "A",
       "weight": 4,
       "sleeve": "core",
-      "score": 19,
+      "score": 20.3,
       "factors": {
         "quality": 5,
-        "growth": 4,
+        "growth": 5,
         "valuation": 2,
         "estimates": 4,
         "durability": 4
@@ -299,73 +493,150 @@
       "thesis": "",
       "sellTrigger": "Combined hyperscaler capex guidance (MSFT, GOOG, AMZN, META) is cut for the next year, or data-center gross margin falls below 65%.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 20.3,
+          "note": "Core rubric adopted; prior rubric score 19"
+        }
+      ],
+      "growthTrail3y": 206.6,
+      "growthFwd2y": 79.6,
+      "scoreRubric": "core",
+      "altScore": 19,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
-      "ticker": "GEV",
-      "name": "GE Vernova Inc.",
-      "sector": "Industrials",
-      "tier": "B",
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "tier": "A",
       "weight": 4,
       "sleeve": "core",
-      "score": 18,
+      "score": 20.0,
       "factors": {
         "quality": 4,
         "growth": 4,
-        "valuation": 3,
-        "estimates": 4,
-        "durability": 3
+        "valuation": 4,
+        "estimates": 3,
+        "durability": 4
       },
-      "zacksRank": 2,
+      "zacksRank": 3,
       "entryDate": "2026-11-04",
-      "entryPrice": 918.2,
-      "price": 918.2,
-      "priceDate": "2026-11-03",
+      "entryPrice": 66.08,
+      "price": 66.08,
+      "priceDate": "2026-11-04",
       "returnSinceEntry": 0.0,
-      "why": "Gas turbines, grid and electrification; AI-power demand without semi-equipment China exposure",
-      "aiCapex": true,
-      "nextEarnings": "2027-01-27",
+      "why": "Global subscription video; 27% ROIC, net cash, EPS +19% at ~18x forward after a 40% drawdown; firm Buy",
+      "aiCapex": false,
+      "nextEarnings": "2027-01-19",
       "thesis": "",
-      "sellTrigger": "Power or Electrification orders decline year over year, or segment margin guidance is cut; a turbine-slot cancellation by a hyperscaler or utility is an immediate review.",
+      "sellTrigger": "Paid memberships or revenue growth below 8% for two quarters, or ad-tier revenue stalls while content spend keeps rising; a second straight quarter of negative estimate revisions is a review.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 20.0,
+          "note": "Core rubric adopted; prior rubric score 18"
+        }
+      ],
+      "growthTrail3y": 36.3,
+      "growthFwd2y": 21.9,
+      "scoreRubric": "core",
+      "altScore": 18,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
-      "ticker": "VRT",
-      "name": "Vertiv Holdings Co",
-      "sector": "Industrials",
+      "ticker": "LLY",
+      "name": "Eli Lilly and Company",
+      "sector": "Healthcare",
       "tier": "B",
       "weight": 4,
       "sleeve": "core",
-      "score": 22,
+      "score": 17.8,
       "factors": {
         "quality": 4,
         "growth": 5,
-        "valuation": 5,
-        "estimates": 5,
-        "durability": 3
+        "valuation": 1,
+        "estimates": 3,
+        "durability": 4
+      },
+      "zacksRank": 3,
+      "entryDate": "2026-11-04",
+      "entryPrice": 1409.38,
+      "price": 1409.38,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "GLP-1 lead; pricing/IRA risk",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-03",
+      "thesis": "",
+      "sellTrigger": "Orforglipron or retatrutide fails or is delayed past 2027, or Medicare price negotiation lands on a GLP-1 earlier than the 2027 list.",
+      "flags": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 17.8,
+          "note": "Core rubric adopted; prior rubric score 17"
+        }
+      ],
+      "growthTrail3y": 51.7,
+      "growthFwd2y": 46.7,
+      "scoreRubric": "core",
+      "altScore": 17,
+      "altScoreRubric": "growth",
+      "zacksGate": false
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical, Inc.",
+      "sector": "Healthcare",
+      "tier": "B",
+      "weight": 4,
+      "sleeve": "core",
+      "score": 17.8,
+      "factors": {
+        "quality": 3,
+        "growth": 4,
+        "valuation": 2,
+        "estimates": 4,
+        "durability": 5
       },
       "zacksRank": 2,
       "entryDate": "2026-11-04",
-      "entryPrice": 235.97,
-      "price": 235.97,
+      "entryPrice": 440.75,
+      "price": 440.75,
       "priceDate": "2026-11-03",
       "returnSinceEntry": 0.0,
-      "why": "Data-center thermal and power leader",
-      "aiCapex": true,
-      "nextEarnings": "2027-02-10",
+      "why": "Surgical-robotics near-monopoly",
+      "aiCapex": false,
+      "nextEarnings": "2027-01-28",
       "thesis": "",
-      "sellTrigger": "Backlog stops growing sequentially, or a top-3 hyperscaler publicly shifts to a competing liquid-cooling supplier.",
+      "sellTrigger": "Procedure growth below 12%, or a competing soft-tissue robot wins FDA clearance with a major hospital system switching.",
       "flags": [],
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-04",
+          "score": 17.8,
+          "note": "Core rubric adopted; prior rubric score 17"
+        }
+      ],
+      "growthTrail3y": 29.2,
+      "growthFwd2y": 25.9,
+      "scoreRubric": "core",
+      "altScore": 17,
+      "altScoreRubric": "growth",
+      "zacksGate": false
     },
     {
       "ticker": "FIX",
       "name": "Comfort Systems USA, Inc.",
       "sector": "Industrials",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
       "score": 22,
       "factors": {
         "quality": 5,
@@ -386,218 +657,56 @@
       "thesis": "",
       "sellTrigger": "Backlog declines sequentially for two quarters, or data-center work falls below 30% of backlog with margins reverting toward pre-2023 levels.",
       "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 22.2,
+      "altScoreRubric": "core",
+      "growthTrail3y": 61.7,
+      "growthFwd2y": 52.1,
+      "zacksGate": false
     },
     {
-      "ticker": "ICE",
-      "name": "Intercontinental Exchange Inc.",
-      "sector": "Financial Services",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 17,
-      "factors": {
-        "quality": 3,
-        "growth": 2,
-        "valuation": 3,
-        "estimates": 4,
-        "durability": 5
-      },
-      "zacksRank": 2,
-      "entryDate": "2026-11-04",
-      "entryPrice": 170.93,
-      "price": 170.93,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Exchanges, data and mortgage tech; durable fee streams, not a lender or card network",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-04",
-      "thesis": "",
-      "sellTrigger": "Net revenue growth below 5% for two quarters, or net debt/EBITDA back above 3.5x from an acquisition; a mortgage-tech writedown is an immediate review.",
-      "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "NFLX",
-      "name": "Netflix, Inc.",
-      "sector": "Communication Services",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 18,
-      "factors": {
-        "quality": 4,
-        "growth": 3,
-        "valuation": 4,
-        "estimates": 3,
-        "durability": 4
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 66.08,
-      "price": 66.08,
-      "priceDate": "2026-11-04",
-      "returnSinceEntry": 0.0,
-      "why": "Global subscription video; 27% ROIC, net cash, EPS +19% at ~18x forward after a 40% drawdown; firm Buy",
-      "aiCapex": false,
-      "nextEarnings": "2027-01-19",
-      "thesis": "",
-      "sellTrigger": "Paid memberships or revenue growth below 8% for two quarters, or ad-tier revenue stalls while content spend keeps rising; a second straight quarter of negative estimate revisions is a review.",
-      "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "V",
-      "name": "Visa Inc.",
-      "sector": "Financial Services",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 18,
-      "factors": {
-        "quality": 5,
-        "growth": 3,
-        "valuation": 2,
-        "estimates": 3,
-        "durability": 5
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 420.42,
-      "price": 420.42,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Payments duopoly",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-04",
-      "thesis": "",
-      "sellTrigger": "Same as MA: cross-border growth below 10%, or an interchange cap in a major market; also a stablecoin or account-to-account rail taking visible US volume share.",
-      "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar Inc.",
+      "ticker": "VRT",
+      "name": "Vertiv Holdings Co",
       "sector": "Industrials",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 17,
-      "factors": {
-        "quality": 3,
-        "growth": 4,
-        "valuation": 4,
-        "estimates": 3,
-        "durability": 3
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 623.94,
-      "price": 623.94,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Dealer moat; deeply cyclical",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-04",
-      "thesis": "",
-      "sellTrigger": "Dealer inventories build two quarters in a row with retail sales negative, or backlog falls below $25B.",
-      "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly and Company",
-      "sector": "Healthcare",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 17,
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
+      "score": 22,
       "factors": {
         "quality": 4,
         "growth": 5,
-        "valuation": 1,
-        "estimates": 3,
-        "durability": 4
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 1409.38,
-      "price": 1409.38,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "GLP-1 lead; pricing/IRA risk",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-03",
-      "thesis": "",
-      "sellTrigger": "Orforglipron or retatrutide fails or is delayed past 2027, or Medicare price negotiation lands on a GLP-1 earlier than the 2027 list.",
-      "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical, Inc.",
-      "sector": "Healthcare",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 17,
-      "factors": {
-        "quality": 3,
-        "growth": 3,
-        "valuation": 2,
-        "estimates": 4,
-        "durability": 5
+        "valuation": 5,
+        "estimates": 5,
+        "durability": 3
       },
       "zacksRank": 2,
       "entryDate": "2026-11-04",
-      "entryPrice": 440.75,
-      "price": 440.75,
+      "entryPrice": 235.97,
+      "price": 235.97,
       "priceDate": "2026-11-03",
       "returnSinceEntry": 0.0,
-      "why": "Surgical-robotics near-monopoly",
-      "aiCapex": false,
-      "nextEarnings": "2027-01-28",
+      "why": "Data-center thermal and power leader",
+      "aiCapex": true,
+      "nextEarnings": "2027-02-10",
       "thesis": "",
-      "sellTrigger": "Procedure growth below 12%, or a competing soft-tissue robot wins FDA clearance with a major hospital system switching.",
+      "sellTrigger": "Backlog stops growing sequentially, or a top-3 hyperscaler publicly shifts to a competing liquid-cooling supplier.",
       "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon.com, Inc.",
-      "sector": "Consumer Cyclical",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 16,
-      "factors": {
-        "quality": 1,
-        "growth": 3,
-        "valuation": 4,
-        "estimates": 3,
-        "durability": 5
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 250.69,
-      "price": 250.69,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "AWS, retail, ads flywheel; Q=1 is a capex artifact",
-      "aiCapex": false,
-      "nextEarnings": "2027-02-04",
-      "thesis": "",
-      "sellTrigger": "AWS growth below 15%, or North America retail operating margin falls back under 5% for two quarters.",
-      "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 19.7,
+      "altScoreRubric": "core",
+      "growthTrail3y": null,
+      "growthFwd2y": 69.6,
+      "zacksGate": false
     },
     {
       "ticker": "TER",
       "name": "Teradyne, Inc.",
       "sector": "Technology",
-      "tier": "C",
-      "weight": 2,
-      "sleeve": "core",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
       "score": 22,
       "factors": {
         "quality": 4,
@@ -618,44 +727,21 @@
       "thesis": "",
       "sellTrigger": "Semi test orders turn down year over year while a top customer (Apple or NVDA-related) concentration rises above 15%.",
       "flags": [],
-      "history": []
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research Corporation",
-      "sector": "Technology",
-      "tier": "C",
-      "weight": 2,
-      "sleeve": "core",
-      "score": 21,
-      "factors": {
-        "quality": 5,
-        "growth": 5,
-        "valuation": 4,
-        "estimates": 3,
-        "durability": 4
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 230.72,
-      "price": 230.72,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Etch/deposition leader; sized down, WFE cap",
-      "aiCapex": true,
-      "nextEarnings": "2027-01-27",
-      "thesis": "",
-      "sellTrigger": "NAND and DRAM capex guidance from the top-3 memory makers cut for the following year; LRCX is out at the same time MU exits the sleeve.",
-      "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 19.7,
+      "altScoreRubric": "core",
+      "growthTrail3y": -6.2,
+      "growthFwd2y": 80,
+      "zacksGate": false
     },
     {
       "ticker": "MU",
       "name": "Micron Technology, Inc.",
       "sector": "Technology",
-      "tier": "C",
-      "weight": 2,
-      "sleeve": "cyclical",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
       "score": 22,
       "factors": {
         "quality": 5,
@@ -676,44 +762,126 @@
       "thesis": "",
       "sellTrigger": "DRAM contract prices decline quarter over quarter, or HBM share loss to Samsung/SK Hynix at NVDA; sleeve name, so no second quarter of grace.",
       "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 19.7,
+      "altScoreRubric": "core",
+      "growthTrail3y": null,
+      "growthFwd2y": 68.4,
+      "zacksGate": false
     },
     {
-      "ticker": "EOG",
-      "name": "EOG Resources, Inc.",
-      "sector": "Energy",
-      "tier": "C",
-      "weight": 2,
-      "sleeve": "cyclical",
-      "score": 17,
+      "ticker": "GEV",
+      "name": "GE Vernova Inc.",
+      "sector": "Industrials",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
+      "score": 18,
       "factors": {
-        "quality": 3,
-        "growth": 3,
-        "valuation": 5,
+        "quality": 4,
+        "growth": 4,
+        "valuation": 3,
         "estimates": 4,
-        "durability": 2
+        "durability": 3
       },
       "zacksRank": 2,
       "entryDate": "2026-11-04",
-      "entryPrice": 147.99,
-      "price": 147.99,
+      "entryPrice": 918.2,
+      "price": 918.2,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Gas turbines, grid and electrification; AI-power demand without semi-equipment China exposure",
+      "aiCapex": true,
+      "nextEarnings": "2027-01-27",
+      "thesis": "",
+      "sellTrigger": "Power or Electrification orders decline year over year, or segment margin guidance is cut; a turbine-slot cancellation by a hyperscaler or utility is an immediate review.",
+      "flags": [],
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 17.5,
+      "altScoreRubric": "core",
+      "growthTrail3y": null,
+      "growthFwd2y": 80,
+      "zacksGate": false
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc.",
+      "sector": "Industrials",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
+      "score": 17,
+      "factors": {
+        "quality": 3,
+        "growth": 4,
+        "valuation": 4,
+        "estimates": 3,
+        "durability": 3
+      },
+      "zacksRank": 3,
+      "entryDate": "2026-11-04",
+      "entryPrice": 623.94,
+      "price": 623.94,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Dealer moat; deeply cyclical",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-04",
+      "thesis": "",
+      "sellTrigger": "Dealer inventories build two quarters in a row with retail sales negative, or backlog falls below $25B.",
+      "flags": [],
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 17.2,
+      "altScoreRubric": "core",
+      "growthTrail3y": 14.2,
+      "growthFwd2y": 30.9,
+      "zacksGate": false
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies Inc.",
+      "sector": "Technology",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
+      "score": 22,
+      "factors": {
+        "quality": 5,
+        "growth": 5,
+        "valuation": 5,
+        "estimates": 5,
+        "durability": 2
+      },
+      "zacksRank": 1,
+      "entryDate": "2026-11-04",
+      "entryPrice": 369.62,
+      "price": 369.62,
       "priceDate": "2026-11-04",
       "returnSinceEntry": 0.0,
-      "why": "Cyclical sleeve: lowest-leverage large E&P (net debt 0.2x), 8.8x forward, 2.6% yield; firm Strong Buy (in for OXY, firm Hold)",
-      "aiCapex": false,
-      "nextEarnings": "2026-11-05",
+      "why": "AI server backlog; PEG 0.41, 15.7x forward; thin assembly margins, customer concentration",
+      "aiCapex": true,
+      "nextEarnings": "2026-11-24",
       "thesis": "",
-      "sellTrigger": "WTI under $60 for a sustained month, or capex guidance rises faster than production; sleeve name, first trigger exits.",
+      "sellTrigger": "AI-server backlog declines sequentially for two quarters, or ISG operating margin falls below 8%, or Zacks Rank moves to 4-5.",
       "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 20.8,
+      "altScoreRubric": "core",
+      "growthTrail3y": 38.9,
+      "growthFwd2y": 76.4,
+      "zacksGate": false
     },
     {
       "ticker": "FCX",
       "name": "Freeport-McMoRan Inc.",
       "sector": "Basic Materials",
-      "tier": "C",
-      "weight": 2,
-      "sleeve": "cyclical",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
       "score": 18,
       "factors": {
         "quality": 1,
@@ -734,41 +902,105 @@
       "thesis": "",
       "sellTrigger": "Copper below $4.00/lb for a sustained month, or Grasberg output disruption beyond one quarter; sleeve name, exit on the first trigger.",
       "flags": [],
-      "history": []
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 13.1,
+      "altScoreRubric": "core",
+      "growthTrail3y": -14,
+      "growthFwd2y": 67.5,
+      "zacksGate": false
+    },
+    {
+      "ticker": "EOG",
+      "name": "EOG Resources, Inc.",
+      "sector": "Energy",
+      "tier": "G",
+      "weight": 3,
+      "sleeve": "growth",
+      "score": 17,
+      "factors": {
+        "quality": 3,
+        "growth": 3,
+        "valuation": 5,
+        "estimates": 4,
+        "durability": 2
+      },
+      "zacksRank": 2,
+      "entryDate": "2026-11-04",
+      "entryPrice": 147.99,
+      "price": 147.99,
+      "priceDate": "2026-11-04",
+      "returnSinceEntry": 0.0,
+      "why": "Cyclical sleeve: lowest-leverage large E&P (net debt 0.2x), 8.8x forward, 2.6% yield; firm Strong Buy (in for OXY, firm Hold)",
+      "aiCapex": false,
+      "nextEarnings": "2026-11-05",
+      "thesis": "",
+      "sellTrigger": "WTI under $60 for a sustained month, or capex guidance rises faster than production; sleeve name, first trigger exits.",
+      "flags": [],
+      "history": [],
+      "scoreRubric": "growth",
+      "altScore": 13.6,
+      "altScoreRubric": "core",
+      "growthTrail3y": -11.7,
+      "growthFwd2y": 26.2,
+      "zacksGate": false
     }
   ],
   "bench": [
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "score": 17.2,
+      "keptOutBy": "Core rubric 17.2 (quality 1: 8% ROIC, FCF conversion 44% under the capex ramp). Durability 5, so core-eligible the moment quality improves.",
+      "wouldMoveIn": "ROIC back above 12% or FCF conversion above 70% for two quarters",
+      "sleeveEligible": "core",
+      "coreScore": 17.2,
+      "growthScore": 16
+    },
+    {
+      "ticker": "ICE",
+      "name": "Intercontinental Exchange, Inc.",
+      "sector": "Financial Services",
+      "score": 16.7,
+      "keptOutBy": "Core rubric 16.7: growth 2 (7% trailing, 14% forward). Durability 5; the best ballast name on the bench if the core needs a defensive slot.",
+      "wouldMoveIn": "A core name fails and the book needs a durability-5 anchor, or EPS growth re-accelerates past 15%",
+      "sleeveEligible": "core",
+      "coreScore": 16.7,
+      "growthScore": 17
+    },
     {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "sector": "Technology",
       "score": 22,
       "keptOutBy": "Removed Nov 4 on the firm's Sell rating and China/export-control exposure, despite a 22 score and Zacks Rank 1",
-      "wouldMoveIn": "Firm rating back to Hold or better and no new export restrictions"
-    },
-    {
-      "ticker": "DELL",
-      "name": "Dell Technologies Inc.",
-      "sector": "Technology",
-      "score": 22,
-      "keptOutBy": "Durability 2 (thin-margin AI server assembly, customer concentration, 30% PCs), so sleeve-only; sleeve is full and AI-capex would hit the 50% cap. Op margin 9.6% fails the Ideas quality gate",
-      "wouldMoveIn": "Sleeve slot opening (swap for OXY or FCX at 2%). Zacks Rank 1, PEG 0.41, 15.7x forward, 38% off its high; Justin sees strong upside. Reports Nov 24"
+      "wouldMoveIn": "Firm rating back to Hold or better and no new export restrictions",
+      "coreScore": 20.3,
+      "growthScore": 22,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials, Inc.",
       "sector": "Technology",
       "score": 21,
-      "keptOutBy": "WFE cap of 3 (behind ASML, KLAC, LRCX)",
-      "wouldMoveIn": "Any WFE name losing its Zacks Rank 1-3 or a cut to F2"
+      "keptOutBy": "WFE cap of 3 (behind ASML, KLAC, LRCX). Tech cap: 9 names already held, so the open growth slot is reserved for a non-tech name.",
+      "wouldMoveIn": "Any WFE name losing its Zacks Rank 1-3 or a cut to F2",
+      "coreScore": 21.1,
+      "growthScore": 21,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk Corporation",
       "sector": "Technology",
       "score": 21,
-      "keptOutBy": "Memory cap of 1 (MU holds the slot)",
-      "wouldMoveIn": "MU losing its Rank 1, or a 4-name sleeve"
+      "keptOutBy": "Memory cap of 1 (MU holds the slot). Tech cap: 9 names already held, so the open growth slot is reserved for a non-tech name.",
+      "wouldMoveIn": "MU losing its Rank 1, or a 4-name sleeve",
+      "coreScore": 19.7,
+      "growthScore": 21,
+      "sleeveEligible": "growth"
     },
     {
       "ticker": "ADBE",
@@ -776,7 +1008,10 @@
       "sector": "Technology",
       "score": 19,
       "keptOutBy": "Removed Nov 4: firm Hold, no near-term catalyst; the 19 is a valuation call that needs a re-rating nobody can date",
-      "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy"
+      "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy",
+      "coreScore": 20.3,
+      "growthScore": 19,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "AVGO",
@@ -784,7 +1019,10 @@
       "sector": "Technology",
       "score": 19,
       "keptOutBy": "AI-capex name; 18x sales; Zacks Rank 3",
-      "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year"
+      "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year",
+      "coreScore": 18.9,
+      "growthScore": 19,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "OXY",
@@ -792,15 +1030,21 @@
       "sector": "Energy",
       "score": 19,
       "keptOutBy": "Swapped out of the sleeve Nov 4 for EOG: firm Hold with a $63 target (4% upside), 0.7x net debt vs EOG at 0.2x",
-      "wouldMoveIn": "Firm rating back to Buy; OXY's 41% ROIC and Rank 2 still score higher than EOG"
+      "wouldMoveIn": "Firm rating back to Buy; OXY's 41% ROIC and Rank 2 still score higher than EOG",
+      "coreScore": 18.6,
+      "growthScore": 19,
+      "sleeveEligible": "growth"
     },
     {
       "ticker": "ANET",
       "name": "Arista Networks, Inc.",
       "sector": "Technology",
       "score": 18,
-      "keptOutBy": "AI-capex name (hyperscaler switching); cluster at 46% against a 50% cap. Valuation 2 at 41x forward, PEG 1.82 (Zacks app), 18x sales",
-      "wouldMoveIn": "An AI-capex slot opening, behind DELL; Zacks Rank 2, 23% ROIC, net cash, EPS +38% this year. Reports Feb 11"
+      "keptOutBy": "AI-capex name (hyperscaler switching); cluster at 46% against a 50% cap. Valuation 2 at 41x forward, PEG 1.82 (Zacks app), 18x sales. Tech cap: 9 names already held, so the open growth slot is reserved for a non-tech name.",
+      "wouldMoveIn": "An AI-capex slot opening, behind DELL; Zacks Rank 2, 23% ROIC, net cash, EPS +38% this year. Reports Feb 11",
+      "coreScore": 18.9,
+      "growthScore": 18,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "MA",
@@ -808,15 +1052,21 @@
       "sector": "Financial Services",
       "score": 18,
       "keptOutBy": "Removed Nov 4 to cut card-network exposure; V kept as the single payments name. Interchange-cap risk in Congress",
-      "wouldMoveIn": "V leaving the list"
+      "wouldMoveIn": "V leaving the list",
+      "coreScore": 18.3,
+      "growthScore": 18,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "CDNS",
       "name": "Cadence Design Systems, Inc.",
       "sector": "Technology",
       "score": 18,
-      "keptOutBy": "Swapped out for ADBE on Nov 4; EDA is chip-design adjacent",
-      "wouldMoveIn": "A non-capex tech slot opening up"
+      "keptOutBy": "Swapped out for ADBE on Nov 4; EDA is chip-design adjacent. Tech cap: 9 names already held, so the open growth slot is reserved for a non-tech name.",
+      "wouldMoveIn": "A non-capex tech slot opening up",
+      "coreScore": 18.9,
+      "growthScore": 18,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "AXP",
@@ -824,7 +1074,10 @@
       "sector": "Financial Services",
       "score": 18,
       "keptOutBy": "Financials already at 18%",
-      "wouldMoveIn": "V or MA failing the screen"
+      "wouldMoveIn": "V or MA failing the screen",
+      "coreScore": 17.8,
+      "growthScore": 18,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "RDDT",
@@ -832,7 +1085,10 @@
       "sector": "Communication Services",
       "score": 18,
       "keptOutBy": "Durability 2, down 49% over 52 weeks",
-      "wouldMoveIn": "Two quarters of ad revenue holding without Google-traffic help"
+      "wouldMoveIn": "Two quarters of ad revenue holding without Google-traffic help",
+      "coreScore": 18.3,
+      "growthScore": 18,
+      "sleeveEligible": "growth"
     },
     {
       "ticker": "PWR",
@@ -840,7 +1096,10 @@
       "sector": "Industrials",
       "score": 17,
       "keptOutBy": "ROIC under 10%",
-      "wouldMoveIn": "ROIC crossing 12%"
+      "wouldMoveIn": "ROIC crossing 12%",
+      "coreScore": 17.2,
+      "growthScore": 17,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "HSY",
@@ -848,15 +1107,21 @@
       "sector": "Consumer Defensive",
       "score": 17,
       "keptOutBy": "Revenue flat",
-      "wouldMoveIn": "Volume growth returning; would be the first staple in"
+      "wouldMoveIn": "Volume growth returning; would be the first staple in",
+      "coreScore": 15.3,
+      "growthScore": 17,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "CRDO",
       "name": "Credo Technology Group",
       "sector": "Technology",
       "score": 17,
-      "keptOutBy": "Durability 2, hyperscaler concentration",
-      "wouldMoveIn": "A third major customer disclosed"
+      "keptOutBy": "Durability 2, hyperscaler concentration. Tech cap: 9 names already held, so the open growth slot is reserved for a non-tech name.",
+      "wouldMoveIn": "A third major customer disclosed",
+      "coreScore": 15.8,
+      "growthScore": 17,
+      "sleeveEligible": "growth"
     },
     {
       "ticker": "TT",
@@ -864,7 +1129,10 @@
       "sector": "Industrials",
       "score": 17,
       "keptOutBy": "Growth 3, PEG 1.6 (FMP-only score, Zacks Rank pending)",
-      "wouldMoveIn": "Industrials slot wanted outside power/grid: 21% ROIC, EPS +15%, data-center HVAC share"
+      "wouldMoveIn": "Industrials slot wanted outside power/grid: 21% ROIC, EPS +15%, data-center HVAC share",
+      "coreScore": 17.8,
+      "growthScore": 17,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "BX",
@@ -872,7 +1140,10 @@
       "sector": "Financial Services",
       "score": 16,
       "keptOutBy": "Estimate momentum (F1 and F2 drifting down)",
-      "wouldMoveIn": "F2 revisions turning positive"
+      "wouldMoveIn": "F2 revisions turning positive",
+      "coreScore": 20.3,
+      "growthScore": 16,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "CRM",
@@ -880,7 +1151,10 @@
       "sector": "Technology",
       "score": 16,
       "keptOutBy": "9% ROIC; FY28 EPS below FY27",
-      "wouldMoveIn": "ROIC above 12% with F2 growth"
+      "wouldMoveIn": "ROIC above 12% with F2 growth",
+      "coreScore": 16.1,
+      "growthScore": 16,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "EQIX",
@@ -888,7 +1162,10 @@
       "sector": "Real Estate",
       "score": 16,
       "keptOutBy": "Quality 2 (heavy capex, FCF conversion)",
-      "wouldMoveIn": "Would be the first REIT in if one is wanted"
+      "wouldMoveIn": "Would be the first REIT in if one is wanted",
+      "coreScore": 16.1,
+      "growthScore": 16,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "CAH",
@@ -896,7 +1173,10 @@
       "sector": "Healthcare",
       "score": 14,
       "keptOutBy": "Scores 14 on the rubric (growth 1, 1% distributor margins); firm Strong Buy, Zacks Rank 3, VGM A. A defensive judgment candidate, not a quality-growth name",
-      "wouldMoveIn": "Justin's call: Tier B for a cyclical (CAT first) if a defensive is wanted; reports Nov 5 BMO at a 52-week high"
+      "wouldMoveIn": "Justin's call: Tier B for a cyclical (CAT first) if a defensive is wanted; reports Nov 5 BMO at a 52-week high",
+      "coreScore": 16.4,
+      "growthScore": 14,
+      "sleeveEligible": "core"
     },
     {
       "ticker": "BRK.B",
@@ -904,7 +1184,10 @@
       "sector": "Financial Services",
       "score": 13,
       "keptOutBy": "Flat EPS, PEG 7.7, 4% ROIC; a conglomerate plus cash, not a compounder",
-      "wouldMoveIn": "Justin's call, not the scorecard's: a Tier C ballast position if beta or dry powder is wanted"
+      "wouldMoveIn": "Justin's call, not the scorecard's: a Tier C ballast position if beta or dry powder is wanted",
+      "coreScore": 13.3,
+      "growthScore": 13,
+      "sleeveEligible": "core"
     }
   ],
   "changelog": [
@@ -943,6 +1226,40 @@
     {
       "date": "2026-11-04",
       "action": "Sleeve: OXY out (firm Hold, $63 target) to bench; EOG in at 2% (firm Strong Buy, Zacks Rank 2, near-zero leverage). ETN scored 13 and passed on."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Restructured into two sleeves after re-scoring every name on a 3-5 year rubric (Quality/Durability ~28% each, Growth/Valuation ~22%, blended trailing + forward growth, Zacks Rank as a gate). Core 70% / Growth 30% target; core needs durability 4+."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Core (15): ASML 25.0, BKNG 22.5, LRCX 22.5, TSM 21.1, APH 21.1, SCHW 21.1, MSFT 20.6, IBKR 20.3, NVDA 20.3, NFLX 20.0, META 19.7, V 19.4, GOOG 18.6, LLY 17.8, ISRG 17.8. LRCX lifted 2% to 5% and IBKR/V to 5% on core scores."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "AMZN (17.2, quality 1) and ICE (16.7, growth 2) moved to the core bench, first in line. Both durability 5."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Growth sleeve (9 at 3%): FIX, VRT, TER, MU, GEV, CAT, FCX, EOG kept; DELL in from the bench (22, Zacks Rank 1). FCX and EOG stay because the growth sleeve scores on the original rubric where they pass; they are the names the sleeve trigger exists for. One growth slot open, reserved for a non-tech name (tech at the 9-name cap)."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Tech 39% / 9 names, AI-capex 43% against the 50% cap. BKNG carries the only Zacks Rank 4 gate flag: confirm firm rating."
     }
-  ]
+  ],
+  "structure": {
+    "target": {
+      "core": 70,
+      "growth": 30
+    },
+    "current": {
+      "core": 73,
+      "growth": 27
+    },
+    "openSlots": {
+      "growth": 1
+    },
+    "note": "One growth slot open for a non-tech name scoring 18+ on the growth rubric (tech already at the 9-name cap)."
+  }
 }

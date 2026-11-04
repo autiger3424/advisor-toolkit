@@ -1,16 +1,20 @@
 /* ────────────────────────────────────────────────────────────────
    PORTFOLIO — Advisor Toolkit module
 
-   Renders src/data/model-portfolio.json: a 25-name model built from
-   the weekly Ideas list with a five-factor score (quality, growth,
-   valuation, estimate momentum, durability; 18/25 is the bar).
+   Renders src/data/model-portfolio.json: a 24-25 name model in two
+   sleeves. Core (target 70%) is scored on a 3-5 year rubric
+   (quality and durability weighted up, growth blends trailing and
+   forward, Zacks Rank is a gate). Growth (target 30%) is scored on
+   the original five-factor rubric with estimate momentum. 18/25 is
+   the bar in both.
 
    Views:
-     Holdings  — every name with weight, score, Zacks Rank and return
-                 since entry; tap a row for the factor breakdown, the
-                 thesis and the sell trigger.
-     Rules     — the scoring, construction, sizing and review cadence,
-                 kept here so the method travels with the list.
+     Holdings  — core and growth sleeves with weight vs target, each
+                 name's score, Zacks Rank and return since entry; tap
+                 a row for the factor breakdown, the other rubric's
+                 score, the thesis and the sell trigger.
+     Rules     — the structure, both rubrics, construction, sizing and
+                 review cadence, kept here so the method travels.
      Bench     — names that score well but are kept out, and why.
      Log       — every change since inception.
 
@@ -77,7 +81,9 @@ const pct = (n, digits = 1) => (n == null ? "—" : `${n > 0 ? "+" : ""}${n.toFi
 const trendColor = (n) => (n == null ? palette.textMuted : n >= 0 ? palette.success : palette.danger);
 const money = (n) => (n == null ? "—" : `$${n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
 const scoreColor = (n) => (n >= 18 ? palette.success : n >= 16 ? palette.warn : palette.danger);
-const tierColor = { A: palette.accent, B: palette.textDim, C: palette.textMuted };
+const tierColor = { A: palette.accent, B: palette.textDim, C: palette.textMuted, G: palette.warn };
+const RULE_ORDER = ["structure", "coreScoring", "growthScoring", "scoring", "construction", "sizing", "cadence", "data"];
+const RULE_LABEL = { coreScoring: "core scoring", growthScoring: "growth scoring" };
 
 function fmtDate(iso) {
   if (!iso) return null;
@@ -133,13 +139,15 @@ function Row({ h, open, onToggle }) {
           <div style={{ display: "flex", gap: 14, marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted, flexWrap: "wrap" }}>
             <span>entry {money(h.entryPrice)} on {fmtDate(h.entryDate)}</span>
             <span>now {money(h.price)}</span>
-            {h.zacksRank && <span>Zacks {h.zacksRank} {RANK_LABEL[h.zacksRank]}</span>}
+            {h.zacksRank && <span>Zacks {h.zacksRank} {RANK_LABEL[h.zacksRank]}{h.zacksGate ? " · gate" : ""}</span>}
+            {h.altScore != null && <span>{h.altScoreRubric} rubric <span style={{ color: scoreColor(h.altScore) }}>{h.altScore}</span></span>}
             {h.aiCapex && <span style={{ color: palette.warn }}>AI capex</span>}
             {h.nextEarnings && <span>earnings {fmtDate(h.nextEarnings)}</span>}
           </div>
-          {(h.pe != null || h.peg != null || h.roic != null || h.fwdEpsGrowth != null) && (
+          {(h.pe != null || h.peg != null || h.roic != null || h.fwdEpsGrowth != null || h.growthTrail3y != null || h.growthFwd2y != null) && (
             <div style={{ display: "flex", gap: 14, marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted, flexWrap: "wrap" }}>
-              {h.fwdEpsGrowth != null && <span>EPS <span style={{ color: trendColor(h.fwdEpsGrowth) }}>{pct(h.fwdEpsGrowth, 0)}</span>/yr</span>}
+              {h.growthTrail3y != null && <span>3y EPS <span style={{ color: trendColor(h.growthTrail3y) }}>{pct(h.growthTrail3y, 0)}</span>/yr</span>}
+              {(h.growthFwd2y ?? h.fwdEpsGrowth) != null && <span>fwd EPS <span style={{ color: trendColor(h.growthFwd2y ?? h.fwdEpsGrowth) }}>{pct(h.growthFwd2y ?? h.fwdEpsGrowth, 0)}</span>/yr</span>}
               {h.fwdRevGrowth != null && <span>rev <span style={{ color: trendColor(h.fwdRevGrowth) }}>{pct(h.fwdRevGrowth, 0)}</span>/yr</span>}
               {h.roic != null ? <span>ROIC {h.roic.toFixed(0)}%</span> : h.roe != null && <span>ROE {h.roe.toFixed(0)}%</span>}
               {h.pe != null && <span>P/E {h.pe.toFixed(0)}</span>}
@@ -178,6 +186,13 @@ function BenchRow({ b }) {
         <span style={s.badge(scoreColor(b.score))}>{b.score}</span>
       </div>
       <div style={{ marginLeft: 64, marginTop: 4, fontSize: "0.72rem", color: palette.textDim, lineHeight: 1.5 }}>
+        {(b.sleeveEligible || b.coreScore != null) && (
+          <div style={{ fontFamily: fonts.mono, fontSize: "0.66rem", color: palette.textMuted }}>
+            {b.sleeveEligible && <span>{b.sleeveEligible} candidate</span>}
+            {b.coreScore != null && <span> · core {b.coreScore}</span>}
+            {b.growthScore != null && <span> · growth {b.growthScore}</span>}
+          </div>
+        )}
         <div><span style={{ color: palette.textMuted }}>Kept out by:</span> {b.keptOutBy}</div>
         <div><span style={{ color: palette.textMuted }}>Moves in on:</span> {b.wouldMoveIn}</div>
       </div>
@@ -200,7 +215,6 @@ export default function Portfolio() {
   const aiWeight = holdings.filter((h) => h.aiCapex).reduce((a, h) => a + (h.weight || 0), 0);
   const techWeight = holdings.filter((h) => h.sector === "Technology").reduce((a, h) => a + (h.weight || 0), 0);
   const flagged = holdings.filter((h) => (h.flags || []).length > 0);
-  const avgScore = holdings.length ? holdings.reduce((a, h) => a + h.score, 0) / holdings.length : null;
 
   const sectorWeights = Object.entries(
     holdings.reduce((acc, h) => { acc[h.sector] = (acc[h.sector] || 0) + (h.weight || 0); return acc; }, {})
@@ -214,7 +228,14 @@ export default function Portfolio() {
   ];
 
   const byWeight = [...holdings].sort((a, b) => b.weight - a.weight || b.score - a.score || a.ticker.localeCompare(b.ticker));
-  const tierGroups = ["A", "B", "C"].map((t) => ({ tier: t, items: byWeight.filter((h) => h.tier === t) }));
+  const structure = data.structure || {};
+  const target = structure.target || { core: 70, growth: 30 };
+  const sleeves = [
+    { id: "core", label: "Core", sub: "durability 4+, 3–5 year rubric", items: byWeight.filter((h) => h.sleeve === "core") },
+    { id: "growth", label: "Growth", sub: "2–3% each, momentum rubric, hard triggers", items: byWeight.filter((h) => h.sleeve === "growth") },
+  ];
+  const sleeveWeight = (id) => holdings.filter((h) => h.sleeve === id).reduce((a, h) => a + (h.weight || 0), 0);
+  const portfolioFlags = data.portfolioFlags || [];
 
   return (
     <>
@@ -226,7 +247,7 @@ export default function Portfolio() {
 
       <div style={{ ...s.card, display: "flex", gap: 12 }}>
         <div style={s.stat}><div style={s.statLabel}>Since inception</div><div style={s.statValue(trendColor(portReturn))}>{pct(portReturn)}</div></div>
-        <div style={s.stat}><div style={s.statLabel}>Avg score</div><div style={s.statValue()}>{avgScore?.toFixed(1)}</div></div>
+        <div style={s.stat}><div style={s.statLabel}>Core / Growth</div><div style={s.statValue()}>{sleeveWeight("core")}<span style={{ color: palette.textMuted }}>/</span>{sleeveWeight("growth")}</div></div>
         <div style={s.stat}><div style={s.statLabel}>Tech</div><div style={s.statValue()}>{techWeight}%</div></div>
         <div style={s.stat}><div style={s.statLabel}>AI capex</div><div style={s.statValue(aiWeight > 50 ? palette.danger : palette.text)}>{aiWeight}%</div></div>
       </div>
@@ -241,21 +262,36 @@ export default function Portfolio() {
 
       {view === "holdings" && (
         <>
+          {portfolioFlags.length > 0 && (
+            <div style={{ ...s.note, color: palette.danger, borderColor: palette.danger + "66", background: palette.danger + "14" }}>{portfolioFlags.join(" · ")}</div>
+          )}
           {flagged.length > 0 && (
             <div style={s.card}>
               <div style={s.sectionTitle}><span>On review</span><span style={s.count}>{flagged.length}</span></div>
               {flagged.map((h) => <Row key={h.ticker} h={h} open={open === h.ticker} onToggle={() => toggle(h.ticker)} />)}
             </div>
           )}
-          {tierGroups.map(({ tier, items }) => (
-            <div key={tier} style={s.card}>
-              <div style={s.sectionTitle}>
-                <span>Tier {tier}{tier === "C" ? " · reduced and cyclical" : ""}</span>
-                <span style={s.count}>{items.length} · {items.reduce((a, h) => a + h.weight, 0)}%</span>
+          {sleeves.map(({ id, label, sub, items }) => {
+            const w = items.reduce((a, h) => a + h.weight, 0);
+            const openSlots = structure.openSlots?.[id] || 0;
+            return (
+              <div key={id} style={s.card}>
+                <div style={s.sectionTitle}>
+                  <span>{label} <span style={{ fontFamily: fonts.body, fontSize: "0.66rem", fontWeight: 400, color: palette.textMuted }}>{sub}</span></span>
+                  <span style={s.count}>{items.length} · {w}% <span style={{ color: palette.borderLight }}>of {target[id]}</span></span>
+                </div>
+                {items.map((h) => <Row key={h.ticker} h={h} open={open === h.ticker} onToggle={() => toggle(h.ticker)} />)}
+                {openSlots > 0 && (
+                  <div style={{ ...s.empty, fontStyle: "italic" }}>{openSlots} open slot{openSlots > 1 ? "s" : ""}. {structure.note}</div>
+                )}
+                {id === "growth" && structure.growthSleeveDrawdown != null && (
+                  <div style={{ marginTop: 6, fontFamily: fonts.mono, fontSize: "0.66rem", color: palette.textMuted }}>
+                    sleeve {pct(structure.growthSleeveReturn)} since entry · {pct(structure.growthSleeveDrawdown)} from high-water · trims at −20%
+                  </div>
+                )}
               </div>
-              {items.map((h) => <Row key={h.ticker} h={h} open={open === h.ticker} onToggle={() => toggle(h.ticker)} />)}
-            </div>
-          ))}
+            );
+          })}
           <div style={s.card}>
             <div style={s.sectionTitle}><span>By sector</span></div>
             {sectorWeights.map(([sec, w]) => (
@@ -270,9 +306,9 @@ export default function Portfolio() {
       {view === "rules" && (
         <div style={s.card}>
           <div style={s.sectionTitle}><span>How the list is run</span></div>
-          {["scoring", "construction", "sizing", "cadence", "data"].map((k) => rules[k] && (
+          {RULE_ORDER.map((k) => rules[k] && (
             <div key={k}>
-              <div style={s.ruleHead}>{k}</div>
+              <div style={s.ruleHead}>{RULE_LABEL[k] || k}</div>
               <div style={s.rule}>{rules[k]}</div>
             </div>
           ))}
