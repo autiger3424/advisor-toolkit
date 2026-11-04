@@ -331,31 +331,31 @@
       "history": []
     },
     {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
-      "sector": "Technology",
+      "ticker": "GEV",
+      "name": "GE Vernova Inc.",
+      "sector": "Industrials",
       "tier": "B",
       "weight": 4,
       "sleeve": "core",
-      "score": 22,
+      "score": 18,
       "factors": {
-        "quality": 5,
-        "growth": 5,
+        "quality": 4,
+        "growth": 4,
         "valuation": 3,
-        "estimates": 5,
-        "durability": 4
+        "estimates": 4,
+        "durability": 3
       },
-      "zacksRank": 1,
+      "zacksRank": 2,
       "entryDate": "2026-11-04",
-      "entryPrice": 156.2,
-      "price": 156.2,
+      "entryPrice": 918.2,
+      "price": 918.2,
       "priceDate": "2026-11-03",
       "returnSinceEntry": 0.0,
-      "why": "Process-control leader, high share",
+      "why": "Gas turbines, grid and electrification; AI-power demand without semi-equipment China exposure",
       "aiCapex": true,
-      "nextEarnings": "2027-02-04",
+      "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "Process-control share loss to a competitor at a major fab, or WFE industry forecast cut more than 15% with KLAC orders following.",
+      "sellTrigger": "Power or Electrification orders decline year over year, or segment margin guidance is cut; a turbine-slot cancellation by a hyperscaler or utility is an immediate review.",
       "flags": [],
       "history": []
     },
@@ -739,6 +739,14 @@
   ],
   "bench": [
     {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "sector": "Technology",
+      "score": 22,
+      "keptOutBy": "Removed Nov 4 on the firm's Sell rating and China/export-control exposure, despite a 22 score and Zacks Rank 1",
+      "wouldMoveIn": "Firm rating back to Hold or better and no new export restrictions"
+    },
+    {
       "ticker": "AMAT",
       "name": "Applied Materials, Inc.",
       "sector": "Technology",
@@ -761,14 +769,6 @@
       "score": 18,
       "keptOutBy": "Swapped out for ADBE on Nov 4; EDA is chip-design adjacent",
       "wouldMoveIn": "A non-capex tech slot opening up"
-    },
-    {
-      "ticker": "GEV",
-      "name": "GE Vernova Inc.",
-      "sector": "Industrials",
-      "score": 18,
-      "keptOutBy": "Backlog execution risk; same AI-power bet as VRT/FIX",
-      "wouldMoveIn": "Two clean quarters on margin guidance"
     },
     {
       "ticker": "AXP",
@@ -859,6 +859,10 @@
     {
       "date": "2026-11-04",
       "action": "Sell triggers drafted for all 25 names (Claude draft, pending Justin's edit). Theses still open."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "KLAC out (firm Sell rating, geopolitical exposure) to bench; GEV in at Tier B 4%. Tech 34%, industrials 16%, AI-capex 46%."
     }
   ]
 }
