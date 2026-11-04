@@ -739,14 +739,6 @@
   ],
   "bench": [
     {
-      "ticker": "ADBE",
-      "name": "Adobe Inc.",
-      "sector": "Technology",
-      "score": 19,
-      "keptOutBy": "Removed Nov 4: firm Hold, no near-term catalyst; the 19 is a valuation call that needs a re-rating nobody can date",
-      "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy"
-    },
-    {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "sector": "Technology",
@@ -769,6 +761,30 @@
       "score": 21,
       "keptOutBy": "Memory cap of 1 (MU holds the slot)",
       "wouldMoveIn": "MU losing its Rank 1, or a 4-name sleeve"
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Technology",
+      "score": 19,
+      "keptOutBy": "Removed Nov 4: firm Hold, no near-term catalyst; the 19 is a valuation call that needs a re-rating nobody can date",
+      "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy"
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks, Inc.",
+      "sector": "Technology",
+      "score": 19,
+      "keptOutBy": "AI-capex name (hyperscaler switching); cluster already at 46%",
+      "wouldMoveIn": "An AI-capex slot opening; Zacks Rank 2, PEG 0.87, net cash"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc.",
+      "sector": "Technology",
+      "score": 19,
+      "keptOutBy": "AI-capex name; 18x sales; Zacks Rank 3",
+      "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year"
     },
     {
       "ticker": "CDNS",
@@ -795,6 +811,14 @@
       "wouldMoveIn": "Two quarters of ad revenue holding without Google-traffic help"
     },
     {
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "score": 18,
+      "keptOutBy": "Not yet needed; first non-capex 18 outside the list (FMP-only score, Zacks Rank pending)",
+      "wouldMoveIn": "A non-capex slot: 27% ROIC, EPS +19%, ~18x FY27 EPS, PEG 0.9"
+    },
+    {
       "ticker": "PWR",
       "name": "Quanta Services, Inc.",
       "sector": "Industrials",
@@ -817,6 +841,14 @@
       "score": 17,
       "keptOutBy": "Durability 2, hyperscaler concentration",
       "wouldMoveIn": "A third major customer disclosed"
+    },
+    {
+      "ticker": "TT",
+      "name": "Trane Technologies plc",
+      "sector": "Industrials",
+      "score": 17,
+      "keptOutBy": "Growth 3, PEG 1.6 (FMP-only score, Zacks Rank pending)",
+      "wouldMoveIn": "Industrials slot wanted outside power/grid: 21% ROIC, EPS +15%, data-center HVAC share"
     },
     {
       "ticker": "BX",
@@ -867,6 +899,10 @@
     {
       "date": "2026-11-04",
       "action": "ADBE out (firm Hold, no near-term catalyst) to bench; ICE in at Tier B 4%. Tech 30%, financials 22%, AI-capex 46%."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Bench widened: ANET 19, AVGO 19, NFLX 18, TT 17 added. Scored and passed on: MCO 16, MSCI 16, CMG 16, ORLY 15, TJX 14; SNPS, ETN, KKR, WMB, URI failed the quality gate."
     }
   ]
 }
