@@ -1,0 +1,66 @@
+name: Quarterly 13F sweep
+
+on:
+  schedule:
+    # The morning after each 13F deadline (Feb 14, May 15, Aug 14, Nov 14),
+    # 14:10 UTC = 8:10 am Central. Late filers are caught by the next run or
+    # a manual dispatch.
+    - cron: "10 14 15 2,5,8,11 *"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Report year (blank = latest complete quarter)"
+        required: false
+      quarter:
+        description: "Report quarter 1-4"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check secrets
+        run: |
+          if [ -z "${{ secrets.FMP_API_KEY }}" ]; then
+            echo "Add FMP_API_KEY under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Sweep 13F filings
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: node scripts/sweep-13f.mjs ${{ github.event.inputs.year }} ${{ github.event.inputs.quarter }}
+
+      - name: Upload as a run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 13f-sweep
+          path: src/data/13f-sweep.json
+
+      - name: Commit sweep
+        run: |
+          git config user.name "sweep-13f[bot]"
+          git config user.email "sweep-13f@users.noreply.github.com"
+          if git diff --quiet -- src/data/13f-sweep.json && [ -f src/data/13f-sweep.json ]; then
+            echo "No changes."
+            exit 0
+          fi
+          git add src/data/13f-sweep.json
+          git commit -m "13F sweep: $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --quiet origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}"; then
+              exit 0
+            fi
+            sleep 30
+          done
+          exit 1

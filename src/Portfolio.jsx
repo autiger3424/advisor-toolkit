@@ -25,6 +25,8 @@
 
 import { useState } from "react";
 import data from "./data/model-portfolio.json";
+import sweep from "./data/13f-sweep.json";
+import fundList from "./data/13f-funds.json";
 
 const palette = {
   bg: "#0B1120",
@@ -200,6 +202,159 @@ function BenchRow({ b }) {
   );
 }
 
+const bn = (n) => (n == null ? "—" : n >= 1e9 ? `$${(n / 1e9).toFixed(1)}B` : n >= 1e6 ? `$${(n / 1e6).toFixed(0)}M` : `$${n.toLocaleString("en-US")}`);
+const ACTION_COLOR = { new: palette.success, add: palette.success, trim: palette.warn, exit: palette.danger };
+const ACTION_LABEL = { new: "NEW", add: "ADD", trim: "TRIM", exit: "EXIT" };
+
+function Tag({ children, color }) {
+  return <span style={{ ...s.badge(color), marginLeft: 6 }}>{children}</span>;
+}
+
+function FundCard({ f, open, onToggle, inBook }) {
+  const buys = f.moves.filter((m) => m.action === "new" || m.action === "add");
+  const sells = f.moves.filter((m) => m.action === "trim" || m.action === "exit");
+  return (
+    <div style={s.card}>
+      <div onClick={onToggle} style={{ cursor: "pointer" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+          <div>
+            <div style={{ fontFamily: fonts.display, fontSize: "0.9rem", fontWeight: 700, color: palette.text }}>{f.name}</div>
+            <div style={{ fontSize: "0.66rem", color: palette.textMuted }}>{f.style} · {f.positions} positions · {bn(f.totalValue)}</div>
+          </div>
+          <div style={{ fontFamily: fonts.mono, fontSize: "0.7rem", color: palette.textMuted, textAlign: "right" }}>
+            <span style={{ color: palette.success }}>+{buys.length}</span> / <span style={{ color: palette.danger }}>−{sells.length}</span>
+          </div>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 8 }}>
+          {f.top.slice(0, 10).map((t) => (
+            <span key={t.symbol} style={{ fontFamily: fonts.mono, fontSize: "0.68rem", color: inBook(t.symbol) ? palette.accent : palette.textDim, background: palette.bg, border: `1px solid ${inBook(t.symbol) ? palette.accent + "66" : palette.border}`, borderRadius: 4, padding: "2px 6px" }}>
+              {t.symbol} <span style={{ color: palette.textMuted }}>{t.pct != null ? `${(t.pct * 100).toFixed(0)}%` : ""}</span>
+            </span>
+          ))}
+        </div>
+      </div>
+      {open && (
+        <div style={{ marginTop: 10 }}>
+          {[["Bought", buys], ["Sold", sells]].map(([label, list]) => list.length > 0 && (
+            <div key={label} style={{ marginBottom: 8 }}>
+              <div style={s.ruleHead}>{label}</div>
+              {list.slice(0, 15).map((m) => (
+                <div key={m.symbol + m.action} style={{ display: "flex", justifyContent: "space-between", padding: "3px 0", fontSize: "0.74rem", color: palette.textDim, borderBottom: `1px solid ${palette.border}` }}>
+                  <span><span style={{ fontFamily: fonts.mono, color: inBook(m.symbol) ? palette.accent : palette.text }}>{m.symbol}</span> <span style={{ color: palette.textMuted }}>{m.name?.slice(0, 28)}</span>{inBook(m.symbol) && <Tag color={palette.accent}>{inBook(m.symbol)}</Tag>}</span>
+                  <span style={{ fontFamily: fonts.mono, fontSize: "0.66rem", whiteSpace: "nowrap" }}>
+                    <span style={{ color: ACTION_COLOR[m.action] }}>{ACTION_LABEL[m.action]}</span>
+                    {m.change != null && m.action !== "exit" && <span style={{ color: palette.textMuted }}> {m.change > 0 ? "+" : ""}{(m.change * 100).toFixed(0)}%</span>}
+                    {m.action !== "exit" && <span style={{ color: palette.textMuted }}> · {bn(m.value)}</span>}
+                  </span>
+                </div>
+              ))}
+              {list.length > 15 && <div style={{ fontSize: "0.66rem", color: palette.textMuted, marginTop: 3 }}>+{list.length - 15} more</div>}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ThirteenF({ holdings, bench }) {
+  const [openFund, setOpenFund] = useState(null);
+  const held = new Map(holdings.map((h) => [h.ticker.replace(".", "-"), h]));
+  const benched = new Set(bench.map((b) => b.ticker.replace(".", "-")));
+  const inBook = (sym) => (held.has(sym) ? held.get(sym).sleeve : benched.has(sym) ? "bench" : null);
+  const q = sweep.quarter;
+
+  if (!q || !(sweep.funds || []).length) {
+    return (
+      <div style={s.card}>
+        <div style={s.sectionTitle}><span>13F sweep</span><span style={s.count}>{fundList.funds.length} funds</span></div>
+        <div style={s.empty}>
+          No sweep yet. The first run lands the morning after the Nov 14 deadline (Q3 2026 filings) and then after each quarterly 13F deadline. It pulls every fund's top positions and the quarter's new buys, adds, trims and exits, then cross-references them against the holdings and the bench.
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
+          {fundList.funds.map((f) => <span key={f.cik} style={{ fontSize: "0.66rem", color: palette.textDim, background: palette.bg, border: `1px solid ${palette.border}`, borderRadius: 4, padding: "2px 7px" }}>{f.name}</span>)}
+        </div>
+      </div>
+    );
+  }
+
+  const consensus = sweep.consensus || [];
+  const bought = consensus.filter((c) => c.score > 0).slice(0, 20);
+  const sold = consensus.filter((c) => c.score < 0).sort((a, b) => a.score - b.score).slice(0, 12);
+  const overlapH = sweep.overlap?.holdings || [];
+  const overlapB = sweep.overlap?.bench || [];
+
+  return (
+    <>
+      <div style={s.meta}>
+        13F filings for Q{q.quarter} {q.year} vs Q{sweep.priorQuarter.quarter} {sweep.priorQuarter.year}, swept {fmtDate(sweep.asOf)}. {sweep.funds.length} funds filed{sweep.missing?.length ? `; not yet filed: ${sweep.missing.join(", ")}` : ""}. Positions are as of quarter end, 45 days stale by the time they're public.
+      </div>
+
+      {overlapH.length > 0 && (
+        <div style={s.card}>
+          <div style={s.sectionTitle}><span>Our holdings they moved</span><span style={s.count}>{overlapH.length}</span></div>
+          {overlapH.sort((a, b) => (b.buys.length - b.sells.length) - (a.buys.length - a.sells.length)).map((o) => (
+            <div key={o.symbol} style={{ padding: "6px 0", borderBottom: `1px solid ${palette.border}`, fontSize: "0.74rem", color: palette.textDim }}>
+              <span style={{ fontFamily: fonts.mono, color: palette.accent }}>{o.symbol}</span><Tag color={palette.textMuted}>{o.sleeve}</Tag>
+              <span style={{ marginLeft: 8, color: palette.success }}>+{o.buys.length}</span> <span style={{ color: palette.danger }}>−{o.sells.length}</span>
+              <div style={{ fontSize: "0.66rem", color: palette.textMuted, marginTop: 2 }}>
+                {o.buys.length > 0 && <span style={{ color: palette.success }}>{o.buys.join(", ")}</span>}
+                {o.buys.length > 0 && o.sells.length > 0 && " · "}
+                {o.sells.length > 0 && <span style={{ color: palette.danger }}>{o.sells.join(", ")}</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div style={s.card}>
+        <div style={s.sectionTitle}><span>Most bought</span><span style={s.count}>2+ funds</span></div>
+        {bought.length === 0 && <div style={s.empty}>No name was bought by two or more funds.</div>}
+        {bought.map((c) => (
+          <div key={c.symbol} style={{ padding: "6px 0", borderBottom: `1px solid ${palette.border}`, fontSize: "0.74rem", color: palette.textDim }}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <span><span style={{ fontFamily: fonts.mono, color: inBook(c.symbol) ? palette.accent : palette.text }}>{c.symbol}</span> <span style={{ color: palette.textMuted }}>{c.name?.slice(0, 30)}</span>{inBook(c.symbol) && <Tag color={palette.accent}>{inBook(c.symbol)}</Tag>}</span>
+              <span style={{ fontFamily: fonts.mono, fontSize: "0.68rem" }}><span style={{ color: palette.success }}>{c.buys.length} buy{c.buys.length > 1 ? "s" : ""}</span>{c.sells.length > 0 && <span style={{ color: palette.danger }}> / {c.sells.length} sell{c.sells.length > 1 ? "s" : ""}</span>}</span>
+            </div>
+            <div style={{ fontSize: "0.66rem", color: palette.textMuted, marginTop: 2 }}>{c.buys.join(", ")}</div>
+          </div>
+        ))}
+      </div>
+
+      {overlapB.length > 0 && (
+        <div style={s.card}>
+          <div style={s.sectionTitle}><span>Bench names they moved</span><span style={s.count}>{overlapB.length}</span></div>
+          {overlapB.map((o) => (
+            <div key={o.symbol} style={{ padding: "6px 0", borderBottom: `1px solid ${palette.border}`, fontSize: "0.74rem", color: palette.textDim }}>
+              <span style={{ fontFamily: fonts.mono, color: palette.accent }}>{o.symbol}</span>
+              <span style={{ marginLeft: 8, color: palette.success }}>+{o.buys.length}</span> <span style={{ color: palette.danger }}>−{o.sells.length}</span>
+              <div style={{ fontSize: "0.66rem", color: palette.textMuted, marginTop: 2 }}>{[...o.buys, ...o.sells].join(", ")}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {sold.length > 0 && (
+        <div style={s.card}>
+          <div style={s.sectionTitle}><span>Most sold</span><span style={s.count}>2+ funds</span></div>
+          {sold.map((c) => (
+            <div key={c.symbol} style={{ padding: "6px 0", borderBottom: `1px solid ${palette.border}`, fontSize: "0.74rem", color: palette.textDim }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span><span style={{ fontFamily: fonts.mono, color: inBook(c.symbol) ? palette.accent : palette.text }}>{c.symbol}</span> <span style={{ color: palette.textMuted }}>{c.name?.slice(0, 30)}</span>{inBook(c.symbol) && <Tag color={palette.danger}>{inBook(c.symbol)}</Tag>}</span>
+                <span style={{ fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.danger }}>{c.sells.length} sell{c.sells.length > 1 ? "s" : ""}</span>
+              </div>
+              <div style={{ fontSize: "0.66rem", color: palette.textMuted, marginTop: 2 }}>{c.sells.join(", ")}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div style={{ ...s.sectionTitle, border: "none", marginTop: 4 }}><span>By fund</span><span style={s.count}>tap for the quarter's moves · gold = in our book</span></div>
+      {sweep.funds.map((f) => <FundCard key={f.cik} f={f} open={openFund === f.cik} onToggle={() => setOpenFund((p) => (p === f.cik ? null : f.cik))} inBook={inBook} />)}
+    </>
+  );
+}
+
 export default function Portfolio() {
   const [view, setView] = useState("holdings");
   const [open, setOpen] = useState(null);
@@ -224,6 +379,7 @@ export default function Portfolio() {
     { id: "holdings", label: "Holdings" },
     { id: "rules", label: "Rules" },
     { id: "bench", label: "Bench" },
+    { id: "13f", label: "13F" },
     { id: "log", label: "Log" },
   ];
 
@@ -322,6 +478,8 @@ export default function Portfolio() {
           {bench.map((b) => <BenchRow key={b.ticker} b={b} />)}
         </div>
       )}
+
+      {view === "13f" && <ThirteenF holdings={holdings} bench={bench} />}
 
       {view === "log" && (
         <div style={s.card}>

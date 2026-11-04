@@ -1,0 +1,145 @@
+{
+  "note": "Funds swept each 13F season (scripts/sweep-13f.mjs). CIKs verified against SEC EDGAR filer list, Nov 4 2026. Edit freely; the script reads this file.",
+  "funds": [
+    {
+      "name": "Berkshire Hathaway",
+      "cik": "0001067983",
+      "style": "quality / long hold"
+    },
+    {
+      "name": "Pershing Square",
+      "cik": "0001336528",
+      "style": "concentrated quality"
+    },
+    {
+      "name": "Appaloosa",
+      "cik": "0001656456",
+      "style": "macro / value"
+    },
+    {
+      "name": "Baupost",
+      "cik": "0001061768",
+      "style": "deep value"
+    },
+    {
+      "name": "Third Point",
+      "cik": "0001040273",
+      "style": "event / activist"
+    },
+    {
+      "name": "Tiger Global",
+      "cik": "0001167483",
+      "style": "growth / tech"
+    },
+    {
+      "name": "Coatue",
+      "cik": "0001135730",
+      "style": "growth / tech"
+    },
+    {
+      "name": "Lone Pine",
+      "cik": "0001061165",
+      "style": "growth"
+    },
+    {
+      "name": "Viking Global",
+      "cik": "0001103804",
+      "style": "long/short fundamental"
+    },
+    {
+      "name": "Maverick Capital",
+      "cik": "0000934639",
+      "style": "long/short fundamental"
+    },
+    {
+      "name": "D1 Capital",
+      "cik": "0001747057",
+      "style": "growth"
+    },
+    {
+      "name": "Altimeter",
+      "cik": "0001541617",
+      "style": "growth / tech"
+    },
+    {
+      "name": "Duquesne Family Office",
+      "cik": "0001536411",
+      "style": "macro (Druckenmiller)"
+    },
+    {
+      "name": "Soros Fund Management",
+      "cik": "0001029160",
+      "style": "macro"
+    },
+    {
+      "name": "Bridgewater",
+      "cik": "0001350694",
+      "style": "macro / systematic"
+    },
+    {
+      "name": "Greenlight",
+      "cik": "0001079114",
+      "style": "value"
+    },
+    {
+      "name": "Elliott",
+      "cik": "0001791786",
+      "style": "activist"
+    },
+    {
+      "name": "Scion",
+      "cik": "0001649339",
+      "style": "contrarian (Burry)"
+    },
+    {
+      "name": "Starboard Value",
+      "cik": "0001517137",
+      "style": "activist"
+    },
+    {
+      "name": "Trian",
+      "cik": "0001345471",
+      "style": "activist"
+    },
+    {
+      "name": "Icahn",
+      "cik": "0000921669",
+      "style": "activist"
+    },
+    {
+      "name": "TCI",
+      "cik": "0001647251",
+      "style": "concentrated quality"
+    },
+    {
+      "name": "Akre",
+      "cik": "0001112520",
+      "style": "quality compounders"
+    },
+    {
+      "name": "Whale Rock",
+      "cik": "0001387322",
+      "style": "growth / tech"
+    },
+    {
+      "name": "Light Street",
+      "cik": "0001569049",
+      "style": "growth / tech"
+    },
+    {
+      "name": "Durable Capital",
+      "cik": "0001798849",
+      "style": "growth"
+    },
+    {
+      "name": "Glenview",
+      "cik": "0001138995",
+      "style": "healthcare / event"
+    },
+    {
+      "name": "JANA Partners",
+      "cik": "0001998597",
+      "style": "activist"
+    }
+  ]
+}

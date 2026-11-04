@@ -1,6 +1,6 @@
 {
   "name": "advisor-toolkit",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
