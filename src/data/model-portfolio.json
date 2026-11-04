@@ -36,7 +36,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-03",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Search revenue growth falls below 8% for two straight quarters, or a remedies ruling forces divestiture of Chrome or the default-search payments.",
       "flags": [],
       "history": []
     },
@@ -65,7 +65,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "EUV orders decline year over year for two quarters, or export rules extend to DUV servicing of the installed China base.",
       "flags": [],
       "history": []
     },
@@ -94,7 +94,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-01-21",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Advanced-node (3nm and below) revenue share stops growing, or a credible Taiwan-blockade escalation; also any sign Intel foundry wins a top-5 customer.",
       "flags": [],
       "history": []
     },
@@ -123,7 +123,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Organic growth drops below 8% while margins compress, or data-center and IT-datacom falls below 25% of sales without the other markets taking up the slack.",
       "flags": [],
       "history": []
     },
@@ -152,7 +152,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Azure growth below 25% constant-currency for two quarters, or Copilot seat growth stalls while capex keeps rising (margin squeeze with no revenue).",
       "flags": [],
       "history": []
     },
@@ -181,7 +181,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-20",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Net new assets fall below 3% annualized for two quarters, or cash sorting resumes and net interest margin contracts.",
       "flags": [],
       "history": []
     },
@@ -210,7 +210,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-19",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Account growth below 15% year over year, or a sustained rate-cut cycle takes net interest income down more than 20% from peak.",
       "flags": [],
       "history": []
     },
@@ -239,7 +239,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-17",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Room-night growth turns negative outside a recession, or Google's AI travel results visibly cut direct bookings share (paid-traffic cost rising faster than revenue).",
       "flags": [],
       "history": []
     },
@@ -268,7 +268,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Ad impressions and price per ad both decline in the same quarter, or capex guidance rises without a matching revenue step-up for two quarters.",
       "flags": [],
       "history": []
     },
@@ -297,7 +297,7 @@
       "aiCapex": true,
       "nextEarnings": "2026-11-17",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Combined hyperscaler capex guidance (MSFT, GOOG, AMZN, META) is cut for the next year, or data-center gross margin falls below 65%.",
       "flags": [],
       "history": []
     },
@@ -326,7 +326,7 @@
       "aiCapex": false,
       "nextEarnings": "2026-12-09",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Digital Media net new ARR declines year over year for two quarters, or Creative Cloud seat count falls (AI disruption showing up in the numbers, not the narrative).",
       "flags": [],
       "history": []
     },
@@ -355,7 +355,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-02-04",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Process-control share loss to a competitor at a major fab, or WFE industry forecast cut more than 15% with KLAC orders following.",
       "flags": [],
       "history": []
     },
@@ -384,7 +384,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-02-10",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Backlog stops growing sequentially, or a top-3 hyperscaler publicly shifts to a competing liquid-cooling supplier.",
       "flags": [],
       "history": []
     },
@@ -413,7 +413,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-02-18",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Backlog declines sequentially for two quarters, or data-center work falls below 30% of backlog with margins reverting toward pre-2023 levels.",
       "flags": [],
       "history": []
     },
@@ -442,7 +442,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-04",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Cross-border volume growth below 10%, or a regulatory interchange cap enacted in the US or EU that hits net revenue yield.",
       "flags": [],
       "history": []
     },
@@ -471,7 +471,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-04",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Same as MA: cross-border growth below 10%, or an interchange cap in a major market; also a stablecoin or account-to-account rail taking visible US volume share.",
       "flags": [],
       "history": []
     },
@@ -500,7 +500,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-04",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Dealer inventories build two quarters in a row with retail sales negative, or backlog falls below $25B.",
       "flags": [],
       "history": []
     },
@@ -529,7 +529,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-03",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Orforglipron or retatrutide fails or is delayed past 2027, or Medicare price negotiation lands on a GLP-1 earlier than the 2027 list.",
       "flags": [],
       "history": []
     },
@@ -558,7 +558,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-28",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Procedure growth below 12%, or a competing soft-tissue robot wins FDA clearance with a major hospital system switching.",
       "flags": [],
       "history": []
     },
@@ -587,7 +587,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-02-04",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "AWS growth below 15%, or North America retail operating margin falls back under 5% for two quarters.",
       "flags": [],
       "history": []
     },
@@ -616,7 +616,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-02-01",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Semi test orders turn down year over year while a top customer (Apple or NVDA-related) concentration rises above 15%.",
       "flags": [],
       "history": []
     },
@@ -645,7 +645,7 @@
       "aiCapex": true,
       "nextEarnings": "2027-01-27",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "NAND and DRAM capex guidance from the top-3 memory makers cut for the following year; LRCX is out at the same time MU exits the sleeve.",
       "flags": [],
       "history": []
     },
@@ -674,7 +674,7 @@
       "aiCapex": true,
       "nextEarnings": "2026-12-16",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "DRAM contract prices decline quarter over quarter, or HBM share loss to Samsung/SK Hynix at NVDA; sleeve name, so no second quarter of grace.",
       "flags": [],
       "history": []
     },
@@ -703,7 +703,7 @@
       "aiCapex": false,
       "nextEarnings": "2026-11-09",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "WTI below $60 for a sustained month, or any dilutive acquisition; sleeve name, exit on the first trigger.",
       "flags": [],
       "history": []
     },
@@ -732,7 +732,7 @@
       "aiCapex": false,
       "nextEarnings": "2027-01-28",
       "thesis": "",
-      "sellTrigger": "",
+      "sellTrigger": "Copper below $4.00/lb for a sustained month, or Grasberg output disruption beyond one quarter; sleeve name, exit on the first trigger.",
       "flags": [],
       "history": []
     }
@@ -855,6 +855,10 @@
     {
       "date": "2026-11-04",
       "action": "Inception: 25 names from the Nov 2 Ideas list plus a widened screen (FIX, SCHW, ADBE). LRCX, TER sized to 2% for factor weight; CDNS out for ADBE."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Sell triggers drafted for all 25 names (Claude draft, pending Justin's edit). Theses still open."
     }
   ]
 }
