@@ -302,35 +302,6 @@
       "history": []
     },
     {
-      "ticker": "ADBE",
-      "name": "Adobe Inc.",
-      "sector": "Technology",
-      "tier": "B",
-      "weight": 4,
-      "sleeve": "core",
-      "score": 19,
-      "factors": {
-        "quality": 5,
-        "growth": 2,
-        "valuation": 5,
-        "estimates": 3,
-        "durability": 4
-      },
-      "zacksRank": 3,
-      "entryDate": "2026-11-04",
-      "entryPrice": 246.14,
-      "price": 246.14,
-      "priceDate": "2026-11-03",
-      "returnSinceEntry": 0.0,
-      "why": "Creative-suite moat at 10x trailing; non-capex tech",
-      "aiCapex": false,
-      "nextEarnings": "2026-12-09",
-      "thesis": "",
-      "sellTrigger": "Digital Media net new ARR declines year over year for two quarters, or Creative Cloud seat count falls (AI disruption showing up in the numbers, not the narrative).",
-      "flags": [],
-      "history": []
-    },
-    {
       "ticker": "GEV",
       "name": "GE Vernova Inc.",
       "sector": "Industrials",
@@ -414,6 +385,35 @@
       "nextEarnings": "2027-02-18",
       "thesis": "",
       "sellTrigger": "Backlog declines sequentially for two quarters, or data-center work falls below 30% of backlog with margins reverting toward pre-2023 levels.",
+      "flags": [],
+      "history": []
+    },
+    {
+      "ticker": "ICE",
+      "name": "Intercontinental Exchange Inc.",
+      "sector": "Financial Services",
+      "tier": "B",
+      "weight": 4,
+      "sleeve": "core",
+      "score": 17,
+      "factors": {
+        "quality": 3,
+        "growth": 2,
+        "valuation": 3,
+        "estimates": 4,
+        "durability": 5
+      },
+      "zacksRank": 2,
+      "entryDate": "2026-11-04",
+      "entryPrice": 170.93,
+      "price": 170.93,
+      "priceDate": "2026-11-03",
+      "returnSinceEntry": 0.0,
+      "why": "Exchanges, data and mortgage tech; durable fee streams, not a lender or card network",
+      "aiCapex": false,
+      "nextEarnings": "2027-02-04",
+      "thesis": "",
+      "sellTrigger": "Net revenue growth below 5% for two quarters, or net debt/EBITDA back above 3.5x from an acquisition; a mortgage-tech writedown is an immediate review.",
       "flags": [],
       "history": []
     },
@@ -739,6 +739,14 @@
   ],
   "bench": [
     {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Technology",
+      "score": 19,
+      "keptOutBy": "Removed Nov 4: firm Hold, no near-term catalyst; the 19 is a valuation call that needs a re-rating nobody can date",
+      "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy"
+    },
+    {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "sector": "Technology",
@@ -793,14 +801,6 @@
       "score": 17,
       "keptOutBy": "ROIC under 10%",
       "wouldMoveIn": "ROIC crossing 12%"
-    },
-    {
-      "ticker": "ICE",
-      "name": "Intercontinental Exchange Inc.",
-      "sector": "Financial Services",
-      "score": 17,
-      "keptOutBy": "Growth under 10%",
-      "wouldMoveIn": "F2 growth above 12%"
     },
     {
       "ticker": "HSY",
@@ -863,6 +863,10 @@
     {
       "date": "2026-11-04",
       "action": "KLAC out (firm Sell rating, geopolitical exposure) to bench; GEV in at Tier B 4%. Tech 34%, industrials 16%, AI-capex 46%."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "ADBE out (firm Hold, no near-term catalyst) to bench; ICE in at Tier B 4%. Tech 30%, financials 22%, AI-capex 46%."
     }
   ]
 }
