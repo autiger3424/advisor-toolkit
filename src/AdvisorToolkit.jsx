@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WeeklyIdeas from "./WeeklyIdeas";
 import MarketBrief, { latestBrief } from "./MarketBrief";
+import Portfolio from "./Portfolio";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -179,73 +180,6 @@ const retirementData = {
     { item: "Qualified Charitable Distribution", value: "Up to $111,000/year from IRA; age 70½+" },
   ],
 };
-
-const checklistData = [
-  {
-    title: "Core Documents",
-    items: [
-      { text: "Revocable living trust drafted and funded", critical: true },
-      { text: "Pour-over will in place", critical: true },
-      { text: "Durable financial power of attorney", critical: true },
-      { text: "Healthcare power of attorney / proxy", critical: true },
-      { text: "HIPAA authorization", critical: false },
-      { text: "Living will / advance directive", critical: true },
-      { text: "Letter of intent / personal wishes", critical: false },
-    ],
-  },
-  {
-    title: "Beneficiary & Title Review",
-    items: [
-      { text: "Review all beneficiary designations (IRAs, 401k, life insurance)", critical: true },
-      { text: "Verify asset titling aligns with trust", critical: true },
-      { text: "Confirm TOD/POD designations on accounts", critical: false },
-      { text: "Review joint tenancy and community property titling", critical: false },
-      { text: "Update designations after life changes (marriage, divorce, birth, death)", critical: true },
-    ],
-  },
-  {
-    title: "Tax & Wealth Transfer Planning",
-    items: [
-      { text: "Assess estate size relative to federal exemption ($15M)", critical: true },
-      { text: "Evaluate need for irrevocable trust strategies (ILIT, GRAT, etc.)", critical: false },
-      { text: "Review annual gifting strategy using $19,000 exclusion", critical: false },
-      { text: "Consider charitable giving vehicles (CRT, CLT, DAF)", critical: false },
-      { text: "Evaluate state estate/inheritance tax exposure", critical: true },
-      { text: "Plan for potential 2026 exemption sunset", critical: true },
-    ],
-  },
-  {
-    title: "Business & Special Situations",
-    items: [
-      { text: "Buy-sell agreement in place and funded", critical: true },
-      { text: "Business succession plan documented", critical: true },
-      { text: "Special needs trust for disabled dependents", critical: false },
-      { text: "Guardian designations for minor children", critical: true },
-      { text: "Digital assets inventory and access plan", critical: false },
-      { text: "Pet trust or care instructions", critical: false },
-    ],
-  },
-  {
-    title: "Insurance & Liquidity",
-    items: [
-      { text: "Life insurance coverage adequate for estate needs", critical: true },
-      { text: "ILIT established if estate exceeds exemption", critical: false },
-      { text: "Long-term care insurance evaluated", critical: false },
-      { text: "Disability insurance reviewed", critical: false },
-      { text: "Liquidity plan for estate tax payment", critical: true },
-    ],
-  },
-  {
-    title: "Ongoing Maintenance",
-    items: [
-      { text: "Annual review of estate plan", critical: true },
-      { text: "Review after major life events", critical: true },
-      { text: "Confirm executor/trustee willingness and capacity", critical: false },
-      { text: "Update document storage and access information", critical: false },
-      { text: "Review state law changes affecting estate plan", critical: false },
-    ],
-  },
-];
 
 // ─── Roth Conversion Data (TY2026, IRS Rev. Proc. 2025-32) ───
 // Update these each year alongside the other tax-year constants.
@@ -437,7 +371,6 @@ function AdvisorToolkit() {
   const [rothInputs, setRothInputs] = useState({ status: "mfj", agi: "", muni: "", ltcg: "", age65: 0, dedOverride: "" });
   const [taxSubTab, setTaxSubTab] = useState("brackets");
   const [retireSubTab, setRetireSubTab] = useState("limits");
-  const [checkStates, setCheckStates] = useState({});
   const [ssSubTab, setSsSubTab] = useState("keyfigs");
   const [estateSubTab, setEstateSubTab] = useState("statemap");
 
@@ -452,7 +385,7 @@ function AdvisorToolkit() {
     ss:        { label: "Soc Sec",    icon: "🏛️", group: "reference", blurb: "FRA, claiming, taxation, Medicare" },
     estate:    { label: "Estate",     icon: "⚰️", group: "reference", blurb: "State death tax map, gift rules" },
     calc:      { label: "Calculators", icon: "🧮", group: "tools",    blurb: "Growth, RMD, TEY, Roth window, loans" },
-    checklist: { label: "Checklists", icon: "✅", group: "tools",     blurb: "Meeting prep and planning lists" },
+    portfolio: { label: "Portfolio",  icon: "🎯", group: "tools",     blurb: "25-name model, scored and tracked" },
     ideas:     { label: "Ideas",      icon: "📈", group: "markets",   blurb: "Weekly core and halal idea lists" },
     brief:     { label: "Brief",      icon: "📰", group: "markets",   blurb: "Morning and afternoon market briefs" },
   };
@@ -678,7 +611,7 @@ function AdvisorToolkit() {
             <div style={{ ...s.card, cursor: "default" }}>
               <div style={{ fontFamily: fonts.display, fontSize: "1rem", fontWeight: 700, color: palette.accent, marginBottom: 6 }}>About this app</div>
               <div style={{ fontSize: "0.78rem", color: palette.textDim, lineHeight: 1.6 }}>
-                A reference and calculator hub for advisor–client conversations: trusts, tax, retirement, Social Security, estate and gift rules, planning checklists, and a markets corner with weekly idea lists and twice-daily briefs.
+                A reference and calculator hub for advisor–client conversations: trusts, tax, retirement, Social Security, estate and gift rules, a scored model portfolio, and a markets corner with weekly idea lists and twice-daily briefs.
               </div>
             </div>
             <div style={{ ...s.card, cursor: "default" }}>
@@ -1140,31 +1073,8 @@ function AdvisorToolkit() {
           </>
         )}
 
-        {/* ════════ CHECKLISTS ════════ */}
-        {activeTab === "checklist" && (
-          <>
-            {checklistData.map((section, si) => (
-              <div key={si} style={{ ...s.card, cursor: "default", marginBottom: 12 }}>
-                <div style={{ fontFamily: fonts.display, fontSize: "0.9rem", fontWeight: 700, color: palette.accent, marginBottom: 10, paddingBottom: 6, borderBottom: `1px solid ${palette.border}` }}>{section.title}</div>
-                {section.items.map((item, ii) => {
-                  const key = `${si}-${ii}`;
-                  const checked = checkStates[key] || false;
-                  return (
-                    <div key={ii} onClick={() => setCheckStates(p => ({ ...p, [key]: !p[key] }))} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "7px 0", borderBottom: ii < section.items.length - 1 ? `1px solid ${palette.border}` : "none", cursor: "pointer" }}>
-                      <div style={{ width: 18, height: 18, borderRadius: 4, border: `2px solid ${checked ? palette.accent : palette.borderLight}`, background: checked ? palette.accent : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1, transition: "all 0.2s" }}>
-                        {checked && <span style={{ color: palette.bg, fontSize: "0.7rem", fontWeight: 700 }}>✓</span>}
-                      </div>
-                      <span style={{ fontSize: "0.78rem", color: checked ? palette.textMuted : palette.text, textDecoration: checked ? "line-through" : "none", lineHeight: 1.5, transition: "all 0.2s" }}>
-                        {item.text}
-                        {item.critical && <span style={{ marginLeft: 6, fontSize: "0.6rem", color: "#ef4444", fontWeight: 700, verticalAlign: "top" }}>CRITICAL</span>}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
-          </>
-        )}
+        {/* ════════ PORTFOLIO ════════ */}
+        {activeTab === "portfolio" && <Portfolio />}
 
         {/* ════════ WEEKLY IDEAS ════════ */}
         {activeTab === "ideas" && <WeeklyIdeas />}
