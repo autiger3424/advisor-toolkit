@@ -875,6 +875,14 @@
       "wouldMoveIn": "Would be the first REIT in if one is wanted"
     },
     {
+      "ticker": "CAH",
+      "name": "Cardinal Health, Inc.",
+      "sector": "Healthcare",
+      "score": 14,
+      "keptOutBy": "Scores 14 on the rubric (growth 1, 1% distributor margins); firm Strong Buy, Zacks Rank 3, VGM A. A defensive judgment candidate, not a quality-growth name",
+      "wouldMoveIn": "Justin's call: Tier B for a cyclical (CAT first) if a defensive is wanted; reports Nov 5 BMO at a 52-week high"
+    },
+    {
       "ticker": "BRK.B",
       "name": "Berkshire Hathaway Inc.",
       "sector": "Financial Services",
@@ -907,6 +915,10 @@
     {
       "date": "2026-11-04",
       "action": "MA out (second card network, interchange-cap risk) to bench; NFLX in at Tier B 4% on Zacks Rank 3 confirmed and firm Buy. Financials 18%, comm services 15%, tech 30%, AI-capex 46%."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "CAH added to bench as a defensive judgment candidate (firm Strong Buy, rubric 14)."
     }
   ]
 }
