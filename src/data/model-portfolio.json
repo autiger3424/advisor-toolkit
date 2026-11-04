@@ -116,14 +116,12 @@
       "price": 155.67,
       "priceDate": "2026-11-03",
       "returnSinceEntry": 0.0,
-      "why": "Global OTA scale; Google dependency",
+      "why": "Global OTA scale; Google dependency. Zacks Rank 4 gate cleared Nov 4 on the firm Strong Buy.",
       "aiCapex": false,
       "nextEarnings": "2027-02-17",
       "thesis": "",
       "sellTrigger": "Room-night growth turns negative outside a recession, or Google's AI travel results visibly cut direct bookings share (paid-traffic cost rising faster than revenue).",
-      "flags": [
-        "Zacks Rank 4-5: gate flag, confirm firm rating"
-      ],
+      "flags": [],
       "history": [
         {
           "date": "2026-11-04",
@@ -136,7 +134,9 @@
       "scoreRubric": "core",
       "altScore": 18,
       "altScoreRubric": "growth",
-      "zacksGate": true
+      "zacksGate": false,
+      "firmRating": "Strong Buy",
+      "firmRatingDate": "2026-11-04"
     },
     {
       "ticker": "TSM",
@@ -1246,6 +1246,10 @@
     {
       "date": "2026-11-04",
       "action": "Tech 39% / 9 names, AI-capex 43% against the 50% cap. BKNG carries the only Zacks Rank 4 gate flag: confirm firm rating."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "BKNG: Zacks Rank 4 gate flag cleared on the firm Strong Buy rating. Core score 22.5, stays at 5%."
     }
   ],
   "structure": {
