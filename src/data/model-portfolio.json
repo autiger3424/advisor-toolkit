@@ -679,31 +679,31 @@
       "history": []
     },
     {
-      "ticker": "OXY",
-      "name": "Occidental Petroleum Corporation",
+      "ticker": "EOG",
+      "name": "EOG Resources, Inc.",
       "sector": "Energy",
       "tier": "C",
       "weight": 2,
       "sleeve": "cyclical",
-      "score": 19,
+      "score": 17,
       "factors": {
-        "quality": 5,
-        "growth": 2,
+        "quality": 3,
+        "growth": 3,
         "valuation": 5,
-        "estimates": 5,
+        "estimates": 4,
         "durability": 2
       },
       "zacksRank": 2,
       "entryDate": "2026-11-04",
-      "entryPrice": 60.43,
-      "price": 60.43,
-      "priceDate": "2026-11-03",
+      "entryPrice": 147.99,
+      "price": 147.99,
+      "priceDate": "2026-11-04",
       "returnSinceEntry": 0.0,
-      "why": "Cyclical sleeve: oil",
+      "why": "Cyclical sleeve: lowest-leverage large E&P (net debt 0.2x), 8.8x forward, 2.6% yield; firm Strong Buy (in for OXY, firm Hold)",
       "aiCapex": false,
-      "nextEarnings": "2026-11-09",
+      "nextEarnings": "2026-11-05",
       "thesis": "",
-      "sellTrigger": "WTI below $60 for a sustained month, or any dilutive acquisition; sleeve name, exit on the first trigger.",
+      "sellTrigger": "WTI under $60 for a sustained month, or capex guidance rises faster than production; sleeve name, first trigger exits.",
       "flags": [],
       "history": []
     },
@@ -785,6 +785,14 @@
       "score": 19,
       "keptOutBy": "AI-capex name; 18x sales; Zacks Rank 3",
       "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year"
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum Corporation",
+      "sector": "Energy",
+      "score": 19,
+      "keptOutBy": "Swapped out of the sleeve Nov 4 for EOG: firm Hold with a $63 target (4% upside), 0.7x net debt vs EOG at 0.2x",
+      "wouldMoveIn": "Firm rating back to Buy; OXY's 41% ROIC and Rank 2 still score higher than EOG"
     },
     {
       "ticker": "ANET",
@@ -931,6 +939,10 @@
     {
       "date": "2026-11-04",
       "action": "DELL (22, Zacks Rank 1) added to bench: durability 2 makes it sleeve-only and the sleeve is full; Justin flags strong upside. First in line if the sleeve opens."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "Sleeve: OXY out (firm Hold, $63 target) to bench; EOG in at 2% (firm Strong Buy, Zacks Rank 2, near-zero leverage). ETN scored 13 and passed on."
     }
   ]
 }
