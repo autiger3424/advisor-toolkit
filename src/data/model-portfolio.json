@@ -747,6 +747,14 @@
       "wouldMoveIn": "Firm rating back to Hold or better and no new export restrictions"
     },
     {
+      "ticker": "DELL",
+      "name": "Dell Technologies Inc.",
+      "sector": "Technology",
+      "score": 22,
+      "keptOutBy": "Durability 2 (thin-margin AI server assembly, customer concentration, 30% PCs), so sleeve-only; sleeve is full and AI-capex would hit the 50% cap. Op margin 9.6% fails the Ideas quality gate",
+      "wouldMoveIn": "Sleeve slot opening (swap for OXY or FCX at 2%). Zacks Rank 1, PEG 0.41, 15.7x forward, 38% off its high; Justin sees strong upside. Reports Nov 24"
+    },
+    {
       "ticker": "AMAT",
       "name": "Applied Materials, Inc.",
       "sector": "Technology",
@@ -919,6 +927,10 @@
     {
       "date": "2026-11-04",
       "action": "CAH added to bench as a defensive judgment candidate (firm Strong Buy, rubric 14)."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "DELL (22, Zacks Rank 1) added to bench: durability 2 makes it sleeve-only and the sleeve is full; Justin flags strong upside. First in line if the sleeve opens."
     }
   ]
 }
