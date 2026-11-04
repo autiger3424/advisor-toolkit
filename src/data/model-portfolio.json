@@ -779,20 +779,20 @@
       "wouldMoveIn": "Creative Cloud net new ARR re-accelerating, or firm rating moving to Buy"
     },
     {
-      "ticker": "ANET",
-      "name": "Arista Networks, Inc.",
-      "sector": "Technology",
-      "score": 19,
-      "keptOutBy": "AI-capex name (hyperscaler switching); cluster already at 46%",
-      "wouldMoveIn": "An AI-capex slot opening; Zacks Rank 2, PEG 0.87, net cash"
-    },
-    {
       "ticker": "AVGO",
       "name": "Broadcom Inc.",
       "sector": "Technology",
       "score": 19,
       "keptOutBy": "AI-capex name; 18x sales; Zacks Rank 3",
       "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year"
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks, Inc.",
+      "sector": "Technology",
+      "score": 18,
+      "keptOutBy": "AI-capex name (hyperscaler switching); cluster at 46% against a 50% cap. Valuation 2 at 41x forward, PEG 1.82 (Zacks app), 18x sales",
+      "wouldMoveIn": "An AI-capex slot opening, behind DELL; Zacks Rank 2, 23% ROIC, net cash, EPS +38% this year. Reports Feb 11"
     },
     {
       "ticker": "MA",
