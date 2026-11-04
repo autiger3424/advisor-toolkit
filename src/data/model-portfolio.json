@@ -418,31 +418,31 @@
       "history": []
     },
     {
-      "ticker": "MA",
-      "name": "Mastercard Incorporated",
-      "sector": "Financial Services",
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
       "tier": "B",
       "weight": 4,
       "sleeve": "core",
       "score": 18,
       "factors": {
-        "quality": 5,
+        "quality": 4,
         "growth": 3,
-        "valuation": 1,
-        "estimates": 4,
-        "durability": 5
+        "valuation": 4,
+        "estimates": 3,
+        "durability": 4
       },
-      "zacksRank": 2,
+      "zacksRank": 3,
       "entryDate": "2026-11-04",
-      "entryPrice": 647.18,
-      "price": 647.18,
-      "priceDate": "2026-11-03",
+      "entryPrice": 66.08,
+      "price": 66.08,
+      "priceDate": "2026-11-04",
       "returnSinceEntry": 0.0,
-      "why": "Payments duopoly",
+      "why": "Global subscription video; 27% ROIC, net cash, EPS +19% at ~18x forward after a 40% drawdown; firm Buy",
       "aiCapex": false,
-      "nextEarnings": "2027-02-04",
+      "nextEarnings": "2027-01-19",
       "thesis": "",
-      "sellTrigger": "Cross-border volume growth below 10%, or a regulatory interchange cap enacted in the US or EU that hits net revenue yield.",
+      "sellTrigger": "Paid memberships or revenue growth below 8% for two quarters, or ad-tier revenue stalls while content spend keeps rising; a second straight quarter of negative estimate revisions is a review.",
       "flags": [],
       "history": []
     },
@@ -787,6 +787,14 @@
       "wouldMoveIn": "An AI-capex slot opening; custom-ASIC ramp has EPS +60% next year"
     },
     {
+      "ticker": "MA",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
+      "score": 18,
+      "keptOutBy": "Removed Nov 4 to cut card-network exposure; V kept as the single payments name. Interchange-cap risk in Congress",
+      "wouldMoveIn": "V leaving the list"
+    },
+    {
       "ticker": "CDNS",
       "name": "Cadence Design Systems, Inc.",
       "sector": "Technology",
@@ -809,14 +817,6 @@
       "score": 18,
       "keptOutBy": "Durability 2, down 49% over 52 weeks",
       "wouldMoveIn": "Two quarters of ad revenue holding without Google-traffic help"
-    },
-    {
-      "ticker": "NFLX",
-      "name": "Netflix, Inc.",
-      "sector": "Communication Services",
-      "score": 18,
-      "keptOutBy": "Not yet needed; first non-capex 18 outside the list (FMP-only score, Zacks Rank pending)",
-      "wouldMoveIn": "A non-capex slot: 27% ROIC, EPS +19%, ~18x FY27 EPS, PEG 0.9"
     },
     {
       "ticker": "PWR",
@@ -903,6 +903,10 @@
     {
       "date": "2026-11-04",
       "action": "Bench widened: ANET 19, AVGO 19, NFLX 18, TT 17 added. Scored and passed on: MCO 16, MSCI 16, CMG 16, ORLY 15, TJX 14; SNPS, ETN, KKR, WMB, URI failed the quality gate."
+    },
+    {
+      "date": "2026-11-04",
+      "action": "MA out (second card network, interchange-cap risk) to bench; NFLX in at Tier B 4% on Zacks Rank 3 confirmed and firm Buy. Financials 18%, comm services 15%, tech 30%, AI-capex 46%."
     }
   ]
 }
