@@ -2,6 +2,265 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-05",
+      "session": "morning",
+      "generatedAt": "2026-11-05T13:57:55Z",
+      "headline": "Mixed open after Wednesday's 1,569-point Dow surge: Dow futures up about 0.6%, S&P roughly flat and Nasdaq 100 down about 0.5% as Qualcomm and Arm guidance plus data-center permitting worries hit chips; jobless claims and productivity both came in strong and barely moved futures.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,731",
+          "change": "+0.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "n/a",
+          "change": "-0.5% (news reports)"
+        },
+        {
+          "label": "Dow fut",
+          "value": "n/a",
+          "change": "+0.6% (news reports)"
+        },
+        {
+          "label": "Russell fut",
+          "value": "n/a",
+          "change": "+/- not captured"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.90%",
+          "change": "-5 bp (Wed close; intraday not captured)"
+        },
+        {
+          "label": "VIX",
+          "value": "16.86",
+          "change": "+1.5%"
+        },
+        {
+          "label": "WTI",
+          "value": "$88.80",
+          "change": "+0.8% (news reports)"
+        },
+        {
+          "label": "Brent",
+          "value": "$96.80",
+          "change": "+2.3%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,123",
+          "change": "+1.2%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$79,690",
+          "change": "-0.9%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Initial jobless claims (wk Oct 31)",
+          "actual": "189K",
+          "consensus": "196K",
+          "prior": "195K",
+          "read": "low and falling; 4-week average 194.75K",
+          "reaction": "S&P futures flat, about 7,730 before and 7,731 ten minutes after; yield reaction not captured"
+        },
+        {
+          "name": "Continuing claims (wk Oct 24)",
+          "actual": "1.718M",
+          "consensus": "1.710M",
+          "prior": "1.695M",
+          "read": "a touch higher; rehiring still slow",
+          "reaction": "none visible"
+        },
+        {
+          "name": "Nonfarm productivity (Q3 prelim)",
+          "actual": "+3.6%",
+          "consensus": "+2.8%",
+          "prior": "+2.1%",
+          "read": "clear beat",
+          "reaction": "none visible; gold slipped about $8"
+        },
+        {
+          "name": "Unit labor costs (Q3 prelim)",
+          "actual": "-0.7%",
+          "consensus": "+0.6%",
+          "prior": "+1.9%",
+          "read": "soft for wage-driven inflation",
+          "reaction": "none visible"
+        },
+        {
+          "name": "Challenger job cuts (Oct, released earlier this morning)",
+          "actual": "44.0K",
+          "consensus": "51K",
+          "prior": "43.3K",
+          "read": "below expectations",
+          "reaction": "n/a"
+        }
+      ],
+      "drivers": [
+        "Post-election rally is cooling. Democrats took both chambers; on Wednesday the Dow rose 3.0% to 53,356 (best day since April 2025), the S&P rose 1.6% to 7,688.62 and the VIX fell from 20.8 to 16.6.",
+        "Chips are the drag. Qualcomm and Arm are down on weak handset demand, memory names are off 4-5% on fears of tighter data-center approvals, and Nvidia dipped below $200 pre-market. Financials, staples and healthcare are leading instead.",
+        "Oil is bouncing after Wednesday's 8%+ plunge, which was driven by hopes the election result speeds an end to the Iran war. Brent is back near $97.",
+        "Friday's October jobs report is next; ADP on Wednesday showed +86K.",
+        "Overseas: Europe firmer, FTSE 100 +0.8% (a headline says the Bank of England hiked to 4%; details not confirmed) and Maersk down about 10% on a Q3 miss. Asia split: Nikkei -1.8% on tech weakness, Hang Seng +3.7%."
+      ],
+      "calendar": [
+        {
+          "time": "7:50 CT",
+          "item": "Fed's Hammack speaks (no blackout; next FOMC Dec 8-9)",
+          "consensus": ""
+        },
+        {
+          "time": "8:10 CT",
+          "item": "Fed's Barkin speaks",
+          "consensus": ""
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA natural gas storage",
+          "consensus": "+81 Bcf (prior +80)"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "4-week and 8-week Treasury bill auctions",
+          "consensus": ""
+        },
+        {
+          "time": "11:00 CT",
+          "item": "Freddie Mac mortgage rates",
+          "consensus": "prior 30-yr 7.24%"
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Earnings already reported: ConocoPhillips $3.27 vs $3.05, Cigna $7.98 vs $7.52, Parker-Hannifin $8.90 vs $8.21, Duke $1.99 vs $1.86, Southern $1.94 vs $1.71; Cummins missed at $7.71 vs $8.20",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Earnings: Airbnb, EOG, Devon, Monster, Atlassian, Microchip, Cloudflare, Axon, DraftKings, Affirm (timing inferred; calendar has no report times)",
+          "consensus": "Airbnb EPS $2.85, EOG $4.47, Devon $1.33"
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "October jobs report",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "QCOM",
+          "move": "about -10% pre-market",
+          "why": "Revenue of $10.44B beat, but next-quarter EPS guide was below consensus and handset revenue fell 26%. Wednesday close $173.19."
+        },
+        {
+          "ticker": "APP",
+          "move": "+16% to +20% pre-market",
+          "why": "Q3 EPS $4.30 vs $3.94, revenue up 55%, Q4 revenue guide above estimates. Wednesday close $271.75."
+        },
+        {
+          "ticker": "ARM",
+          "move": "-5% to -7% pre-market",
+          "why": "Royalty revenue grew only 8% on smartphone weakness. Wednesday close $191.80."
+        },
+        {
+          "ticker": "SNAP",
+          "move": "-10%+ pre-market",
+          "why": "Q3 revenue of $1.72B was slightly light. Wednesday close $5.92."
+        },
+        {
+          "ticker": "MU",
+          "move": "about -4% pre-market",
+          "why": "Memory group sold on data-center approval fears; SanDisk and Western Digital also lower."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance via AOL - Stock market today: Dow, S&P 500, Nasdaq trade mixed as post-election relief rally cools",
+          "url": "https://www.aol.com/articles/stock-market-today-dow-p-090519000.html"
+        },
+        {
+          "title": "TradingKey - US Pre-Market: Memory stocks extend losses; Qualcomm drops over 9%, AppLovin surges nearly 20%",
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262282182-memory-stocks-slide-sk-hynix-sandisk-5-qualcomm-9-applovin-20-tradingkey"
+        },
+        {
+          "title": "investingLive - Morning Kickstart: BOE hikes to 4% (headline only)",
+          "url": "https://investinglive.com/technical-analysis/morning-kickstart-boe-hikes-to-4-as-sterling-struggles-to-hold-its-gains/"
+        },
+        {
+          "title": "Invezz - Dow futures up, Nasdaq futures slide: Five things to know (via FMP)",
+          "url": "https://invezz.com/news/2026/11/05/dow-futures-up-nasdaq-futures-slide-five-things-to-know-before-wall-street-opens/"
+        },
+        {
+          "title": "CNBC International TV - The Blue Wave turns Wall Street green (via FMP)",
+          "url": "https://www.youtube.com/watch?v=8u03s9lCgGs"
+        },
+        {
+          "title": "Barron's - The Market Landscape Is Shifting, and the AI Trade Looks Lost (via FMP)",
+          "url": "https://www.barrons.com/articles/things-to-know-today-09e79395"
+        },
+        {
+          "title": "MarketWatch - Research firm declares end of the AI trade as we know it (via FMP)",
+          "url": "https://www.marketwatch.com/story/research-firm-declares-end-of-the-ai-trade-as-we-know-it-and-asian-tech-stocks-reflect-the-shift-25ac8e8f"
+        },
+        {
+          "title": "24/7 Wall St. - Qualcomm Sinks 11% as Soft Profit Guidance and Handset Slump Overshadow Beat (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/05/qualcomm-sinks-11-as-soft-profit-guidance-and-handset-slump-overshadow-beat-arm-holdings-drops-7-skyworks-slides-2/"
+        },
+        {
+          "title": "Seeking Alpha - Qualcomm Q4: This Dip Is Not The One To Buy Yet (via FMP)",
+          "url": "https://seekingalpha.com/article/4962912-qualcomm-q4-this-dip-is-not-the-one-to-buy-yet"
+        },
+        {
+          "title": "Benzinga - AppLovin Rallies 16% After Earnings (via FMP)",
+          "url": "https://www.benzinga.com/trading-ideas/movers/26/11/62908812/applovin-rallies-16-after-earnings-revenue-beat-and-strong-guidance"
+        },
+        {
+          "title": "Barron's - Arm Stock Has an Apple and Android Problem (via FMP)",
+          "url": "https://www.barrons.com/articles/arm-earnings-stock-price-0b2ba8d0"
+        },
+        {
+          "title": "24/7 Wall St. - How Worried Should Investors Be About Micron Right Now? (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/05/how-worried-should-investors-be-about-micron-right-now/"
+        },
+        {
+          "title": "24/7 Wall St. - Nvidia Just Dipped Below $200 for the First Time Since August (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/05/nvidia-just-dipped-below-200-for-the-first-time-since-august/"
+        },
+        {
+          "title": "Zacks - Stock Market News for Nov 5, 2026",
+          "url": "https://www.zacks.com/stock/news/3024095/stock-market-news-for-nov-5,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Qualcomm (QCOM) Q4 Earnings: How Key Metrics Compare to Wall Street Estimates",
+          "url": "https://www.zacks.com/stock/news/3023459/qualcomm-(qcom)-q4-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - AppLovin (APP) Q3 Earnings and Revenues Beat Estimates",
+          "url": "https://www.zacks.com/stock/news/3023451/applovin-(app)-q3-earnings-and-revenues-beat-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "QCOM - Zacks",
+          "url": "https://www.zacks.com/stock/quote/QCOM?utm_source=zacks_mcp"
+        },
+        {
+          "title": "APP - Zacks",
+          "url": "https://www.zacks.com/stock/quote/APP?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ARM - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ARM?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Financial Modeling Prep - economic calendar, Treasury rates, index, futures, commodity and crypto prices, earnings calendar",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-05-morning"
+    },
+    {
       "date": "2026-11-04",
       "session": "afternoon",
       "generatedAt": "2026-11-04T21:35:00Z",
