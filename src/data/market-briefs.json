@@ -3,6 +3,219 @@
   "briefs": [
     {
       "date": "2026-11-05",
+      "session": "afternoon",
+      "generatedAt": "2026-11-05T21:27:43Z",
+      "headline": "Stocks had their worst day since the April 2025 tariff rout: the S&P 500 fell 4.3% and the Nasdaq 5.5% (now in correction) as investors priced in a Democratic Congress slowing the AI data-center buildout, erasing Wednesday's post-election rally.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,355.84",
+          "change": "-4.33%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "24,315.00",
+          "change": "-5.52%"
+        },
+        {
+          "label": "Dow",
+          "value": "51,523.06",
+          "change": "-3.44%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,729.89",
+          "change": "-4.45%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.84%",
+          "change": "-6 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "28.15",
+          "change": "+69.5%"
+        },
+        {
+          "label": "WTI",
+          "value": "$90.66",
+          "change": "+2.9%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,098",
+          "change": "+0.6%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$75,766",
+          "change": "-5.8%"
+        }
+      ],
+      "drivers": [
+        "AI policy risk: with Democrats holding both chambers, the market fixed on campaign-trail calls from some Democrats to restrict or pause new data-center projects (power prices were a campaign issue). Traders read that as an AI buildout that gets slower and more expensive. The chip index fell more than 10% and the tech sector fund (XLK) lost 8%.",
+        "Changed since the morning: pre-market it looked like a chip-specific wobble on Qualcomm's light guidance, with Dow futures up 0.6%. It became broad liquidation: the Dow opened higher, then lost 1,833 points, and the indexes finished near session lows.",
+        "Flight to safety, not a growth scare: jobless claims (189K vs 196K est.) and Q3 productivity (+3.6% vs +2.8% est.) were solid and ignored. Treasuries rallied (10-yr -6 bp, 2-yr -12 bp), the VIX had its biggest one-day jump in over two years, and retail investors were on pace for their heaviest net selling since March 2020 (Vanda, via Yahoo).",
+        "Technicals: the Nasdaq closed below its 200-day average and more than 10% under its Oct. 6 record. The S&P 500 finished just above its 200-day (about 7,320). Oil rebounded about 3% after Wednesday's 8% drop; bitcoin fell 5.8%."
+      ],
+      "sectors": {
+        "leaders": "All 11 fell. Held up best: Communication Services (-0.6%), Utilities (-0.7%), Staples (-0.8%)",
+        "laggards": "Technology (-8.0%), Industrials (-4.1%), Consumer Discretionary (-3.8%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "ABNB",
+          "move": "+12%",
+          "why": "EPS $3.16 vs $2.85 est., revenue $4.87B vs $4.75B; raised full-year revenue growth outlook to high-teens from mid-teens."
+        },
+        {
+          "ticker": "TEAM",
+          "move": "-17%",
+          "why": "EPS $1.65 vs $1.39 est. and revenue $1.77B vs $1.71B both topped estimates; reason for the drop not clear from headlines yet."
+        },
+        {
+          "ticker": "DKNG",
+          "move": "-18%",
+          "why": "Single early print. Loss of $0.53 a share vs $0.41 est.; revenue $1.33B vs $1.39B."
+        },
+        {
+          "ticker": "NET",
+          "move": "+17%",
+          "why": "Single early print. EPS $0.38 vs $0.34 est.; revenue $0.78B vs $0.74B."
+        },
+        {
+          "ticker": "AFRM",
+          "move": "-8%",
+          "why": "EPS $0.47 vs $0.38 est.; revenue $1.26B vs $1.21B. All after-hours moves are early, thin prints as of about 3:20 CT."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "3:30 CT",
+          "item": "Fed's Williams speaks",
+          "consensus": ""
+        },
+        {
+          "time": "7:30 CT",
+          "item": "October jobs report: nonfarm payrolls, unemployment rate, average hourly earnings",
+          "consensus": "Payrolls +65K (prior +29K); unemployment 4.2% (prior 4.2%); hourly earnings +0.3% m/m, +2.9% y/y"
+        },
+        {
+          "time": "8:10 CT",
+          "item": "Fed's Musalem speaks",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "U. Michigan consumer sentiment, November preliminary",
+          "consensus": "48.0 (prior 48.0); 1-yr inflation expectations 4.7%"
+        },
+        {
+          "time": "11:15 CT",
+          "item": "Fed's Bowman speaks",
+          "consensus": ""
+        },
+        {
+          "time": "2:00 CT",
+          "item": "Consumer credit, September",
+          "consensus": "+$12B (prior +$8.3B)"
+        },
+        {
+          "time": "Earnings",
+          "item": "Humana, Charter, Enbridge, Vistra, Brookfield Asset Mgmt, Franklin Resources, Fluor",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "MU",
+          "move": "-17.5%",
+          "why": "Hardest-hit large chip name in the AI liquidation; Marvell fell 16.4%."
+        },
+        {
+          "ticker": "TSLA",
+          "move": "-10.8%",
+          "why": "High-beta megacap sold with the group; Yahoo also cites merger and regulatory concerns (SpaceX -9%)."
+        },
+        {
+          "ticker": "QCOM",
+          "move": "-9.5%",
+          "why": "Beat the quarter but guided light, which started the chip selling."
+        },
+        {
+          "ticker": "PLTR",
+          "move": "-9.7%",
+          "why": "Software was dragged down with AI infrastructure."
+        },
+        {
+          "ticker": "APP",
+          "move": "+31.0%",
+          "why": "Q3 revenue $2.18B vs $2.07B est. and Q4 guidance above consensus; a rare winner."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance: Stock market today live blog, Nov. 5",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
+        },
+        {
+          "title": "Fox Business: Stocks plunge as Dem midterm sweep fuels AI regulatory concerns",
+          "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
+        },
+        {
+          "title": "WSJ: Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks (via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/wall-street-gets-2-5-trillion-ai-reality-check-with-historic-rout-of-tech-stocks-93985d7c"
+        },
+        {
+          "title": "CNBC: Qualcomm slides 9% after earnings, leading post-election chip stock sell-off (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+        },
+        {
+          "title": "CNBC: Experts on whether the AI trade is ending (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/05/cnbcs-experts-on-whether-the-ai-trade-is-ending-and-what-investors-should-do-next.html"
+        },
+        {
+          "title": "MarketWatch: After tech-stock rout, October jobs report could bring relief or more pain (via FMP)",
+          "url": "https://www.marketwatch.com/story/after-tech-stock-rout-october-jobs-report-could-bring-relief-or-more-pain-db93357e"
+        },
+        {
+          "title": "WSJ: Airbnb Raises Outlook as It Remains Insulated from Global Conflicts (via FMP)",
+          "url": "https://www.wsj.com/business/earnings/airbnb-raises-outlook-as-it-remains-insulated-from-global-conflicts-a8ffcbf8"
+        },
+        {
+          "title": "Reuters: Airbnb lifts annual revenue growth forecast (via FMP)",
+          "url": "https://www.reuters.com/business/airbnb-lifts-annual-revenue-growth-forecast-resilient-global-travel-demand-2026-11-05/"
+        },
+        {
+          "title": "Business Wire: Atlassian Announces First Quarter Fiscal Year 2027 Results (via FMP)",
+          "url": "https://www.businesswire.com/news/home/20261105890344/en/Atlassian-Announces-First-Quarter-Fiscal-Year-2027-Results/"
+        },
+        {
+          "title": "Business Wire: Affirm reports first fiscal quarter 2027 results (via FMP)",
+          "url": "https://www.businesswire.com/news/home/20261102297116/en/Affirm-reports-first-fiscal-quarter-2027-results/"
+        },
+        {
+          "title": "24/7 Wall St.: AppLovin Soars 30% on Record Quarter and Strong Outlook (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/05/applovin-soars-30-on-record-quarter-and-strong-outlook-magnite-surges-17-trade-desk-falls-2/"
+        },
+        {
+          "title": "Zacks: Stock Market News for Nov 5, 2026",
+          "url": "https://www.zacks.com/stock/news/3024095/stock-market-news-for-nov-5,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MRVL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MU - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MU?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-05-afternoon"
+    },
+    {
+      "date": "2026-11-05",
       "session": "morning",
       "generatedAt": "2026-11-05T13:57:55Z",
       "headline": "Mixed open after Wednesday's 1,569-point Dow surge: Dow futures up about 0.6%, S&P roughly flat and Nasdaq 100 down about 0.5% as Qualcomm and Arm guidance plus data-center permitting worries hit chips; jobless claims and productivity both came in strong and barely moved futures.",
