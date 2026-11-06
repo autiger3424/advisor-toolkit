@@ -3,6 +3,209 @@
   "briefs": [
     {
       "date": "2026-11-06",
+      "session": "afternoon",
+      "generatedAt": "2026-11-06T21:30:00Z",
+      "headline": "Stocks clawed back a sliver of Thursday's rout and faded into the close: the S&P 500 finished +0.3% after being up about 1.2% midday, the Nasdaq held +1.1% on a chip rebound led by AMD, and the Dow slipped 0.5%. A blowout October jobs report (165K vs about 65K expected) kept a December Fed hike on the table. For the week the S&P lost 2.7% and the Nasdaq 3.4%, the worst since June.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,378.90",
+          "change": "+0.34%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "24,579",
+          "change": "+1.09%"
+        },
+        {
+          "label": "Dow",
+          "value": "51,285.73",
+          "change": "-0.46%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,754",
+          "change": "+0.89%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.86%",
+          "change": "+2bp"
+        },
+        {
+          "label": "VIX",
+          "value": "25.64",
+          "change": "-9.0%"
+        },
+        {
+          "label": "WTI",
+          "value": "$91.1 (3pm ET)",
+          "change": "+0.6%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,075",
+          "change": "-0.9%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$75,770",
+          "change": "-0.3%"
+        }
+      ],
+      "drivers": [
+        "Jobs vs. the Fed: payrolls +165K (est. about 65K), prior two months revised up 84K, unemployment 4.1%, wages +0.4% m/m. SF Fed's Daly told CNBC further hikes are likely needed; NEC's Hassett argued the report doesn't justify one. Yields rose, then eased as stocks faded; the 10-yr ended at 4.86% versus a 4.89% post-jobs high.",
+        "AI dip-buying, selectively: semis bounced (SOX about +4% after -12% Thursday; AMD +10.7%, Intel +7.7%, Micron +5.1%, Nvidia +2.8% after giving back an early 5% pop). Software and memory stayed weak; Oracle recovered to +0.8% after a midday dip on a report Microsoft is ending a compute contract.",
+        "Consumer data firmer than feared: UMich sentiment 51.0 (est. 48.0) with 1-yr inflation expectations down to 4.3% from 4.7%; consumer credit +$27.8B (est. +$12B). Surveys flagged household worries about an AI bubble.",
+        "Oil and geopolitics: Brent slipped back under $100 as traders weighed US-Iran deal hopes against new tanker incidents in the Strait of Hormuz. Changed since the morning: gold's slide held, the VIX dropped sharply, and the Dow never joined the bounce. The session reversed from a midday high (S&P 7,444) and sold off into the bell."
+      ],
+      "sectors": {
+        "leaders": "Health care, industrials, utilities, energy, semiconductors",
+        "laggards": "Software, memory/storage, Dow mega-caps (tech ex-chips flat to down)"
+      },
+      "afterHours": [
+        {
+          "ticker": "None",
+          "move": "",
+          "why": "No major reporters were scheduled after Friday's close and nothing notable has crossed yet. Weekend: China October CPI/PPI Sunday 8:30pm CT; New Zealand general election Saturday."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "Mon 7:40 CT",
+          "item": "Fed's Bowman speaks; Goolsbee 9:00 CT; Barkin 11:15 CT",
+          "consensus": ""
+        },
+        {
+          "time": "Mon 10:00 CT",
+          "item": "NY Fed consumer inflation expectations (Oct)",
+          "consensus": "3.8% (prior 3.9%)"
+        },
+        {
+          "time": "Mon 12:00 CT",
+          "item": "3-year note auction (prior 4.932%)",
+          "consensus": ""
+        },
+        {
+          "time": "Mon pre-bell",
+          "item": "Earnings: Constellation Energy, NRG, KKR, Ferguson, CNH, Sanmina",
+          "consensus": "CEG EPS $3.90 est; NRG $3.35 est; KKR $1.58 est"
+        },
+        {
+          "time": "Mon after bell",
+          "item": "Earnings: Take-Two Interactive",
+          "consensus": "EPS $0.97 est"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Tuesday: October CPI (the week's key print)",
+          "consensus": "+0.3% m/m, 3.7% y/y; core +0.2% m/m, 2.5% y/y"
+        },
+        {
+          "time": "Wed",
+          "item": "Veterans Day: bond market closed, stocks open; 10-yr note auction Tue, 30-yr Thu",
+          "consensus": ""
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Thursday: initial jobless claims, then existing home sales at 9:00 CT",
+          "consensus": "195K claims; 3.98M home sales"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Friday: October PPI",
+          "consensus": "+0.4% m/m (prior +1.3%)"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "AMD",
+          "move": "+10.7%",
+          "why": "Led the chip rebound after Tuesday's beat and Thursday's 17% drop; Zacks Rank #2 (Buy), trending on Zacks"
+        },
+        {
+          "ticker": "DKNG",
+          "move": "-21.3%",
+          "why": "Q3 revenue miss, wider loss, FY26 revenue guide cut"
+        },
+        {
+          "ticker": "ABNB",
+          "move": "+12%",
+          "why": "Q3 beat, Q4 revenue guide above the Street, new buyback"
+        },
+        {
+          "ticker": "MCHP",
+          "move": "-10%",
+          "why": "Post-earnings analyst cuts"
+        },
+        {
+          "ticker": "KRMN",
+          "move": "+42%",
+          "why": "Defense beat; led a post-election defense snapback. Also: IONQ +23%, IREN +20%, Cloudflare about +13%, Atlassian about -14%, Axon about -16% on a miss and cut outlook"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance - Stock market today: Nasdaq and S&P 500 rebound, Dow slips",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
+        },
+        {
+          "title": "TheStreet - Stock Market Today Nov 6, 2026",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026"
+        },
+        {
+          "title": "CNBC - Daly says higher rates are likely to be needed (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html"
+        },
+        {
+          "title": "CNBC - Long-term unemployment trend beneath the jobs numbers (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/06/long-term-unemployment-october-jobs-report.html"
+        },
+        {
+          "title": "Reuters - Consumer sentiment improves; AI bubble worries emerge (via FMP)",
+          "url": "https://www.reuters.com/business/us-consumer-sentiment-improves-november-worries-about-ai-bubble-emerge-2026-11-06/"
+        },
+        {
+          "title": "Reuters - AI rout sets off market alarm signals (via FMP)",
+          "url": "https://www.reuters.com/business/ai-rout-sets-off-market-alarm-signals-traders-brace-whats-next-2026-11-06/"
+        },
+        {
+          "title": "WSJ - Week ahead: U.S. inflation data could give clues on rate-hike prospects (via FMP)",
+          "url": "https://www.wsj.com/economy/week-ahead-for-fx-bonds-u-s-inflation-data-could-give-clues-on-rate-hike-prospects-53a07d17"
+        },
+        {
+          "title": "Barron's - Karman's 29% rise makes it a defense winner (via FMP)",
+          "url": "https://www.barrons.com/articles/karman-drone-defense-stock-price-earnings-82992a66"
+        },
+        {
+          "title": "Stock Market News for Nov 6, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3025392/stock-market-news-for-nov-6,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVIDIA and AMD Sell-Off: Which Is the Better Buy on the Dip? - Zacks",
+          "url": "https://www.zacks.com/stock/news/3025912/nvidia-and-amd-sell-off:-which-ai-stock-is-the-better-buy-on-the-dip?-?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DraftKings Reports Q3 Loss, Misses Revenue Estimates - Zacks",
+          "url": "https://www.zacks.com/stock/news/3024899/draftkings-(dkng)-reports-q3-loss,-misses-revenue-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DKNG - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DKNG?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-06-afternoon"
+    },
+    {
+      "date": "2026-11-06",
       "session": "morning",
       "generatedAt": "2026-11-06T13:57:46Z",
       "headline": "Mixed and jittery: futures are trying to bounce from Thursday's AI-led rout (S&P -4.4%, Nasdaq -5.5%), but a blowout October jobs report pushed the 10-year to about 4.89% and keeps a December Fed hike in play.",
