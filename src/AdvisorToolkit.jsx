@@ -2,6 +2,7 @@ import { useState } from "react";
 import WeeklyIdeas from "./WeeklyIdeas";
 import MarketBrief, { latestBrief } from "./MarketBrief";
 import Portfolio from "./Portfolio";
+import links from "./data/links.json";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -437,7 +438,9 @@ function AdvisorToolkit() {
     homeMoverTicker: { fontFamily: fonts.mono, fontWeight: 500, color: palette.text, width: 44, flexShrink: 0 },
     homeMoverMove: (up) => ({ fontFamily: fonts.mono, color: up === null ? palette.textDim : up ? palette.success : "#f87171", width: 44, flexShrink: 0, whiteSpace: "nowrap", overflow: "hidden" }),
     homeMoverWhy: { flex: 1, minWidth: 0, color: palette.textMuted, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
-    homeGrid: { flex: "0 1 230px", minHeight: 176, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "1fr", gap: 8 },
+    // Modules plus external links (links.json) — 10 tiles, so four rows.
+    homeGrid: { flex: "0 1 290px", minHeight: 224, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "1fr", gap: 8 },
+    homeExt: { fontSize: "0.6rem", color: palette.textDim, marginLeft: "auto", flexShrink: 0 },
     homeCard: { background: palette.card, border: `1px solid ${palette.border}`, borderRadius: 10, padding: "0 8px", cursor: "pointer", display: "flex", alignItems: "center", gap: 6, minHeight: 0, overflow: "hidden" },
     homeIcon: { fontSize: "0.95rem", lineHeight: 1, flexShrink: 0 },
     homeLabel: { fontFamily: fonts.display, fontSize: "0.76rem", fontWeight: 700, letterSpacing: "-0.01em", color: palette.text, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
@@ -584,6 +587,13 @@ function AdvisorToolkit() {
                 <span style={s.homeIcon}>{m.icon}</span>
                 <span style={s.homeLabel}>{m.label}</span>
               </div>
+            ))}
+            {links.map((l) => (
+              <a key={l.id} href={l.url} target="_blank" rel="noopener noreferrer" title={l.blurb} style={{ ...s.homeCard, textDecoration: "none" }}>
+                <span style={s.homeIcon}>{l.icon}</span>
+                <span style={s.homeLabel}>{l.label}</span>
+                <span style={s.homeExt}>↗</span>
+              </a>
             ))}
           </div>
 
