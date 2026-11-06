@@ -2,6 +2,256 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-06",
+      "session": "morning",
+      "generatedAt": "2026-11-06T13:57:46Z",
+      "headline": "Mixed and jittery: futures are trying to bounce from Thursday's AI-led rout (S&P -4.4%, Nasdaq -5.5%), but a blowout October jobs report pushed the 10-year to about 4.89% and keeps a December Fed hike in play.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,390",
+          "change": "+0.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "27,144 (6:00 CT)",
+          "change": "+1.5% post-print"
+        },
+        {
+          "label": "Dow fut",
+          "value": "51,040 (6:00 CT)",
+          "change": "-1.1%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,734 (6:00 CT)",
+          "change": "-0.1%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.89%",
+          "change": "+6bp"
+        },
+        {
+          "label": "VIX",
+          "value": "26.9",
+          "change": "-4.7%"
+        },
+        {
+          "label": "WTI",
+          "value": "$90.89 (6:00 CT)",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Brent",
+          "value": "$98.44",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,057",
+          "change": "-1.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$75,850",
+          "change": "-4.5% (24h)"
+        }
+      ],
+      "data": [
+        {
+          "name": "Nonfarm payrolls (Oct)",
+          "actual": "+165K",
+          "consensus": "+65K (Dow Jones 59K)",
+          "prior": "+60K (revised from +29K)",
+          "read": "Hot; prior two months revised up a combined 84K",
+          "reaction": "10-yr up about 6bp to 4.89%; S&P futures dipped about 20 points and steadied near flat; Nasdaq 100 futures held about +1.5%"
+        },
+        {
+          "name": "Unemployment rate (Oct)",
+          "actual": "4.1%",
+          "consensus": "4.2%",
+          "prior": "4.2%",
+          "read": "Tighter headline, but U-6 rose to 7.9% from 7.6% and involuntary part-time jumped",
+          "reaction": "Revives December Fed hike bets (about 70% odds before the data)"
+        },
+        {
+          "name": "Average hourly earnings (Oct)",
+          "actual": "+0.4% m/m, 3.1% y/y",
+          "consensus": "+0.3% m/m, 2.9% y/y",
+          "prior": "+0.3% m/m, 3.2% y/y",
+          "read": "Firmer wages",
+          "reaction": "Gold slipped toward $4,000 support; yields higher"
+        }
+      ],
+      "drivers": [
+        "Jobs vs. the Fed: markets priced about 70% odds of a December hike before the data, and this print revives those bets. CPI and PPI next week matter more.",
+        "Rebound attempt after the rout: Thursday was the S&P 500's worst day since the April 2025 tariff shock, on fears a Democratic Congress and new governors slow the data-center buildout. Chips fell 12% and are leading the bounce (AMD +8%, Micron about +9%, Nvidia +4.5% pre-market).",
+        "Rotation unwinding: Dow futures are down about 1% while the Nasdaq rebounds; healthcare is weak globally.",
+        "Oil and gold: Brent is holding near $98 after fresh tanker attacks in the Gulf; gold is sliding toward $4,000 support after the strong jobs data.",
+        "Overseas: Asia took the hit, with the Nikkei -6.0%, Kospi about -6% and Hang Seng -1.3%. Europe is lower but calmer; FTSE 100 -2.0% and the STOXX 600 erased its weekly gain."
+      ],
+      "calendar": [
+        {
+          "time": "8:10 CT",
+          "item": "Fed's Musalem speaks (Williams spoke at 3:30 CT). No FOMC blackout; next meeting is in December",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "UMich consumer sentiment, Nov prelim (prior 48.0; 1-yr inflation expectations prior 4.7%)",
+          "consensus": "48.0"
+        },
+        {
+          "time": "11:15 CT",
+          "item": "Fed's Bowman speaks",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Baker Hughes oil rig count (prior 462)",
+          "consensus": ""
+        },
+        {
+          "time": "2:00 CT",
+          "item": "Consumer credit, Sep (prior +$8.3B)",
+          "consensus": "+$12.0B"
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Reported: Humana (loss $0.70 vs $1.00 est, raised FY guide), Moderna, Vistra ($3.01 vs $2.98), Enbridge ($0.49 vs $0.36), Charter, Franklin Resources ($0.94 vs $0.77), Brookfield Asset Mgmt, Ubiquiti",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Nothing major on the earnings slate; no notable Treasury auctions today",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NET",
+          "move": "+20%",
+          "why": "Q3 revenue +39% to $782.5M, EPS $0.38 vs $0.35, raised full-year guide"
+        },
+        {
+          "ticker": "ABNB",
+          "move": "+14%",
+          "why": "EPS $3.16 vs $2.86, revenue +19%, Q4 guide above the Street"
+        },
+        {
+          "ticker": "DKNG",
+          "move": "-27%",
+          "why": "Q3 revenue $1.33B missed, wider loss, cut FY26 revenue guide to $6.45B from $6.7B"
+        },
+        {
+          "ticker": "TEAM",
+          "move": "-15%",
+          "why": "Guided to sharply slower revenue growth (about 14% vs 26% last year)"
+        },
+        {
+          "ticker": "MRNA",
+          "move": "-0.1%",
+          "why": "Big beat and raised 2026 revenue outlook to +15-25%; spiked to about $268 early, then gave it all back"
+        }
+      ],
+      "sources": [
+        {
+          "title": "CNBC - U.S. economy added 165,000 jobs in October (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html"
+        },
+        {
+          "title": "WSJ - Hiring blew past expectations with 165,000 jobs (via FMP)",
+          "url": "https://www.wsj.com/economy/jobs/october-jobs-report-unemployment-d7392948"
+        },
+        {
+          "title": "CoinDesk - U.S. added 165,000 jobs in October, blowing past 65,000 estimate",
+          "url": "https://www.coindesk.com/markets/2026/11/06/u-s-added-165-000-jobs-in-october-blowing-past-65-000-estimate"
+        },
+        {
+          "title": "The Private Banker - US Payrolls Jump by 165,000 in October",
+          "url": "https://leprivatebanker.com/2026/11/06/us-payrolls-jump-by-165000-in-october-almost-triple-forecasts-as-unemployment-rate-holds-at-4-1/"
+        },
+        {
+          "title": "Yahoo Finance - Stock market today: live updates",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-091927729.html"
+        },
+        {
+          "title": "TradingKey - US Pre-Market: Chip Stocks Rebound",
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262291918-us-premarket-chip-stocks-rebound-micron-amd-sandisk-october-nonfarm-payrolls-tradingkey"
+        },
+        {
+          "title": "CNBC - AI stocks hammered by midterm shock (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/06/ai-data-center-midterms-selloff.html"
+        },
+        {
+          "title": "MarketWatch - After Wall Street's worst selloff since the 2025 tariff shock (via FMP)",
+          "url": "https://www.marketwatch.com/story/after-wall-streets-worst-selloff-since-the-2025-tariff-shock-heres-what-investors-need-to-watch-next-6e2e629a"
+        },
+        {
+          "title": "WSJ - Healthcare Stocks Fall as Market Rout Spreads (via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/healthcare-stocks-fall-as-market-rout-spreads-f789b5c8"
+        },
+        {
+          "title": "Kitco - Gold prices see selling pressure after jobs data (via FMP)",
+          "url": "https://www.kitco.com/news/article/2026-11-06/gold-prices-see-some-selling-pressure-us-economy-created-165k-october"
+        },
+        {
+          "title": "Invezz - Cloudflare stock surges 20% after Q3 earnings (via FMP)",
+          "url": "https://invezz.com/news/2026/11/06/cloudflare-stock-surges-20-after-strong-q3-earnings-heres-what-analysts-say/"
+        },
+        {
+          "title": "Reuters - Airbnb rises on upbeat outlook (via FMP)",
+          "url": "https://www.reuters.com/business/airbnb-rises-upbeat-outlook-bucking-broader-industry-caution-2026-11-06/"
+        },
+        {
+          "title": "WSJ - Moderna Lifts Full-Year Outlook (via FMP)",
+          "url": "https://www.wsj.com/health/moderna-lifts-full-year-outlook-swings-to-quarterly-profit-d05bf4b3"
+        },
+        {
+          "title": "WSJ - Humana Lifts Outlook as Quarterly Revenue Jumps (via FMP)",
+          "url": "https://www.wsj.com/business/earnings/humana-lifts-outlook-as-quarterly-revenue-jumps-dda14c54"
+        },
+        {
+          "title": "Invezz - Nvidia, AMD and Intel stocks rebound sharply (via FMP)",
+          "url": "https://invezz.com/news/2026/11/06/nvidia-amd-and-intel-stocks-rebound-sharply-is-wall-streets-ai-panic-easing/"
+        },
+        {
+          "title": "Zacks - Stock Market News for Nov 6, 2026",
+          "url": "https://www.zacks.com/stock/news/3025392/stock-market-news-for-nov-6,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - DraftKings (DKNG) Reports Q3 Earnings",
+          "url": "https://www.zacks.com/stock/news/3025146/draftkings-(dkng)-reports-q3-earnings:-what-key-metrics-have-to-say?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Cloudflare (NET) Surpasses Q3 Earnings and Revenue Estimates",
+          "url": "https://www.zacks.com/stock/news/3024876/cloudflare-(net)-surpasses-q3-earnings-and-revenue-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Airbnb (ABNB) Q3 Earnings: A Look at Key Metrics",
+          "url": "https://www.zacks.com/stock/news/3024854/compared-to-estimates,-airbnb-(abnb)-q3-earnings:-a-look-at-key-metrics?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NET - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NET?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ABNB - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ABNB?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DKNG - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DKNG?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FMP - economics calendar, Treasury rates, index and futures quotes, price charts",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-06-morning"
+    },
+    {
       "date": "2026-11-05",
       "session": "afternoon",
       "generatedAt": "2026-11-05T21:27:43Z",
