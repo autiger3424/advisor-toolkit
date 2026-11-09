@@ -2,6 +2,236 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-09",
+      "session": "morning",
+      "generatedAt": "2026-11-09T13:56:24Z",
+      "headline": "Futures are bouncing (S&P +0.7%, Dow +1.1%) as oil drops about 3% after Trump played down new strikes on Iran, but Nvidia is down about 5% pre-market after its board opened an investigation into CEO Jensen Huang.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,454.50 (7:30 CT)",
+          "change": "+0.7%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "27,247 (7:30 CT)",
+          "change": "+0.6%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "51,923 (7:30 CT)",
+          "change": "+1.1%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,795.70 (7:30 CT)",
+          "change": "+1.3%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.87% (7:33 CT)",
+          "change": "+1bp"
+        },
+        {
+          "label": "VIX",
+          "value": "23.2 (7:33 CT)",
+          "change": "-9.5%"
+        },
+        {
+          "label": "WTI",
+          "value": "$87.55 (7:30 CT)",
+          "change": "-3.6%"
+        },
+        {
+          "label": "Brent",
+          "value": "$96.52 (3:23 CT, later print not captured)",
+          "change": "-1.8%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,137 (7:30 CT)",
+          "change": "+1.5%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$74,644 (7:49 CT)",
+          "change": "-0.1% (24h)"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "Oil relief: Trump told CNN that renewed strikes on Iran are highly unlikely while talks on the nuclear program and reopening the Strait of Hormuz progress. WTI fell back below $90. Rubio said a breakthrough is not close and tanker attacks near Hormuz continue, so the risk has not gone away.",
+        "Nvidia: the board opened an independent investigation into CEO Jensen Huang over a reported personal relationship with a woman US intelligence reportedly suspects of ties to Chinese state security. Shares are down about 5% pre-market. Rivals are up, with AMD about +4% on an Oppenheimer upgrade and Alphabet about +2% on reports of two new in-house AI chips.",
+        "Rebound from last week: the S&P 500 lost 2.7% and the Nasdaq 3.4% last week after Thursday's AI and chip rout (S&P -4.4%), which followed Democratic midterm wins and fears of tighter data-center rules. Chips bounced Friday and Asian chipmakers followed overnight.",
+        "Rates are the counterweight: Friday's payrolls came in at +165K against roughly 60K expected, and markets put about 76-80% odds on a Fed hike at the Dec 8-9 meeting. October CPI is tomorrow at 7:30 CT. The bond market is closed Wednesday for Veterans Day.",
+        "Overseas: Europe is higher (DAX +1.1%, CAC +0.8%, FTSE 100 +0.7%, Italy +2.1%). Asia closed up, led by chips (Nikkei about +2.5%, Taiwan about +5%, Kospi up more than 1%, Hang Seng modestly higher)."
+      ],
+      "calendar": [
+        {
+          "time": "7:40 CT",
+          "item": "Fed's Bowman speaks. No FOMC blackout; next meeting is Dec 8-9",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Wholesale inventories, Sep (prior +0.5%); Conference Board Employment Trends Index, Oct (prior 107.56); Fed's Goolsbee speaks",
+          "consensus": "+0.6%"
+        },
+        {
+          "time": "10:00 CT",
+          "item": "NY Fed consumer inflation expectations, Oct (prior 3.9%)",
+          "consensus": "3.8%"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "3-month and 6-month Treasury bill auctions",
+          "consensus": ""
+        },
+        {
+          "time": "11:15 CT",
+          "item": "Fed's Barkin speaks",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "3-year Treasury note auction (prior high yield 4.932%)",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Reported: Constellation Energy ($5.06 vs $3.90 est, raised FY guide), NRG ($4.68 vs $3.35, $4B asset sale), KKR ($1.78 vs $1.58), Barrick ($0.82 vs $0.74), Ferguson ($3.43 vs $3.31), CNH ($0.16 vs $0.10), monday.com ($2.14 vs $1.41), Dole ($0.16 vs $0.32, miss)",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Still due today (calendar gives no report times): Occidental (est $1.45), Take-Two (est $0.97), Trade Desk, Hims & Hers, Rocket Lab, Sanmina, Plug Power, Lucid, Archer Aviation",
+          "consensus": ""
+        },
+        {
+          "time": "Tue 7:30 CT",
+          "item": "October CPI",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "GOOGL",
+          "move": "+2.3%",
+          "why": "Reported to be introducing two new in-house TPU AI chips, seen as competition for Nvidia"
+        },
+        {
+          "ticker": "NRG",
+          "move": "+6.9%",
+          "why": "Adjusted EPS $4.68 vs $3.35 est; selling six gas plants to LS Power for $4B to pay down debt and buy back stock; initiated 2027 guidance"
+        },
+        {
+          "ticker": "CEG",
+          "move": "+2.6%",
+          "why": "Q3 beat and raised full-year guidance despite post-election worries about a data-center slowdown"
+        },
+        {
+          "ticker": "CRWV",
+          "move": "-3.8%",
+          "why": "CoreWeave weak again ahead of Tuesday earnings as AI financing and regulation worries linger"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance - Stock market today: Dow, S&P 500, Nasdaq futures rise with Nvidia stock, AI trade in focus",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
+        },
+        {
+          "title": "Yahoo Finance / InvestorsHub - US stock futures mixed as investors assess Berkshire earnings, Nvidia reports and AI regulation plans",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-mixed-investors-095952467.html"
+        },
+        {
+          "title": "investingLive - Morning Kickstart: stock futures climb as Bitcoin nears its 200-day moving average",
+          "url": "https://investinglive.com/technical-analysis/morning-kickstart-stock-futures-climb-as-bitcoin-nears-its-200-day-moving-average-usd-is-lower/"
+        },
+        {
+          "title": "Saxo - Market Quick Take: Asian chipmakers rebound and Brent holds below USD 100",
+          "url": "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---asian-chipmakers-rebound-and-brent-holds-below-usd-100---9-november-2026-09112026"
+        },
+        {
+          "title": "The National - Oil edges lower as Trump plays down prospect of new US attacks on Iran",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/09/oil-edges-lower-as-trump-plays-down-prospect-of-new-us-attacks-on-iran/"
+        },
+        {
+          "title": "Reuters via Yahoo Finance - Oil falls on open as Trump says fresh Iran attacks unlikely",
+          "url": "https://finance.yahoo.com/energy/articles/oil-falls-open-trump-says-235002807.html"
+        },
+        {
+          "title": "WSJ - Oil slides more than 3% as Trump downplays prospect of new Iran strikes (via FMP)",
+          "url": "https://www.wsj.com/finance/commodities-futures/oil-prices-fall-staying-below-100-as-trump-plays-down-new-iran-strikes-27dc3911"
+        },
+        {
+          "title": "CNBC - Rubio sees little hope of diplomatic breakthrough to Mideast deadlock (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/09/us-iran-war-trump-hormuz.html"
+        },
+        {
+          "title": "CNBC - Nasdaq defies Nvidia impact as Huang faces probe (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/09/nasdaq-defies-nvidia-impact-huang-faces-espionage-affair-probe.html"
+        },
+        {
+          "title": "24/7 Wall St - Nvidia falls 5% as board probes CEO; AMD rises 4% (via FMP)",
+          "url": "https://247wallst.com/investing/2026/11/09/nvidia-falls-5-as-board-probes-jensen-huangs-ties-to-alleged-chinese-spy-amd-rises-4-intel-holds-steady/"
+        },
+        {
+          "title": "Barron's - AMD stock pops; it's about much more than the Huang probe (via FMP)",
+          "url": "https://www.barrons.com/articles/amd-stock-upgrade-nvidia-jensen-huang-probe-3fabd3f8"
+        },
+        {
+          "title": "Finbold - Oppenheimer upgrades AMD to Outperform, $600 target (via FMP)",
+          "url": "https://finbold.com/wall-street-sets-amd-stock-price-target-for-next-12-months-6/"
+        },
+        {
+          "title": "Reuters - Google to introduce two variants of its in-house chips (via FMP)",
+          "url": "https://www.reuters.com/business/google-to-introduce-two-variants-its-in-house-chips-bloomberg-news-reports-2026-11-09/"
+        },
+        {
+          "title": "Business Wire - NRG Energy announces $4 billion asset sale (via FMP)",
+          "url": "https://www.businesswire.com/news/home/20261108045871/en/NRG-Energy-Announces-4-Billion-Asset-Sale/"
+        },
+        {
+          "title": "Business Wire - NRG Energy reports third quarter 2026 results (via FMP)",
+          "url": "https://www.businesswire.com/news/home/20261108962633/en/NRG-Energy-Reports-Third-Quarter-2026-Results-Reaffirms-2026-Financial-Guidance-and-Initiates-2027-Guidance/"
+        },
+        {
+          "title": "Barron's - Data-center moratoriums aren't showing up in Constellation Energy's guidance (via FMP)",
+          "url": "https://www.barrons.com/articles/constellation-energy-earnings-stock-price-89dc5612"
+        },
+        {
+          "title": "WSJ - KKR profit rises on fee-related earnings growth (via FMP)",
+          "url": "https://www.wsj.com/business/earnings/kkr-profit-rises-on-fee-related-earnings-growth-4a62dcfb"
+        },
+        {
+          "title": "Invezz - Dow futures jump 470 points: 5 things to know before Wall Street opens (via FMP)",
+          "url": "https://invezz.com/news/2026/11/09/dow-futures-jump-470-points-5-things-to-know-before-wall-street-opens/"
+        },
+        {
+          "title": "Zacks - Stock Market News for Nov 9, 2026",
+          "url": "https://www.zacks.com/stock/news/3026040/stock-market-news-for-nov-9,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Zacks - Stock Market News for Nov 6, 2026",
+          "url": "https://www.zacks.com/stock/news/3025392/stock-market-news-for-nov-6,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "FMP - economic calendar, earnings calendar, Treasury rates, index and pre-market price data",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-09-morning"
+    },
+    {
       "date": "2026-11-06",
       "session": "afternoon",
       "generatedAt": "2026-11-06T21:30:00Z",
