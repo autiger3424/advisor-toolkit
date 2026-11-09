@@ -3,6 +3,235 @@
   "briefs": [
     {
       "date": "2026-11-09",
+      "session": "afternoon",
+      "generatedAt": "2026-11-09T21:26:00Z",
+      "headline": "Stocks snapped back hard from last week's AI rout, with the S&P 500 up 2.4% and the Nasdaq up 2.7%, as chips led the dip-buying and a 4% drop in oil eased inflation nerves ahead of Tuesday's CPI; the rally built all session and small caps led.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,556",
+          "change": "+2.4%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,253",
+          "change": "+2.7%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,390",
+          "change": "+2.2%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,841",
+          "change": "+3.1%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.88%",
+          "change": "+2 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.9",
+          "change": "-22%"
+        },
+        {
+          "label": "WTI",
+          "value": "$87",
+          "change": "-4.1%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,148",
+          "change": "+1.8%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$74.8K",
+          "change": "+0.1%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Wholesale inventories (Sep)",
+          "actual": "+0.7%",
+          "consensus": "+0.6%",
+          "prior": "+0.6%",
+          "read": "slightly firmer",
+          "reaction": "none"
+        },
+        {
+          "name": "NY Fed 1-yr inflation expectations (Oct)",
+          "actual": "3.9%",
+          "consensus": "3.8%",
+          "prior": "3.9%",
+          "read": "sticky",
+          "reaction": "none"
+        },
+        {
+          "name": "3-yr note auction",
+          "actual": "4.627%",
+          "consensus": "",
+          "prior": "4.932%",
+          "read": "solid",
+          "reaction": "10-yr +2bp on the day"
+        }
+      ],
+      "drivers": [
+        "AI and chip rebound: after the worst week in about 18 months (Thursday's 4.4% S&P drop on post-midterm AI-regulation fears), money came back into semis and AI infrastructure. AMD jumped 13% on an Oppenheimer upgrade to Outperform with a $600 target; Coherent rose 17% and Intel 5%.",
+        "Oil slid about 4% to roughly $87 WTI after Trump said new strikes on Iran are unlikely while talks continue, a tailwind for stocks and for Tuesday's inflation read. Solar names fell on the oil move.",
+        "Nvidia fell 4.3% as its board probes CEO Jensen Huang over an admitted affair with a woman reportedly linked to China; Trump said Huang should stay. The index rally went on without it.",
+        "Fed and inflation remain the overhang: Goolsbee, Barkin and Bowman spoke with no market-moving shift, and futures still lean toward a hike after Friday's strong jobs report. NY Fed 1-yr inflation expectations held at 3.9%. Change from the morning: the cautious recovery turned into a broad, full-session rally."
+      ],
+      "sectors": {
+        "leaders": "Utilities, Industrials, Technology (semis)",
+        "laggards": "Financials, Communication Services, Energy"
+      },
+      "afterHours": [
+        {
+          "ticker": "TTD",
+          "move": "+24%",
+          "why": "Q3 EPS $0.33 vs about $0.04 est, revenue $736M vs $651M; ran +15% into the print"
+        },
+        {
+          "ticker": "RKLB",
+          "move": "-6%",
+          "why": "Revenue $268M beat ($257M est) but loss wider at -$0.12 vs -$0.07"
+        },
+        {
+          "ticker": "TTWO",
+          "move": "+2.5%",
+          "why": "GAAP loss narrower than its own guidance; volatile after hours; GTA VI launches Nov 19"
+        },
+        {
+          "ticker": "HIMS",
+          "move": "+1%",
+          "why": "Whipsawed after a 12% session drop; EPS -$0.14 vs +$0.06 est, revenue about in line at $890M"
+        },
+        {
+          "ticker": "OXY",
+          "move": "flat",
+          "why": "Q3 EPS $1.91 vs $1.46 est"
+        },
+        {
+          "ticker": "MNDY",
+          "move": "flat",
+          "why": "Q3 EPS $2.14 vs $1.41 est"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "3:00 CT",
+          "item": "Fed Waller speech",
+          "consensus": ""
+        },
+        {
+          "time": "5:00 CT",
+          "item": "NFIB small business optimism (Oct)",
+          "consensus": "97.7 (prior 97.9)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "October CPI",
+          "consensus": "+0.3% m/m headline (prior +0.6%), +0.2% core (prior +0.3%); year-over-year figures may be missing due to last year's shutdown gap"
+        },
+        {
+          "time": "8:35 CT",
+          "item": "Fed Logan speech",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "10-yr note auction",
+          "consensus": ""
+        },
+        {
+          "time": "12:30 CT",
+          "item": "Fed Bowman and Fed Schmid speeches",
+          "consensus": ""
+        },
+        {
+          "time": "Tue",
+          "item": "Earnings: CoreWeave, TransDigm, Sea Ltd, SoftBank, On Holding, Vodafone, Petrobras, Rigetti, D-Wave, IAC, Sonos, Wix, eToro, Alcon; Flex investor day",
+          "consensus": ""
+        },
+        {
+          "time": "Wed",
+          "item": "Veterans Day: bond market closed, stock market open",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "IONS",
+          "move": "-21%",
+          "why": "Cut Tryngolza full-year sales guidance roughly in half"
+        },
+        {
+          "ticker": "COHR",
+          "move": "+17%",
+          "why": "AI optics earnings beat"
+        },
+        {
+          "ticker": "NRG",
+          "move": "+10%",
+          "why": "Big Q3 beat; selling six gas plants for $4B"
+        },
+        {
+          "ticker": "CEG",
+          "move": "+",
+          "why": "Q3 EPS $5.06 vs $3.90 est, fourth straight beat"
+        },
+        {
+          "ticker": "INTC",
+          "move": "+5.5%",
+          "why": "Chip rebound"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Nasdaq surges despite Nvidia stock slide, Dow and S&P 500 rally (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
+        },
+        {
+          "title": "Stock Market Today (Nov. 9, 2026): Nvidia bucks tech stock comeback on controversy (TheStreet)",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
+        },
+        {
+          "title": "Rocket Lab Stock Slips after Mixed Q3 Results (TipRanks)",
+          "url": "https://www.tipranks.com/news/rocket-lab-stock-slips-after-mixed-q3-results"
+        },
+        {
+          "title": "A key report for where inflation stood in October comes out Tuesday (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/09/october-cpi-report-2026-inflation.html"
+        },
+        {
+          "title": "The stock-market rally keeps spreading beyond Big Tech (MarketWatch via FMP)",
+          "url": "https://www.marketwatch.com/story/the-stock-market-rally-keeps-spreading-beyond-big-tech-october-inflation-data-could-put-it-to-the-test-c1b87dcd"
+        },
+        {
+          "title": "Jensen Huang News Dominates Morning Headlines (Zacks, 11/09/2026)",
+          "url": "https://www.zacks.com/stock/news/3026538/jensen-huang-news-dominates-morning-headlines?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Nov 9, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3026040/stock-market-news-for-nov-9,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Nov 6, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3025392/stock-market-news-for-nov-6,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Index, yield, sector, movers, earnings calendar and intraday prices: Financial Modeling Prep",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-09-afternoon"
+    },
+    {
+      "date": "2026-11-09",
       "session": "morning",
       "generatedAt": "2026-11-09T13:56:24Z",
       "headline": "Futures are bouncing (S&P +0.7%, Dow +1.1%) as oil drops about 3% after Trump played down new strikes on Iran, but Nvidia is down about 5% pre-market after its board opened an investigation into CEO Jensen Huang.",
