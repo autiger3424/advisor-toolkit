@@ -3,6 +3,302 @@
   "briefs": [
     {
       "date": "2026-11-10",
+      "session": "afternoon",
+      "generatedAt": "2026-11-10T21:40:00Z",
+      "headline": "Stocks closed modestly lower but well off the midday lows: a hot October CPI pushed the 10-year toward 5% and locked in a December Fed hike, while Nvidia's governance mess dragged semis; CoreWeave beat and raised after the bell.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,521",
+          "change": "-0.4%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,066",
+          "change": "-0.7%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,232",
+          "change": "-0.3%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,821",
+          "change": "-0.7%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.98%",
+          "change": "+10 bp"
+        },
+        {
+          "label": "2-yr yield",
+          "value": "4.73%",
+          "change": "+17 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.48",
+          "change": "-0.44"
+        },
+        {
+          "label": "WTI",
+          "value": "~$86",
+          "change": "-0.6%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,040",
+          "change": "-1.8%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$73,850",
+          "change": "-1.9%"
+        }
+      ],
+      "data": [
+        {
+          "name": "CPI m/m (Oct)",
+          "actual": "+0.4%",
+          "consensus": "+0.3%",
+          "prior": "+0.6%",
+          "read": "hot",
+          "reaction": "10-yr +10 bp to 4.98%, TLT -1.3%"
+        },
+        {
+          "name": "Core CPI m/m (Oct)",
+          "actual": "+0.3%",
+          "consensus": "+0.2%",
+          "prior": "+0.3%",
+          "read": "hot, third straight 0.3%",
+          "reaction": "December hike fully priced; 25 vs 50 bp now the debate"
+        },
+        {
+          "name": "10-yr note auction",
+          "actual": "5.02% stop",
+          "consensus": "",
+          "prior": "5.30%",
+          "read": "absorbed",
+          "reaction": ""
+        },
+        {
+          "name": "NFIB small-biz optimism (Oct)",
+          "actual": "97.8",
+          "consensus": "97.7",
+          "prior": "97.9",
+          "read": "in line",
+          "reaction": ""
+        }
+      ],
+      "drivers": [
+        "CPI ran hot on both lines (headline +0.4% vs +0.3% est, core +0.3% vs +0.2%, the third straight 0.3% core print; no year-over-year rate published because of last year's shutdown gap). The 10-year jumped about 10 bp to 4.98% and the 2-year 17 bp to 4.73%; a December hike is now fully priced and the argument has shifted to 25 vs 50 bp.",
+        "Fed chorus turned hawkish: Waller (before the print) backed a December hike and said 50 bp should be considered if core came in at 0.3% or more, which it did; Dallas Fed's Logan called for at least two more quarter-point hikes with room to move faster this winter; Vice Chair Bowman said there is still work to do on inflation but, notably, did not call for a hike and flagged a large AI-driven equity correction as a top risk that must be weighed against tighter financial conditions.",
+        "Nvidia fell 5.5% to $169, its lowest since March and most oversold since 2019 (RSI 23), after CEO Huang acknowledged a relationship with a former Megaspeed executive suspected of spying for China; a shareholder suit was filed and Trump said the FBI is looking into it. Chips tried an early bounce and failed; the equal-weight S&P was only down about 0.2% at midday, so the damage was concentrated in mega-cap tech and semis. Goldman called semis oversold.",
+        "Offsets: oil stayed heavy (WTI near $86, Brent about $92) after Trump said new Iran strikes are not needed for now; the equal-weight market held up and the S&P recovered more than half of a 1.1% intraday loss into the close. Gold fell 1.8% to about $4,040 and bitcoin slipped 1.9% to about $73,800, below its 200-day.",
+        "Changed since the morning brief: the close was better than the post-CPI futures implied (S&P -0.4% vs -0.6% futures, Nasdaq -0.7% vs -1.2%); the 10-year ended at 4.98% vs 4.93% at 7:40 CT; gold's drop deepened from -0.7% to -1.8%. Data notes: Financial Datasets and Bigdata.com were both out of credits this run and CNBC pages would not load, so narrative came from Yahoo Finance and TheStreet wraps plus FMP and Zacks."
+      ],
+      "sectors": {
+        "leaders": "Industrials, Consumer Discretionary, Materials (equal-weight S&P roughly flat)",
+        "laggards": "Semis and mega-cap Tech (SOX down more than 1%), Communication Services, Healthcare"
+      },
+      "afterHours": [
+        {
+          "ticker": "CRWV",
+          "move": "+2% to +3% (spiked ~7%, faded)",
+          "why": "Revenue +168% y/y to about $3.66B vs $3.54B est, loss of $1.27/sh in line, backlog $133B, guidance raised; eases AI-slowdown worry"
+        },
+        {
+          "ticker": "NVDA",
+          "move": "+0.6%",
+          "why": "Stabilizing at $169.88 after the 5.5% regular-session drop"
+        },
+        {
+          "ticker": "RGTI",
+          "move": "-6%",
+          "why": "Revenue $1.4M vs $3.5M est; loss of $0.06 vs $0.05 est"
+        },
+        {
+          "ticker": "QBTS",
+          "move": "n/a",
+          "why": "Loss of $0.13 vs $0.10 est; revenue $4.5M a slight beat"
+        },
+        {
+          "ticker": "SONO",
+          "move": "flat",
+          "why": "Surprise profit of $0.04 vs an $0.18 loss est; revenue $344M vs $340M"
+        },
+        {
+          "ticker": "STUB",
+          "move": "flat",
+          "why": "EPS $0.05 vs $0.08 est; revenue $502M vs $507M"
+        },
+        {
+          "ticker": "PBR / ALC",
+          "move": "pending",
+          "why": "Petrobras and Alcon still due this evening"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "3:30 CT tonight",
+          "item": "API crude inventories",
+          "consensus": "-1.0M bbl"
+        },
+        {
+          "time": "All day",
+          "item": "Veterans Day: stocks open, bond market closed (no Treasury trading, no yield read until Thursday)",
+          "consensus": ""
+        },
+        {
+          "time": "6:00 CT",
+          "item": "MBA mortgage applications; 30-yr rate prior 7.30%",
+          "consensus": ""
+        },
+        {
+          "time": "~4:00 CT",
+          "item": "OPEC monthly oil market report",
+          "consensus": ""
+        },
+        {
+          "time": "None",
+          "item": "No 7:30 CT print and no US Fed speakers on the calendar tomorrow; next 7:30 CT release is Thursday's weekly jobless claims",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "Earnings: Corteva (CTVA), CGI (GIB), Tetra Tech (TTEK), Franco-Nevada (FNV), EnerSys (ENS), Ultrapar (UGP)",
+          "consensus": "CTVA est EPS $0.02, rev $1.77B"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "HIMS",
+          "move": "-16.6%",
+          "why": "Q3 revenue +49% but gross margin fell to 57% from 74%, subscribers missed and the Q4 revenue outlook disappointed"
+        },
+        {
+          "ticker": "AAON",
+          "move": "+19%",
+          "why": "Q3 beat and raised full-year outlook (data-center cooling demand)"
+        },
+        {
+          "ticker": "GEV",
+          "move": "-5% to -7%",
+          "why": "SoftBank disclosed a $3.7B charge and modified AI data-center power contracts, raising doubt about power-infrastructure demand"
+        },
+        {
+          "ticker": "TTWO",
+          "move": "+6%",
+          "why": "GTA VI pre-orders running well above initial expectations despite a 15% revenue decline"
+        },
+        {
+          "ticker": "GFL",
+          "move": "-9%",
+          "why": "Board unanimously rejected a $22B take-private bid from Blackstone, KKR and Energy Capital Partners"
+        },
+        {
+          "ticker": "RKLB",
+          "move": "-8% premarket",
+          "why": "Wider-than-expected Q3 loss; revenue beat and Q4 guide above estimates. Zacks trending"
+        },
+        {
+          "ticker": "COIN / MSTR",
+          "move": "-4%",
+          "why": "Crypto proxies fell with bitcoin below its 200-day"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance: Stock market today: Dow, S&P 500, Nasdaq slip as hot CPI fuels rate hike odds, Nvidia stock sinks",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
+        },
+        {
+          "title": "TheStreet: Stock Market Today (Nov. 10, 2026): Nasdaq falls after key inflation report derails strong start to week",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+        },
+        {
+          "title": "The Private Banker: Fed's Bowman lists a large AI-driven equity correction among top risks",
+          "url": "https://leprivatebanker.com/2026/11/10/feds-bowman-lists-a-large-ai-driven-equity-correction-among-top-risks-says-rate-hikes-must-be-weighed-against-tighter-financial-conditions/"
+        },
+        {
+          "title": "Investing.com: Fed's Logan calls for two more rate hikes to combat inflation",
+          "url": "https://www.investing.com/news/economy-news/feds-logan-calls-for-two-more-rate-hikes-to-combat-inflation-5016213"
+        },
+        {
+          "title": "Kiplinger: Is the stock market open on Veterans Day in 2026?",
+          "url": "https://www.kiplinger.com/investing/stocks/is-the-stock-market-open-on-veterans-day"
+        },
+        {
+          "title": "Seeking Alpha: October CPI Just Made A December Rate Hike Certain (via FMP)",
+          "url": "https://seekingalpha.com/article/4966013-october-cpi-just-made-december-rate-hike-certain"
+        },
+        {
+          "title": "WSJ: Hot Inflation Revives Wall Street's Rate Hike Fears (via FMP)",
+          "url": "https://www.wsj.com/finance/investing/hot-inflation-revives-wall-streets-rate-hike-fears-1ce54f85"
+        },
+        {
+          "title": "Reuters: Fed's Bowman says 'still work to do' on inflation (via FMP)",
+          "url": "https://www.reuters.com/business/feds-bowman-says-still-work-do-inflation-2026-11-10/"
+        },
+        {
+          "title": "Barron's: The Fed May Raise Rates a Half-Point in December. Here's the Case. (via FMP)",
+          "url": "https://www.barrons.com/articles/fed-rate-hikes-december-inflation-waller-logan-4ece9fc8"
+        },
+        {
+          "title": "CNBC: CoreWeave beats on revenue and lifts guidance, easing AI slowdown concerns (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html"
+        },
+        {
+          "title": "WSJ: CoreWeave Meets Wall Street Expectations, Shares Rise (via FMP)",
+          "url": "https://www.wsj.com/business/earnings/coreweave-crwv-3q-2026-earnings-report-stock-9c109753"
+        },
+        {
+          "title": "Reuters: CoreWeave beats quarterly revenue estimates as AI demand defies growing doubts (via FMP)",
+          "url": "https://www.reuters.com/business/coreweave-beats-quarterly-revenue-estimates-ai-demand-defies-growing-doubts-2026-11-10/"
+        },
+        {
+          "title": "Stock Market News for Nov 10, 2026 — Zacks",
+          "url": "https://www.zacks.com/stock/news/3026944/stock-market-news-for-nov-10,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVIDIA Governance Woes: 3 Areas to Buy From Amid AI Market Slump — Zacks",
+          "url": "https://www.zacks.com/stock/news/3027395/nvidia-governance-woes:-3-areas-to-buy-from-amid-ai-market-slump?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Hims & Hers Health (HIMS) Q3 Earnings: Key Metrics Versus Estimates — Zacks",
+          "url": "https://www.zacks.com/stock/news/3026785/hims-&-hers-health-(hims)-q3-earnings:-taking-a-look-at-key-metrics-versus-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CRWV — Zacks",
+          "url": "https://www.zacks.com/stock/quote/CRWV?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HIMS — Zacks",
+          "url": "https://www.zacks.com/stock/quote/HIMS?utm_source=zacks_mcp"
+        },
+        {
+          "title": "RKLB — Zacks",
+          "url": "https://www.zacks.com/stock/quote/RKLB?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NUE — Zacks",
+          "url": "https://www.zacks.com/stock/quote/NUE?utm_source=zacks_mcp"
+        },
+        {
+          "title": "APH — Zacks",
+          "url": "https://www.zacks.com/stock/quote/APH?utm_source=zacks_mcp"
+        },
+        {
+          "title": "KLAC — Zacks",
+          "url": "https://www.zacks.com/stock/quote/KLAC?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-10-afternoon"
+    },
+    {
+      "date": "2026-11-10",
       "session": "morning",
       "generatedAt": "2026-11-10T13:55:00Z",
       "headline": "Risk-off into the open: October CPI ran hot on both headline and core, yields jumped, and futures flipped from green to red with a December Fed hike fully priced and a half-point move on the table.",
