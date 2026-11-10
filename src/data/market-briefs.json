@@ -2,6 +2,241 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-10",
+      "session": "morning",
+      "generatedAt": "2026-11-10T13:55:00Z",
+      "headline": "Risk-off into the open: October CPI ran hot on both headline and core, yields jumped, and futures flipped from green to red with a December Fed hike fully priced and a half-point move on the table.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "post-CPI",
+          "change": "-0.6%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "post-CPI",
+          "change": "-1.2%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "pre-CPI only",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "pre-CPI only",
+          "change": "+0.1%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.93%",
+          "change": "+6.5 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "19.99",
+          "change": "+0.07"
+        },
+        {
+          "label": "WTI",
+          "value": "$85.53",
+          "change": "-1.5%"
+        },
+        {
+          "label": "Brent",
+          "value": "$90.82",
+          "change": "-1.9%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,086",
+          "change": "-0.7%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$73,600",
+          "change": "-1.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "CPI (Oct) MoM",
+          "actual": "+0.4%",
+          "consensus": "+0.3%",
+          "prior": "+0.6%",
+          "read": "hotter than hoped; energy +0.7%, food +0.5%",
+          "reaction": "S&P fut flat to about -0.6%, Nasdaq 100 fut -1.15%; 2-yr +14 bp to 4.69%, 10-yr +6.5 bp to 4.93%"
+        },
+        {
+          "name": "Core CPI (Oct) MoM",
+          "actual": "+0.3%",
+          "consensus": "+0.2%",
+          "prior": "+0.3%",
+          "read": "broad; used cars -1.2% the only relief, core ex-autos +0.4%",
+          "reaction": "December 25 bp hike now fully priced, small odds of 50 bp"
+        },
+        {
+          "name": "CPI YoY",
+          "actual": "not published",
+          "consensus": "n/a",
+          "prior": "3.7%",
+          "read": "BLS had no Oct 2025 collection due to last year's shutdown",
+          "reaction": "no YoY comparison this month"
+        }
+      ],
+      "drivers": [
+        "Hot CPI plus Fed Gov. Waller's overnight comment that a 50 bp hike should be considered if core ran about 0.3% or above, which it did; a Reuters poll already had a December hike as the base case.",
+        "Nvidia remains a drag on sentiment: board probe into CEO Huang's relationship with an alleged Chinese intelligence asset, a reported FBI investigation, and BofA removed NVDA from its US 1 list. Wells Fargo upgraded its broader AI-infrastructure view after the chip selloff.",
+        "Oil is the offset: Brent broke below $90 for the first time since August after Trump said new strikes on Iran are not needed for now; Ukrainian strikes reportedly cut Russian refining capacity about 30%.",
+        "Levels: futures and yields as of about 7:40 CT post-print; oil, gold, VIX and bitcoin as of about 6:30 CT pre-print. Financial Datasets and Bigdata.com were out of credits this run; FMP index quotes are plan-blocked.",
+        "Overseas: Europe traded higher pre-CPI (Stoxx near records on falling oil and tech/bank strength); Asia closed higher with the Nikkei +2.9%, Hang Seng +0.4%, Shanghai +0.1% after Monday's 2%+ Wall Street rally."
+      ],
+      "calendar": [
+        {
+          "time": "8:35 CT",
+          "item": "Fed's Logan speaks",
+          "consensus": "FOMC blackout not in effect"
+        },
+        {
+          "time": "10:00 CT",
+          "item": "NY Fed Q3 household debt; USDA WASDE",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "10-yr note auction",
+          "consensus": "prior stop 5.30%; watch demand after the CPI backup"
+        },
+        {
+          "time": "12:30 CT",
+          "item": "Fed's Bowman and Schmid speak",
+          "consensus": ""
+        },
+        {
+          "time": "3:30 CT",
+          "item": "API crude inventories",
+          "consensus": "-1.0M bbl"
+        },
+        {
+          "time": "Pre-bell (reported)",
+          "item": "TDG beat ($12.44 vs $12.21); SE EPS in line, rev beat ($8.6B vs $8.08B); VG big beat ($0.96 vs $0.50); ONON beat ($0.66 vs $0.47), margin outlook raised; WIX slight beat; LEGN beat",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "CRWV, PBR, EC, ALC, RGTI, SONO, STUB",
+          "consensus": "CRWV est EPS -$1.27, rev $3.54B"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "-0.5%",
+          "why": "Huang probe headlines, BofA pulled it from its US 1 list; Zacks flags oversold (RSI 27) after a 21% four-week drop"
+        },
+        {
+          "ticker": "ONON",
+          "move": "up",
+          "why": "Q3 EPS beat and higher margin guide; holding full price in a promotional market"
+        },
+        {
+          "ticker": "VG",
+          "move": "up",
+          "why": "Venture Global EPS nearly double consensus"
+        },
+        {
+          "ticker": "SE",
+          "move": "up",
+          "why": "Sea Ltd revenue beat at $8.6B vs $8.08B est"
+        },
+        {
+          "ticker": "LCID",
+          "move": "down",
+          "why": "Q3 miss"
+        },
+        {
+          "ticker": "SNDK",
+          "move": "down",
+          "why": "Sharply lower on regulatory-risk concerns"
+        }
+      ],
+      "sources": [
+        {
+          "title": "U.S. CPI rose stronger than expected 0.4% in October; core rate rose 0.3% - CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3"
+        },
+        {
+          "title": "US October core CPI +0.3% vs +0.2% expected - investingLive",
+          "url": "https://investinglive.com/news/us-october-core-cpi-vs-0-2-expected/"
+        },
+        {
+          "title": "Stock Market Today, Nov. 10 - TipRanks",
+          "url": "https://www.tipranks.com/news/stock-market-today-nov-10-markets-await-the-consumer-inflation-report"
+        },
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq trade mixed ahead of inflation data - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
+        },
+        {
+          "title": "Stock Market Today (Nov. 10, 2026) - TheStreet",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+        },
+        {
+          "title": "Consumer prices rose 0.4% in October, more than expected - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html"
+        },
+        {
+          "title": "Brent crude falls below $90 for first time since August - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/10/oil-prices-trump-iran.html"
+        },
+        {
+          "title": "Fed's Waller puts half-point rate hike into the mix for December - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/feds-waller-puts-half-point-rate-hike-into-the-mix-for-december-1bebdffc"
+        },
+        {
+          "title": "Fed to raise rates once more in December: Reuters poll (via FMP)",
+          "url": "https://www.reuters.com/business/poll-fed-raise-rates-once-more-december-inflation-risks-stay-high-2026-11-10/"
+        },
+        {
+          "title": "Wells Fargo upgrades US AI infrastructure view after chip selloff - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/wells-fargo-upgrades-us-ai-infrastructure-view-after-chip-selloff-2026-11-10/"
+        },
+        {
+          "title": "Ukrainian attacks cut Russia's oil processing capacity by 30% - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/energy/recent-ukrainian-attacks-have-reduced-russias-oil-processing-capacity-by-30-2026-11-10/"
+        },
+        {
+          "title": "On Holding Logs Higher Profit, Sales - WSJ (via FMP)",
+          "url": "https://www.wsj.com/business/retail/on-holding-logs-higher-profit-sales-ed2bb7be"
+        },
+        {
+          "title": "Banking giant drops Nvidia from top investment stocks - Finbold (via FMP)",
+          "url": "https://finbold.com/banking-giant-drops-nvidia-from-top-investment-stocks-amid-huangs-affair-saga/"
+        },
+        {
+          "title": "Why Is SanDisk Stock Crashing - Motley Fool (via FMP)",
+          "url": "https://www.fool.com/investing/2026/11/10/why-is-sandisk-stock-crashing-and-is-it-a-generational-buying-opportunity/"
+        },
+        {
+          "title": "Dow futures rise ahead of inflation data - Invezz (via FMP)",
+          "url": "https://invezz.com/news/2026/11/10/us-stock-futures-today-cpi-nvidia-wall-street-november-10/"
+        },
+        {
+          "title": "Stock Market News for Nov 10, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3026944/stock-market-news-for-nov-10,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "After Plunging 21% in 4 Weeks, Why the Trend Might Reverse for Nvidia - Zacks",
+          "url": "https://www.zacks.com/stock/news/3027183/after-plunging-21-in-4-weeks,-here's-why-the-trend-might-reverse-for-nvidia-(nvda)?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-10-morning"
+    },
+    {
       "date": "2026-11-09",
       "session": "afternoon",
       "generatedAt": "2026-11-09T21:26:00Z",
