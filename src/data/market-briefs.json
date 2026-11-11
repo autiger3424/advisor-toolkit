@@ -3,6 +3,204 @@
   "briefs": [
     {
       "date": "2026-11-11",
+      "session": "afternoon",
+      "generatedAt": "2026-11-11T21:35:00Z",
+      "headline": "Stocks closed higher for a second day, led by chips and AI infrastructure, after CoreWeave's beat-and-raise revived the AI trade; the rally faded a bit in the last hour as a December Fed hike stayed about 87% priced. Cash Treasuries were closed for Veterans Day.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,618",
+          "change": "+1.3%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "25,466",
+          "change": "+1.6%"
+        },
+        {
+          "label": "Dow",
+          "value": "52,486",
+          "change": "+0.5%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,846",
+          "change": "+0.9%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.98% (Tue close; bond mkt closed)",
+          "change": "+0.00"
+        },
+        {
+          "label": "VIX",
+          "value": "17.5",
+          "change": "-10.0%"
+        },
+        {
+          "label": "WTI",
+          "value": "$86.30 (late session)",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,991",
+          "change": "-1.0%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$74,580",
+          "change": "+1.2%"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "CoreWeave (+25%) beat, raised its full-year outlook, guided to about $9B of customer prepayments and said it will not add costly debt through 2027. Chips and AI-power names ripped: SOXX +6%, Dell and Arm +12%, SanDisk +13%, Bloom +12.5%, Intel +7.5%, Super Micro +9.5%.",
+        "Nvidia bounced about 3% after a roughly 10% two-day slide on the Jensen Huang / alleged-spy probe; still down about 14% in November. Earnings Nov 17.",
+        "Rates: a 25 bp December hike is about 87% priced after Tuesday's hot CPI; Goldman now pencils in a March hike as well, and some desks discuss 50 bp. The euro hit an 18-month low on dollar strength. The 10-year briefly topped 5% Tuesday; cash Treasuries were closed today.",
+        "Oil: RBC's Croft calls the Iran/Hormuz situation a status quo and OPEC output is nearing prewar levels, capping crude. EIA raised its 2027 gasoline forecast. Gold slid about 1% on rate-hike bets.",
+        "Session: positive from the open and strengthened into the afternoon; leaders gave back some gains in the final hour. VIX fell 10% to 17.5.",
+        "Data note: CNBC could not be fetched this run and Bigdata.com and Financial Datasets are out of credits; wrap built from Yahoo Finance, 24/7 Wall St., Zacks and FMP."
+      ],
+      "sectors": {
+        "leaders": "Technology / semis and AI infrastructure; healthcare, financials, staples modestly positive",
+        "laggards": "Industrials, communication services, consumer discretionary (FMP snapshot, not confirmed vs S&P sector ETFs)"
+      },
+      "afterHours": [
+        {
+          "ticker": "—",
+          "move": "",
+          "why": "No major large-cap reports after today's bell. Nebius reports Thursday pre-open; Cisco and Applied Materials Thursday after the close."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Initial jobless claims (wk of Nov 7); continuing claims",
+          "consensus": "195K (prior 189K); continuing 1,710K"
+        },
+        {
+          "time": "8:00 CT",
+          "item": "Fed: Hammack speaks; Barr 9:00, Goolsbee 10:30, Daly 12:10, Schmid 12:30, Williams 5:30pm CT",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Existing home sales (Oct)",
+          "consensus": "3.85M (prior 3.99M)"
+        },
+        {
+          "time": "11:00 CT",
+          "item": "EIA weekly crude inventories (holiday-delayed)",
+          "consensus": "-1.1M bbl"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "30-year Treasury auction; cash Treasuries reopen",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "Federal budget balance (Oct)",
+          "consensus": "-$298.6B"
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Earnings: Nebius (NBIS), Nu Holdings (NU)",
+          "consensus": "NBIS -$0.72 / NU $0.23"
+        },
+        {
+          "time": "After close",
+          "item": "Earnings: Cisco (CSCO), Applied Materials (AMAT), Cerebras (CBRS)",
+          "consensus": "CSCO $1.33 / AMAT $4.06"
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "PPI (Oct) now expected Friday, not Thursday",
+          "consensus": "y/y about 6.6%"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "CRWV",
+          "move": "+24.7%",
+          "why": "Beat-and-raise, $132.5B backlog, debt-discipline pledge"
+        },
+        {
+          "ticker": "SNDK",
+          "move": "+13.3%",
+          "why": "AI-infrastructure sympathy rally; Dell and Arm +12%"
+        },
+        {
+          "ticker": "BE",
+          "move": "+12.5%",
+          "why": "AI power names bid on CoreWeave read-through"
+        },
+        {
+          "ticker": "INTC",
+          "move": "+7.5%",
+          "why": "Chip and server complex squeezed higher; SMCI +9.5%"
+        },
+        {
+          "ticker": "GPRO",
+          "move": "-18.3%",
+          "why": "No company news; small-cap washout"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: chip stock rally rekindles AI trade — Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html"
+        },
+        {
+          "title": "S&P 500 Closes Up 1.3% as Tech Pulls the Market Higher — 24/7 Wall St.",
+          "url": "https://247wallst.com/cards/tech-did-the-heavy-lifting-again-the-nasdaq-s-1-55-close-m-gspc-market-bell-01m766s5wqxj8egm37q8ks13gp"
+        },
+        {
+          "title": "We're stuck in a status quo with Iran, says RBC's Helima Croft — CNBC TV (via FMP)",
+          "url": "https://www.youtube.com/watch?v=WZJSrx6A2-0"
+        },
+        {
+          "title": "Euro Falls to 18-Month Low Against Dollar on Fed Rate-Hike Bets — WSJ (via FMP)",
+          "url": "https://www.wsj.com/economy/central-banking/euro-falls-to-18-month-low-against-dollar-on-fed-rate-hike-bets-02d386c5"
+        },
+        {
+          "title": "OPEC's Oil Production Nears Prewar Levels on Saudi Rebound — WSJ (via FMP)",
+          "url": "https://www.wsj.com/business/energy-oil/opecs-oil-production-nears-prewar-levels-on-saudi-rebound-70ffcc13"
+        },
+        {
+          "title": "Gas prices estimate rises for 2027 — Fox Business (via FMP)",
+          "url": "https://www.foxbusiness.com/economy/gas-prices-estimate-rises-2027-though-consumers-could-still-see-relief-from-pain-pump-eia"
+        },
+        {
+          "title": "PPI Data in Focus — Zacks, 11/11/2026",
+          "url": "https://www.zacks.com/stock/news/3027879/ppi-data-in-focus?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AI Trade Comes Back Post-CoreWeave Numbers — Zacks, 11/11/2026",
+          "url": "https://www.zacks.com/stock/news/3027835/ai-trade-comes-back-post-coreweave-numbers?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Nov 11, 2026 — Zacks",
+          "url": "https://www.zacks.com/stock/news/3027683/stock-market-news-for-nov-11,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA — Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CRWV — Zacks",
+          "url": "https://www.zacks.com/stock/quote/CRWV?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD — Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-11-afternoon"
+    },
+    {
+      "date": "2026-11-11",
       "session": "morning",
       "generatedAt": "2026-11-11T14:00:00Z",
       "headline": "Futures bounce, led by tech, as CoreWeave's beat-and-raise revives the AI trade after a two-day Nvidia-driven selloff, but yesterday's hot CPI has a December Fed hike about 87% priced. Stocks open normally; cash Treasuries are closed for Veterans Day.",
