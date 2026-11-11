@@ -2,6 +2,223 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-11",
+      "session": "morning",
+      "generatedAt": "2026-11-11T14:00:00Z",
+      "headline": "Futures bounce, led by tech, as CoreWeave's beat-and-raise revives the AI trade after a two-day Nvidia-driven selloff, but yesterday's hot CPI has a December Fed hike about 87% priced. Stocks open normally; cash Treasuries are closed for Veterans Day.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,610",
+          "change": "+0.9%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "28,390",
+          "change": "+1.9%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "52,470",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,855",
+          "change": "+0.9%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.98% (Tue close; bond mkt closed)",
+          "change": "+0.10"
+        },
+        {
+          "label": "VIX",
+          "value": "18.4",
+          "change": "-5.5%"
+        },
+        {
+          "label": "WTI",
+          "value": "$87.15",
+          "change": "+1.3%"
+        },
+        {
+          "label": "Brent",
+          "value": "$92.80",
+          "change": "+1.4%"
+        },
+        {
+          "label": "Gold",
+          "value": "$4,045",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$73,700",
+          "change": "-0.0%"
+        }
+      ],
+      "data": [],
+      "drivers": [
+        "No 7:30 releases today (Veterans Day). Earlier: MBA mortgage applications +6.2% w/w, 30-yr rate 7.21% from 7.30%. Tuesday's October CPI was +0.4% m/m vs +0.3% expected (core +0.3% vs +0.2%).",
+        "CoreWeave Q3 revenue $3.66B (+168% y/y) beat, record $132.5B backlog, raised full-year sales outlook and pledged debt discipline; chips and neoclouds rallying across the board (MU, AMD, INTC, AVGO higher pre-market).",
+        "Nvidia rebounding about 3% pre-market after a roughly 10% two-day slide on the Jensen Huang / alleged Chinese-spy report and board investigation; Baird halved its price target. Earnings Nov 17.",
+        "Hot CPI drove Fed repricing: CME FedWatch about 87% for a 25 bp hike at the Dec 8-9 meeting, with some odds on 50 bp. Dallas Fed's Logan floated two more hikes, Goolsbee called the report borderline disturbing, Bowman said inflation is broadening, and Goldman now pencils in more tightening. Dollar firmer.",
+        "Oil up after a tanker reportedly hit a mine in the Strait of Hormuz; OPEC+ output still rising per Reuters. Anthropic IPO roadshow ($70-78 range, about $1.4T) is drawing AI attention; AMD plans a $2.5B Anthropic investment.",
+        "Overseas: Europe higher (Stoxx 600 +0.4% near a record, DAX +0.9%, CAC +0.7%, FTSE +0.8%) on chip names and the CoreWeave read-through. Asia: tech and AI names bid; index levels not captured this run."
+      ],
+      "calendar": [
+        {
+          "time": "10:00 CT",
+          "item": "Reuters/Ipsos consumer sentiment (Nov)",
+          "consensus": "prior 45.2 (low impact)"
+        },
+        {
+          "time": "All day",
+          "item": "Veterans Day: stocks open normal hours, cash Treasury market closed, no Treasury auctions (30-yr auction Thu)",
+          "consensus": ""
+        },
+        {
+          "time": "All day",
+          "item": "Fed: no scheduled speakers; FOMC blackout not yet in effect (Dec 8-9 meeting)",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Earnings: CGI (GIB) beat $1.65 vs $1.64; Corteva (CTVA), Franco-Nevada (FNV), Tetra Tech (TTEK), CAE",
+          "consensus": "CTVA $0.02 / FNV $1.77 / TTEK $0.47"
+        },
+        {
+          "time": "After close",
+          "item": "Earnings: Alcon (ALC)",
+          "consensus": ""
+        },
+        {
+          "time": "Thu 7:30 CT",
+          "item": "Weekly jobless claims and PPI resume; Cisco, Applied Materials report Thu after the close",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "CRWV",
+          "move": "+13% to +17%",
+          "why": "Q3 revenue beat, raised FY guide, $132.5B backlog; flagged about $1.15B per quarter in interest cost."
+        },
+        {
+          "ticker": "NVDA",
+          "move": "+3%",
+          "why": "Rebound from the governance-scandal selloff ($168.89 close); Baird cut its price target about 60%; earnings Nov 17."
+        },
+        {
+          "ticker": "AMD",
+          "move": "+5%",
+          "why": "AI rebound plus plan to invest $2.5B in Anthropic ($515.21 close)."
+        },
+        {
+          "ticker": "MU",
+          "move": "higher",
+          "why": "Bounce after a roughly 24% drawdown on regulatory fears; CoreWeave read-through ($725 close)."
+        },
+        {
+          "ticker": "TTD",
+          "move": "+3%",
+          "why": "Q3 EPS $0.33 vs $0.26 est; revenue beat by 13%. OXY +2% and AMRC +23% also beat late Tuesday."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance - Stock market today: futures rise as Nvidia recovers, 10-yr near 5%",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html"
+        },
+        {
+          "title": "Upstox - Futures hint positive open Nov 11; CoreWeave, tech in focus",
+          "url": "https://upstox.com/news/market-news/us-stocks/dow-jones-s-and-p-500-nasdaq-futures-hint-positive-opening-on-nov-11-core-weave-tech-stocks-in-focus/article-203309/"
+        },
+        {
+          "title": "Yahoo Finance UK/ADVFN - European stocks advance, Stoxx 600 near record",
+          "url": "https://uk.finance.yahoo.com/news/european-stocks-advance-stoxx-600-094933315.html"
+        },
+        {
+          "title": "The Weekend Spread - Week ahead Nov 9-13",
+          "url": "https://theweekendspread.substack.com/p/the-week-ahead-monday-november-9"
+        },
+        {
+          "title": "StockTitan - Is the stock market open on Veterans Day 2026?",
+          "url": "https://www.stocktitan.net/articles/stock-market-open-veterans-day-2026"
+        },
+        {
+          "title": "CNBC - Goolsbee calls inflation report borderline disturbing (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html"
+        },
+        {
+          "title": "Invezz - Nasdaq futures rise over 500 points: 5 things to know (via FMP)",
+          "url": "https://invezz.com/news/2026/11/11/nasdaq-futures-rise-over-500-points-5-things-to-know-before-wall-street-opens/"
+        },
+        {
+          "title": "Invezz - CoreWeave surges but AI ambitions carry a $1.15B problem (via FMP)",
+          "url": "https://invezz.com/news/2026/11/11/coreweave-stock-surges-but-its-ai-ambitions-come-with-a-1-15-billion-problem/"
+        },
+        {
+          "title": "Invezz - Nvidia, AMD and Intel rally despite hot CPI (via FMP)",
+          "url": "https://invezz.com/news/2026/11/11/nvidia-amd-and-intel-stocks-rally-despite-hot-cpi-what-changed-overnight/"
+        },
+        {
+          "title": "MarketWatch - Micron and AI stocks surge as CoreWeave calms fears (via FMP)",
+          "url": "https://www.marketwatch.com/story/micron-and-other-ai-stocks-surge-as-coreweave-calms-wall-streets-worst-fears-0a18152a"
+        },
+        {
+          "title": "MarketWatch - Why Goldman is changing its Fed forecast (via FMP)",
+          "url": "https://www.marketwatch.com/story/why-goldman-sachs-is-now-changing-its-federal-reserve-interest-rate-forecast-3753f968"
+        },
+        {
+          "title": "Reuters - Saudi Arabia leads further jump in OPEC+ output (via FMP)",
+          "url": "https://www.reuters.com/business/energy/saudi-arabia-leads-further-jump-opec-oil-output-despite-war-2026-11-11/"
+        },
+        {
+          "title": "Reuters - Sterling drops as markets price hawkish Fed (via FMP)",
+          "url": "https://www.reuters.com/business/sterling-drops-against-firmer-dollar-markets-price-hawkish-fed-2026-11-11/"
+        },
+        {
+          "title": "Bloomberg - AI stocks rally after CoreWeave; Treasury market closed (via FMP)",
+          "url": "https://www.youtube.com/watch?v=x0xoCwRrHx8"
+        },
+        {
+          "title": "Finbold - Analyst slashes Nvidia price target by 60% (via FMP)",
+          "url": "https://finbold.com/wall-street-analyst-slashes-nvidia-stock-price-target-by-60/"
+        },
+        {
+          "title": "Motley Fool - AMD rises on plan to invest $2.5B in Anthropic (via FMP)",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-amd-rises-on-plan-to-invest-usd2-5-billion-in-anthropic/"
+        },
+        {
+          "title": "Stock Market News for Nov 11, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3027683/stock-market-news-for-nov-11,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Pre-Markets Drop on Warmer CPI Numbers - Zacks",
+          "url": "https://www.zacks.com/stock/news/3027340/pre-markets-drop-on-warmer-cpi-numbers:-+0.4-month-over-month?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CoreWeave Reports Q3 Loss, Tops Revenue Estimates - Zacks",
+          "url": "https://www.zacks.com/stock/news/3027561/coreweave-(crwv)-reports-q3-loss,-tops-revenue-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CRWV - Zacks",
+          "url": "https://www.zacks.com/stock/quote/CRWV?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MU - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MU?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-11-morning"
+    },
+    {
       "date": "2026-11-10",
       "session": "afternoon",
       "generatedAt": "2026-11-10T21:40:00Z",
