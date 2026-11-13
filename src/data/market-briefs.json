@@ -4,94 +4,99 @@
     {
       "date": "2026-11-13",
       "session": "morning",
-      "generatedAt": "2026-11-13T14:28:00Z",
-      "headline": "Futures modestly green into the open after October PPI came in a touch cooler than feared and Nvidia steadies following its CEO shock; the 10-year is still pushing above 5.1% with a December Fed hike fully priced.",
+      "generatedAt": "2026-11-13T15:25:00Z",
+      "headline": "Stocks opened higher on a slightly cooler October PPI, then reversed hard: the Nasdaq is down about 1.8% as the AI and chip complex sells off again with Nvidia and AMD both red, the 10-year yield pinned above 5.1% and a December Fed hike priced in. Levels are post-open as of about 9:15 CT.",
       "levels": [
         {
-          "label": "S&P 500 fut",
-          "value": "7,645",
-          "change": "+0.4%"
+          "label": "S&P 500 (SPY proxy)",
+          "value": "749.90",
+          "change": "-0.9%"
         },
         {
-          "label": "Nasdaq 100 fut",
-          "value": "28,438",
-          "change": "+0.2%"
+          "label": "Nasdaq 100 (QQQ proxy)",
+          "value": "675.69",
+          "change": "-1.8%"
         },
         {
-          "label": "Dow fut",
-          "value": "52,576",
-          "change": "+0.4%"
+          "label": "Dow (DIA proxy)",
+          "value": "520.53",
+          "change": "-0.4%"
         },
         {
-          "label": "Russell fut",
-          "value": "2,812",
-          "change": "+0.2%"
+          "label": "Russell 2000 (IWM proxy)",
+          "value": "275.60",
+          "change": "-1.0%"
         },
         {
           "label": "10-yr yield",
-          "value": "5.15%",
+          "value": "5.14%",
           "change": "+4bp"
         },
         {
           "label": "VIX",
-          "value": "18.0",
-          "change": "-0.7"
+          "value": "20.5",
+          "change": "+1.8"
         },
         {
           "label": "WTI",
-          "value": "$89.14",
-          "change": "+0.5%"
+          "value": "$88.30",
+          "change": "-0.5%"
         },
         {
           "label": "Brent",
-          "value": "~$94 (Thu close)",
-          "change": "+3.3%"
+          "value": "$96.76",
+          "change": "+0.4%"
         },
         {
           "label": "Gold",
-          "value": "$3,890",
-          "change": "+0.1%"
+          "value": "$3,894",
+          "change": "-0.2%"
         },
         {
           "label": "Bitcoin",
-          "value": "$69,300",
-          "change": "-3.2%"
+          "value": "$68,800",
+          "change": "-6.6%"
         }
       ],
       "data": [
         {
-          "name": "PPI final demand (Oct) m/m",
+          "name": "PPI (Oct) m/m",
           "actual": "+0.3%",
           "consensus": "+0.4%",
-          "prior": "+1.3% (rev. +1.4%)",
-          "read": "small miss; y/y 6.5% vs 6.6% est, highest since Nov 2022",
-          "reaction": "futures held gains; 2-yr yields eased modestly"
+          "prior": "+1.4% (rev. up)",
+          "read": "a touch softer on the month; y/y 6.5% vs 6.6% est is the hottest since Nov 2022",
+          "reaction": "futures ticked higher after the print (S&P +48, Nasdaq +137 pre-market); 10-yr held near 5.14%; gains faded after the open"
         },
         {
-          "name": "Core PPI ex food & energy (Oct) m/m",
+          "name": "Core PPI (Oct) m/m",
           "actual": "+0.3%",
           "consensus": "+0.3%",
           "prior": "+0.8%",
-          "read": "in line; y/y 5.0% unchanged; ex food/energy/trade +0.5%",
-          "reaction": "little added reaction; December hike still fully priced"
+          "read": "in line; core y/y 5.0% in line, ex food/energy/trade 4.9%",
+          "reaction": "little incremental move; December hike odds stayed near 85-90%"
         }
       ],
       "drivers": [
-        "Nvidia bounces 2-3% pre-market after CEO Jensen Huang's exit; CFO Colette Kress is interim CEO. NVDA fell as much as 14% intraday Thursday and closed down 4%; roughly $1T of market value lost this month. Earnings next Tuesday.",
-        "Rates: hot CPI earlier this week plus strong October payrolls have markets pricing at least 25bp of hikes at the Dec 9 FOMC, with 50bp being debated after Waller's comments. 10-yr closed above 5% Thursday for the first time since Oct 22; dollar at an 18-month high.",
-        "Crypto risk-off: bitcoin below $70K for the first time in about three months, down more than 10% in November on ETF outflows and leveraged unwinds; COIN, HOOD, CRCL weaker pre-market.",
-        "Overseas: Europe slightly lower (STOXX 600 -0.2% from Thursday's record, chip names weak on AI uncertainty); Asia edged higher (KOSPI and Nikkei firm on the Nvidia recovery; Hang Seng lower again after Thursday's -1.3% on US chip-export curbs on Chinese AI firms)."
+        "Nvidia aftershocks: Jensen Huang's abrupt resignation Thursday (CFO Colette Kress interim CEO) keeps the AI trade on edge; NVDA bounced pre-market, then rolled over after the open. NVDA reports Nov 17.",
+        "Rates: Wednesday's CPI was hot, PPI y/y is at a four-year high, the 10-year is above 5.1% and the dollar is near 19-month highs. Markets price roughly 85-90% odds of a 25bp hike at the Dec 8-9 FOMC, with some officials floating 50bp. Treasury Secretary Bessent said the Fed should not hike over an energy shock tied to the Iran war.",
+        "Oil and geopolitics: Trump said the U.S. no longer needs an Iran deal; Brent is holding above $96.",
+        "Overseas: Europe pulled back from Thursday's record (STOXX 600 down 0.1% to 0.2%, Richemont -7% on slowing sales); Asia mixed with the Nikkei +0.5% as the yen passed 160, Hang Seng -1.6%, Kospi -1%, Shanghai -0.6%."
       ],
       "calendar": [
         {
           "time": "8:10 CT",
-          "item": "Fed's Collins speaks (no blackout; Dec 9 FOMC blackout begins Nov 28)",
+          "item": "Fed's Collins speaks (done)",
           "consensus": ""
         },
         {
           "time": "8:40 CT",
-          "item": "Fed's Logan speaks",
+          "item": "Fed's Logan speaks (done)",
           "consensus": ""
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA natural gas storage",
+          "consensus": "+66 bcf"
         },
         {
           "time": "9:50 CT",
@@ -100,104 +105,111 @@
         },
         {
           "time": "11:00 CT",
-          "item": "Fed's Daly speaks",
+          "item": "Fed's Daly speaks (Jefferson also scheduled, time not captured); no FOMC blackout yet",
           "consensus": ""
         },
         {
           "time": "12:00 CT",
           "item": "Baker Hughes rig count",
-          "consensus": ""
+          "consensus": "prior 463"
         },
         {
-          "time": "6:00 pm CT",
-          "item": "Fed's Jefferson speaks (Goolsbee also scheduled today, time not captured)",
-          "consensus": ""
-        },
-        {
-          "time": "Pre-bell",
-          "item": "Earnings light: MUFG, SMFG, Mizuho, Generali overseas; no notable US names. Cisco (reported Thu after close) is the live reaction.",
+          "time": "Today",
+          "item": "Earnings: light U.S. slate, mostly foreign ADRs (MUFG, Mizuho); Cerebras reported after the bell Thursday",
           "consensus": ""
         }
       ],
       "movers": [
         {
-          "ticker": "MOD",
-          "move": "+31%",
-          "why": "Bloomberg: Samsung in talks to acquire the data-center cooling maker"
+          "ticker": "NVDA",
+          "move": "-3.3%",
+          "why": "Was +2.5% pre-market, opened near $170 and sold straight down; CEO transition still weighing"
+        },
+        {
+          "ticker": "AMD",
+          "move": "-9%",
+          "why": "Giving back Thursday's +5.9% Nvidia-rival rally; no company-specific headline captured"
         },
         {
           "ticker": "CBRS",
-          "move": "+13-17%",
-          "why": "Record Q3; Q4 revenue guide well above consensus; Microsoft named as a customer"
+          "move": "+13-16% pre-mkt",
+          "why": "Raised FY core revenue guide to $940-960M, surprise profit, new Microsoft cloud deal"
         },
         {
-          "ticker": "NVDA",
-          "move": "+2-3%",
-          "why": "Stabilizing after CEO ouster; Kress interim CEO; earnings next Tuesday"
+          "ticker": "MOD",
+          "move": "+25-29% pre-mkt",
+          "why": "Bloomberg report that Samsung is in talks to acquire the data-center cooling maker"
         },
         {
-          "ticker": "CSCO",
-          "move": "-2%",
-          "why": "Record FQ1 beat (revenue +24%, EPS $1.40) but gross margin compression"
-        },
-        {
-          "ticker": "NU",
-          "move": "+3%",
-          "why": "Record Q3 but slight EPS/revenue misses; focus on ROE and efficiency outlook"
+          "ticker": "MSFT",
+          "move": "-0.6%",
+          "why": "Was -2.3% pre-market on a widespread Exchange, Teams and Outlook outage not yet fully restored"
         }
       ],
       "sources": [
         {
-          "title": "Yahoo Finance - Stock market today live, Nov 13, 2026",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+          "title": "PPI +6.5% YoY: Highest in Nearly 4 Years - Zacks",
+          "url": "https://www.zacks.com/stock/news/3029594/ppi-+6.5-yoy:-highest-in-nearly-4-years?utm_source=zacks_mcp"
         },
         {
-          "title": "Reuters via Investing.com - US producer prices rise further in October",
-          "url": "https://www.investing.com/news/economy-news/us-producer-prices-rise-further-in-october-5025549"
+          "title": "Stock Market News for Nov 13, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3029203/stock-market-news-for-nov-13,-2026?utm_source=zacks_mcp"
         },
         {
-          "title": "Investing.com - US producer prices rise 6.5% y/y in October",
-          "url": "https://www.investing.com/news/economic-indicators/us-producer-prices-rise-by-65-yearoveryear-in-october-5025495"
+          "title": "US producer prices rise further in October - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/us-producer-prices-rise-further-october-2026-11-13/"
         },
         {
-          "title": "Rio Times - US PPI October 2026",
-          "url": "https://www.riotimesonline.com/us-producer-price-index-october-2026/"
+          "title": "Wholesale prices rose 0.3% in October - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html"
         },
         {
-          "title": "TokenPost - PPI rises 0.3%, below expectations",
-          "url": "https://www.tokenpost.com/news/investing/56705"
+          "title": "Treasury chief says Fed should not hike over energy shock - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/us-treasury-chief-says-fed-should-not-hike-rates-over-energy-shock-tied-iran-war-2026-11-13/"
         },
         {
-          "title": "TokenPost - Producer inflation highest since 2022",
-          "url": "https://www.tokenpost.com/news/investing/56721"
+          "title": "Ten-Year Treasury Yields Again Spike Above 5% - Seeking Alpha (via FMP)",
+          "url": "https://seekingalpha.com/article/4967774-ten-year-treasury-yields-again-spike-above-5-percent"
         },
         {
-          "title": "Newsquawk - US October PPI preview",
-          "url": "https://www.newsquawk.com/headlines/preview---us-october-ppi-data-will-be-released-at-1330gmt0830est"
+          "title": "Dow rises as US stocks gain despite Nvidia losses - Invezz (via FMP)",
+          "url": "https://invezz.com/news/2026/11/13/dow-rises-as-us-stocks-gain-despite-nvidia-losses-and-bitcoin-slump/"
         },
         {
-          "title": "Investing.com - Premarket movers: Modine, Cerebras",
-          "url": "https://www.investing.com/news/stock-market-news/premarket-movers-modine-surges-cerebras-jumps-on-microsoft-deal-5024934"
+          "title": "AMD, Broadcom fall as Nvidia rebounds - Invezz (via FMP)",
+          "url": "https://invezz.com/news/2026/11/13/amd-broadcom-stocks-fall-2-as-nvidia-rebounds-is-wall-street-switching-sides/"
         },
         {
-          "title": "Saxo - Asia Market Quick Take, 13 Nov 2026",
-          "url": "https://www.home.saxo/en-sg/content/articles/macro/asia-market-quick-take--13-november-2026-13112026"
+          "title": "Cerebras jumps 13% on raised forecast, Microsoft deal - Invezz (via FMP)",
+          "url": "https://invezz.com/news/2026/11/13/cerebras-stock-jumps-13-as-ai-chipmaker-raises-annual-forecast-signs-microsoft-deal/"
         },
         {
-          "title": "Reuters via Business Recorder - European shares retreat from record highs",
+          "title": "Modine surges on Samsung takeover interest - Invezz (via FMP)",
+          "url": "https://invezz.com/news/2026/11/13/modine-stock-surges-samsung-ai-cooling-takeover/"
+        },
+        {
+          "title": "US Pre-Market: Nvidia rebounds, Microsoft falls on outage - TradingKey",
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262304609-nvda-nvidia-msft-us-ppi-tradingkey"
+        },
+        {
+          "title": "European shares retreat from record highs - Business Recorder/Reuters",
           "url": "https://www.brecorder.com/news/40448754/european-shares-retreat-from-record-highs-ai-uncertainty-weighs"
         },
         {
-          "title": "Finobird - Economic calendar Nov 13, 2026",
-          "url": "https://finobird.com/calendar/economic/analysis/french-and-spanish-inflation-iea-oil-report-and-a-fed-speaker-wave-what-to-watch-on-november-13-2026-2026-11-13"
+          "title": "Futures Pointing To Extended Rebound - Panthere Group",
+          "url": "https://www.pantheregroup.com/2026/11/13/futures-pointing-to-extended-rebound-from-yesterdays-initial-slump/"
         },
         {
-          "title": "Yahoo Finance - Nvidia CEO Huang resigns; Kress interim CEO",
-          "url": "https://finance.yahoo.com/technology/article/nvidia-ceo-huang-resigns-amid-affair-scandals-board-names-cfo-colette-kress-interim-ceo-135801377.html"
+          "title": "Market Pulse Nov 13, 2026 - NordFX",
+          "url": "https://nordfx.com/market-news/market-pulse-november-13-2026"
         },
         {
-          "title": "Yahoo Finance - Cerebras surges after record Q3",
-          "url": "https://finance.yahoo.com/markets/stocks/article/cerebras-stock-surges-after-ai-chipmaker-posts-q3-record-revenue-deals-with-hyperscalers-124719638.html"
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MSFT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MSFT?utm_source=zacks_mcp"
         }
       ],
       "id": "2026-11-13-morning"
