@@ -37,6 +37,18 @@ jobs:
         with:
           node-version: 22
 
+      - name: Probe SEC EDGAR access
+        # EDGAR answers 403 to anything it takes for an undeclared bot (missing contact in the
+        # User-Agent, or a blocked network). Surface that in the first lines of the log.
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          UA="${SEC_USER_AGENT:-advisor-toolkit 13F sweep autiger3424@users.noreply.github.com}"
+          for u in https://data.sec.gov/submissions/CIK0001067983.json https://www.sec.gov/Archives/edgar/data/1061768/000106176826000015/index.json; do
+            code=$(curl -sS -o /dev/null -w "%{http_code}" -A "$UA" "$u" || echo "err")
+            echo "$code  $u"
+          done
+
       - name: Sweep 13F filings
         env:
           SOURCE: ${{ github.event.inputs.source || 'edgar' }}

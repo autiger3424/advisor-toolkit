@@ -52,8 +52,10 @@ const CUSIP_FILE = path.join(OUT_DIR, "cusips.json");
 const SOURCE = (process.env.SOURCE || "edgar").toLowerCase();
 const FMP_KEY = process.env.FMP_API_KEY || "";
 const FIGI_KEY = process.env.OPENFIGI_API_KEY || "";
-// SEC asks for a descriptive User-Agent with a contact; set SEC_USER_AGENT in the workflow secrets.
-const SEC_UA = process.env.SEC_USER_AGENT || "advisor-toolkit 13F sweep (github.com/autiger3424/advisor-toolkit)";
+// SEC's fair-access rules require a User-Agent that names the app and a contact
+// address ("Name email@domain"); anything else is refused with 403 as an
+// undeclared automated tool. Override with the SEC_USER_AGENT secret.
+const SEC_UA = process.env.SEC_USER_AGENT || "advisor-toolkit 13F sweep autiger3424@users.noreply.github.com";
 
 const ADD_THRESHOLD = 0.20;
 const MIN_VALUE_USD = 20_000_000;
@@ -88,6 +90,7 @@ const qfile = ({ year, quarter }) => `${year}-q${quarter}.json`;
 // ── HTTP ───────────────────────────────────────────────────────
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let lastSec = 0;
+let secForbidden = 0;
 async function secFetch(url, as = "json") {
   // SEC fair-access limit is 10 requests/second; stay under it.
   const wait = 120 - (Date.now() - lastSec);
@@ -95,8 +98,15 @@ async function secFetch(url, as = "json") {
   lastSec = Date.now();
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": SEC_UA } });
-      if (res.status === 429 || res.status === 403) { console.warn(`  SEC ${res.status} on ${url}, backing off`); await sleep(10_000 * attempt); continue; }
+      const res = await fetch(url, { headers: { "User-Agent": SEC_UA, Accept: "application/json, text/xml, */*" } });
+      if (res.status === 403) {
+        // 403 is SEC's bot filter (bad User-Agent or a blocked network), not a transient. Fail the run
+        // after three in a row rather than backing off for an hour and committing an empty quarter.
+        if (++secForbidden >= 3) { console.error(`\nSEC EDGAR refused ${url} with 403 three times. Check SEC_USER_AGENT ("Name email@domain") and whether this network is allowed by sec.gov.`); process.exit(2); }
+        console.warn(`  SEC 403 on ${url}, retrying`); await sleep(5_000 * attempt); continue;
+      }
+      secForbidden = 0;
+      if (res.status === 429) { console.warn(`  SEC 429 on ${url}, backing off`); await sleep(10_000 * attempt); continue; }
       if (res.status === 404) return null;
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       return as === "json" ? await res.json() : await res.text();
