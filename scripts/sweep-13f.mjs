@@ -39,6 +39,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import zlib from "node:zlib";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -239,28 +240,83 @@ let cusipMap = fs.existsSync(CUSIP_FILE) ? JSON.parse(fs.readFileSync(CUSIP_FILE
 let cusipDirty = false;
 const saveCusips = () => { if (cusipDirty) { fs.mkdirSync(OUT_DIR, { recursive: true }); fs.writeFileSync(CUSIP_FILE, JSON.stringify(cusipMap, null, 1) + "\n"); cusipDirty = false; } };
 
+// Primary map: the SEC's fails-to-deliver file, one zip per half-month with a
+// CUSIP|SYMBOL|DESCRIPTION line for nearly every listed security. Free, one
+// request, no rate limit. Loaded once per run.
+let secMap = null;
+function unzipSingle(buf) {
+  // Minimal zip reader (one deflated entry): central directory → local header → inflateRaw.
+  const eocd = buf.lastIndexOf(Buffer.from([0x50, 0x4b, 0x05, 0x06]));
+  if (eocd < 0) throw new Error("not a zip");
+  const cdOff = buf.readUInt32LE(eocd + 16);
+  const method = buf.readUInt16LE(cdOff + 10), csize = buf.readUInt32LE(cdOff + 20);
+  const nameLen = buf.readUInt16LE(cdOff + 28), extraLen = buf.readUInt16LE(cdOff + 30), cmtLen = buf.readUInt16LE(cdOff + 32);
+  const localOff = buf.readUInt32LE(cdOff + 42);
+  const lNameLen = buf.readUInt16LE(localOff + 26), lExtraLen = buf.readUInt16LE(localOff + 28);
+  const start = localOff + 30 + lNameLen + lExtraLen;
+  const data = buf.subarray(start, start + csize);
+  void nameLen; void extraLen; void cmtLen;
+  return method === 0 ? data : zlib.inflateRawSync(data);
+}
+async function loadSecCusipMap() {
+  if (secMap) return secMap;
+  secMap = new Map();
+  // Try the most recent half-month files, newest first (each posts about two weeks after its period).
+  const now = new Date();
+  const ym = (back) => { const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - back, 1)); return `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}`; };
+  const candidates = [...(now.getUTCDate() > 20 ? [`${ym(0)}a`] : []), `${ym(1)}b`, `${ym(1)}a`, `${ym(2)}b`, `${ym(2)}a`];
+  for (const tag of candidates) {
+    const url = `https://www.sec.gov/files/data/fails-deliver-data/cnsfails${tag}.zip`;
+    try {
+      const wait = 120 - (Date.now() - lastSec); if (wait > 0) await sleep(wait); lastSec = Date.now();
+      const res = await fetch(url, { headers: { "User-Agent": SEC_UA } });
+      if (!res.ok) continue;
+      const txt = unzipSingle(Buffer.from(await res.arrayBuffer())).toString("latin1");
+      for (const line of txt.split(/\r?\n/)) {
+        const [, cusip, symbol, , desc] = line.split("|");
+        if (cusip && symbol && /^[0-9A-Z]{9}$/.test(cusip) && !secMap.has(cusip)) secMap.set(cusip, { symbol: symbol.trim().toUpperCase(), name: (desc || "").trim() });
+      }
+      console.log(`  SEC fails-to-deliver map ${tag}: ${secMap.size} CUSIPs`);
+      if (secMap.size > 1000) break;
+    } catch (err) { console.warn(`  FTD ${tag}: ${err.message}`); }
+  }
+  return secMap;
+}
+
+let figiDown = false;
 async function resolveCusips(cusips) {
   // Misses are cached with a date and retried after 60 days (new listings get a ticker eventually).
   const stale = (e) => e && !e.symbol && (!e.miss || Date.now() - Date.parse(e.miss) > 60 * 86400e3);
-  const todo = [...new Set(cusips)].filter((c) => c && (!(c in cusipMap) || stale(cusipMap[c])));
+  let todo = [...new Set(cusips)].filter((c) => c && (!(c in cusipMap) || stale(cusipMap[c])));
   if (!todo.length) return;
-  console.log(`  resolving ${todo.length} new CUSIPs`);
+  const sec = await loadSecCusipMap();
+  for (const c of todo) { const hit = sec.get(c); if (hit) { cusipMap[c] = { symbol: hit.symbol.replace("/", "-"), name: hit.name, type: "sec-ftd", sector: "" }; cusipDirty = true; } }
+  todo = todo.filter((c) => !cusipMap[c]?.symbol);
+  saveCusips();
+  if (!todo.length || figiDown) return;
+  console.log(`  resolving ${todo.length} CUSIPs via OpenFIGI`);
   // OpenFIGI: 10 jobs/request without a key (25 req/min), 100 jobs/request with one.
   const batch = FIGI_KEY ? 100 : 10;
-  for (let i = 0; i < todo.length; i += batch) {
+  let throttled = 0;
+  for (let i = 0; i < todo.length && !figiDown; i += batch) {
     const slice = todo.slice(i, i + batch);
     let data = null;
-    for (let attempt = 1; attempt <= 3 && !data; attempt++) {
+    for (let attempt = 1; attempt <= 2 && !data; attempt++) {
       try {
         const res = await fetch("https://api.openfigi.com/v3/mapping", {
           method: "POST", headers: { "Content-Type": "application/json", ...(FIGI_KEY ? { "X-OPENFIGI-APIKEY": FIGI_KEY } : {}) },
           body: JSON.stringify(slice.map((c) => ({ idType: "ID_CUSIP", idValue: c }))),
         });
-        if (res.status === 429) { await sleep(FIGI_KEY ? 6500 : 61_000); continue; }
+        if (res.status === 429) {
+          // Shared egress IPs get throttled hard; after three throttles in a run, stop and leave the rest for next time.
+          if (++throttled >= 3) { figiDown = true; console.warn("  OpenFIGI throttling; leaving remaining CUSIPs unmapped for this run"); break; }
+          await sleep(FIGI_KEY ? 6500 : 61_000); continue;
+        }
         if (!res.ok) throw new Error(`${res.status}`);
         data = await res.json();
-      } catch (err) { if (attempt === 3) console.warn(`  OpenFIGI failed: ${err.message}`); else await sleep(3000); }
+      } catch (err) { if (attempt === 2) console.warn(`  OpenFIGI failed: ${err.message}`); else await sleep(3000); }
     }
+    if (!data) continue; // not a confirmed miss; retried next run
     slice.forEach((c, j) => {
       const recs = data?.[j]?.data || [];
       // Prefer a US-listed common stock / ADR / ETF record; fall back to the first.
