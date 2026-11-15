@@ -1745,6 +1745,10 @@
     {
       "date": "2026-11-04",
       "action": "BKNG: Zacks Rank 4 gate flag cleared on the firm Strong Buy rating. Core score 22.5, stays at 5%."
+    },
+    {
+      "date": "2026-11-15",
+      "action": "First 13F sweep (Q3 2026) reviewed; see doc. 6 of 28 funds had filed (deadline rolled to Mon Nov 16); FMP returned 402 on institutional ownership and Financial Datasets was at $0, so the six filings were read from EDGAR directly. META bought by 2 funds, GOOG trimmed by 2, MSFT split; no bench candidate cleared the bar. https://claude.ai/artifact/2TGX1SYDk659qYEjgerse5"
     }
   ],
   "structure": {
