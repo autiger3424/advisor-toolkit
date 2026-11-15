@@ -1,12 +1,47 @@
 {
-  "asOf": null,
-  "quarter": null,
-  "priorQuarter": null,
+  "asOf": "2026-11-15",
+  "quarter": {
+    "year": 2026,
+    "quarter": 3
+  },
+  "priorQuarter": {
+    "year": 2026,
+    "quarter": 2
+  },
   "funds": [],
   "consensus": [],
   "overlap": {
     "holdings": [],
     "bench": []
   },
-  "missing": []
+  "missing": [
+    "Berkshire Hathaway",
+    "Pershing Square",
+    "Appaloosa",
+    "Baupost",
+    "Third Point",
+    "Tiger Global",
+    "Coatue",
+    "Lone Pine",
+    "Viking Global",
+    "Maverick Capital",
+    "D1 Capital",
+    "Altimeter",
+    "Duquesne Family Office",
+    "Soros Fund Management",
+    "Bridgewater",
+    "Greenlight",
+    "Elliott",
+    "Scion",
+    "Starboard Value",
+    "Trian",
+    "Icahn",
+    "TCI",
+    "Akre",
+    "Whale Rock",
+    "Light Street",
+    "Durable Capital",
+    "Glenview",
+    "JANA Partners"
+  ]
 }
