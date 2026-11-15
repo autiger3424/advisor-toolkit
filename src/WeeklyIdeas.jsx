@@ -168,11 +168,24 @@ function Row({ h, open, onToggle, showSector }) {
               {h.filingDate && <span>filed {fmtDate(h.filingDate)}</span>}
             </div>
           )}
+          {h.zoyaStatus !== undefined && (
+            <div style={{ marginTop: 4, fontFamily: fonts.mono, fontSize: "0.68rem", color: palette.textMuted }}>
+              Zoya <span style={{ color: ZOYA_LABEL[h.zoyaStatus]?.color(palette) || palette.warn }}>{ZOYA_LABEL[h.zoyaStatus]?.label || "unverified"}</span>
+              {h.zoyaDate && <span> · report {fmtDate(h.zoyaDate)}</span>}
+            </div>
+          )}
         </div>
       )}
     </div>
   );
 }
+
+const ZOYA_LABEL = {
+  COMPLIANT: { label: "compliant", color: (p) => p.success },
+  QUESTIONABLE: { label: "questionable", color: (p) => p.warn },
+  NON_COMPLIANT: { label: "not compliant", color: (p) => p.danger },
+  UNRATED: { label: "unrated", color: (p) => p.textMuted },
+};
 
 function Group({ title, items, open, toggle, showSector, emptyText }) {
   return (
@@ -249,7 +262,9 @@ export default function WeeklyIdeas() {
       )}
 
       {isHalal ? (
-        <div style={s.note}>Shariah idea list, all equity, higher risk. Business screen by industry plus AAOIFI ratios (debt, cash, interest income vs market cap and revenue) on the latest filing. Confirm every name in Zoya before use: Zoya's status governs, and purification comes from its per-holding figure.</div>
+        <div style={s.note}>Shariah idea list, all equity, higher risk. Business screen by industry plus AAOIFI ratios (debt, cash, interest income vs market cap and revenue) on the latest filing. {ideas.zoya?.mode === "live"
+          ? " Each name's Zoya status is checked weekly and shown on its card; anything marked unverified still needs a manual check, and purification comes from Zoya's per-holding figure."
+          : " Confirm every name in Zoya before use: Zoya's status governs, and purification comes from its per-holding figure."}</div>
       ) : (
         <div style={s.note}>Idea list only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account.</div>
       )}

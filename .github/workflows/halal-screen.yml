@@ -36,6 +36,8 @@ jobs:
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+          # Optional. Sandbox key = connection test only; live key = real compliance gate.
+          ZOYA_API_KEY: ${{ secrets.ZOYA_API_KEY }}
           TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
           SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '45' }}
         run: node scripts/halal-screen.mjs

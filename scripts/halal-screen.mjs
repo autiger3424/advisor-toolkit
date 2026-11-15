@@ -25,12 +25,18 @@
                      no P/E cap (high-risk list), net downgrades ≥ 2 in
                      45 days removes a name.
      5. Momentum   — Twelve Data closes vs 200-day SMA, 52-wk, 12-wk.
+     5b. Zoya      — if ZOYA_API_KEY is set, every name that reaches
+                     selection is checked against Zoya's compliance
+                     report. With a live key, NON_COMPLIANT is a hard
+                     removal and QUESTIONABLE is a Watch. A sandbox key
+                     returns dummy data, so it only tests the connection
+                     and nothing from it is written to the list.
      6. Select     — sector slots summing to ~68, floor 50, ceiling 75;
                      incumbents keep their slot unless they fail a rule.
      7. Diff       — New / Hold / Watch / Removed against last week.
 
-   Env: FMP_API_KEY, TWELVE_DATA_API_KEY (required); TD_CALLS_PER_MIN,
-        SCREEN_LIMIT, DRY_RUN=1 (optional).
+   Env: FMP_API_KEY, TWELVE_DATA_API_KEY (required); ZOYA_API_KEY,
+        TD_CALLS_PER_MIN, SCREEN_LIMIT, DRY_RUN=1 (optional).
 
    Run:  node scripts/halal-screen.mjs
 ──────────────────────────────────────────────────────────────── */
@@ -48,6 +54,12 @@ if (!FMP_KEY || !TD_KEY) {
   console.error("Missing FMP_API_KEY or TWELVE_DATA_API_KEY.");
   process.exit(1);
 }
+
+// Zoya: optional. A key starting with "live-" is real data; anything else is treated as sandbox (dummy data).
+const ZOYA_KEY = (process.env.ZOYA_API_KEY || "").trim();
+const ZOYA_MODE = !ZOYA_KEY ? "off" : ZOYA_KEY.startsWith("live-") ? "live" : "sandbox";
+const ZOYA_URL = ZOYA_MODE === "live" ? "https://api.zoya.finance/graphql" : "https://sandbox-api.zoya.finance/graphql";
+const ZOYA_STATUSES = new Set(["COMPLIANT", "NON_COMPLIANT", "QUESTIONABLE", "UNRATED"]);
 
 // ── Configuration ──────────────────────────────────────────────
 const CFG = {
@@ -152,6 +164,33 @@ async function twelve(path, params = {}) {
   Object.entries(params).forEach(([k, v]) => v != null && u.searchParams.set(k, v));
   u.searchParams.set("apikey", TD_KEY);
   return getJSON(u.toString(), { label: `td ${path} ${params.symbol}` });
+}
+
+// One compliance report from Zoya. Returns { status, reportDate } or null if the call failed.
+// The key goes only in the Authorization header and is never logged.
+async function zoyaReport(symbol) {
+  const body = JSON.stringify({
+    query: "query Report($symbol: String!) { basicCompliance { report(symbol: $symbol) { symbol status reportDate } } }",
+    variables: { symbol },
+  });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(ZOYA_URL, { method: "POST", headers: { Authorization: ZOYA_KEY, "Content-Type": "application/json" }, body });
+      if (res.status === 429) { console.warn(`  zoya rate limited (${symbol}), waiting 30s`); await sleep(30_000); continue; }
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      const data = await res.json();
+      if (data.errors?.length) throw new Error(data.errors[0].message);
+      const r = data.data?.basicCompliance?.report;
+      if (!r) return { status: "UNRATED", reportDate: null };
+      const status = String(r.status || "").toUpperCase();
+      if (!ZOYA_STATUSES.has(status)) throw new Error(`unexpected status "${r.status}"`);
+      return { status, reportDate: r.reportDate ? String(r.reportDate).slice(0, 10) : null };
+    } catch (err) {
+      if (attempt === 3) { console.warn(`  zoya failed ${symbol}: ${err.message}`); return null; }
+      await sleep(1500 * attempt);
+    }
+  }
+  return null;
 }
 
 const pick = (obj, keys) => {
@@ -354,8 +393,33 @@ async function main() {
     c.momentumFail = momentumCheck(c, prevTag.get(c.ticker));
   }
 
+  let passing = survivors.filter((c) => !c.momentumFail && !c.momentumMissing);
+
+  const zoya = { mode: ZOYA_MODE, checked: 0, failed: 0 };
+  if (ZOYA_MODE === "live") {
+    console.log(`Step 5b: Zoya compliance (${passing.length} names)`);
+    for (const c of passing) {
+      const r = await zoyaReport(c.ticker);
+      if (r) { c.zoyaStatus = r.status; c.zoyaDate = r.reportDate; zoya.checked++; } else zoya.failed++;
+      if (c.zoyaStatus === "NON_COMPLIANT") c.zoyaFail = `Zoya rates it not Shariah-compliant${c.zoyaDate ? ` (report ${c.zoyaDate})` : ""}`;
+      await sleep(300);
+    }
+    const out = passing.filter((c) => c.zoyaFail);
+    console.log(`  ${zoya.checked} checked, ${out.length} non-compliant removed${out.length ? `: ${out.map((c) => c.ticker).join(", ")}` : ""}, ${zoya.failed} lookups failed`);
+    passing = passing.filter((c) => !c.zoyaFail);
+  } else if (ZOYA_MODE === "sandbox") {
+    // Sandbox data is dummy: prove the key and query work, then throw the answers away.
+    console.log("Step 5b: Zoya sandbox connection test (dummy data, not written to the list)");
+    for (const c of passing.slice(0, 5)) {
+      const r = await zoyaReport(c.ticker);
+      if (r) zoya.checked++; else zoya.failed++;
+      console.log(`  ${c.ticker}: ${r ? `ok (${r.status}, ignored)` : "FAILED"}`);
+      await sleep(300);
+    }
+    console.log(zoya.failed ? "  Zoya connection has problems; see failures above." : "  Zoya connection works. Swap in a live key to turn on real compliance checks.");
+  }
+
   console.log("Step 6: select");
-  const passing = survivors.filter((c) => !c.momentumFail && !c.momentumMissing);
   assignScores(passing);
   let swapsLeft = CFG.maxSwapsPerWeek;
   const swapped = [];
@@ -402,6 +466,7 @@ async function main() {
   const tagFor = (c) => {
     const reasons = [];
     if (!prevTag.has(c.ticker)) reasons.push(c.backfilled ? `added to keep the list at ${CFG.minTotal}+ names` : "added by screen");
+    if (c.zoyaStatus === "QUESTIONABLE") reasons.push("Zoya rates it questionable; review before use");
     if (nearLimit(c)) reasons.push(`near a Shariah ratio limit (debt ${(c.debtToCap * 100).toFixed(0)}%, cash ${(c.cashToCap * 100).toFixed(0)}%); confirm in Zoya`);
     if (c.vs200 < 0) reasons.push(`${(c.vs200 * 100).toFixed(1)}% below 200-day; remove if >5% below or below two weeks`);
     if (c.lastSurprise != null && c.lastSurprise < 0) reasons.push(`missed last earnings by ${(Math.abs(c.lastSurprise) * 100).toFixed(0)}%`);
@@ -409,7 +474,7 @@ async function main() {
     if (c.ret12w != null && c.ret12w <= -0.15 && c.vs200 >= 0) reasons.push(`down ${(Math.abs(c.ret12w) * 100).toFixed(0)}% over 12 weeks; still above 200-day`);
     let tag = "Hold";
     if (!prevTag.has(c.ticker)) tag = "New";
-    else if (nearLimit(c) || c.vs200 < 0 || (c.lastSurprise != null && c.lastSurprise < 0) || (c.ret12w != null && c.ret12w <= -0.15)) tag = "Watch";
+    else if (c.zoyaStatus === "QUESTIONABLE" || nearLimit(c) || c.vs200 < 0 || (c.lastSurprise != null && c.lastSurprise < 0) || (c.ret12w != null && c.ret12w <= -0.15)) tag = "Watch";
     if (reasons.length === 0) reasons.push(`${(c.ret52w * 100).toFixed(0) > 0 ? "+" : ""}${(c.ret52w * 100).toFixed(0)}% 52-week; ${c.upgrades} up / ${c.downgrades} down grades`);
     return { tag, reason: reasons.join(". ") };
   };
@@ -433,6 +498,7 @@ async function main() {
     cashToCap: fmtPct(c.cashToCap),
     interestToRev: fmtPct(c.interestToRev),
     filingDate: c.filingDate,
+    ...(ZOYA_MODE === "live" ? { zoyaStatus: c.zoyaStatus ?? null, zoyaDate: c.zoyaDate ?? null } : {}),
     upgrades: c.upgrades,
     downgrades: c.downgrades,
     lastSurprise: fmtPct(c.lastSurprise),
@@ -453,7 +519,7 @@ async function main() {
     let reason = "no longer in screen universe";
     if (c) {
       const sw = swapped.find((s) => s.ticker === h.ticker);
-      reason = c.businessFail || c.shariahFail || c.qualityFail || c.momentumFail
+      reason = c.businessFail || c.shariahFail || c.qualityFail || c.momentumFail || c.zoyaFail
         || (sw ? `replaced by ${sw.by}, which outscored it by ${sw.gap.toFixed(0)} points` : `trimmed at the ${CFG.maxTotal}-name ceiling`);
     }
     removed.push({ ...h, tag: "Removed", reason, vs200: c?.vs200 != null ? fmtPct(c.vs200) : h.vs200, price: c?.price ?? h.price });
@@ -465,12 +531,16 @@ async function main() {
     asOf: new Date().toISOString().slice(0, 10),
     generatedBy: "scripts/halal-screen.mjs (FMP + Twelve Data)",
     priceDate,
-    standard: "AAOIFI ratio screen on the latest quarterly filing; Zoya is the compliance source of truth",
+    standard: ZOYA_MODE === "live"
+      ? "AAOIFI ratio screen on the latest quarterly filing, then Zoya's compliance status on every name"
+      : "AAOIFI ratio screen on the latest quarterly filing; Zoya is the compliance source of truth",
+    zoya: { mode: ZOYA_MODE, checked: ZOYA_MODE === "live" ? zoya.checked : 0, failed: ZOYA_MODE === "live" ? zoya.failed : 0 },
     rules: {
       universe: `US stocks over $${CFG.minMarketCap / 1e9}B in every sector except Financial Services, top ${CFG.candidatesPerSector} per sector by market cap (tech 2x)`,
       business: "excluded by industry: banks, insurance, lenders, alcohol, tobacco, gambling and casinos, aerospace and defense, mortgage REITs; blocklist for pork processors and casino operators",
       ratios: `total debt under ${s.maxDebtToCap * 100}% of market cap, cash and short-term investments under ${s.maxCashToCap * 100}% of market cap, interest income under ${s.maxInterestToRev * 100}% of revenue`,
       quality: `positive gross margin, trailing price/sales at or below ${CFG.maxPS}, no P/E cap; net analyst downgrades of 2 or more in ${CFG.gradeWindowDays} days removes a name`,
+      ...(ZOYA_MODE === "live" ? { zoya: "Zoya compliance report checked for every name each week; non-compliant is removed, questionable is tagged Watch, unrated or failed lookups are shown as unverified" } : {}),
       momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below two straight weeks",
       scoring: "percentile ranks: 45% trend (12-month and 12-week), 20% revisions and last surprise, 20% quality (margin, ROE), 15% above 200-day",
       sizing: `sector slots: tech ${CFG.slots.Technology}, healthcare ${CFG.slots.Healthcare}, industrials ${CFG.slots.Industrials}, consumer cyclical ${CFG.slots["Consumer Cyclical"]}, others 2–5; sectors are left empty if nothing passes`,
