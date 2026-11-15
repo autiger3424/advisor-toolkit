@@ -10,6 +10,11 @@ on:
         description: "Candidates per sector (lower for a quick test run)"
         required: false
         default: "45"
+      compliance_only:
+        description: "Only refresh Halal Terminal statuses on the current list (fast; the screen does not run)"
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
@@ -38,6 +43,10 @@ jobs:
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
           # Optional. Sandbox key = connection test only; live key = real compliance gate.
           ZOYA_API_KEY: ${{ secrets.ZOYA_API_KEY }}
+          # Optional second opinion. Free plan is about 100 lookups a month, so each run checks a rotating batch.
+          HALAL_TERMINAL_API_KEY: ${{ secrets.HALAL_TERMINAL_API_KEY }}
+          HT_MAX_CHECKS: ${{ vars.HT_MAX_CHECKS || '18' }}
+          COMPLIANCE_ONLY: ${{ github.event.inputs.compliance_only || 'false' }}
           TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
           SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '45' }}
         run: node scripts/halal-screen.mjs

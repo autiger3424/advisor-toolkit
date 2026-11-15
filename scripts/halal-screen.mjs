@@ -31,12 +31,24 @@
                      removal and QUESTIONABLE is a Watch. A sandbox key
                      returns dummy data, so it only tests the connection
                      and nothing from it is written to the list.
+     5c. Halal Terminal — if HALAL_TERMINAL_API_KEY is set, names on
+                     the final list get a second-opinion AAOIFI status
+                     from Halal Terminal. The free plan covers about 100
+                     lookups a month, so each run checks HT_MAX_CHECKS
+                     names (default 18): unchecked names first, then the
+                     oldest checks. Statuses carry forward week to week.
+                     A not-compliant flag tags the name Watch; it does
+                     not remove it, because Zoya governs.
+                     COMPLIANCE_ONLY=1 skips the screen and only
+                     refreshes these statuses on the existing list.
      6. Select     — sector slots summing to ~68, floor 50, ceiling 75;
                      incumbents keep their slot unless they fail a rule.
      7. Diff       — New / Hold / Watch / Removed against last week.
 
-   Env: FMP_API_KEY, TWELVE_DATA_API_KEY (required); ZOYA_API_KEY,
-        TD_CALLS_PER_MIN, SCREEN_LIMIT, DRY_RUN=1 (optional).
+   Env: FMP_API_KEY, TWELVE_DATA_API_KEY (required unless
+        COMPLIANCE_ONLY=1); ZOYA_API_KEY, HALAL_TERMINAL_API_KEY,
+        HT_MAX_CHECKS, COMPLIANCE_ONLY=1, TD_CALLS_PER_MIN,
+        SCREEN_LIMIT, DRY_RUN=1 (optional).
 
    Run:  node scripts/halal-screen.mjs
 ──────────────────────────────────────────────────────────────── */
@@ -50,7 +62,8 @@ const OUT_PATH = resolve(__dirname, "../src/data/halal-ideas.json");
 
 const FMP_KEY = process.env.FMP_API_KEY;
 const TD_KEY = process.env.TWELVE_DATA_API_KEY;
-if (!FMP_KEY || !TD_KEY) {
+const COMPLIANCE_ONLY = ["1", "true"].includes(String(process.env.COMPLIANCE_ONLY || "").toLowerCase());
+if (!COMPLIANCE_ONLY && (!FMP_KEY || !TD_KEY)) {
   console.error("Missing FMP_API_KEY or TWELVE_DATA_API_KEY.");
   process.exit(1);
 }
@@ -60,6 +73,12 @@ const ZOYA_KEY = (process.env.ZOYA_API_KEY || "").trim();
 const ZOYA_MODE = !ZOYA_KEY ? "off" : ZOYA_KEY.startsWith("live-") ? "live" : "sandbox";
 const ZOYA_URL = ZOYA_MODE === "live" ? "https://api.zoya.finance/graphql" : "https://sandbox-api.zoya.finance/graphql";
 const ZOYA_STATUSES = new Set(["COMPLIANT", "NON_COMPLIANT", "QUESTIONABLE", "UNRATED"]);
+
+// Halal Terminal: optional second opinion. Free plan = 500 tokens/month at ~5 per lookup.
+const HT_KEY = (process.env.HALAL_TERMINAL_API_KEY || "").trim();
+const HT_MAX_CHECKS = Number(process.env.HT_MAX_CHECKS) || 18;
+const HT_BASE = process.env.HT_BASE_URL || "https://api.halalterminal.com/api";
+const HT_FLAG = "Halal Terminal flags it not compliant under AAOIFI; confirm in Zoya";
 
 // ── Configuration ──────────────────────────────────────────────
 const CFG = {
@@ -191,6 +210,67 @@ async function zoyaReport(symbol) {
     }
   }
   return null;
+}
+
+// One Halal Terminal screen. Returns { status, purification }, "QUOTA" when the plan is used up, or null on failure.
+// The key goes only in the X-API-Key header and is never logged.
+let htMethod = "POST"; // their docs show both POST and GET for this path; fall back once if POST is refused
+let htLoggedShape = false;
+async function htScreen(symbol) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${HT_BASE}/screen/${encodeURIComponent(symbol)}`, { method: htMethod, headers: { "X-API-Key": HT_KEY, Accept: "application/json" } });
+      if (res.status === 405 && htMethod === "POST") { htMethod = "GET"; continue; }
+      if (res.status === 401 || res.status === 403) { console.warn(`  halal terminal rejected the key (${res.status})`); return "QUOTA"; }
+      if (res.status === 402 || res.status === 429) { console.warn(`  halal terminal quota or rate limit reached (${res.status})`); return "QUOTA"; }
+      if (res.status === 404) return { status: "UNRATED", purification: null };
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      const data = await res.json();
+      const d = data?.data && typeof data.data === "object" ? data.data : data;
+      if (!htLoggedShape) { console.log(`  halal terminal response fields: ${Object.keys(d || {}).join(", ")}`); htLoggedShape = true; }
+      const flag = typeof d?.aaoifi_compliant === "boolean" ? d.aaoifi_compliant : typeof d?.is_compliant === "boolean" ? d.is_compliant : null;
+      if (flag == null) throw new Error("no aaoifi_compliant or is_compliant field in the response");
+      const pur = Number(d.purification_rate);
+      return { status: flag ? "COMPLIANT" : "NON_COMPLIANT", purification: Number.isFinite(pur) ? Number((pur * 100).toFixed(2)) : null };
+    } catch (err) {
+      if (attempt === 3) { console.warn(`  halal terminal failed ${symbol}: ${err.message}`); return null; }
+      await sleep(1500 * attempt);
+    }
+  }
+  return null;
+}
+
+// Carries last week's Halal Terminal statuses onto this week's rows, refreshes as many as the budget allows,
+// and tags flagged names. Mutates rows; returns the summary written to the JSON.
+async function applyHalalTerminal(rows, prevHoldings) {
+  const prev = new Map((prevHoldings || []).map((h) => [h.ticker, h]));
+  for (const r of rows) {
+    const p = prev.get(r.ticker);
+    r.htStatus = p?.htStatus ?? null;
+    r.htChecked = p?.htChecked ?? null;
+    r.htPurification = p?.htPurification ?? null;
+  }
+  let checked = 0, stopped = false;
+  if (HT_KEY) {
+    const today = new Date().toISOString().slice(0, 10);
+    const queue = [...rows].sort((a, b) => String(a.htChecked || "").localeCompare(String(b.htChecked || ""))).slice(0, HT_MAX_CHECKS);
+    console.log(`Halal Terminal: checking ${queue.length} of ${rows.length} names (budget ${HT_MAX_CHECKS} per run)`);
+    for (const r of queue) {
+      const res = await htScreen(r.ticker);
+      if (res === "QUOTA") { stopped = true; break; }
+      if (res) { r.htStatus = res.status; r.htChecked = today; r.htPurification = res.purification; checked++; console.log(`  ${r.ticker}: ${res.status}`); }
+      await sleep(400);
+    }
+  }
+  for (const r of rows) {
+    if (r.htStatus !== "NON_COMPLIANT") continue;
+    if (!String(r.reason || "").includes(HT_FLAG)) r.reason = `${HT_FLAG}. ${r.reason || ""}`.trim();
+    if (r.tag === "Hold") r.tag = "Watch";
+  }
+  const covered = rows.filter((r) => r.htStatus).length;
+  const flagged = rows.filter((r) => r.htStatus === "NON_COMPLIANT").map((r) => r.ticker);
+  if (HT_KEY) console.log(`  ${checked} checked this run, ${covered} of ${rows.length} covered so far, flagged: ${flagged.join(", ") || "none"}${stopped ? " (stopped early: quota or key problem)" : ""}`);
+  return { mode: HT_KEY ? "on" : "off", checkedThisRun: checked, covered, total: rows.length, perRun: HT_MAX_CHECKS, stoppedEarly: stopped };
 }
 
 const pick = (obj, keys) => {
@@ -360,6 +440,18 @@ function assignScores(pool) {
 // ── Main ───────────────────────────────────────────────────────
 async function main() {
   const prev = existsSync(OUT_PATH) ? JSON.parse(readFileSync(OUT_PATH, "utf8")) : { holdings: [], removed: [] };
+
+  if (COMPLIANCE_ONLY) {
+    // Refresh Halal Terminal statuses on the list as it stands; the screen itself does not run.
+    if (!HT_KEY) { console.error("COMPLIANCE_ONLY needs HALAL_TERMINAL_API_KEY."); process.exit(1); }
+    const rows = prev.holdings || [];
+    const summary = await applyHalalTerminal(rows, rows);
+    const json = JSON.stringify({ ...prev, halalTerminal: { ...summary, lastRun: new Date().toISOString().slice(0, 10) }, holdings: rows }, null, 2);
+    if (process.env.DRY_RUN) { console.log(json); return; }
+    writeFileSync(OUT_PATH, json + "\n");
+    console.log(`Wrote Halal Terminal statuses → ${OUT_PATH}`);
+    return;
+  }
   const prevTag = new Map((prev.holdings || []).map((h) => [h.ticker, h.tag]));
   const prevRank = new Map((prev.holdings || []).map((h) => [h.ticker, h.zacksRank ?? null]));
 
@@ -511,6 +603,7 @@ async function main() {
   });
 
   const holdings = chosen.map((c) => { const { tag, reason } = tagFor(c); return toRow(c, tag, reason); });
+  const htSummary = await applyHalalTerminal(holdings, prev.holdings);
 
   const removed = [];
   for (const h of prev.holdings || []) {
@@ -534,6 +627,7 @@ async function main() {
     standard: ZOYA_MODE === "live"
       ? "AAOIFI ratio screen on the latest quarterly filing, then Zoya's compliance status on every name"
       : "AAOIFI ratio screen on the latest quarterly filing; Zoya is the compliance source of truth",
+    halalTerminal: { ...htSummary, lastRun: new Date().toISOString().slice(0, 10) },
     zoya: { mode: ZOYA_MODE, checked: ZOYA_MODE === "live" ? zoya.checked : 0, failed: ZOYA_MODE === "live" ? zoya.failed : 0 },
     rules: {
       universe: `US stocks over $${CFG.minMarketCap / 1e9}B in every sector except Financial Services, top ${CFG.candidatesPerSector} per sector by market cap (tech 2x)`,
