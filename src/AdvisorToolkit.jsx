@@ -2,6 +2,7 @@ import { useState } from "react";
 import WeeklyIdeas from "./WeeklyIdeas";
 import MarketBrief, { latestBrief } from "./MarketBrief";
 import Portfolio from "./Portfolio";
+import ThirteenF from "./ThirteenF";
 import links from "./data/links.json";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
@@ -387,6 +388,7 @@ function AdvisorToolkit() {
     estate:    { label: "Estate",     icon: "⚰️", group: "reference", blurb: "State death tax map, gift rules" },
     calc:      { label: "Calculators", icon: "🧮", group: "tools",    blurb: "Growth, RMD, TEY, Roth window, loans" },
     portfolio: { label: "Portfolio",  icon: "🎯", group: "markets",   blurb: "Core and growth sleeves, scored and tracked" },
+    thirteenf: { label: "13F",        icon: "🐋", group: "markets",   blurb: "What the tracked funds bought and sold, by quarter" },
     ideas:     { label: "Ideas",      icon: "📈", group: "markets",   blurb: "Weekly core and halal idea lists" },
     brief:     { label: "Brief",      icon: "📰", group: "markets",   blurb: "Morning and afternoon market briefs" },
   };
@@ -1085,6 +1087,9 @@ function AdvisorToolkit() {
 
         {/* ════════ PORTFOLIO ════════ */}
         {activeTab === "portfolio" && <Portfolio />}
+
+        {/* ════════ 13F SWEEP ════════ */}
+        {activeTab === "thirteenf" && <ThirteenF />}
 
         {/* ════════ WEEKLY IDEAS ════════ */}
         {activeTab === "ideas" && <WeeklyIdeas />}

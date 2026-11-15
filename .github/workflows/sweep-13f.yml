@@ -2,10 +2,10 @@ name: Quarterly 13F sweep
 
 on:
   schedule:
-    # The morning after each 13F deadline (Feb 14, May 15, Aug 14, Nov 14),
-    # 14:10 UTC = 8:10 am Central. Late filers are caught by the next run or
-    # a manual dispatch.
-    - cron: "10 14 15 2,5,8,11 *"
+    # 13F deadlines: Feb 14, May 15, Aug 14, Nov 14 (next business day when
+    # that is a weekend). Run the morning after, and again three days later so
+    # a weekend deadline or a late filer is caught. 14:10 UTC = 8:10 am Central.
+    - cron: "10 14 15,18 2,5,8,11 *"
   workflow_dispatch:
     inputs:
       year:
@@ -14,6 +14,14 @@ on:
       quarter:
         description: "Report quarter 1-4"
         required: false
+      backfill:
+        description: "How many quarters to sweep, ending at the one above (1 = just that quarter)"
+        required: false
+        default: "1"
+      source:
+        description: "edgar (default, free) or fmp (needs a tier with 13F data)"
+        required: false
+        default: "edgar"
 
 permissions:
   contents: write
@@ -21,41 +29,38 @@ permissions:
 jobs:
   sweep:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Check secrets
-        run: |
-          if [ -z "${{ secrets.FMP_API_KEY }}" ]; then
-            echo "Add FMP_API_KEY under Settings → Secrets and variables → Actions."
-            exit 1
-          fi
+          node-version: 22
 
       - name: Sweep 13F filings
         env:
+          SOURCE: ${{ github.event.inputs.source || 'edgar' }}
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-        run: node scripts/sweep-13f.mjs ${{ github.event.inputs.year }} ${{ github.event.inputs.quarter }}
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          node scripts/sweep-13f.mjs ${{ github.event.inputs.year }} ${{ github.event.inputs.quarter }} --backfill ${{ github.event.inputs.backfill || '1' }}
 
       - name: Upload as a run artifact
         uses: actions/upload-artifact@v4
         with:
           name: 13f-sweep
-          path: src/data/13f-sweep.json
+          path: src/data/13f/
 
       - name: Commit sweep
         run: |
           git config user.name "sweep-13f[bot]"
           git config user.email "sweep-13f@users.noreply.github.com"
-          if git diff --quiet -- src/data/13f-sweep.json && [ -f src/data/13f-sweep.json ]; then
+          git add src/data/13f/
+          if git diff --cached --quiet; then
             echo "No changes."
             exit 0
           fi
-          git add src/data/13f-sweep.json
           git commit -m "13F sweep: $(date -u +%Y-%m-%d)"
           for attempt in 1 2 3 4 5; do
             if git pull --rebase --quiet origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}"; then

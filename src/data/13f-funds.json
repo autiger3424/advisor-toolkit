@@ -1,5 +1,5 @@
 {
-  "note": "Funds swept each 13F season (scripts/sweep-13f.mjs). CIKs verified against SEC EDGAR filer list, Nov 4 2026. Edit freely; the script reads this file.",
+  "note": "Funds swept each 13F season (scripts/sweep-13f.mjs). CIKs verified against SEC EDGAR filer list, Nov 4 2026; nine quality managers who file in the first two weeks added Nov 15 2026 (CIKs verified via FMP's EDGAR filings index). Edit freely; the script reads this file.",
   "funds": [
     {
       "name": "Berkshire Hathaway",
@@ -140,6 +140,51 @@
       "name": "JANA Partners",
       "cik": "0001998597",
       "style": "activist"
+    },
+    {
+      "name": "Polen Capital",
+      "cik": "0001034524",
+      "style": "quality growth (early filer)"
+    },
+    {
+      "name": "Giverny Capital",
+      "cik": "0001641864",
+      "style": "quality compounders (early filer)"
+    },
+    {
+      "name": "Abrams Capital",
+      "cik": "0001358706",
+      "style": "concentrated value"
+    },
+    {
+      "name": "AltaRock Partners",
+      "cik": "0001631014",
+      "style": "concentrated quality"
+    },
+    {
+      "name": "Davis Advisers",
+      "cik": "0001036325",
+      "style": "long-term value (early filer)"
+    },
+    {
+      "name": "Dodge & Cox",
+      "cik": "0000200217",
+      "style": "value, large book"
+    },
+    {
+      "name": "Egerton Capital",
+      "cik": "0001581811",
+      "style": "global quality growth (early filer)"
+    },
+    {
+      "name": "Lindsell Train",
+      "cik": "0001484150",
+      "style": "quality / long hold (early filer)"
+    },
+    {
+      "name": "Markel (Gayner)",
+      "cik": "0001096343",
+      "style": "quality / long hold (early filer)"
     }
   ]
 }
