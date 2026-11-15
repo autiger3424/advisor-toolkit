@@ -1749,6 +1749,10 @@
     {
       "date": "2026-11-15",
       "action": "First 13F sweep (Q3 2026) reviewed; see doc. 6 of 28 funds had filed (deadline rolled to Mon Nov 16); FMP returned 402 on institutional ownership and Financial Datasets was at $0, so the six filings were read from EDGAR directly. META bought by 2 funds, GOOG trimmed by 2, MSFT split; no bench candidate cleared the bar. https://claude.ai/artifact/2TGX1SYDk659qYEjgerse5"
+    },
+    {
+      "date": "2026-11-15",
+      "action": "13F moved to its own Markets tab with year/quarter history (src/ThirteenF.jsx, data in src/data/13f/). Sweep engine now reads SEC EDGAR directly; nine quality early-filer managers added (37 tracked). Interim Q3 2026 file holds the five Nov 13 filings; full backfill pending because GitHub Actions cannot reach sec.gov. No portfolio changes."
     }
   ],
   "structure": {
