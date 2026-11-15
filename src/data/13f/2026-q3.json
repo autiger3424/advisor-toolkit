@@ -1,0 +1,942 @@
+{
+  "asOf": "2026-11-15",
+  "quarter": {
+    "year": 2026,
+    "quarter": 3
+  },
+  "priorQuarter": {
+    "year": 2026,
+    "quarter": 2
+  },
+  "source": "SEC EDGAR 13F-HR information tables",
+  "rules": {
+    "addThreshold": 0.2,
+    "minValueUsd": 20000000,
+    "options": "excluded from the share diff, listed per fund",
+    "debt": "notes and convertibles carry a -DEBT suffix"
+  },
+  "funds": [
+    {
+      "name": "Baupost",
+      "cik": "0001061768",
+      "style": "deep value",
+      "filingDate": "2026-11-13",
+      "amendments": 0,
+      "positions": 21,
+      "prevPositions": 23,
+      "totalValue": 5045853000,
+      "prevTotalValue": 5415853000,
+      "top10Pct": 0.77,
+      "turnover": 0.151,
+      "valuesScaled": true,
+      "top": [
+        {
+          "symbol": "AMZN",
+          "name": "AMAZON COM INC",
+          "value": 932781000,
+          "pct": 0.1849
+        },
+        {
+          "symbol": "ELV",
+          "name": "ELEVANCE HEALTH INC FORMERLY",
+          "value": 495805000,
+          "pct": 0.0983
+        },
+        {
+          "symbol": "QSR",
+          "name": "RESTAURANT BRANDS INTL INC",
+          "value": 480104000,
+          "pct": 0.0951
+        },
+        {
+          "symbol": "GPC",
+          "name": "GENUINE PARTS CO",
+          "value": 389540000,
+          "pct": 0.0772
+        },
+        {
+          "symbol": "FERG",
+          "name": "FERGUSON ENTERPRISES INC",
+          "value": 349868000,
+          "pct": 0.0693
+        },
+        {
+          "symbol": "GOOG",
+          "name": "ALPHABET INC",
+          "value": 323679000,
+          "pct": 0.0641
+        },
+        {
+          "symbol": "WCC",
+          "name": "WESCO INTL INC",
+          "value": 258374000,
+          "pct": 0.0512
+        },
+        {
+          "symbol": "V",
+          "name": "VISA INC",
+          "value": 252018000,
+          "pct": 0.0499
+        },
+        {
+          "symbol": "UNP",
+          "name": "UNION PAC CORP",
+          "value": 216451000,
+          "pct": 0.0429
+        },
+        {
+          "symbol": "AON",
+          "name": "AON PLC",
+          "value": 186759000,
+          "pct": 0.037
+        }
+      ],
+      "moves": [
+        {
+          "symbol": "HONA",
+          "name": "HONEYWELL AEROSPACE INC",
+          "action": "new",
+          "shares": 1132000,
+          "value": 175426000,
+          "change": null
+        },
+        {
+          "symbol": "SITE",
+          "name": "SITEONE LANDSCAPE SUPPLY INC",
+          "action": "new",
+          "shares": 1245000,
+          "value": 112436000,
+          "change": null
+        },
+        {
+          "symbol": "AXTA",
+          "name": "AXALTA COATING SYS LTD",
+          "action": "add",
+          "shares": 2506031,
+          "value": 80594000,
+          "change": 0.9665
+        },
+        {
+          "symbol": "GOOG",
+          "name": "ALPHABET INC",
+          "action": "trim",
+          "shares": 949931,
+          "value": 323679000,
+          "change": -0.3076
+        },
+        {
+          "symbol": "UNP",
+          "name": "UNION PAC CORP",
+          "action": "trim",
+          "shares": 795395,
+          "value": 216451000,
+          "change": -0.329
+        },
+        {
+          "symbol": "MOH",
+          "name": "MOLINA HEALTHCARE INC",
+          "action": "trim",
+          "shares": 449609,
+          "value": 85021000,
+          "change": -0.2904
+        },
+        {
+          "symbol": "TFX",
+          "name": "TELEFLEX INCORPORATED",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 178605000
+        },
+        {
+          "symbol": "NCLH",
+          "name": "NORWEGIAN CRUISE LINE HLDGS",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 163180000
+        },
+        {
+          "symbol": "LBTYK",
+          "name": "LIBERTY GLOBAL LTD",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 93975000
+        },
+        {
+          "symbol": "DNOW",
+          "name": "DNOW INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 36160000
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Icahn",
+      "cik": "0000921669",
+      "style": "activist",
+      "filingDate": "2026-11-13",
+      "amendments": 0,
+      "positions": 10,
+      "prevPositions": 12,
+      "totalValue": 9428081917,
+      "prevTotalValue": 8264090525,
+      "top10Pct": 1,
+      "turnover": 0.019,
+      "valuesScaled": false,
+      "top": [
+        {
+          "symbol": "IEP",
+          "name": "Icahn Enterprises LP",
+          "value": 4447740626,
+          "pct": 0.4718
+        },
+        {
+          "symbol": "CVI",
+          "name": "CVR Energy Inc",
+          "value": 3630583606,
+          "pct": 0.3851
+        },
+        {
+          "symbol": "UAN",
+          "name": "CVR Partners, LP",
+          "value": 515453836,
+          "pct": 0.0547
+        },
+        {
+          "symbol": "CTRI",
+          "name": "Centuri Holdings, Inc.",
+          "value": 287294322,
+          "pct": 0.0305
+        },
+        {
+          "symbol": "IFF",
+          "name": "International Flavors and Fragrances Inc.",
+          "value": 249916413,
+          "pct": 0.0265
+        },
+        {
+          "symbol": "CZR",
+          "name": "Caesars Entertainment, Inc.",
+          "value": 72349232,
+          "pct": 0.0077
+        },
+        {
+          "symbol": "MNRO",
+          "name": "Monro, Inc.",
+          "value": 71049236,
+          "pct": 0.0075
+        },
+        {
+          "symbol": "SD",
+          "name": "SandRidge Energy, Inc.",
+          "value": 68561946,
+          "pct": 0.0073
+        },
+        {
+          "symbol": "SATS",
+          "name": "EchoStar Corporation",
+          "value": 44705000,
+          "pct": 0.0047
+        },
+        {
+          "symbol": "BLCO",
+          "name": "Bausch Plus Lomb Corp.",
+          "value": 40427700,
+          "pct": 0.0043
+        }
+      ],
+      "moves": [
+        {
+          "symbol": "IFF",
+          "name": "International Flavors and Fragrances Inc.",
+          "action": "trim",
+          "shares": 2993728,
+          "value": 249916413,
+          "change": -0.2997
+        },
+        {
+          "symbol": "SATS",
+          "name": "EchoStar Corporation",
+          "action": "trim",
+          "shares": 500000,
+          "value": 44705000,
+          "change": -0.644
+        },
+        {
+          "symbol": "BLCO",
+          "name": "Bausch Plus Lomb Corp.",
+          "action": "trim",
+          "shares": 2378100,
+          "value": 40427700,
+          "change": -0.3205
+        },
+        {
+          "symbol": "JBLU",
+          "name": "JetBlue Airways Corp.",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 118371366
+        },
+        {
+          "symbol": "AEP",
+          "name": "American Electric Power Company",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 59472675
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Akre",
+      "cik": "0001112520",
+      "style": "quality compounders",
+      "filingDate": "2026-11-13",
+      "amendments": 0,
+      "positions": 20,
+      "prevPositions": 19,
+      "totalValue": 4401918808,
+      "prevTotalValue": 5106870308,
+      "top10Pct": 0.865,
+      "turnover": 0.038,
+      "valuesScaled": false,
+      "top": [
+        {
+          "symbol": "MA",
+          "name": "MASTERCARD INCORPORATED",
+          "value": 970165325,
+          "pct": 0.2204
+        },
+        {
+          "symbol": "MCO",
+          "name": "MOODYS CORP",
+          "value": 462720323,
+          "pct": 0.1051
+        },
+        {
+          "symbol": "KKR",
+          "name": "KKR & CO L P DEL",
+          "value": 393502138,
+          "pct": 0.0894
+        },
+        {
+          "symbol": "BN",
+          "name": "BROOKFIELD CORP",
+          "value": 382924957,
+          "pct": 0.087
+        },
+        {
+          "symbol": "ROP",
+          "name": "ROPER TECHNOLOGIES INC",
+          "value": 350242644,
+          "pct": 0.0796
+        },
+        {
+          "symbol": "V",
+          "name": "VISA INC",
+          "value": 334207084,
+          "pct": 0.0759
+        },
+        {
+          "symbol": "CSGP",
+          "name": "COSTAR GROUP INC",
+          "value": 296188465,
+          "pct": 0.0673
+        },
+        {
+          "symbol": "FICO",
+          "name": "FAIR ISAAC CORP",
+          "value": 222811378,
+          "pct": 0.0506
+        },
+        {
+          "symbol": "CPRT",
+          "name": "COPART INC",
+          "value": 202342334,
+          "pct": 0.046
+        },
+        {
+          "symbol": "CCCS",
+          "name": "CCC INTELLIGENT SOLUTIONS HL",
+          "value": 194420911,
+          "pct": 0.0442
+        }
+      ],
+      "moves": [
+        {
+          "symbol": "ABNB",
+          "name": "AIRBNB INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 169394482
+        }
+      ],
+      "options": [
+        {
+          "symbol": "CRM",
+          "name": "SALESFORCE INC",
+          "type": "Call",
+          "value": 22957000,
+          "shares": 100000
+        }
+      ]
+    },
+    {
+      "name": "Whale Rock",
+      "cik": "0001387322",
+      "style": "growth / tech",
+      "filingDate": "2026-11-13",
+      "amendments": 0,
+      "positions": 40,
+      "prevPositions": 35,
+      "totalValue": 11449943528,
+      "prevTotalValue": 12456319060,
+      "top10Pct": 0.499,
+      "turnover": 0.275,
+      "valuesScaled": false,
+      "top": [
+        {
+          "symbol": "META",
+          "name": "META PLATFORMS INC",
+          "value": 868864990,
+          "pct": 0.0759
+        },
+        {
+          "symbol": "AMD",
+          "name": "ADVANCED MICRO DEVICES INC",
+          "value": 793136440,
+          "pct": 0.0693
+        },
+        {
+          "symbol": "CLS",
+          "name": "CELESTICA INC",
+          "value": 638225744,
+          "pct": 0.0557
+        },
+        {
+          "symbol": "TTMI",
+          "name": "TTM TECHNOLOGIES INC",
+          "value": 614838277,
+          "pct": 0.0537
+        },
+        {
+          "symbol": "AMZN",
+          "name": "AMAZON COM INC",
+          "value": 513596813,
+          "pct": 0.0449
+        },
+        {
+          "symbol": "SITM",
+          "name": "SITIME CORP",
+          "value": 487241806,
+          "pct": 0.0426
+        },
+        {
+          "symbol": "BE",
+          "name": "BLOOM ENERGY CORP",
+          "value": 478246963,
+          "pct": 0.0418
+        },
+        {
+          "symbol": "FROG",
+          "name": "JFROG LTD",
+          "value": 459267613,
+          "pct": 0.0401
+        },
+        {
+          "symbol": "MSFT",
+          "name": "MICROSOFT CORP",
+          "value": 441937720,
+          "pct": 0.0386
+        },
+        {
+          "symbol": "GOOG",
+          "name": "ALPHABET INC",
+          "value": 417672174,
+          "pct": 0.0365
+        }
+      ],
+      "moves": [
+        {
+          "symbol": "MSFT",
+          "name": "MICROSOFT CORP",
+          "action": "new",
+          "shares": 861645,
+          "value": 441937720,
+          "change": null
+        },
+        {
+          "symbol": "HPE",
+          "name": "HEWLETT PACKARD ENTERPRISE C",
+          "action": "new",
+          "shares": 5775919,
+          "value": 369023465,
+          "change": null
+        },
+        {
+          "symbol": "OKTA",
+          "name": "OKTA INC",
+          "action": "new",
+          "shares": 1601078,
+          "value": 334801421,
+          "change": null
+        },
+        {
+          "symbol": "VICR",
+          "name": "VICOR CORP",
+          "action": "new",
+          "shares": 813986,
+          "value": 235193115,
+          "change": null
+        },
+        {
+          "symbol": "MPWR",
+          "name": "MONOLITHIC PWR SYS INC",
+          "action": "new",
+          "shares": 142551,
+          "value": 192047558,
+          "change": null
+        },
+        {
+          "symbol": "SMTC",
+          "name": "SEMTECH CORP",
+          "action": "new",
+          "shares": 1012749,
+          "value": 180623784,
+          "change": null
+        },
+        {
+          "symbol": "WRBY",
+          "name": "WARBY PARKER INC",
+          "action": "new",
+          "shares": 2460494,
+          "value": 68352523,
+          "change": null
+        },
+        {
+          "symbol": "META",
+          "name": "META PLATFORMS INC",
+          "action": "add",
+          "shares": 1198137,
+          "value": 868864990,
+          "change": 1.6276
+        },
+        {
+          "symbol": "SITM",
+          "name": "SITIME CORP",
+          "action": "add",
+          "shares": 747269,
+          "value": 487241806,
+          "change": 0.3327
+        },
+        {
+          "symbol": "TWLO",
+          "name": "TWILIO INC",
+          "action": "add",
+          "shares": 1276842,
+          "value": 373425211,
+          "change": 0.5538
+        },
+        {
+          "symbol": "VIAV",
+          "name": "VIAVI SOLUTIONS INC",
+          "action": "add",
+          "shares": 8673766,
+          "value": 363604271,
+          "change": 0.2615
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA CORPORATION",
+          "action": "add",
+          "shares": 1550823,
+          "value": 354176957,
+          "change": 3.1114
+        },
+        {
+          "symbol": "INTC",
+          "name": "INTEL CORP",
+          "action": "add",
+          "shares": 393987,
+          "value": 47369057,
+          "change": 0.5159
+        },
+        {
+          "symbol": "GOOG",
+          "name": "ALPHABET INC",
+          "action": "trim",
+          "shares": 1213881,
+          "value": 417672174,
+          "change": -0.4934
+        },
+        {
+          "symbol": "SNDK",
+          "name": "SANDISK CORP",
+          "action": "trim",
+          "shares": 209621,
+          "value": 364717482,
+          "change": -0.6486
+        },
+        {
+          "symbol": "APP",
+          "name": "APPLOVIN CORP",
+          "action": "trim",
+          "shares": 362774,
+          "value": 105360453,
+          "change": -0.2141
+        },
+        {
+          "symbol": "LRCX",
+          "name": "LAM RESEARCH CORP",
+          "action": "trim",
+          "shares": 150129,
+          "value": 49318878,
+          "change": -0.7978
+        },
+        {
+          "symbol": "KVYO",
+          "name": "KLAVIYO INC",
+          "action": "trim",
+          "shares": 2241966,
+          "value": 35266125,
+          "change": -0.5944
+        },
+        {
+          "symbol": "SPCX",
+          "name": "SPACE EXPLORATION TECHN CORP",
+          "action": "trim",
+          "shares": 81647,
+          "value": 12317266,
+          "change": -0.4647
+        },
+        {
+          "symbol": "ALAB",
+          "name": "ASTERA LABS INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 757318364
+        },
+        {
+          "symbol": "CVNA",
+          "name": "CARVANA CO",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 280859206
+        },
+        {
+          "symbol": "WDC",
+          "name": "WESTERN DIGITAL CORP",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 255926801
+        },
+        {
+          "symbol": "AAPL",
+          "name": "APPLE INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 28868290
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "JANA Partners",
+      "cik": "0001998597",
+      "style": "activist",
+      "filingDate": "2026-11-13",
+      "amendments": 0,
+      "positions": 10,
+      "prevPositions": 10,
+      "totalValue": 1589134762,
+      "prevTotalValue": 1902301416,
+      "top10Pct": 1,
+      "turnover": 0.269,
+      "valuesScaled": false,
+      "top": [
+        {
+          "symbol": "MRCY",
+          "name": "MERCURY SYS INC",
+          "value": 321303707,
+          "pct": 0.2022
+        },
+        {
+          "symbol": "LW",
+          "name": "LAMB WESTON HLDGS INC",
+          "value": 224902333,
+          "pct": 0.1415
+        },
+        {
+          "symbol": "COO",
+          "name": "COOPER COS INC",
+          "value": 216985883,
+          "pct": 0.1365
+        },
+        {
+          "symbol": "SPY",
+          "name": "STATE STR SPDR S&P 500 ETF T",
+          "value": 214090832,
+          "pct": 0.1347
+        },
+        {
+          "symbol": "FI",
+          "name": "FISERV INC",
+          "value": 187508250,
+          "pct": 0.118
+        },
+        {
+          "symbol": "CWST",
+          "name": "CASELLA WASTE SYS INC",
+          "value": 145633813,
+          "pct": 0.0916
+        },
+        {
+          "symbol": "ALKT",
+          "name": "ALKAMI TECHNOLOGY INC",
+          "value": 92376109,
+          "pct": 0.0581
+        },
+        {
+          "symbol": "RPD",
+          "name": "RAPID7 INC",
+          "value": 82484218,
+          "pct": 0.0519
+        },
+        {
+          "symbol": "MOD",
+          "name": "MODINE MFG CO",
+          "value": 53842464,
+          "pct": 0.0339
+        },
+        {
+          "symbol": "FUN",
+          "name": "SIX FLAGS ENTERTAINMENT CORP",
+          "value": 50007153,
+          "pct": 0.0315
+        }
+      ],
+      "moves": [
+        {
+          "symbol": "CWST",
+          "name": "CASELLA WASTE SYS INC",
+          "action": "new",
+          "shares": 1812493,
+          "value": 145633813,
+          "change": null
+        },
+        {
+          "symbol": "MOD",
+          "name": "MODINE MFG CO",
+          "action": "new",
+          "shares": 287620,
+          "value": 53842464,
+          "change": null
+        },
+        {
+          "symbol": "MKL",
+          "name": "MARKEL GROUP INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 149879846
+        },
+        {
+          "symbol": "P",
+          "name": "EVERPURE INC",
+          "action": "exit",
+          "shares": 0,
+          "value": 0,
+          "change": -1,
+          "priorValue": 77938753
+        }
+      ],
+      "options": []
+    }
+  ],
+  "consensus": [
+    {
+      "symbol": "GOOG",
+      "name": "ALPHABET INC",
+      "buys": [],
+      "sells": [
+        "Baupost (trim)",
+        "Whale Rock (trim)"
+      ],
+      "netValue": -741351174,
+      "score": -2
+    }
+  ],
+  "overlap": {
+    "holdings": [
+      {
+        "symbol": "GOOG",
+        "sleeve": "core",
+        "buys": [],
+        "sells": [
+          "Baupost (trim)",
+          "Whale Rock (trim)"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sleeve": "core",
+        "buys": [
+          "Whale Rock (new)"
+        ],
+        "sells": []
+      },
+      {
+        "symbol": "META",
+        "sleeve": "core",
+        "buys": [
+          "Whale Rock (add)"
+        ],
+        "sells": []
+      },
+      {
+        "symbol": "NVDA",
+        "sleeve": "core",
+        "buys": [
+          "Whale Rock (add)"
+        ],
+        "sells": []
+      },
+      {
+        "symbol": "LRCX",
+        "sleeve": "core",
+        "buys": [],
+        "sells": [
+          "Whale Rock (trim)"
+        ]
+      }
+    ],
+    "bench": [
+      {
+        "symbol": "SNDK",
+        "buys": [],
+        "sells": [
+          "Whale Rock (trim)"
+        ]
+      }
+    ]
+  },
+  "missing": [
+    "Berkshire Hathaway",
+    "Pershing Square",
+    "Appaloosa",
+    "Third Point",
+    "Tiger Global",
+    "Coatue",
+    "Lone Pine",
+    "Viking Global",
+    "Maverick Capital",
+    "D1 Capital",
+    "Altimeter",
+    "Duquesne Family Office",
+    "Bridgewater",
+    "Greenlight",
+    "Elliott",
+    "Scion",
+    "Starboard Value",
+    "Trian",
+    "TCI",
+    "Light Street",
+    "Durable Capital",
+    "Glenview",
+    "Polen Capital",
+    "Giverny Capital",
+    "Abrams Capital",
+    "AltaRock Partners",
+    "Davis Advisers",
+    "Dodge & Cox",
+    "Egerton Capital",
+    "Lindsell Train",
+    "Markel (Gayner)"
+  ],
+  "heldByFilers": {
+    "AMZN": [
+      {
+        "fund": "Baupost",
+        "value": 932781000,
+        "pct": 0.1849
+      },
+      {
+        "fund": "Whale Rock",
+        "value": 513596813,
+        "pct": 0.0449
+      }
+    ],
+    "GOOG": [
+      {
+        "fund": "Baupost",
+        "value": 323679000,
+        "pct": 0.0641
+      },
+      {
+        "fund": "Whale Rock",
+        "value": 417672174,
+        "pct": 0.0365
+      }
+    ],
+    "V": [
+      {
+        "fund": "Baupost",
+        "value": 252018000,
+        "pct": 0.0499
+      },
+      {
+        "fund": "Akre",
+        "value": 334207084,
+        "pct": 0.0759
+      }
+    ],
+    "MA": [
+      {
+        "fund": "Akre",
+        "value": 970165325,
+        "pct": 0.2204
+      }
+    ],
+    "META": [
+      {
+        "fund": "Whale Rock",
+        "value": 868864990,
+        "pct": 0.0759
+      }
+    ],
+    "MSFT": [
+      {
+        "fund": "Whale Rock",
+        "value": 441937720,
+        "pct": 0.0386
+      }
+    ]
+  },
+  "notes": [
+    "Interim build (Nov 15): five of the six Nov 13 filings reconstructed from their EDGAR information tables; Soros Fund Management also filed Nov 13 but its ~180-row table was only partly read by hand (META, INTC and MU adds; MSFT and BRK-B trims), so it is left out of the structured data until the full re-run. 22 funds wait for the Mon Nov 16 deadline; re-run after Nov 17."
+  ]
+}

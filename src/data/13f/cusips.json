@@ -1,1 +1,758 @@
-{}
+{
+ "02079K107": {
+  "symbol": "GOOG",
+  "name": "Alphabet Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "02079K305": {
+  "symbol": "GOOG",
+  "name": "Alphabet Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "02079K602": {
+  "symbol": "GOOG",
+  "name": "Alphabet Inc (dep shs)",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "023135106": {
+  "symbol": "AMZN",
+  "name": "Amazon.com",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "03064D108": {
+  "symbol": "COLD",
+  "name": "Americold Realty",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G0403H108": {
+  "symbol": "AON",
+  "name": "Aon plc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G0750C108": {
+  "symbol": "AXTA",
+  "name": "Axalta Coating",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "12572Q105": {
+  "symbol": "CME",
+  "name": "CME Group",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "26969P108": {
+  "symbol": "EXP",
+  "name": "Eagle Materials",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "036752103": {
+  "symbol": "ELV",
+  "name": "Elevance Health",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "31488V107": {
+  "symbol": "FERG",
+  "name": "Ferguson Enterprises",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "36165L108": {
+  "symbol": "GDS",
+  "name": "GDS Holdings",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "372460105": {
+  "symbol": "GPC",
+  "name": "Genuine Parts",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "40054J109": {
+  "symbol": "AERO",
+  "name": "Grupo Aeromexico",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G4412G101": {
+  "symbol": "HLF",
+  "name": "Herbalife",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "43849R105": {
+  "symbol": "HONA",
+  "name": "Honeywell Aerospace",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "60855R100": {
+  "symbol": "MOH",
+  "name": "Molina Healthcare",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "71531U102": {
+  "symbol": "PS",
+  "name": "Pershing Square Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "76131D103": {
+  "symbol": "QSR",
+  "name": "Restaurant Brands Intl",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "82982L103": {
+  "symbol": "SITE",
+  "name": "SiteOne Landscape",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "907818108": {
+  "symbol": "UNP",
+  "name": "Union Pacific",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "92826C839": {
+  "symbol": "V",
+  "name": "Visa Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "95082P105": {
+  "symbol": "WCC",
+  "name": "Wesco International",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "67011P100": {
+  "symbol": "DNOW",
+  "name": "DNOW Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G61188127": {
+  "symbol": "LBTYK",
+  "name": "Liberty Global C",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G66721104": {
+  "symbol": "NCLH",
+  "name": "Norwegian Cruise Line",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "879369106": {
+  "symbol": "TFX",
+  "name": "Teleflex",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "03027X100": {
+  "symbol": "AMT",
+  "name": "American Tower",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "084670702": {
+  "symbol": "BRK-B",
+  "name": "Berkshire Hathaway B",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "11271J107": {
+  "symbol": "BN",
+  "name": "Brookfield Corp",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "12510Q100": {
+  "symbol": "CCCS",
+  "name": "CCC Intelligent Solutions",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "217204106": {
+  "symbol": "CPRT",
+  "name": "Copart",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "22160N109": {
+  "symbol": "CSGP",
+  "name": "CoStar Group",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "303250104": {
+  "symbol": "FICO",
+  "name": "Fair Isaac",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "38267D109": {
+  "symbol": "GSHD",
+  "name": "Goosehead Insurance",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "48251W104": {
+  "symbol": "KKR",
+  "name": "KKR & Co",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "57636Q104": {
+  "symbol": "MA",
+  "name": "Mastercard",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "615369105": {
+  "symbol": "MCO",
+  "name": "Moody's",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "67103H107": {
+  "symbol": "ORLY",
+  "name": "O'Reilly Automotive",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "71385M107": {
+  "symbol": "PRM",
+  "name": "Perimeter Solutions",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "775711104": {
+  "symbol": "ROL",
+  "name": "Rollins",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "776696106": {
+  "symbol": "ROP",
+  "name": "Roper Technologies",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "79466L302": {
+  "symbol": "CRM",
+  "name": "Salesforce",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "81762P102": {
+  "symbol": "NOW",
+  "name": "ServiceNow",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "H82027105": {
+  "symbol": "SOPH",
+  "name": "Sophia Genetics",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "893641100": {
+  "symbol": "TDG",
+  "name": "TransDigm",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "009066101": {
+  "symbol": "ABNB",
+  "name": "Airbnb",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "01644J108": {
+  "symbol": "ALKT",
+  "name": "Alkami Technology",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "147448104": {
+  "symbol": "CWST",
+  "name": "Casella Waste",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "216648501": {
+  "symbol": "COO",
+  "name": "Cooper Cos",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "337738108": {
+  "symbol": "FI",
+  "name": "Fiserv",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "513272104": {
+  "symbol": "LW",
+  "name": "Lamb Weston",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "589378108": {
+  "symbol": "MRCY",
+  "name": "Mercury Systems",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "607828100": {
+  "symbol": "MOD",
+  "name": "Modine",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "753422104": {
+  "symbol": "RPD",
+  "name": "Rapid7",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "83001C108": {
+  "symbol": "FUN",
+  "name": "Six Flags Entertainment",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "78462F103": {
+  "symbol": "SPY",
+  "name": "SPDR S&P 500 ETF",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "74624M102": {
+  "symbol": "P",
+  "name": "Everpure (ex-Pure Storage)",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "570535104": {
+  "symbol": "MKL",
+  "name": "Markel Group",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "071705107": {
+  "symbol": "BLCO",
+  "name": "Bausch + Lomb",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "12769G100": {
+  "symbol": "CZR",
+  "name": "Caesars Entertainment",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "155923105": {
+  "symbol": "CTRI",
+  "name": "Centuri Holdings",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "12662P108": {
+  "symbol": "CVI",
+  "name": "CVR Energy",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "126633205": {
+  "symbol": "UAN",
+  "name": "CVR Partners",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "278768106": {
+  "symbol": "SATS",
+  "name": "EchoStar",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "451100101": {
+  "symbol": "IEP",
+  "name": "Icahn Enterprises",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "459506101": {
+  "symbol": "IFF",
+  "name": "Intl Flavors & Fragrances",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "610236101": {
+  "symbol": "MNRO",
+  "name": "Monro",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "80007P869": {
+  "symbol": "SD",
+  "name": "SandRidge Energy",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "025537101": {
+  "symbol": "AEP",
+  "name": "American Electric Power",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "477143101": {
+  "symbol": "JBLU",
+  "name": "JetBlue",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "007903107": {
+  "symbol": "AMD",
+  "name": "Advanced Micro Devices",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "03831W108": {
+  "symbol": "APP",
+  "name": "AppLovin",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "T19377109": {
+  "symbol": "BSP",
+  "name": "Bending Spoons",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "093712107": {
+  "symbol": "BE",
+  "name": "Bloom Energy",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "11135F101": {
+  "symbol": "AVGO",
+  "name": "Broadcom",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "15101Q207": {
+  "symbol": "CLS",
+  "name": "Celestica",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "15675D103": {
+  "symbol": "CBRS",
+  "name": "Cerebras Systems",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "19247G107": {
+  "symbol": "COHR",
+  "name": "Coherent",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "219350105": {
+  "symbol": "GLW",
+  "name": "Corning",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "26603R106": {
+  "symbol": "DUOL",
+  "name": "Duolingo",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G3323L100": {
+  "symbol": "FN",
+  "name": "Fabrinet",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "42824C109": {
+  "symbol": "HPE",
+  "name": "Hewlett Packard Enterprise",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "453204109": {
+  "symbol": "PI",
+  "name": "Impinj",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "458140100": {
+  "symbol": "INTC",
+  "name": "Intel",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "M6191J100": {
+  "symbol": "FROG",
+  "name": "JFrog",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "49845K101": {
+  "symbol": "KVYO",
+  "name": "Klaviyo",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "512807306": {
+  "symbol": "LRCX",
+  "name": "Lam Research",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "55405Y100": {
+  "symbol": "MTSI",
+  "name": "MACOM Technology",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "30303M102": {
+  "symbol": "META",
+  "name": "Meta Platforms",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "594918104": {
+  "symbol": "MSFT",
+  "name": "Microsoft",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "55306N104": {
+  "symbol": "MKSI",
+  "name": "MKS Inc",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "60937P106": {
+  "symbol": "MDB",
+  "name": "MongoDB",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "609839105": {
+  "symbol": "MPWR",
+  "name": "Monolithic Power",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "67066G104": {
+  "symbol": "NVDA",
+  "name": "NVIDIA",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "679295105": {
+  "symbol": "OKTA",
+  "name": "Okta",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "80004C200": {
+  "symbol": "SNDK",
+  "name": "Sandisk",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G7997R103": {
+  "symbol": "STX",
+  "name": "Seagate Technology",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "816850101": {
+  "symbol": "SMTC",
+  "name": "Semtech",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "82982T106": {
+  "symbol": "SITM",
+  "name": "SiTime",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "833445109": {
+  "symbol": "SNOW",
+  "name": "Snowflake",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "84615Q103": {
+  "symbol": "SPCX",
+  "name": "Space Exploration Technologies",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "874039100": {
+  "symbol": "TSM",
+  "name": "Taiwan Semiconductor ADR",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "87305R109": {
+  "symbol": "TTMI",
+  "name": "TTM Technologies",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "90138F102": {
+  "symbol": "TWLO",
+  "name": "Twilio",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "925550105": {
+  "symbol": "VIAV",
+  "name": "Viavi Solutions",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "925815102": {
+  "symbol": "VICR",
+  "name": "Vicor",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "93403J106": {
+  "symbol": "WRBY",
+  "name": "Warby Parker",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "037833100": {
+  "symbol": "AAPL",
+  "name": "Apple",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "04626A103": {
+  "symbol": "ALAB",
+  "name": "Astera Labs",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "146869102": {
+  "symbol": "CVNA",
+  "name": "Carvana",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "958102105": {
+  "symbol": "WDC",
+  "name": "Western Digital",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "00724F101": {
+  "symbol": "ADBE",
+  "name": "Adobe",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "532457108": {
+  "symbol": "LLY",
+  "name": "Eli Lilly",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "45841N107": {
+  "symbol": "IBKR",
+  "name": "Interactive Brokers",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "64110L106": {
+  "symbol": "NFLX",
+  "name": "Netflix",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "595112103": {
+  "symbol": "MU",
+  "name": "Micron Technology",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "35671D857": {
+  "symbol": "FCX",
+  "name": "Freeport-McMoRan",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "09260D107": {
+  "symbol": "BX",
+  "name": "Blackstone",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "75734B100": {
+  "symbol": "RDDT",
+  "name": "Reddit",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "87256C101": {
+  "symbol": "TKO",
+  "name": "TKO Group",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "57060D108": {
+  "symbol": "MKTX",
+  "name": "MarketAxess",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "63001N106": {
+  "symbol": "NATL",
+  "name": "NCR Atleos",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "866966104": {
+  "symbol": "SUNB",
+  "name": "Sunbelt Rentals Holdings",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "G54950103": {
+  "symbol": "LIN",
+  "name": "Linde",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ },
+ "29364G103": {
+  "symbol": "ETR",
+  "name": "Entergy",
+  "type": "verified-2026-11-15",
+  "sector": ""
+ }
+}
