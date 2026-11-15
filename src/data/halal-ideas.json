@@ -44,7 +44,10 @@
       "score": 82.8,
       "tag": "Hold",
       "reason": "+72% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-01-26"
+      "nextEarnings": "2027-01-26",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 307
     },
     {
       "ticker": "OKTA",
@@ -72,7 +75,10 @@
       "score": 80.1,
       "tag": "Hold",
       "reason": "+96% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-12-01"
+      "nextEarnings": "2026-12-01",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 309
     },
     {
       "ticker": "AMD",
@@ -100,7 +106,10 @@
       "score": 73.5,
       "tag": "Hold",
       "reason": "+89% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-02"
+      "nextEarnings": "2027-02-02",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 40
     },
     {
       "ticker": "TWLO",
@@ -128,7 +137,10 @@
       "score": 71.4,
       "tag": "Watch",
       "reason": "down 19% over 12 weeks; still above 200-day",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 139
     },
     {
       "ticker": "ROP",
@@ -156,7 +168,10 @@
       "score": 70.8,
       "tag": "Hold",
       "reason": "+7% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-01-26"
+      "nextEarnings": "2027-01-26",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 0
     },
     {
       "ticker": "NTAP",
@@ -184,7 +199,10 @@
       "score": 68.8,
       "tag": "Watch",
       "reason": "down 17% over 12 weeks; still above 200-day",
-      "nextEarnings": "2026-12-01"
+      "nextEarnings": "2026-12-01",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 181
     },
     {
       "ticker": "VEEV",
@@ -210,9 +228,12 @@
       "pe": 48.9,
       "ps": 14.2,
       "score": 67.3,
-      "tag": "Hold",
-      "reason": "+4% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-11-25"
+      "tag": "Watch",
+      "reason": "Halal Terminal flags it not compliant under AAOIFI; confirm in Zoya. +4% 52-week; 0 up / 0 down grades",
+      "nextEarnings": "2026-11-25",
+      "htStatus": "NON_COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 601
     },
     {
       "ticker": "RBRK",
@@ -240,7 +261,10 @@
       "score": 66.3,
       "tag": "Hold",
       "reason": "+48% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-12-03"
+      "nextEarnings": "2026-12-03",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 396
     },
     {
       "ticker": "ANET",
@@ -268,7 +292,10 @@
       "score": 64.5,
       "tag": "Watch",
       "reason": "near a Shariah ratio limit (debt 0%, cash 7%); confirm in Zoya. down 16% over 12 weeks; still above 200-day",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 426
     },
     {
       "ticker": "AAPL",
@@ -296,7 +323,10 @@
       "score": 62.8,
       "tag": "Hold",
       "reason": "+27% 52-week; 0 up / 1 down grades",
-      "nextEarnings": "2027-02-04"
+      "nextEarnings": "2027-02-04",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 78
     },
     {
       "ticker": "ADI",
@@ -324,7 +354,10 @@
       "score": 59.7,
       "tag": "Watch",
       "reason": "-2.9% below 200-day; remove if >5% below or below two weeks",
-      "nextEarnings": "2026-11-24"
+      "nextEarnings": "2026-11-24",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 96
     },
     {
       "ticker": "PANW",
@@ -352,7 +385,10 @@
       "score": 62.1,
       "tag": "New",
       "reason": "added by screen. reports 2026-11-18. down 21% over 12 weeks; still above 200-day",
-      "nextEarnings": "2026-11-18"
+      "nextEarnings": "2026-11-18",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 326
     },
     {
       "ticker": "MSI",
@@ -380,7 +416,10 @@
       "score": 74.4,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-10"
+      "nextEarnings": "2027-02-10",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 50
     },
     {
       "ticker": "FTV",
@@ -408,7 +447,10 @@
       "score": 69.3,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-03"
+      "nextEarnings": "2027-02-03",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 0
     },
     {
       "ticker": "ADP",
@@ -436,7 +478,10 @@
       "score": 68.4,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-01-27"
+      "nextEarnings": "2027-01-27",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 169
     },
     {
       "ticker": "SNPS",
@@ -464,7 +509,10 @@
       "score": 65.5,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2026-12-08"
+      "nextEarnings": "2026-12-08",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 394
     },
     {
       "ticker": "MSFT",
@@ -492,7 +540,10 @@
       "score": 63.9,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-01-27"
+      "nextEarnings": "2027-01-27",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 99
     },
     {
       "ticker": "VRSK",
@@ -520,7 +571,10 @@
       "score": 62.1,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-17"
+      "nextEarnings": "2027-02-17",
+      "htStatus": "COMPLIANT",
+      "htChecked": "2026-11-15",
+      "htPurification": 0
     },
     {
       "ticker": "ROKU",
@@ -548,7 +602,10 @@
       "score": 61.8,
       "tag": "Hold",
       "reason": "+53% 52-week; 0 up / 1 down grades",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "DIS",
@@ -576,7 +633,10 @@
       "score": 59,
       "tag": "Hold",
       "reason": "reports 2026-11-17",
-      "nextEarnings": "2026-11-17"
+      "nextEarnings": "2026-11-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "LYV",
@@ -604,7 +664,10 @@
       "score": 56.6,
       "tag": "Watch",
       "reason": "near a Shariah ratio limit (debt 29%, cash 20%); confirm in Zoya",
-      "nextEarnings": "2027-02-18"
+      "nextEarnings": "2027-02-18",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "FOXA",
@@ -632,7 +695,10 @@
       "score": 56.2,
       "tag": "Hold",
       "reason": "+1% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-02-03"
+      "nextEarnings": "2027-02-03",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "FWONA",
@@ -660,7 +726,10 @@
       "score": 59.5,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-25"
+      "nextEarnings": "2027-02-25",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "RPRX",
@@ -688,7 +757,10 @@
       "score": 85.5,
       "tag": "Watch",
       "reason": "near a Shariah ratio limit (debt 29%, cash 2%); confirm in Zoya",
-      "nextEarnings": "2027-02-10"
+      "nextEarnings": "2027-02-10",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "ILMN",
@@ -716,7 +788,10 @@
       "score": 83.9,
       "tag": "Hold",
       "reason": "+76% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-04"
+      "nextEarnings": "2027-02-04",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "REGN",
@@ -744,7 +819,10 @@
       "score": 83.1,
       "tag": "Watch",
       "reason": "near a Shariah ratio limit (debt 3%, cash 10%); confirm in Zoya",
-      "nextEarnings": "2027-01-28"
+      "nextEarnings": "2027-01-28",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "BIIB",
@@ -772,7 +850,10 @@
       "score": 82,
       "tag": "Hold",
       "reason": "+58% 52-week; 2 up / 0 down grades",
-      "nextEarnings": "2027-02-05"
+      "nextEarnings": "2027-02-05",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "LLY",
@@ -800,7 +881,10 @@
       "score": 81.1,
       "tag": "Hold",
       "reason": "+44% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-03"
+      "nextEarnings": "2027-02-03",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "WST",
@@ -828,7 +912,10 @@
       "score": 80,
       "tag": "Hold",
       "reason": "+45% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "MRK",
@@ -856,7 +943,10 @@
       "score": 76.5,
       "tag": "Hold",
       "reason": "+71% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-02"
+      "nextEarnings": "2027-02-02",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "MTD",
@@ -884,7 +974,10 @@
       "score": 72.2,
       "tag": "Hold",
       "reason": "+20% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-04"
+      "nextEarnings": "2027-02-04",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "A",
@@ -912,7 +1005,10 @@
       "score": 70,
       "tag": "Hold",
       "reason": "+18% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-11-23"
+      "nextEarnings": "2026-11-23",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "BDX",
@@ -940,7 +1036,10 @@
       "score": 80.6,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-08"
+      "nextEarnings": "2027-02-08",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "GWW",
@@ -968,7 +1067,10 @@
       "score": 77.1,
       "tag": "Hold",
       "reason": "+51% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-02"
+      "nextEarnings": "2027-02-02",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "CSX",
@@ -996,7 +1098,10 @@
       "score": 70.8,
       "tag": "Hold",
       "reason": "+40% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-01-28"
+      "nextEarnings": "2027-01-28",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "FAST",
@@ -1024,7 +1129,10 @@
       "score": 68.8,
       "tag": "Hold",
       "reason": "+30% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-01-19"
+      "nextEarnings": "2027-01-19",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "CTAS",
@@ -1052,7 +1160,10 @@
       "score": 68.7,
       "tag": "Hold",
       "reason": "+20% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-12-17"
+      "nextEarnings": "2026-12-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "WAB",
@@ -1080,7 +1191,10 @@
       "score": 64.8,
       "tag": "Hold",
       "reason": "+39% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-10"
+      "nextEarnings": "2027-02-10",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "EMR",
@@ -1108,7 +1222,10 @@
       "score": 61.7,
       "tag": "Hold",
       "reason": "+23% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-02"
+      "nextEarnings": "2027-02-02",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "URI",
@@ -1136,7 +1253,10 @@
       "score": 60.6,
       "tag": "Hold",
       "reason": "+25% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-01-27"
+      "nextEarnings": "2027-01-27",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "UNP",
@@ -1164,7 +1284,10 @@
       "score": 57.3,
       "tag": "Hold",
       "reason": "+33% 52-week; 0 up / 1 down grades",
-      "nextEarnings": "2027-01-26"
+      "nextEarnings": "2027-01-26",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "RSG",
@@ -1192,7 +1315,10 @@
       "score": 68.3,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-16"
+      "nextEarnings": "2027-02-16",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "COP",
@@ -1220,7 +1346,10 @@
       "score": 81.5,
       "tag": "Hold",
       "reason": "+59% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-04"
+      "nextEarnings": "2027-02-04",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "PR",
@@ -1248,7 +1377,10 @@
       "score": 79.7,
       "tag": "Hold",
       "reason": "+70% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-24"
+      "nextEarnings": "2027-02-24",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "DINO",
@@ -1276,7 +1408,10 @@
       "score": 78.3,
       "tag": "Hold",
       "reason": "+81% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-17"
+      "nextEarnings": "2027-02-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "OXY",
@@ -1304,7 +1439,10 @@
       "score": 59.2,
       "tag": "Watch",
       "reason": "-0.1% below 200-day; remove if >5% below or below two weeks",
-      "nextEarnings": "2026-11-09"
+      "nextEarnings": "2026-11-09",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "MPC",
@@ -1332,7 +1470,10 @@
       "score": 76.8,
       "tag": "New",
       "reason": "added by screen. near a Shariah ratio limit (debt 33%, cash 13%); confirm in Zoya",
-      "nextEarnings": "2027-02-02"
+      "nextEarnings": "2027-02-02",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "SN",
@@ -1360,7 +1501,10 @@
       "score": 85.3,
       "tag": "Hold",
       "reason": "+143% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-10"
+      "nextEarnings": "2027-02-10",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "EBAY",
@@ -1388,7 +1532,10 @@
       "score": 84.8,
       "tag": "Hold",
       "reason": "+51% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-02-17"
+      "nextEarnings": "2027-02-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "HLT",
@@ -1416,7 +1563,10 @@
       "score": 79.4,
       "tag": "Hold",
       "reason": "+40% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-02-10"
+      "nextEarnings": "2027-02-10",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "MAR",
@@ -1444,7 +1594,10 @@
       "score": 78.8,
       "tag": "Hold",
       "reason": "+48% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-09"
+      "nextEarnings": "2027-02-09",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "ULTA",
@@ -1472,7 +1625,10 @@
       "score": 71.5,
       "tag": "Hold",
       "reason": "+26% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2026-12-03"
+      "nextEarnings": "2026-12-03",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "WSM",
@@ -1500,7 +1656,10 @@
       "score": 70.4,
       "tag": "Hold",
       "reason": "reports 2026-11-18",
-      "nextEarnings": "2026-11-18"
+      "nextEarnings": "2026-11-18",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "ROST",
@@ -1528,7 +1687,10 @@
       "score": 68.2,
       "tag": "Hold",
       "reason": "reports 2026-11-19",
-      "nextEarnings": "2026-11-19"
+      "nextEarnings": "2026-11-19",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "EXPE",
@@ -1556,7 +1718,10 @@
       "score": 53.5,
       "tag": "Watch",
       "reason": "down 21% over 12 weeks; still above 200-day",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "TGT",
@@ -1584,7 +1749,10 @@
       "score": 76,
       "tag": "Hold",
       "reason": "reports 2026-11-18",
-      "nextEarnings": "2026-11-18"
+      "nextEarnings": "2026-11-18",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "EL",
@@ -1612,7 +1780,10 @@
       "score": 71.7,
       "tag": "Hold",
       "reason": "+25% 52-week; 1 up / 0 down grades",
-      "nextEarnings": "2027-02-03"
+      "nextEarnings": "2027-02-03",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "PG",
@@ -1640,7 +1811,10 @@
       "score": 69.9,
       "tag": "Hold",
       "reason": "+13% 52-week; 2 up / 0 down grades",
-      "nextEarnings": "2027-01-21"
+      "nextEarnings": "2027-01-21",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "USFD",
@@ -1668,7 +1842,10 @@
       "score": 65.8,
       "tag": "Hold",
       "reason": "+49% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "RS",
@@ -1696,7 +1873,10 @@
       "score": 68.8,
       "tag": "Hold",
       "reason": "+52% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-02-17"
+      "nextEarnings": "2027-02-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "PPG",
@@ -1724,7 +1904,10 @@
       "score": 68.1,
       "tag": "Hold",
       "reason": "+29% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-01-26"
+      "nextEarnings": "2027-01-26",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "APD",
@@ -1752,7 +1935,10 @@
       "score": 43,
       "tag": "Hold",
       "reason": "+18% 52-week; 0 up / 0 down grades",
-      "nextEarnings": "2027-01-29"
+      "nextEarnings": "2027-01-29",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "RGLD",
@@ -1780,7 +1966,10 @@
       "score": 87.2,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-17"
+      "nextEarnings": "2027-02-17",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "NEM",
@@ -1808,7 +1997,10 @@
       "score": 67,
       "tag": "New",
       "reason": "added by screen",
-      "nextEarnings": "2027-02-18"
+      "nextEarnings": "2027-02-18",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "WELL",
@@ -1836,7 +2028,10 @@
       "score": 55.7,
       "tag": "Watch",
       "reason": "missed last earnings by 16%",
-      "nextEarnings": "2027-02-09"
+      "nextEarnings": "2027-02-09",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     },
     {
       "ticker": "PSA",
@@ -1864,7 +2059,10 @@
       "score": 52.8,
       "tag": "Watch",
       "reason": "missed last earnings by 32%",
-      "nextEarnings": "2027-02-11"
+      "nextEarnings": "2027-02-11",
+      "htStatus": null,
+      "htChecked": null,
+      "htPurification": null
     }
   ],
   "removed": [
@@ -2232,5 +2430,14 @@
       "reason": "-8.9% below 200-day",
       "nextEarnings": "2027-01-28"
     }
-  ]
+  ],
+  "halalTerminal": {
+    "mode": "on",
+    "checkedThisRun": 18,
+    "covered": 18,
+    "total": 66,
+    "perRun": 18,
+    "stoppedEarly": false,
+    "lastRun": "2026-11-15"
+  }
 }
