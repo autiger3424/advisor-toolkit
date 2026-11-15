@@ -47,7 +47,7 @@
       "nextEarnings": "2027-01-26",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 307
+      "htPurification": 3.07
     },
     {
       "ticker": "OKTA",
@@ -78,7 +78,7 @@
       "nextEarnings": "2026-12-01",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 309
+      "htPurification": 3.09
     },
     {
       "ticker": "AMD",
@@ -109,7 +109,7 @@
       "nextEarnings": "2027-02-02",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 40
+      "htPurification": 0.4
     },
     {
       "ticker": "TWLO",
@@ -140,7 +140,7 @@
       "nextEarnings": "2027-02-11",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 139
+      "htPurification": 1.39
     },
     {
       "ticker": "ROP",
@@ -171,7 +171,7 @@
       "nextEarnings": "2027-01-26",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 0
+      "htPurification": 0.0
     },
     {
       "ticker": "NTAP",
@@ -202,7 +202,7 @@
       "nextEarnings": "2026-12-01",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 181
+      "htPurification": 1.81
     },
     {
       "ticker": "VEEV",
@@ -233,7 +233,7 @@
       "nextEarnings": "2026-11-25",
       "htStatus": "NON_COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 601
+      "htPurification": 6.01
     },
     {
       "ticker": "RBRK",
@@ -264,7 +264,7 @@
       "nextEarnings": "2026-12-03",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 396
+      "htPurification": 3.96
     },
     {
       "ticker": "ANET",
@@ -295,7 +295,7 @@
       "nextEarnings": "2027-02-11",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 426
+      "htPurification": 4.26
     },
     {
       "ticker": "AAPL",
@@ -326,7 +326,7 @@
       "nextEarnings": "2027-02-04",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 78
+      "htPurification": 0.78
     },
     {
       "ticker": "ADI",
@@ -357,7 +357,7 @@
       "nextEarnings": "2026-11-24",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 96
+      "htPurification": 0.96
     },
     {
       "ticker": "PANW",
@@ -388,7 +388,7 @@
       "nextEarnings": "2026-11-18",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 326
+      "htPurification": 3.26
     },
     {
       "ticker": "MSI",
@@ -419,7 +419,7 @@
       "nextEarnings": "2027-02-10",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 50
+      "htPurification": 0.5
     },
     {
       "ticker": "FTV",
@@ -450,7 +450,7 @@
       "nextEarnings": "2027-02-03",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 0
+      "htPurification": 0.0
     },
     {
       "ticker": "ADP",
@@ -481,7 +481,7 @@
       "nextEarnings": "2027-01-27",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 169
+      "htPurification": 1.69
     },
     {
       "ticker": "SNPS",
@@ -512,7 +512,7 @@
       "nextEarnings": "2026-12-08",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 394
+      "htPurification": 3.94
     },
     {
       "ticker": "MSFT",
@@ -543,7 +543,7 @@
       "nextEarnings": "2027-01-27",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 99
+      "htPurification": 0.99
     },
     {
       "ticker": "VRSK",
@@ -574,7 +574,7 @@
       "nextEarnings": "2027-02-17",
       "htStatus": "COMPLIANT",
       "htChecked": "2026-11-15",
-      "htPurification": 0
+      "htPurification": 0.0
     },
     {
       "ticker": "ROKU",

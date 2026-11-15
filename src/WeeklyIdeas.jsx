@@ -272,7 +272,7 @@ export default function WeeklyIdeas() {
         <div style={s.note}>Shariah idea list, all equity, higher risk. Business screen by industry plus AAOIFI ratios (debt, cash, interest income vs market cap and revenue) on the latest filing. {ideas.zoya?.mode === "live"
           ? " Each name's Zoya status is checked weekly and shown on its card; anything marked unverified still needs a manual check, and purification comes from Zoya's per-holding figure."
           : " Confirm every name in Zoya before use: Zoya's status governs, and purification comes from its per-holding figure."}
-        {ideas.halalTerminal?.mode === "on" && ` Halal Terminal second opinion on ${ideas.halalTerminal.covered} of ${ideas.halalTerminal.total} names so far; a batch is rechecked each week.`}</div>
+        {ideas.halalTerminal?.mode === "on" && ` Halal Terminal second opinion on ${ideas.halalTerminal.covered} of ${ideas.halalTerminal.total} names so far; a batch is rechecked each run.`}</div>
       ) : (
         <div style={s.note}>Idea list only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account.</div>
       )}

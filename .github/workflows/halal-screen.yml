@@ -2,7 +2,9 @@ name: Halal ideas screen
 
 on:
   schedule:
-    # Sundays at 20:30 UTC (3:30 pm Central), ahead of the core screen. Markets are closed, Friday data is final.
+    # Every other Sunday at 20:30 UTC. Cron can't say "every two weeks", so this fires weekly and the
+    # "Every other week" step below skips the off weeks (runs Nov 22, Dec 6, Dec 20, 2026 and so on).
+    # The Run workflow button always runs, whatever the week.
     - cron: "30 20 * * 0"
   workflow_dispatch:
     inputs:
@@ -24,13 +26,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
+      - name: Every other week
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ $(( $(date -u +%s) / 604800 % 2 )) -ne 0 ]; then
+            echo "Off week for the bi-weekly schedule; skipping. Use Run workflow to run it anyway."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
 
       - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: 20
 
       - name: Check secrets
+        if: steps.gate.outputs.run == 'true'
         run: |
           if [ -z "${{ secrets.FMP_API_KEY }}" ] || [ -z "${{ secrets.TWELVE_DATA_API_KEY }}" ]; then
             echo "Add FMP_API_KEY and TWELVE_DATA_API_KEY under Settings → Secrets and variables → Actions."
@@ -38,20 +53,22 @@ jobs:
           fi
 
       - name: Run screen
+        if: steps.gate.outputs.run == 'true'
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
           # Optional. Sandbox key = connection test only; live key = real compliance gate.
           ZOYA_API_KEY: ${{ secrets.ZOYA_API_KEY }}
-          # Optional second opinion. Free plan is about 100 lookups a month, so each run checks a rotating batch.
+          # Optional second opinion. Free plan is about 100 lookups a month, so each run checks a rotating batch of 30.
           HALAL_TERMINAL_API_KEY: ${{ secrets.HALAL_TERMINAL_API_KEY }}
-          HT_MAX_CHECKS: ${{ vars.HT_MAX_CHECKS || '18' }}
+          HT_MAX_CHECKS: ${{ vars.HT_MAX_CHECKS || '30' }}
           COMPLIANCE_ONLY: ${{ github.event.inputs.compliance_only || 'false' }}
           TD_CALLS_PER_MIN: ${{ vars.TD_CALLS_PER_MIN || '8' }}
           SCREEN_LIMIT: ${{ github.event.inputs.screen_limit || '45' }}
         run: node scripts/halal-screen.mjs
 
       - name: Commit updated list
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "halal-screen[bot]"
           git config user.email "halal-screen@users.noreply.github.com"

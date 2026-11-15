@@ -35,8 +35,8 @@
                      the final list get a second-opinion AAOIFI status
                      from Halal Terminal. The free plan covers about 100
                      lookups a month, so each run checks HT_MAX_CHECKS
-                     names (default 18): unchecked names first, then the
-                     oldest checks. Statuses carry forward week to week.
+                     names (default 30): unchecked names first, then the
+                     oldest checks. Statuses carry forward run to run. The workflow runs every other Sunday.
                      A not-compliant flag tags the name Watch; it does
                      not remove it, because Zoya governs.
                      COMPLIANCE_ONLY=1 skips the screen and only
@@ -76,7 +76,7 @@ const ZOYA_STATUSES = new Set(["COMPLIANT", "NON_COMPLIANT", "QUESTIONABLE", "UN
 
 // Halal Terminal: optional second opinion. Free plan = 500 tokens/month at ~5 per lookup.
 const HT_KEY = (process.env.HALAL_TERMINAL_API_KEY || "").trim();
-const HT_MAX_CHECKS = Number(process.env.HT_MAX_CHECKS) || 18;
+const HT_MAX_CHECKS = Number(process.env.HT_MAX_CHECKS) || 30;
 const HT_BASE = process.env.HT_BASE_URL || "https://api.halalterminal.com/api";
 const HT_FLAG = "Halal Terminal flags it not compliant under AAOIFI; confirm in Zoya";
 
@@ -230,8 +230,8 @@ async function htScreen(symbol) {
       if (!htLoggedShape) { console.log(`  halal terminal response fields: ${Object.keys(d || {}).join(", ")}`); htLoggedShape = true; }
       const flag = typeof d?.aaoifi_compliant === "boolean" ? d.aaoifi_compliant : typeof d?.is_compliant === "boolean" ? d.is_compliant : null;
       if (flag == null) throw new Error("no aaoifi_compliant or is_compliant field in the response");
-      const pur = Number(d.purification_rate);
-      return { status: flag ? "COMPLIANT" : "NON_COMPLIANT", purification: Number.isFinite(pur) ? Number((pur * 100).toFixed(2)) : null };
+      const pur = Number(d.purification_rate); // already a percent in their response
+      return { status: flag ? "COMPLIANT" : "NON_COMPLIANT", purification: Number.isFinite(pur) ? Number(pur.toFixed(2)) : null };
     } catch (err) {
       if (attempt === 3) { console.warn(`  halal terminal failed ${symbol}: ${err.message}`); return null; }
       await sleep(1500 * attempt);
@@ -560,7 +560,7 @@ async function main() {
     if (!prevTag.has(c.ticker)) reasons.push(c.backfilled ? `added to keep the list at ${CFG.minTotal}+ names` : "added by screen");
     if (c.zoyaStatus === "QUESTIONABLE") reasons.push("Zoya rates it questionable; review before use");
     if (nearLimit(c)) reasons.push(`near a Shariah ratio limit (debt ${(c.debtToCap * 100).toFixed(0)}%, cash ${(c.cashToCap * 100).toFixed(0)}%); confirm in Zoya`);
-    if (c.vs200 < 0) reasons.push(`${(c.vs200 * 100).toFixed(1)}% below 200-day; remove if >5% below or below two weeks`);
+    if (c.vs200 < 0) reasons.push(`${(c.vs200 * 100).toFixed(1)}% below 200-day; remove if >5% below or below on two straight runs`);
     if (c.lastSurprise != null && c.lastSurprise < 0) reasons.push(`missed last earnings by ${(Math.abs(c.lastSurprise) * 100).toFixed(0)}%`);
     if (c.nextEarnings) { const d = (new Date(c.nextEarnings) - Date.now()) / 86_400_000; if (d >= 0 && d <= 10) reasons.push(`reports ${c.nextEarnings}`); }
     if (c.ret12w != null && c.ret12w <= -0.15 && c.vs200 >= 0) reasons.push(`down ${(Math.abs(c.ret12w) * 100).toFixed(0)}% over 12 weeks; still above 200-day`);
@@ -635,10 +635,10 @@ async function main() {
       ratios: `total debt under ${s.maxDebtToCap * 100}% of market cap, cash and short-term investments under ${s.maxCashToCap * 100}% of market cap, interest income under ${s.maxInterestToRev * 100}% of revenue`,
       quality: `positive gross margin, trailing price/sales at or below ${CFG.maxPS}, no P/E cap; net analyst downgrades of 2 or more in ${CFG.gradeWindowDays} days removes a name`,
       ...(ZOYA_MODE === "live" ? { zoya: "Zoya compliance report checked for every name each week; non-compliant is removed, questionable is tagged Watch, unrated or failed lookups are shown as unverified" } : {}),
-      momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below two straight weeks",
+      momentum: "price vs 200-day SMA; Watch if within 5% below, Removed if more than 5% below or below on two straight runs",
       scoring: "percentile ranks: 45% trend (12-month and 12-week), 20% revisions and last surprise, 20% quality (margin, ROE), 15% above 200-day",
       sizing: `sector slots: tech ${CFG.slots.Technology}, healthcare ${CFG.slots.Healthcare}, industrials ${CFG.slots.Industrials}, consumer cyclical ${CFG.slots["Consumer Cyclical"]}, others 2–5; sectors are left empty if nothing passes`,
-      stability: `${CFG.minTotal}–${CFG.maxTotal} names at all times; a holding leaves only when it fails a hard rule (ratio, business, momentum, revisions) or, at most ${CFG.maxSwapsPerWeek} times a week, when a challenger outscores it by ${CFG.incumbentBonus}+ points`,
+      stability: `${CFG.minTotal}–${CFG.maxTotal} names at all times; a holding leaves only when it fails a hard rule (ratio, business, momentum, revisions) or, at most ${CFG.maxSwapsPerWeek} times a run, when a challenger outscores it by ${CFG.incumbentBonus}+ points`,
       purification: "non-compliant income share is not computed here; use Zoya's per-holding purification figure annually",
     },
     sectorsEmpty,
