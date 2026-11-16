@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-16",
   "generatedBy": "scripts/screen.mjs (FMP, quality + growth)",
-  "priceDate": "2026-11-06",
+  "priceDate": "2026-11-13",
   "rules": {
     "universe": "US stocks over $25B by sector (FMP screener), top 15 per sector by market cap, plus an AI watchlist; current holdings always re-screened",
     "quality": "gate: ROIC ≥ 10% (financials ROE ≥ 12%), operating margin ≥ 10% and not down more than 3 pts over 2 years, 3-yr operating cash flow ≥ 80% of net income, net debt ≤ 3x EBITDA; relaxed for financials, REITs, utilities and thin-margin sectors",
@@ -15,38 +15,38 @@
   "sectorsEmpty": [],
   "holdings": [
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
+      "ticker": "ANET",
+      "name": "Arista Networks, Inc.",
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 186.64,
-      "ret52w": -6.2,
-      "vsHigh": -23.3,
-      "fwdEpsGrowth": 79.6,
-      "fwdRevGrowth": 79.2,
-      "trailEpsGrowth": 206.6,
-      "epsFy1": 9.29,
-      "fy1": "2027",
-      "revision": 0.1,
-      "roic": 59.5,
-      "roe": 110.1,
-      "opMargin": 65.2,
-      "netMargin": 63.7,
-      "cashConv": 87.5,
-      "fcfToNi": 82.9,
-      "netDebtEbitda": 0.1,
-      "pe": 23.5,
-      "ps": 14.8,
-      "peg": 0.3,
+      "price": 197.29,
+      "ret52w": 55,
+      "vsHigh": -9.3,
+      "fwdEpsGrowth": 48.3,
+      "fwdRevGrowth": 44.2,
+      "trailEpsGrowth": 37,
+      "epsFy1": 4.37,
+      "fy1": "2026",
+      "revision": 6.4,
+      "roic": 22.9,
+      "roe": 33.3,
+      "opMargin": 43.8,
+      "netMargin": 40,
+      "cashConv": 119.7,
+      "fcfToNi": 117.5,
+      "netDebtEbitda": -0.4,
+      "pe": 52.3,
+      "ps": 21,
+      "peg": 1.1,
       "upgrades": 0,
       "downgrades": 0,
-      "lastSurprise": 6.2,
+      "lastSurprise": 11.1,
       "gateStrikes": 0,
-      "score": 88.9,
+      "score": 89.7,
       "tag": "Hold",
-      "reason": "reports 2026-11-17. EPS growth +80%/yr expected through 2028; revenue +79%/yr; ROIC 60%; estimates +0.1% in 21d",
-      "nextEarnings": "2026-11-17"
+      "reason": "EPS growth +48%/yr expected through 2027; revenue +44%/yr; ROIC 23%; estimates +6.4% in 28d",
+      "nextEarnings": "2027-02-11"
     },
     {
       "ticker": "APH",
@@ -54,9 +54,9 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 74.59,
-      "ret52w": 3.7,
-      "vsHigh": -17.1,
+      "price": 78.23,
+      "ret52w": 18.2,
+      "vsHigh": -13,
       "fwdEpsGrowth": 47.6,
       "fwdRevGrowth": 40.7,
       "trailEpsGrowth": 29.7,
@@ -70,16 +70,16 @@
       "cashConv": 124.1,
       "fcfToNi": 100.5,
       "netDebtEbitda": 1.3,
-      "pe": 31,
-      "ps": 5.6,
+      "pe": 32.5,
+      "ps": 5.8,
       "peg": 0.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 9.7,
       "gateStrikes": 0,
-      "score": 86.4,
+      "score": 86.1,
       "tag": "Hold",
-      "reason": "EPS growth +48%/yr expected through 2027; revenue +41%/yr; ROIC 17%; estimates +5.2% in 21d",
+      "reason": "EPS growth +48%/yr expected through 2027; revenue +41%/yr; ROIC 17%; estimates +5.2% in 28d",
       "nextEarnings": "2027-01-27"
     },
     {
@@ -88,11 +88,11 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 835.06,
-      "ret52w": 211.6,
-      "vsHigh": -64.5,
+      "price": 885.01,
+      "ret52w": 232.9,
+      "vsHigh": -62.4,
       "fwdEpsGrowth": 98.8,
-      "fwdRevGrowth": 73.7,
+      "fwdRevGrowth": 74,
       "trailEpsGrowth": null,
       "epsFy1": 227.09,
       "fy1": "2027",
@@ -104,51 +104,51 @@
       "cashConv": 125.5,
       "fcfToNi": 119.5,
       "netDebtEbitda": -0.2,
-      "pe": 6.3,
-      "ps": 4.1,
+      "pe": 6.7,
+      "ps": 4.3,
       "peg": 0.1,
       "upgrades": 0,
       "downgrades": 1,
       "lastSurprise": 6.1,
       "gateStrikes": 0,
-      "score": 85.9,
+      "score": 85.2,
       "tag": "Watch",
-      "reason": "65% below its 52-week high (price only, not a removal trigger)",
+      "reason": "62% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-04"
     },
     {
-      "ticker": "TER",
-      "name": "Teradyne, Inc.",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 218.22,
-      "ret52w": 18.5,
-      "vsHigh": -55.3,
-      "fwdEpsGrowth": 88.3,
-      "fwdRevGrowth": 42.9,
-      "trailEpsGrowth": -6.2,
-      "epsFy1": 9.49,
-      "fy1": "2026",
-      "revision": 3.1,
-      "roic": 33.6,
-      "roe": 42,
-      "opMargin": 32.1,
-      "netMargin": 27.5,
-      "cashConv": 125,
-      "fcfToNi": 87.4,
-      "netDebtEbitda": -0.2,
-      "pe": 24.9,
-      "ps": 6.8,
+      "price": 162.85,
+      "ret52w": -12.7,
+      "vsHigh": -33.1,
+      "fwdEpsGrowth": 79.3,
+      "fwdRevGrowth": 79.4,
+      "trailEpsGrowth": 206.6,
+      "epsFy1": 9.3,
+      "fy1": "2027",
+      "revision": 0.2,
+      "roic": 59.5,
+      "roe": 110.1,
+      "opMargin": 65.2,
+      "netMargin": 63.7,
+      "cashConv": 87.5,
+      "fcfToNi": 82.9,
+      "netDebtEbitda": 0.1,
+      "pe": 20.5,
+      "ps": 13,
       "peg": 0.3,
       "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 9.6,
+      "downgrades": 9,
+      "lastSurprise": 6.2,
       "gateStrikes": 0,
-      "score": 78.4,
+      "score": 81.5,
       "tag": "Watch",
-      "reason": "55% below its 52-week high (price only, not a removal trigger)",
-      "nextEarnings": "2027-01-27"
+      "reason": "reports 2026-11-17. 33% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2026-11-17"
     },
     {
       "ticker": "ASML",
@@ -156,9 +156,9 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 1424.75,
-      "ret52w": 37.2,
-      "vsHigh": -28.8,
+      "price": 1495.16,
+      "ret52w": 46.6,
+      "vsHigh": -25.2,
       "fwdEpsGrowth": 51.7,
       "fwdRevGrowth": 32.6,
       "trailEpsGrowth": 20.5,
@@ -172,16 +172,16 @@
       "cashConv": 117,
       "fcfToNi": 93.6,
       "netDebtEbitda": -0.4,
-      "pe": 36.7,
-      "ps": 12.5,
+      "pe": 38.2,
+      "ps": 13.1,
       "peg": 0.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 19.4,
       "gateStrikes": 0,
-      "score": 78.1,
+      "score": 78.5,
       "tag": "Watch",
-      "reason": "29% below its 52-week high (price only, not a removal trigger)",
+      "reason": "25% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-01-27"
     },
     {
@@ -190,9 +190,9 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 120.51,
-      "ret52w": -29.2,
-      "vsHigh": -61,
+      "price": 131.51,
+      "ret52w": -9.7,
+      "vsHigh": -57.4,
       "fwdEpsGrowth": 96.3,
       "fwdRevGrowth": 70,
       "trailEpsGrowth": null,
@@ -206,17 +206,51 @@
       "cashConv": 113.3,
       "fcfToNi": 91.3,
       "netDebtEbitda": -0.8,
-      "pe": 40.9,
-      "ps": 14.2,
-      "peg": 0.4,
+      "pe": 44.6,
+      "ps": 15.5,
+      "peg": 0.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 2.6,
       "gateStrikes": 0,
-      "score": 77.9,
+      "score": 78.1,
       "tag": "Watch",
-      "reason": "61% below its 52-week high (price only, not a removal trigger)",
-      "nextEarnings": "2026-12-02"
+      "reason": "57% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2026-12-01"
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne, Inc.",
+      "sector": "Technology",
+      "sleeve": "core",
+      "zacksRank": null,
+      "price": 249.55,
+      "ret52w": 49,
+      "vsHigh": -48.9,
+      "fwdEpsGrowth": 88.5,
+      "fwdRevGrowth": 43,
+      "trailEpsGrowth": -6.2,
+      "epsFy1": 9.5,
+      "fy1": "2026",
+      "revision": 3.1,
+      "roic": 33.6,
+      "roe": 42,
+      "opMargin": 32.1,
+      "netMargin": 27.5,
+      "cashConv": 125,
+      "fcfToNi": 87.4,
+      "netDebtEbitda": -0.2,
+      "pe": 28.5,
+      "ps": 7.8,
+      "peg": 0.3,
+      "upgrades": 0,
+      "downgrades": 0,
+      "lastSurprise": 9.6,
+      "gateStrikes": 0,
+      "score": 77.1,
+      "tag": "Watch",
+      "reason": "49% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2027-01-27"
     },
     {
       "ticker": "LRCX",
@@ -224,9 +258,9 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 200.44,
-      "ret52w": 20.5,
-      "vsHigh": -54.3,
+      "price": 225.92,
+      "ret52w": 53.2,
+      "vsHigh": -48.5,
       "fwdEpsGrowth": 45.1,
       "fwdRevGrowth": 35.2,
       "trailEpsGrowth": 20.2,
@@ -240,16 +274,16 @@
       "cashConv": 101.4,
       "fcfToNi": 88.5,
       "netDebtEbitda": -0.4,
-      "pe": 29.7,
-      "ps": 9.6,
+      "pe": 33.5,
+      "ps": 10.8,
       "peg": 0.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 0.9,
       "gateStrikes": 0,
-      "score": 76.3,
+      "score": 76.6,
       "tag": "Watch",
-      "reason": "54% below its 52-week high (price only, not a removal trigger)",
+      "reason": "48% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-01-27"
     },
     {
@@ -258,9 +292,9 @@
       "sector": "Technology",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 118.84,
-      "ret52w": 44.4,
-      "vsHigh": -39.7,
+      "price": 127.22,
+      "ret52w": 55.3,
+      "vsHigh": -35.5,
       "fwdEpsGrowth": 26.5,
       "fwdRevGrowth": 15.7,
       "trailEpsGrowth": 31.9,
@@ -274,51 +308,17 @@
       "cashConv": 142.9,
       "fcfToNi": 123,
       "netDebtEbitda": -1.1,
-      "pe": 38.3,
-      "ps": 11.1,
-      "peg": 1.4,
+      "pe": 41,
+      "ps": 11.9,
+      "peg": 1.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 5.8,
       "gateStrikes": 0,
-      "score": 71.6,
+      "score": 70.7,
       "tag": "Watch",
-      "reason": "40% below its 52-week high (price only, not a removal trigger)",
+      "reason": "35% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-04"
-    },
-    {
-      "ticker": "ANET",
-      "name": "Arista Networks, Inc.",
-      "sector": "Technology",
-      "sleeve": "core",
-      "zacksRank": null,
-      "price": 170.8,
-      "ret52w": 24.4,
-      "vsHigh": -21.4,
-      "fwdEpsGrowth": 45.9,
-      "fwdRevGrowth": 41.8,
-      "trailEpsGrowth": 37,
-      "epsFy1": 4.3,
-      "fy1": "2026",
-      "revision": 4.5,
-      "roic": 22.9,
-      "roe": 33.3,
-      "opMargin": 43.8,
-      "netMargin": 40,
-      "cashConv": 119.7,
-      "fcfToNi": 117.5,
-      "netDebtEbitda": -0.4,
-      "pe": 45.3,
-      "ps": 18.1,
-      "peg": 1,
-      "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 11.1,
-      "gateStrikes": 0,
-      "score": 87.3,
-      "tag": "New",
-      "reason": "added by screen. EPS growth +46%/yr expected through 2027; revenue +42%/yr; ROIC 23%; estimates +4.5% in 21d",
-      "nextEarnings": "2027-02-11"
     },
     {
       "ticker": "RDDT",
@@ -326,15 +326,15 @@
       "sector": "Communication Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 95.1,
-      "ret52w": -53.4,
-      "vsHigh": -63.9,
-      "fwdEpsGrowth": 61.4,
-      "fwdRevGrowth": 40.7,
+      "price": 98.45,
+      "ret52w": -47.5,
+      "vsHigh": -62.6,
+      "fwdEpsGrowth": 61,
+      "fwdRevGrowth": 40.4,
       "trailEpsGrowth": null,
-      "epsFy1": 5.44,
+      "epsFy1": 5.45,
       "fy1": "2026",
-      "revision": 0.7,
+      "revision": 1,
       "roic": 24.8,
       "roe": 30.6,
       "opMargin": 29.4,
@@ -342,8 +342,8 @@
       "cashConv": 121.5,
       "fcfToNi": null,
       "netDebtEbitda": -1.3,
-      "pe": 18.4,
-      "ps": 5.9,
+      "pe": 19,
+      "ps": 6.2,
       "peg": 0.3,
       "upgrades": 0,
       "downgrades": 4,
@@ -351,42 +351,8 @@
       "gateStrikes": 0,
       "score": 65.8,
       "tag": "Watch",
-      "reason": "64% below its 52-week high (price only, not a removal trigger)",
+      "reason": "63% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-04"
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms, Inc.",
-      "sector": "Communication Services",
-      "sleeve": "core",
-      "zacksRank": 3,
-      "price": 610.15,
-      "ret52w": -3.4,
-      "vsHigh": -21.8,
-      "fwdEpsGrowth": 20.6,
-      "fwdRevGrowth": 24.7,
-      "trailEpsGrowth": 39.8,
-      "epsFy1": 29.11,
-      "fy1": "2026",
-      "revision": -5,
-      "roic": 18.1,
-      "roe": 30.3,
-      "opMargin": 32.9,
-      "netMargin": 31.1,
-      "cashConv": 171.8,
-      "fcfToNi": 89,
-      "netDebtEbitda": 0.9,
-      "pe": 20.6,
-      "ps": 6.5,
-      "peg": 1,
-      "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 13.1,
-      "gateStrikes": 0,
-      "score": 59.9,
-      "tag": "Watch",
-      "reason": "2026 EPS consensus trimmed -5.0% over 21 days",
-      "nextEarnings": "2027-01-27"
     },
     {
       "ticker": "GOOG",
@@ -394,15 +360,15 @@
       "sector": "Communication Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 283.93,
-      "ret52w": -2.3,
-      "vsHigh": -29.8,
+      "price": 292.52,
+      "ret52w": 2.4,
+      "vsHigh": -27.7,
       "fwdEpsGrowth": 17.9,
-      "fwdRevGrowth": 25.7,
+      "fwdRevGrowth": 25.8,
       "trailEpsGrowth": 33.3,
-      "epsFy1": 19.69,
+      "epsFy1": 19.63,
       "fy1": "2026",
-      "revision": -4.4,
+      "revision": -4.7,
       "roic": 14.8,
       "roe": 42.6,
       "opMargin": 33.3,
@@ -410,17 +376,51 @@
       "cashConv": 128,
       "fcfToNi": 70.4,
       "netDebtEbitda": 0.3,
-      "pe": 14.6,
-      "ps": 7.4,
+      "pe": 15.1,
+      "ps": 7.6,
       "peg": 0.8,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": -29.6,
       "gateStrikes": 0,
-      "score": 52.9,
+      "score": 53.2,
       "tag": "Watch",
-      "reason": "2026 EPS consensus trimmed -4.4% over 21 days. missed last earnings by 30%; a second miss removes it. 30% below its 52-week high (price only, not a removal trigger)",
+      "reason": "2026 EPS consensus trimmed -4.7% over 28 days. missed last earnings by 30%; a second miss removes it. 28% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-03"
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "sleeve": "core",
+      "zacksRank": null,
+      "price": 62.15,
+      "ret52w": -43.6,
+      "vsHigh": -46.1,
+      "fwdEpsGrowth": 21.9,
+      "fwdRevGrowth": 11.9,
+      "trailEpsGrowth": 36.3,
+      "epsFy1": 3.58,
+      "fy1": "2026",
+      "revision": -0.5,
+      "roic": 26.6,
+      "roe": 50.4,
+      "opMargin": 31.3,
+      "netMargin": 29.7,
+      "cashConv": 98.7,
+      "fcfToNi": 92.9,
+      "netDebtEbitda": 0.2,
+      "pe": 17.7,
+      "ps": 5.1,
+      "peg": 0.8,
+      "upgrades": 1,
+      "downgrades": 4,
+      "lastSurprise": 6.1,
+      "gateStrikes": 0,
+      "score": 53.3,
+      "tag": "New",
+      "reason": "added by screen. 46% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2027-01-19"
     },
     {
       "ticker": "LLY",
@@ -428,32 +428,32 @@
       "sector": "Healthcare",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 1354,
-      "ret52w": 40.1,
-      "vsHigh": -6.8,
-      "fwdEpsGrowth": 47.6,
-      "fwdRevGrowth": 27.8,
-      "trailEpsGrowth": 51.7,
-      "epsFy1": 35.33,
+      "price": 1443.5,
+      "ret52w": 41.3,
+      "vsHigh": -1.1,
+      "fwdEpsGrowth": 48.3,
+      "fwdRevGrowth": 28.1,
+      "trailEpsGrowth": 49.3,
+      "epsFy1": 35.37,
       "fy1": "2026",
-      "revision": 2.3,
+      "revision": 2.4,
       "roic": 30.5,
       "roe": 83.6,
       "opMargin": 46.1,
       "netMargin": 31.9,
       "cashConv": 81.9,
-      "fcfToNi": 26.3,
+      "fcfToNi": 37.1,
       "netDebtEbitda": 1,
-      "pe": 43.8,
-      "ps": 14.7,
-      "peg": 0.9,
+      "pe": 46.7,
+      "ps": 15.7,
+      "peg": 1,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 31,
       "gateStrikes": 0,
-      "score": 82.5,
+      "score": 81.7,
       "tag": "Hold",
-      "reason": "EPS growth +48%/yr expected through 2027; revenue +28%/yr; ROIC 30%; estimates +2.3% in 21d",
+      "reason": "EPS growth +48%/yr expected through 2027; revenue +28%/yr; ROIC 30%; estimates +2.4% in 28d",
       "nextEarnings": "2027-02-03"
     },
     {
@@ -462,15 +462,15 @@
       "sector": "Healthcare",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 452.8,
-      "ret52w": -21.4,
-      "vsHigh": -25,
-      "fwdEpsGrowth": 25.9,
+      "price": 443.59,
+      "ret52w": -18.9,
+      "vsHigh": -26.5,
+      "fwdEpsGrowth": 26,
       "fwdRevGrowth": 15.2,
       "trailEpsGrowth": 29.2,
-      "epsFy1": 11.25,
+      "epsFy1": 11.26,
       "fy1": "2026",
-      "revision": 4.1,
+      "revision": 4.2,
       "roic": 16,
       "roe": 17,
       "opMargin": 28.4,
@@ -478,16 +478,16 @@
       "cashConv": 103.2,
       "fcfToNi": 64.6,
       "netDebtEbitda": -0.7,
-      "pe": 54.1,
-      "ps": 13.8,
-      "peg": 2.1,
+      "pe": 53,
+      "ps": 13.3,
+      "peg": 2,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 13.2,
       "gateStrikes": 0,
-      "score": 69.9,
+      "score": 69.6,
       "tag": "Watch",
-      "reason": "25% below its 52-week high (price only, not a removal trigger)",
+      "reason": "27% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-01-28"
     },
     {
@@ -496,32 +496,32 @@
       "sector": "Healthcare",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 291.31,
-      "ret52w": 33.2,
-      "vsHigh": -3.8,
-      "fwdEpsGrowth": 162.4,
+      "price": 295.03,
+      "ret52w": 26.1,
+      "vsHigh": -2.6,
+      "fwdEpsGrowth": 161.9,
       "fwdRevGrowth": 9.8,
       "trailEpsGrowth": -29,
-      "epsFy1": 13.97,
+      "epsFy1": 14,
       "fy1": "2026",
-      "revision": 0.1,
-      "roic": 16.7,
-      "roe": -202.5,
-      "opMargin": 35.5,
+      "revision": 0.4,
+      "roic": 16.6,
+      "roe": -202.4,
+      "opMargin": 35.2,
       "netMargin": 15.7,
       "cashConv": 455.1,
       "fcfToNi": 432.9,
-      "netDebtEbitda": 2.9,
-      "pe": 50,
-      "ps": 7.8,
+      "netDebtEbitda": 2.8,
+      "pe": 50.6,
+      "ps": 7.9,
       "peg": 0.3,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 2.4,
       "gateStrikes": 0,
-      "score": 60.6,
+      "score": 61.7,
       "tag": "Hold",
-      "reason": "EPS growth +162%/yr expected through 2027; revenue +10%/yr; ROIC 17%; estimates +0.1% in 21d",
+      "reason": "EPS growth +162%/yr expected through 2027; revenue +10%/yr; ROIC 17%; estimates +0.4% in 28d",
       "nextEarnings": "2027-02-03"
     },
     {
@@ -530,10 +530,10 @@
       "sector": "Healthcare",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 325.78,
-      "ret52w": -8.2,
-      "vsHigh": -16.3,
-      "fwdEpsGrowth": 39.4,
+      "price": 309.64,
+      "ret52w": -14,
+      "vsHigh": -20.5,
+      "fwdEpsGrowth": 39.3,
       "fwdRevGrowth": 6.9,
       "trailEpsGrowth": 10.8,
       "epsFy1": 14.84,
@@ -546,16 +546,16 @@
       "cashConv": 138.2,
       "fcfToNi": 116,
       "netDebtEbitda": 1.8,
-      "pe": 34.5,
-      "ps": 4.7,
-      "peg": 0.9,
+      "pe": 32.8,
+      "ps": 4.5,
+      "peg": 0.8,
       "upgrades": 0,
       "downgrades": 1,
       "lastSurprise": -0.8,
       "gateStrikes": 0,
-      "score": 48.3,
-      "tag": "New",
-      "reason": "added by screen. missed last earnings by 1%; a second miss removes it",
+      "score": 48.4,
+      "tag": "Watch",
+      "reason": "missed last earnings by 1%; a second miss removes it",
       "nextEarnings": "2027-02-04"
     },
     {
@@ -564,32 +564,32 @@
       "sector": "Financial Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 119.5,
-      "ret52w": -17.2,
-      "vsHigh": -37.1,
-      "fwdEpsGrowth": 37.2,
-      "fwdRevGrowth": 15.6,
+      "price": 120.19,
+      "ret52w": -13.2,
+      "vsHigh": -27.2,
+      "fwdEpsGrowth": 37.1,
+      "fwdRevGrowth": 15.3,
       "trailEpsGrowth": 18,
-      "epsFy1": 5.86,
+      "epsFy1": 5.85,
       "fy1": "2026",
-      "revision": null,
+      "revision": -1,
       "roic": 17.3,
       "roe": 40.8,
       "opMargin": 52,
       "netMargin": 21.8,
-      "cashConv": 86.2,
-      "fcfToNi": 82.5,
+      "cashConv": 111.9,
+      "fcfToNi": 108.2,
       "netDebtEbitda": 1.3,
-      "pe": 26.4,
+      "pe": 26.5,
       "ps": 8.5,
       "peg": 0.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 4.8,
       "gateStrikes": 0,
-      "score": 65,
+      "score": 62.8,
       "tag": "Watch",
-      "reason": "37% below its 52-week high (price only, not a removal trigger)",
+      "reason": "27% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-01-28"
     },
     {
@@ -598,9 +598,9 @@
       "sector": "Financial Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 1178.87,
-      "ret52w": 8.9,
-      "vsHigh": -5.1,
+      "price": 1222.91,
+      "ret52w": 19.4,
+      "vsHigh": -1.5,
       "fwdEpsGrowth": 35.8,
       "fwdRevGrowth": 16.1,
       "trailEpsGrowth": 1.3,
@@ -614,16 +614,16 @@
       "cashConv": 72,
       "fcfToNi": 66.6,
       "netDebtEbitda": 0.2,
-      "pe": 26.4,
-      "ps": 6.4,
-      "peg": 0.7,
+      "pe": 27.4,
+      "ps": 6.6,
+      "peg": 0.8,
       "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 11.2,
       "gateStrikes": 0,
-      "score": 61.5,
+      "score": 60.5,
       "tag": "Hold",
-      "reason": "EPS growth +36%/yr expected through 2027; revenue +16%/yr; ROIC 4%; estimates +0.5% in 21d",
+      "reason": "EPS growth +36%/yr expected through 2027; revenue +16%/yr; ROIC 4%; estimates +0.5% in 28d",
       "nextEarnings": "2027-01-21"
     },
     {
@@ -632,10 +632,10 @@
       "sector": "Financial Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 75.82,
-      "ret52w": 6.6,
-      "vsHigh": -23.2,
-      "fwdEpsGrowth": 22,
+      "price": 81.79,
+      "ret52w": 29,
+      "vsHigh": -17.2,
+      "fwdEpsGrowth": 21.9,
       "fwdRevGrowth": -6.8,
       "trailEpsGrowth": 33.3,
       "epsFy1": 2.7,
@@ -647,17 +647,17 @@
       "netMargin": 10.2,
       "cashConv": 275,
       "fcfToNi": 273.4,
-      "netDebtEbitda": -0.6,
-      "pe": 28.8,
-      "ps": 11.5,
-      "peg": 1.3,
+      "netDebtEbitda": 2.9,
+      "pe": 31.1,
+      "ps": 12.4,
+      "peg": 1.4,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 0.3,
       "gateStrikes": 0,
-      "score": 46.5,
+      "score": 46.4,
       "tag": "Hold",
-      "reason": "EPS growth +22%/yr expected through 2027; revenue -7%/yr; ROIC 16%; estimates +0.1% in 21d",
+      "reason": "EPS growth +22%/yr expected through 2027; revenue -7%/yr; ROIC 15%; estimates +0.1% in 28d",
       "nextEarnings": "2027-01-19"
     },
     {
@@ -666,15 +666,15 @@
       "sector": "Financial Services",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 652.7,
-      "ret52w": 18,
-      "vsHigh": -4.3,
+      "price": 661.19,
+      "ret52w": 23.2,
+      "vsHigh": -3,
       "fwdEpsGrowth": 18.5,
       "fwdRevGrowth": 13.3,
       "trailEpsGrowth": 17.3,
-      "epsFy1": 20.05,
+      "epsFy1": 20.07,
       "fy1": "2026",
-      "revision": 0.4,
+      "revision": 0.5,
       "roic": 48.4,
       "roe": 252.9,
       "opMargin": 58.8,
@@ -682,16 +682,16 @@
       "cashConv": 113.8,
       "fcfToNi": 108.5,
       "netDebtEbitda": 0.6,
-      "pe": 34.1,
-      "ps": 15.7,
-      "peg": 1.8,
+      "pe": 34.5,
+      "ps": 15.9,
+      "peg": 1.9,
       "upgrades": 0,
       "downgrades": 1,
       "lastSurprise": 2.7,
       "gateStrikes": 0,
-      "score": 45.9,
+      "score": 46.2,
       "tag": "Hold",
-      "reason": "EPS growth +18%/yr expected through 2027; revenue +13%/yr; ROIC 48%; estimates +0.4% in 21d",
+      "reason": "EPS growth +19%/yr expected through 2027; revenue +13%/yr; ROIC 48%; estimates +0.5% in 28d",
       "nextEarnings": "2027-01-28"
     },
     {
@@ -700,13 +700,13 @@
       "sector": "Financial Services",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 422.65,
-      "ret52w": 26.2,
-      "vsHigh": -4.4,
-      "fwdEpsGrowth": 18,
-      "fwdRevGrowth": 11.1,
-      "trailEpsGrowth": 14.2,
-      "epsFy1": 15.05,
+      "price": 425.76,
+      "ret52w": 30.7,
+      "vsHigh": -3.7,
+      "fwdEpsGrowth": 18.5,
+      "fwdRevGrowth": 11.2,
+      "trailEpsGrowth": 13.9,
+      "epsFy1": 15.04,
       "fy1": "2027",
       "revision": null,
       "roic": 35.9,
@@ -716,51 +716,17 @@
       "cashConv": 105.4,
       "fcfToNi": 98.5,
       "netDebtEbitda": 0.3,
-      "pe": 34,
-      "ps": 17.2,
+      "pe": 34.5,
+      "ps": 17.3,
       "peg": 1.9,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 1.2,
       "gateStrikes": 0,
-      "score": 44.6,
+      "score": 44.9,
       "tag": "Hold",
       "reason": "EPS growth +18%/yr expected through 2028; revenue +11%/yr; ROIC 36%",
       "nextEarnings": "2027-01-28"
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar Inc.",
-      "sector": "Industrials",
-      "sleeve": "core",
-      "zacksRank": null,
-      "price": 558.63,
-      "ret52w": -2.1,
-      "vsHigh": -48,
-      "fwdEpsGrowth": 31,
-      "fwdRevGrowth": 14.5,
-      "trailEpsGrowth": 14.2,
-      "epsFy1": 27.32,
-      "fy1": "2026",
-      "revision": -0.2,
-      "roic": 14,
-      "roe": 58.5,
-      "opMargin": 18.3,
-      "netMargin": 15.2,
-      "cashConv": 122.2,
-      "fcfToNi": 86.9,
-      "netDebtEbitda": 2,
-      "pe": 21.8,
-      "ps": 3.3,
-      "peg": 0.7,
-      "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 2,
-      "gateStrikes": 0,
-      "score": 57.4,
-      "tag": "Watch",
-      "reason": "48% below its 52-week high (price only, not a removal trigger)",
-      "nextEarnings": "2027-02-04"
     },
     {
       "ticker": "PH",
@@ -768,15 +734,15 @@
       "sector": "Industrials",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 917.79,
-      "ret52w": 9.2,
-      "vsHigh": -16.6,
-      "fwdEpsGrowth": 18.4,
-      "fwdRevGrowth": 11.7,
+      "price": 955.68,
+      "ret52w": 16.4,
+      "vsHigh": -13.1,
+      "fwdEpsGrowth": 20.2,
+      "fwdRevGrowth": 12.6,
       "trailEpsGrowth": 21.1,
-      "epsFy1": 35.73,
+      "epsFy1": 36.99,
       "fy1": "2027",
-      "revision": 0,
+      "revision": 3.5,
       "roic": 10.2,
       "roe": 24.7,
       "opMargin": 21.4,
@@ -784,16 +750,50 @@
       "cashConv": 115,
       "fcfToNi": 102,
       "netDebtEbitda": 2.8,
-      "pe": 31.1,
-      "ps": 5.2,
-      "peg": 1.7,
+      "pe": 32.4,
+      "ps": 5.4,
+      "peg": 1.6,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 8.4,
       "gateStrikes": 0,
-      "score": 51.1,
+      "score": 60.8,
       "tag": "Hold",
-      "reason": "EPS growth +18%/yr expected through 2028; revenue +12%/yr; ROIC 10%; estimates +0.0% in 21d",
+      "reason": "EPS growth +20%/yr expected through 2028; revenue +13%/yr; ROIC 10%; estimates +3.5% in 28d",
+      "nextEarnings": "2027-02-04"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc.",
+      "sector": "Industrials",
+      "sleeve": "core",
+      "zacksRank": null,
+      "price": 600.2,
+      "ret52w": 8.7,
+      "vsHigh": -44.1,
+      "fwdEpsGrowth": 30.8,
+      "fwdRevGrowth": 14.5,
+      "trailEpsGrowth": 14.2,
+      "epsFy1": 27.23,
+      "fy1": "2026",
+      "revision": -0.6,
+      "roic": 14,
+      "roe": 58.5,
+      "opMargin": 18.3,
+      "netMargin": 15.2,
+      "cashConv": 122.2,
+      "fcfToNi": 86.9,
+      "netDebtEbitda": 2,
+      "pe": 23.4,
+      "ps": 3.5,
+      "peg": 0.8,
+      "upgrades": 0,
+      "downgrades": 0,
+      "lastSurprise": 2,
+      "gateStrikes": 0,
+      "score": 55.9,
+      "tag": "Watch",
+      "reason": "44% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-04"
     },
     {
@@ -802,13 +802,13 @@
       "sector": "Industrials",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 567.08,
-      "ret52w": 25.4,
-      "vsHigh": -18.1,
+      "price": 596.04,
+      "ret52w": 26.6,
+      "vsHigh": -13.9,
       "fwdEpsGrowth": 24.5,
       "fwdRevGrowth": 7.9,
       "trailEpsGrowth": -0.3,
-      "epsFy1": 30.66,
+      "epsFy1": 30.67,
       "fy1": "2026",
       "revision": 0.8,
       "roic": 19.8,
@@ -818,16 +818,16 @@
       "cashConv": 135.8,
       "fcfToNi": 106.7,
       "netDebtEbitda": 1.4,
-      "pe": 20.1,
+      "pe": 21.1,
       "ps": 1.7,
-      "peg": 0.8,
+      "peg": 0.9,
       "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 6,
       "gateStrikes": 0,
-      "score": 46.8,
+      "score": 46.1,
       "tag": "Hold",
-      "reason": "EPS growth +24%/yr expected through 2027; revenue +8%/yr; ROIC 20%; estimates +0.8% in 21d",
+      "reason": "EPS growth +24%/yr expected through 2027; revenue +8%/yr; ROIC 20%; estimates +0.8% in 28d",
       "nextEarnings": "2027-01-26"
     },
     {
@@ -836,9 +836,9 @@
       "sector": "Industrials",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 290.16,
-      "ret52w": 29.6,
-      "vsHigh": -8.2,
+      "price": 302.44,
+      "ret52w": 36.9,
+      "vsHigh": -4.3,
       "fwdEpsGrowth": 9.7,
       "fwdRevGrowth": 8.8,
       "trailEpsGrowth": 2.2,
@@ -852,16 +852,16 @@
       "cashConv": 133.3,
       "fcfToNi": 79.8,
       "netDebtEbitda": 2.1,
-      "pe": 22.6,
-      "ps": 6.5,
-      "peg": 2.3,
-      "upgrades": 1,
+      "pe": 23.5,
+      "ps": 6.8,
+      "peg": 2.4,
+      "upgrades": 0,
       "downgrades": 1,
       "lastSurprise": 1.7,
       "gateStrikes": 0,
-      "score": 27.9,
+      "score": 22,
       "tag": "Hold",
-      "reason": "EPS growth +10%/yr expected through 2027; revenue +9%/yr; ROIC 12%; estimates +0.6% in 21d",
+      "reason": "EPS growth +10%/yr expected through 2027; revenue +9%/yr; ROIC 12%; estimates +0.6% in 28d",
       "nextEarnings": "2027-01-26"
     },
     {
@@ -870,67 +870,101 @@
       "sector": "Energy",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 56.38,
-      "ret52w": 34.9,
-      "vsHigh": -16.4,
-      "fwdEpsGrowth": 77.9,
-      "fwdRevGrowth": 9.6,
+      "price": 58.75,
+      "ret52w": 40.9,
+      "vsHigh": -12.9,
+      "fwdEpsGrowth": 81.2,
+      "fwdRevGrowth": 9.8,
       "trailEpsGrowth": -49.4,
-      "epsFy1": 6.86,
+      "epsFy1": 7.15,
       "fy1": "2026",
-      "revision": 2.2,
-      "roic": 40.7,
-      "roe": 19,
-      "opMargin": 23,
-      "netMargin": 28.8,
+      "revision": 6.6,
+      "roic": 7.1,
+      "roe": 20.6,
+      "opMargin": 27.2,
+      "netMargin": 32.5,
       "cashConv": 337.2,
       "fcfToNi": 143.5,
-      "netDebtEbitda": 0.7,
-      "pe": 8.5,
-      "ps": 2.2,
+      "netDebtEbitda": 0.5,
+      "pe": 7.7,
+      "ps": 2.3,
       "peg": 0.1,
       "upgrades": 1,
       "downgrades": 0,
-      "lastSurprise": 31.1,
+      "lastSurprise": 30.8,
       "gateStrikes": 0,
-      "score": 62.8,
+      "score": 67.6,
       "tag": "Hold",
-      "reason": "EPS growth +78%/yr expected through 2027; revenue +10%/yr; ROIC 41%; estimates +2.2% in 21d",
-      "nextEarnings": "2026-11-09"
+      "reason": "EPS growth +81%/yr expected through 2027; revenue +10%/yr; ROIC 7%; estimates +6.6% in 28d",
+      "nextEarnings": "2027-02-17"
     },
     {
-      "ticker": "COP",
-      "name": "ConocoPhillips",
+      "ticker": "MPC",
+      "name": "Marathon Petroleum Corporation",
       "sector": "Energy",
       "sleeve": "core",
-      "zacksRank": 3,
-      "price": 136.27,
-      "ret52w": 54.4,
-      "vsHigh": -11.7,
-      "fwdEpsGrowth": 29.4,
-      "fwdRevGrowth": 8.3,
-      "trailEpsGrowth": -24.2,
-      "epsFy1": 11.49,
+      "zacksRank": null,
+      "price": 414.65,
+      "ret52w": 111.6,
+      "vsHigh": -16.1,
+      "fwdEpsGrowth": 111.7,
+      "fwdRevGrowth": 12.3,
+      "trailEpsGrowth": -22.1,
+      "epsFy1": 67.86,
       "fy1": "2026",
-      "revision": 2.1,
-      "roic": 9.6,
-      "roe": 17.8,
-      "opMargin": 24.6,
-      "netMargin": 17.1,
-      "cashConv": 212.7,
-      "fcfToNi": 85.1,
-      "netDebtEbitda": 0.5,
-      "pe": 14.3,
-      "ps": 2.4,
-      "peg": 0.5,
+      "revision": 5.8,
+      "roic": 22.5,
+      "roe": 76.6,
+      "opMargin": 12,
+      "netMargin": 8.4,
+      "cashConv": 153,
+      "fcfToNi": 114,
+      "netDebtEbitda": 0.9,
+      "pe": 8.1,
+      "ps": 0.6,
+      "peg": 0.1,
       "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 7.2,
+      "downgrades": 1,
+      "lastSurprise": 6.1,
       "gateStrikes": 0,
-      "score": 45.7,
+      "score": 67.4,
+      "tag": "New",
+      "reason": "added by screen. EPS growth +112%/yr expected through 2027; revenue +12%/yr; ROIC 22%; estimates +5.8% in 28d",
+      "nextEarnings": "2027-02-02"
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb, Inc.",
+      "sector": "Consumer Cyclical",
+      "sleeve": "core",
+      "zacksRank": null,
+      "price": 186.78,
+      "ret52w": 58.8,
+      "vsHigh": -5.6,
+      "fwdEpsGrowth": 25.7,
+      "fwdRevGrowth": 14.5,
+      "trailEpsGrowth": 13,
+      "epsFy1": 5.57,
+      "fy1": "2026",
+      "revision": 4.9,
+      "roic": 22.1,
+      "roe": 38.9,
+      "opMargin": 22.6,
+      "netMargin": 23,
+      "cashConv": 131.1,
+      "fcfToNi": 131.1,
+      "netDebtEbitda": -1.4,
+      "pe": 34.5,
+      "ps": 8,
+      "peg": 1.3,
+      "upgrades": 2,
+      "downgrades": 0,
+      "lastSurprise": 10.9,
+      "gateStrikes": 0,
+      "score": 63.7,
       "tag": "Hold",
-      "reason": "EPS growth +29%/yr expected through 2027; revenue +8%/yr; ROIC 10%; estimates +2.1% in 21d",
-      "nextEarnings": "2027-02-04"
+      "reason": "EPS growth +26%/yr expected through 2027; revenue +15%/yr; ROIC 22%; estimates +4.9% in 28d",
+      "nextEarnings": "2027-02-11"
     },
     {
       "ticker": "BKNG",
@@ -938,11 +972,11 @@
       "sector": "Consumer Cyclical",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 160.66,
-      "ret52w": -19,
-      "vsHigh": -27.2,
-      "fwdEpsGrowth": 36.1,
-      "fwdRevGrowth": 8.3,
+      "price": 159.58,
+      "ret52w": -17,
+      "vsHigh": -27.7,
+      "fwdEpsGrowth": 36,
+      "fwdRevGrowth": 8.2,
       "trailEpsGrowth": 29.4,
       "epsFy1": 10.47,
       "fy1": "2026",
@@ -954,51 +988,17 @@
       "cashConv": 161,
       "fcfToNi": 154,
       "netDebtEbitda": 0.4,
-      "pe": 17.3,
-      "ps": 4.3,
+      "pe": 17.2,
+      "ps": 4.2,
       "peg": 0.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 3.8,
       "gateStrikes": 0,
-      "score": 62.3,
+      "score": 62.8,
       "tag": "Watch",
-      "reason": "27% below its 52-week high (price only, not a removal trigger)",
+      "reason": "28% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-17"
-    },
-    {
-      "ticker": "ABNB",
-      "name": "Airbnb, Inc.",
-      "sector": "Consumer Cyclical",
-      "sleeve": "core",
-      "zacksRank": null,
-      "price": 189.99,
-      "ret52w": 58.1,
-      "vsHigh": -1.8,
-      "fwdEpsGrowth": 24.6,
-      "fwdRevGrowth": 13.4,
-      "trailEpsGrowth": 13,
-      "epsFy1": 5.31,
-      "fy1": "2026",
-      "revision": 0,
-      "roic": 22.2,
-      "roe": 38.9,
-      "opMargin": 22.6,
-      "netMargin": 23,
-      "cashConv": 131.1,
-      "fcfToNi": 131.1,
-      "netDebtEbitda": -2.1,
-      "pe": 35.1,
-      "ps": 8.2,
-      "peg": 1.4,
-      "upgrades": 1,
-      "downgrades": 0,
-      "lastSurprise": 10.9,
-      "gateStrikes": 0,
-      "score": 58.2,
-      "tag": "Hold",
-      "reason": "EPS growth +25%/yr expected through 2027; revenue +13%/yr; ROIC 22%; estimates -0.0% in 21d",
-      "nextEarnings": "2027-02-11"
     },
     {
       "ticker": "AMZN",
@@ -1006,15 +1006,15 @@
       "sector": "Consumer Cyclical",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 259.3,
-      "ret52w": 4.4,
-      "vsHigh": -9.7,
-      "fwdEpsGrowth": 22.7,
+      "price": 266.66,
+      "ret52w": 14.5,
+      "vsHigh": -7.2,
+      "fwdEpsGrowth": 22.4,
       "fwdRevGrowth": 15.8,
       "trailEpsGrowth": null,
-      "epsFy1": 12.84,
+      "epsFy1": 12.83,
       "fy1": "2026",
-      "revision": 0.4,
+      "revision": 0.3,
       "roic": 8.2,
       "roe": 26.7,
       "opMargin": 13.1,
@@ -1022,14 +1022,14 @@
       "cashConv": 203.4,
       "fcfToNi": 43.5,
       "netDebtEbitda": 0.8,
-      "pe": 20.7,
-      "ps": 3.5,
+      "pe": 21.3,
+      "ps": 3.6,
       "peg": 0.9,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": -4.1,
       "gateStrikes": 0,
-      "score": 49.2,
+      "score": 48.8,
       "tag": "Watch",
       "reason": "missed last earnings by 4%; a second miss removes it",
       "nextEarnings": "2027-02-04"
@@ -1040,15 +1040,15 @@
       "sector": "Consumer Cyclical",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 231.09,
-      "ret52w": 42.7,
-      "vsHigh": -10.1,
-      "fwdEpsGrowth": 16.8,
-      "fwdRevGrowth": 10,
+      "price": 231.68,
+      "ret52w": 45.3,
+      "vsHigh": -9.9,
+      "fwdEpsGrowth": 16.9,
+      "fwdRevGrowth": 10.1,
       "trailEpsGrowth": 14.7,
-      "epsFy1": 8.45,
+      "epsFy1": 8.49,
       "fy1": "2027",
-      "revision": -0.1,
+      "revision": 0.4,
       "roic": 21.2,
       "roe": 42.3,
       "opMargin": 13.7,
@@ -1056,16 +1056,16 @@
       "cashConv": 129.3,
       "fcfToNi": 91.6,
       "netDebtEbitda": 0.1,
-      "pe": 27.7,
+      "pe": 27.8,
       "ps": 3,
-      "peg": 1.7,
+      "peg": 1.6,
       "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 36.4,
       "gateStrikes": 0,
-      "score": 47,
+      "score": 47.7,
       "tag": "Hold",
-      "reason": "reports 2026-11-19. EPS growth +17%/yr expected through 2028; revenue +10%/yr; ROIC 21%; estimates -0.1% in 21d",
+      "reason": "reports 2026-11-19. EPS growth +17%/yr expected through 2028; revenue +10%/yr; ROIC 21%; estimates +0.4% in 28d",
       "nextEarnings": "2026-11-19"
     },
     {
@@ -1074,15 +1074,15 @@
       "sector": "Consumer Defensive",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 45.72,
-      "ret52w": 30.6,
-      "vsHigh": -8.9,
-      "fwdEpsGrowth": 16.2,
-      "fwdRevGrowth": 13.6,
+      "price": 46.46,
+      "ret52w": 29.3,
+      "vsHigh": -7.4,
+      "fwdEpsGrowth": 15.6,
+      "fwdRevGrowth": 14.2,
       "trailEpsGrowth": 20.1,
-      "epsFy1": 1.16,
+      "epsFy1": 1.15,
       "fy1": "2026",
-      "revision": -0.1,
+      "revision": -0.9,
       "roic": 20.6,
       "roe": 24,
       "opMargin": 28.5,
@@ -1090,16 +1090,16 @@
       "cashConv": 113.9,
       "fcfToNi": 101.3,
       "netDebtEbitda": -0.7,
-      "pe": 41.2,
-      "ps": 9.3,
-      "peg": 2.5,
+      "pe": 41.9,
+      "ps": 9.5,
+      "peg": 2.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 0.3,
       "gateStrikes": 0,
-      "score": 47.2,
+      "score": 46.2,
       "tag": "Hold",
-      "reason": "EPS growth +16%/yr expected through 2027; revenue +14%/yr; ROIC 21%; estimates -0.1% in 21d",
+      "reason": "EPS growth +16%/yr expected through 2027; revenue +14%/yr; ROIC 21%; estimates -0.9% in 28d",
       "nextEarnings": "2027-02-25"
     },
     {
@@ -1108,15 +1108,15 @@
       "sector": "Consumer Defensive",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 197.88,
-      "ret52w": 27.6,
-      "vsHigh": -7.7,
+      "price": 198.96,
+      "ret52w": 30.2,
+      "vsHigh": -7.2,
       "fwdEpsGrowth": 11.7,
       "fwdRevGrowth": 6,
       "trailEpsGrowth": 7.7,
       "epsFy1": 8.35,
       "fy1": "2026",
-      "revision": -0.6,
+      "revision": -0.7,
       "roic": 27.5,
       "roe": -119.7,
       "opMargin": 38.6,
@@ -1124,16 +1124,16 @@
       "cashConv": 124.2,
       "fcfToNi": 108.2,
       "netDebtEbitda": 2.2,
-      "pe": 28.9,
-      "ps": 7.1,
+      "pe": 29,
+      "ps": 7.2,
       "peg": 2.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 2.6,
       "gateStrikes": 0,
-      "score": 23.2,
+      "score": 23.7,
       "tag": "Hold",
-      "reason": "EPS growth +12%/yr expected through 2027; revenue +6%/yr; ROIC 27%; estimates -0.6% in 21d",
+      "reason": "EPS growth +12%/yr expected through 2027; revenue +6%/yr; ROIC 27%; estimates -0.7% in 28d",
       "nextEarnings": "2027-02-05"
     },
     {
@@ -1142,15 +1142,15 @@
       "sector": "Basic Materials",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 59.42,
-      "ret52w": 45.1,
-      "vsHigh": -25.9,
-      "fwdEpsGrowth": 68.1,
-      "fwdRevGrowth": 18.8,
+      "price": 59.26,
+      "ret52w": 51.9,
+      "vsHigh": -26.1,
+      "fwdEpsGrowth": 68.7,
+      "fwdRevGrowth": 18.7,
       "trailEpsGrowth": -14,
-      "epsFy1": 3.16,
+      "epsFy1": 3.13,
       "fy1": "2026",
-      "revision": -0.1,
+      "revision": -0.9,
       "roic": 9.4,
       "roe": 17.3,
       "opMargin": 27.6,
@@ -1158,14 +1158,14 @@
       "cashConv": 213.6,
       "fcfToNi": 46.4,
       "netDebtEbitda": 0.7,
-      "pe": 25,
+      "pe": 24.9,
       "ps": 3.2,
       "peg": 0.4,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 8,
       "gateStrikes": 0,
-      "score": 60.8,
+      "score": 60.6,
       "tag": "Watch",
       "reason": "26% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-01-28"
@@ -1176,15 +1176,15 @@
       "sector": "Basic Materials",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 167.27,
-      "ret52w": 26,
-      "vsHigh": -23.5,
-      "fwdEpsGrowth": 19.6,
+      "price": 164.08,
+      "ret52w": 34.5,
+      "vsHigh": -24.9,
+      "fwdEpsGrowth": 19.5,
       "fwdRevGrowth": 12.3,
       "trailEpsGrowth": 15.4,
-      "epsFy1": 7.9,
+      "epsFy1": 7.92,
       "fy1": "2026",
-      "revision": 1.5,
+      "revision": 1.8,
       "roic": 28.2,
       "roe": 52,
       "opMargin": 58.6,
@@ -1192,51 +1192,51 @@
       "cashConv": 125.4,
       "fcfToNi": 92.4,
       "netDebtEbitda": 0.3,
-      "pe": 21.9,
-      "ps": 8.3,
+      "pe": 21.5,
+      "ps": 8.2,
       "peg": 1.1,
-      "upgrades": 0,
+      "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 8,
       "gateStrikes": 0,
-      "score": 52.8,
+      "score": 55.3,
       "tag": "Hold",
-      "reason": "EPS growth +20%/yr expected through 2027; revenue +12%/yr; ROIC 28%; estimates +1.5% in 21d",
+      "reason": "EPS growth +19%/yr expected through 2027; revenue +12%/yr; ROIC 28%; estimates +1.8% in 28d",
       "nextEarnings": "2027-01-27"
     },
     {
-      "ticker": "NEM",
-      "name": "Newmont Corporation",
+      "ticker": "AU",
+      "name": "AngloGold Ashanti Plc",
       "sector": "Basic Materials",
       "sleeve": "core",
-      "zacksRank": 3,
-      "price": 120.91,
-      "ret52w": 37,
-      "vsHigh": -10.6,
-      "fwdEpsGrowth": 24.6,
-      "fwdRevGrowth": 11.6,
-      "trailEpsGrowth": null,
-      "epsFy1": 9.32,
+      "zacksRank": null,
+      "price": 86.29,
+      "ret52w": 11,
+      "vsHigh": -33.2,
+      "fwdEpsGrowth": 30.4,
+      "fwdRevGrowth": 14.8,
+      "trailEpsGrowth": 111.3,
+      "epsFy1": 8.58,
       "fy1": "2026",
-      "revision": 1.1,
-      "roic": 17.5,
-      "roe": 26.5,
-      "opMargin": 55,
-      "netMargin": 35.1,
-      "cashConv": 240.8,
-      "fcfToNi": 128.2,
+      "revision": -3.4,
+      "roic": 30.9,
+      "roe": 44.9,
+      "opMargin": 50.9,
+      "netMargin": 32.6,
+      "cashConv": 225,
+      "fcfToNi": 115.2,
       "netDebtEbitda": -0.2,
-      "pe": 14,
-      "ps": 4.8,
-      "peg": 0.6,
+      "pe": 11.2,
+      "ps": 3.6,
+      "peg": 0.4,
       "upgrades": 0,
-      "downgrades": 1,
-      "lastSurprise": 12.2,
+      "downgrades": 0,
+      "lastSurprise": -11.9,
       "gateStrikes": 0,
-      "score": 46.9,
-      "tag": "Hold",
-      "reason": "EPS growth +25%/yr expected through 2027; revenue +12%/yr; ROIC 17%; estimates +1.1% in 21d",
-      "nextEarnings": "2027-02-18"
+      "score": 62.2,
+      "tag": "New",
+      "reason": "added by screen. 2026 EPS consensus trimmed -3.4% over 28 days. missed last earnings by 12%; a second miss removes it. 33% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2027-02-19"
     },
     {
       "ticker": "EQIX",
@@ -1244,11 +1244,11 @@
       "sector": "Real Estate",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 1012.71,
-      "ret52w": 22.3,
-      "vsHigh": -10.3,
+      "price": 1053.79,
+      "ret52w": 35.6,
+      "vsHigh": -6.6,
       "fwdEpsGrowth": 19.7,
-      "fwdRevGrowth": 11.4,
+      "fwdRevGrowth": 11.5,
       "trailEpsGrowth": 21.5,
       "epsFy1": 18.12,
       "fy1": "2026",
@@ -1260,16 +1260,16 @@
       "cashConv": 331.4,
       "fcfToNi": 7,
       "netDebtEbitda": 5.1,
-      "pe": 60.5,
-      "ps": 9.9,
-      "peg": 3.1,
+      "pe": 63,
+      "ps": 10.3,
+      "peg": 3.2,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 20,
       "gateStrikes": 0,
-      "score": 61.1,
+      "score": 60,
       "tag": "Hold",
-      "reason": "EPS growth +20%/yr expected through 2027; revenue +11%/yr; ROIC 5%; estimates +5.3% in 21d",
+      "reason": "EPS growth +20%/yr expected through 2027; revenue +11%/yr; ROIC 5%; estimates +5.3% in 28d",
       "nextEarnings": "2027-02-10"
     },
     {
@@ -1278,15 +1278,15 @@
       "sector": "Real Estate",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 188.79,
-      "ret52w": 5,
-      "vsHigh": -6.8,
-      "fwdEpsGrowth": 13.5,
-      "fwdRevGrowth": 3.4,
+      "price": 191.64,
+      "ret52w": 6.2,
+      "vsHigh": -5.4,
+      "fwdEpsGrowth": 13.4,
+      "fwdRevGrowth": 3.5,
       "trailEpsGrowth": 12.2,
-      "epsFy1": 6.96,
+      "epsFy1": 6.97,
       "fy1": "2026",
-      "revision": -0.1,
+      "revision": 0,
       "roic": 7,
       "roe": 91.3,
       "opMargin": 44.1,
@@ -1294,16 +1294,16 @@
       "cashConv": 246.6,
       "fcfToNi": 165.8,
       "netDebtEbitda": 5.9,
-      "pe": 26.6,
-      "ps": 8,
+      "pe": 27,
+      "ps": 8.1,
       "peg": 2,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 0,
       "gateStrikes": 0,
-      "score": 23.1,
+      "score": 23.4,
       "tag": "Hold",
-      "reason": "EPS growth +13%/yr expected through 2027; revenue +3%/yr; ROIC 7%; estimates -0.1% in 21d",
+      "reason": "EPS growth +13%/yr expected through 2027; revenue +4%/yr; ROIC 7%; estimates -0.0% in 28d",
       "nextEarnings": "2027-02-23"
     },
     {
@@ -1312,15 +1312,15 @@
       "sector": "Utilities",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 110.55,
-      "ret52w": 13.8,
-      "vsHigh": -6.7,
+      "price": 111.15,
+      "ret52w": 16.3,
+      "vsHigh": -6.2,
       "fwdEpsGrowth": 14.4,
-      "fwdRevGrowth": 8.8,
+      "fwdRevGrowth": 8.9,
       "trailEpsGrowth": 13.3,
       "epsFy1": 4.42,
       "fy1": "2026",
-      "revision": 0.4,
+      "revision": 0.5,
       "roic": 3.5,
       "roe": 11.3,
       "opMargin": 24,
@@ -1328,16 +1328,16 @@
       "cashConv": 268.9,
       "fcfToNi": -90.5,
       "netDebtEbitda": 4.7,
-      "pe": 25.1,
+      "pe": 25.2,
       "ps": 3.8,
       "peg": 1.7,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 14.5,
       "gateStrikes": 0,
-      "score": 39.1,
+      "score": 40.7,
       "tag": "Hold",
-      "reason": "EPS growth +14%/yr expected through 2027; revenue +9%/yr; ROIC 4%; estimates +0.4% in 21d",
+      "reason": "EPS growth +14%/yr expected through 2027; revenue +9%/yr; ROIC 4%; estimates +0.5% in 28d",
       "nextEarnings": "2027-02-11"
     },
     {
@@ -1346,11 +1346,11 @@
       "sector": "Utilities",
       "sleeve": "core",
       "zacksRank": null,
-      "price": 118.56,
-      "ret52w": 20.7,
-      "vsHigh": -3.4,
+      "price": 121,
+      "ret52w": 16.5,
+      "vsHigh": -1.4,
       "fwdEpsGrowth": 7.3,
-      "fwdRevGrowth": 4.2,
+      "fwdRevGrowth": 4.3,
       "trailEpsGrowth": 6.5,
       "epsFy1": 6.11,
       "fy1": "2026",
@@ -1362,16 +1362,16 @@
       "cashConv": 169.3,
       "fcfToNi": -55.4,
       "netDebtEbitda": 4.2,
-      "pe": 18.9,
-      "ps": 2.4,
+      "pe": 19.3,
+      "ps": 2.5,
       "peg": 2.6,
       "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 2,
       "gateStrikes": 0,
-      "score": 24,
+      "score": 23,
       "tag": "Hold",
-      "reason": "EPS growth +7%/yr expected through 2027; revenue +4%/yr; ROIC 4%; estimates -0.0% in 21d",
+      "reason": "EPS growth +7%/yr expected through 2027; revenue +4%/yr; ROIC 4%; estimates -0.0% in 28d",
       "nextEarnings": "2027-02-18"
     },
     {
@@ -1380,15 +1380,15 @@
       "sector": "Industrials",
       "sleeve": "ai",
       "zacksRank": null,
-      "price": 182.86,
-      "ret52w": -2.7,
-      "vsHigh": -51.9,
-      "fwdEpsGrowth": 70,
-      "fwdRevGrowth": 37.9,
+      "price": 202.07,
+      "ret52w": 21.3,
+      "vsHigh": -46.8,
+      "fwdEpsGrowth": 70.3,
+      "fwdRevGrowth": 38.2,
       "trailEpsGrowth": null,
-      "epsFy1": 7.16,
+      "epsFy1": 7.17,
       "fy1": "2026",
-      "revision": 6.5,
+      "revision": 6.7,
       "roic": 22.5,
       "roe": 45.5,
       "opMargin": 20.3,
@@ -1396,16 +1396,16 @@
       "cashConv": 189.3,
       "fcfToNi": 165.5,
       "netDebtEbitda": -0.1,
-      "pe": 33.4,
-      "ps": 5.4,
+      "pe": 36.9,
+      "ps": 5.9,
       "peg": 0.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 21.4,
       "gateStrikes": 0,
-      "score": 80.8,
+      "score": 80.4,
       "tag": "Watch",
-      "reason": "52% below its 52-week high (price only, not a removal trigger)",
+      "reason": "47% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-10"
     },
     {
@@ -1414,15 +1414,15 @@
       "sector": "Technology",
       "sleeve": "ai",
       "zacksRank": 2,
-      "price": 375.44,
-      "ret52w": 27.2,
-      "vsHigh": -23,
-      "fwdEpsGrowth": 48.9,
-      "fwdRevGrowth": 41.2,
+      "price": 398.73,
+      "ret52w": 41.4,
+      "vsHigh": -18.2,
+      "fwdEpsGrowth": 48.8,
+      "fwdRevGrowth": 41.1,
       "trailEpsGrowth": 18.6,
-      "epsFy1": 545.56,
+      "epsFy1": 545.11,
       "fy1": "2026",
-      "revision": 0.3,
+      "revision": 0.2,
       "roic": 28.8,
       "roe": 41.2,
       "opMargin": 57.9,
@@ -1430,51 +1430,17 @@
       "cashConv": 143.3,
       "fcfToNi": 57.6,
       "netDebtEbitda": -0.7,
-      "pe": 22.9,
-      "ps": 11.8,
+      "pe": 23.4,
+      "ps": 12.1,
       "peg": 0.5,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 3.4,
       "gateStrikes": 0,
-      "score": 77.8,
+      "score": 77.6,
       "tag": "Hold",
-      "reason": "EPS growth +49%/yr expected through 2027; revenue +41%/yr; ROIC 29%; estimates +0.3% in 21d",
+      "reason": "EPS growth +49%/yr expected through 2027; revenue +41%/yr; ROIC 29%; estimates +0.2% in 28d",
       "nextEarnings": "2027-01-21"
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology, Inc.",
-      "sector": "Technology",
-      "sleeve": "ai",
-      "zacksRank": 3,
-      "price": 690,
-      "ret52w": 172.4,
-      "vsHigh": -45,
-      "fwdEpsGrowth": 68.5,
-      "fwdRevGrowth": 56,
-      "trailEpsGrowth": null,
-      "epsFy1": 175.61,
-      "fy1": "2027",
-      "revision": 0.2,
-      "roic": 50.1,
-      "roe": 91.8,
-      "opMargin": 74.6,
-      "netMargin": 63.8,
-      "cashConv": 122.7,
-      "fcfToNi": 64.4,
-      "netDebtEbitda": -0.3,
-      "pe": 9.2,
-      "ps": 5.9,
-      "peg": 0.1,
-      "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 5.2,
-      "gateStrikes": 0,
-      "score": 75.2,
-      "tag": "Watch",
-      "reason": "45% below its 52-week high (price only, not a removal trigger)",
-      "nextEarnings": "2026-12-23"
     },
     {
       "ticker": "KLAC",
@@ -1482,11 +1448,11 @@
       "sector": "Technology",
       "sleeve": "ai",
       "zacksRank": null,
-      "price": 138.49,
-      "ret52w": 13.7,
-      "vsHigh": -54.9,
-      "fwdEpsGrowth": 39.3,
-      "fwdRevGrowth": 29.2,
+      "price": 152.32,
+      "ret52w": 34.4,
+      "vsHigh": -50.4,
+      "fwdEpsGrowth": 39.4,
+      "fwdRevGrowth": 29.4,
       "trailEpsGrowth": 14.9,
       "epsFy1": 5.77,
       "fy1": "2027",
@@ -1498,85 +1464,51 @@
       "cashConv": 99,
       "fcfToNi": 90.4,
       "netDebtEbitda": 0.7,
-      "pe": 34.4,
-      "ps": 12.4,
-      "peg": 0.9,
+      "pe": 37.9,
+      "ps": 13.7,
+      "peg": 1,
       "upgrades": 0,
       "downgrades": 0,
       "lastSurprise": 2.5,
       "gateStrikes": 0,
-      "score": 74.7,
+      "score": 75,
       "tag": "Watch",
-      "reason": "55% below its 52-week high (price only, not a removal trigger)",
+      "reason": "50% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2027-02-04"
     },
     {
-      "ticker": "CDNS",
-      "name": "Cadence Design Systems, Inc.",
+      "ticker": "MU",
+      "name": "Micron Technology, Inc.",
       "sector": "Technology",
       "sleeve": "ai",
-      "zacksRank": null,
-      "price": 319.92,
-      "ret52w": -2.7,
-      "vsHigh": -23.2,
-      "fwdEpsGrowth": 55.8,
-      "fwdRevGrowth": 17.7,
-      "trailEpsGrowth": 9.5,
-      "epsFy1": 8.41,
-      "fy1": "2026",
-      "revision": 3.2,
-      "roic": 12.8,
-      "roe": 21.4,
-      "opMargin": 28.9,
-      "netMargin": 22.5,
-      "cashConv": 135.3,
-      "fcfToNi": 123.3,
-      "netDebtEbitda": 0.6,
-      "pe": 63.2,
-      "ps": 14.3,
-      "peg": 1.1,
+      "zacksRank": 3,
+      "price": 778.31,
+      "ret52w": 221.7,
+      "vsHigh": -38,
+      "fwdEpsGrowth": 68.5,
+      "fwdRevGrowth": 56.4,
+      "trailEpsGrowth": null,
+      "epsFy1": 175.61,
+      "fy1": "2027",
+      "revision": 0.2,
+      "roic": 50.1,
+      "roe": 91.8,
+      "opMargin": 74.6,
+      "netMargin": 63.8,
+      "cashConv": 122.7,
+      "fcfToNi": 64.4,
+      "netDebtEbitda": -0.3,
+      "pe": 10.3,
+      "ps": 6.6,
+      "peg": 0.2,
       "upgrades": 0,
       "downgrades": 0,
-      "lastSurprise": 2.9,
+      "lastSurprise": 5.2,
       "gateStrikes": 0,
-      "score": 73,
-      "tag": "Hold",
-      "reason": "EPS growth +56%/yr expected through 2027; revenue +18%/yr; ROIC 13%; estimates +3.2% in 21d",
-      "nextEarnings": "2027-02-16"
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials, Inc.",
-      "sector": "Technology",
-      "sleeve": "ai",
-      "zacksRank": null,
-      "price": 332.71,
-      "ret52w": 41.5,
-      "vsHigh": -55,
-      "fwdEpsGrowth": 47.2,
-      "fwdRevGrowth": 28.5,
-      "trailEpsGrowth": 5.2,
-      "epsFy1": 12.82,
-      "fy1": "2026",
-      "revision": -0.1,
-      "roic": 23.5,
-      "roe": 40.4,
-      "opMargin": 30.5,
-      "netMargin": 30.1,
-      "cashConv": 120.5,
-      "fcfToNi": 98.8,
-      "netDebtEbitda": 0,
-      "pe": 28.5,
-      "ps": 8.6,
-      "peg": 0.6,
-      "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 2.9,
-      "gateStrikes": 0,
-      "score": 61.5,
+      "score": 74.5,
       "tag": "Watch",
-      "reason": "reports 2026-11-12. 55% below its 52-week high (price only, not a removal trigger)",
-      "nextEarnings": "2026-11-12"
+      "reason": "38% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2026-12-23"
     },
     {
       "ticker": "CIEN",
@@ -1584,9 +1516,9 @@
       "sector": "Technology",
       "sleeve": "ai",
       "zacksRank": null,
-      "price": 243.39,
-      "ret52w": 16.6,
-      "vsHigh": -61.8,
+      "price": 280.54,
+      "ret52w": 46.3,
+      "vsHigh": -56,
       "fwdEpsGrowth": 273.4,
       "fwdRevGrowth": 33.1,
       "trailEpsGrowth": -5.3,
@@ -1600,121 +1532,189 @@
       "cashConv": 322.2,
       "fcfToNi": 239.2,
       "netDebtEbitda": -2.3,
-      "pe": 52.7,
-      "ps": 5.7,
+      "pe": 60.7,
+      "ps": 6.6,
       "peg": 0.2,
       "upgrades": 1,
       "downgrades": 0,
       "lastSurprise": 22,
       "gateStrikes": 0,
-      "score": 74.7,
-      "tag": "New",
-      "reason": "added by screen. 62% below its 52-week high (price only, not a removal trigger)",
+      "score": 74.1,
+      "tag": "Watch",
+      "reason": "56% below its 52-week high (price only, not a removal trigger)",
       "nextEarnings": "2026-12-10"
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems, Inc.",
+      "sector": "Technology",
+      "sleeve": "ai",
+      "zacksRank": null,
+      "price": 323.01,
+      "ret52w": 3.8,
+      "vsHigh": -22.5,
+      "fwdEpsGrowth": 55.8,
+      "fwdRevGrowth": 17.7,
+      "trailEpsGrowth": 9.5,
+      "epsFy1": 8.41,
+      "fy1": "2026",
+      "revision": 3.2,
+      "roic": 12.8,
+      "roe": 21.4,
+      "opMargin": 28.9,
+      "netMargin": 22.5,
+      "cashConv": 135.3,
+      "fcfToNi": 123.3,
+      "netDebtEbitda": 0.6,
+      "pe": 63.8,
+      "ps": 14.5,
+      "peg": 1.1,
+      "upgrades": 0,
+      "downgrades": 0,
+      "lastSurprise": 2.9,
+      "gateStrikes": 0,
+      "score": 72.4,
+      "tag": "Hold",
+      "reason": "EPS growth +56%/yr expected through 2027; revenue +18%/yr; ROIC 13%; estimates +3.2% in 28d",
+      "nextEarnings": "2027-02-16"
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials, Inc.",
+      "sector": "Technology",
+      "sleeve": "ai",
+      "zacksRank": null,
+      "price": 370.5,
+      "ret52w": 62,
+      "vsHigh": -49.9,
+      "fwdEpsGrowth": 41,
+      "fwdRevGrowth": 30.2,
+      "trailEpsGrowth": 15.9,
+      "epsFy1": 19.12,
+      "fy1": "2027",
+      "revision": null,
+      "roic": 28.3,
+      "roe": 41.4,
+      "opMargin": 33,
+      "netMargin": 29.3,
+      "cashConv": 105.1,
+      "fcfToNi": 79.9,
+      "netDebtEbitda": -0.1,
+      "pe": 29.2,
+      "ps": 8.5,
+      "peg": 0.7,
+      "upgrades": 0,
+      "downgrades": 0,
+      "lastSurprise": 2.5,
+      "gateStrikes": 0,
+      "score": 69.6,
+      "tag": "Watch",
+      "reason": "50% below its 52-week high (price only, not a removal trigger)",
+      "nextEarnings": "2027-02-11"
     }
   ],
   "removed": [
     {
-      "ticker": "MSFT",
-      "name": "Microsoft Corporation",
-      "sector": "Technology",
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 530.61,
-      "ret52w": 4.9,
-      "vsHigh": -5.1,
-      "fwdEpsGrowth": 15.8,
-      "fwdRevGrowth": 19.9,
-      "trailEpsGrowth": 22.9,
-      "epsFy1": 20.05,
-      "fy1": "2027",
-      "revision": 1.5,
-      "roic": 20.4,
-      "roe": 33.2,
-      "opMargin": 47.1,
-      "netMargin": 41.2,
-      "cashConv": 135.2,
-      "fcfToNi": 65.7,
-      "netDebtEbitda": 0.5,
-      "pe": 27.6,
-      "ps": 11.4,
-      "peg": 1.8,
-      "upgrades": 1,
+      "price": 641.69,
+      "ret52w": 6.6,
+      "vsHigh": -17.7,
+      "fwdEpsGrowth": 20.6,
+      "fwdRevGrowth": 24.8,
+      "trailEpsGrowth": 39.8,
+      "epsFy1": 29.08,
+      "fy1": "2026",
+      "revision": -5.1,
+      "roic": 18.1,
+      "roe": 30.3,
+      "opMargin": 32.9,
+      "netMargin": 31.1,
+      "cashConv": 171.8,
+      "fcfToNi": 89,
+      "netDebtEbitda": 0.9,
+      "pe": 21.6,
+      "ps": 6.8,
+      "peg": 1,
+      "upgrades": 0,
       "downgrades": 0,
-      "lastSurprise": 3.6,
+      "lastSurprise": 13.1,
       "gateStrikes": 0,
-      "score": 60.2,
+      "score": null,
       "tag": "Removed",
-      "reason": "replaced by ANET, which outscored it by 27 points",
+      "reason": "2026 EPS consensus cut -5.1% over 28 days",
       "nextEarnings": "2027-01-27"
     },
     {
-      "ticker": "JNJ",
-      "name": "Johnson & Johnson",
-      "sector": "Healthcare",
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
       "sleeve": "core",
       "zacksRank": 3,
-      "price": 276.22,
-      "ret52w": 46.6,
-      "vsHigh": -2.1,
-      "fwdEpsGrowth": 2.5,
-      "fwdRevGrowth": 7,
-      "trailEpsGrowth": 17.9,
-      "epsFy1": 11.11,
+      "price": 142.28,
+      "ret52w": 60.4,
+      "vsHigh": -7.8,
+      "fwdEpsGrowth": 32.2,
+      "fwdRevGrowth": 8.6,
+      "trailEpsGrowth": -24.2,
+      "epsFy1": 11.88,
       "fy1": "2026",
-      "revision": -0.4,
-      "roic": 15.4,
-      "roe": 19.6,
-      "opMargin": 25.7,
-      "netMargin": 16.2,
-      "cashConv": 132.1,
-      "fcfToNi": 106.6,
-      "netDebtEbitda": 0.9,
-      "pe": 41.9,
-      "ps": 6.7,
-      "peg": 16.8,
+      "revision": 5.6,
+      "roic": 9.6,
+      "roe": 17.8,
+      "opMargin": 24.6,
+      "netMargin": 17.1,
+      "cashConv": 212.7,
+      "fcfToNi": 85.1,
+      "netDebtEbitda": 0.5,
+      "pe": 14.9,
+      "ps": 2.5,
+      "peg": 0.5,
       "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 2.8,
+      "downgrades": 2,
+      "lastSurprise": 7.2,
       "gateStrikes": 0,
-      "score": 26.1,
+      "score": 46.4,
       "tag": "Removed",
-      "reason": "replaced by SYK, which outscored it by 22 points",
-      "nextEarnings": "2027-01-26"
+      "reason": "replaced by MPC, which outscored it by 21 points",
+      "nextEarnings": "2027-02-04"
     },
     {
-      "ticker": "ECL",
-      "name": "Ecolab Inc.",
+      "ticker": "NEM",
+      "name": "Newmont Corporation",
       "sector": "Basic Materials",
       "sleeve": "core",
-      "zacksRank": null,
-      "price": 300.68,
-      "ret52w": 16.3,
-      "vsHigh": -5.7,
-      "fwdEpsGrowth": 13.6,
-      "fwdRevGrowth": 9.7,
-      "trailEpsGrowth": 24.1,
-      "epsFy1": 8.16,
+      "zacksRank": 3,
+      "price": 113.14,
+      "ret52w": 29.9,
+      "vsHigh": -16.4,
+      "fwdEpsGrowth": 24.9,
+      "fwdRevGrowth": 11.8,
+      "trailEpsGrowth": null,
+      "epsFy1": 9.3,
       "fy1": "2026",
-      "revision": 0.1,
-      "roic": 9.2,
-      "roe": 20.7,
-      "opMargin": 17.1,
-      "netMargin": 12,
-      "cashConv": 146.1,
-      "fcfToNi": 95.8,
-      "netDebtEbitda": 3.6,
-      "pe": 40.6,
-      "ps": 4.9,
-      "peg": 3,
+      "revision": 0.8,
+      "roic": 17.5,
+      "roe": 26.5,
+      "opMargin": 55,
+      "netMargin": 35.1,
+      "cashConv": 240.8,
+      "fcfToNi": 128.2,
+      "netDebtEbitda": -0.2,
+      "pe": 13.1,
+      "ps": 4.5,
+      "peg": 0.5,
       "upgrades": 0,
-      "downgrades": 0,
-      "lastSurprise": 0,
-      "gateStrikes": 2,
-      "score": null,
+      "downgrades": 1,
+      "lastSurprise": 12.2,
+      "gateStrikes": 0,
+      "score": 46.7,
       "tag": "Removed",
-      "reason": "net debt 3.6x EBITDA, above 3x (2 runs in a row)",
-      "nextEarnings": "2027-02-09"
+      "reason": "replaced by AU, which outscored it by 16 points",
+      "nextEarnings": "2027-02-18"
     }
   ],
   "estimateHistory": {
@@ -1738,6 +1738,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 9.46
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 9.44
       }
     ],
     "NVDA": [
@@ -1760,6 +1765,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 9.29
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 9.3
       }
     ],
     "MSFT": [
@@ -1782,6 +1792,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 20.05
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 20.1
       }
     ],
     "AVGO": [
@@ -1802,6 +1817,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 11.68
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 11.68
       }
@@ -1826,6 +1846,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 175.61
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 175.61
       }
     ],
     "AMD": [
@@ -1848,28 +1873,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 7.98
-      }
-    ],
-    "CSCO": [
-      {
-        "date": "2026-10-19",
-        "fy": "2027",
-        "eps": 5.1
       },
       {
-        "date": "2026-10-26",
-        "fy": "2027",
-        "eps": 5.1
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2027",
-        "eps": 5.12
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2027",
-        "eps": 5.1
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.07
       }
     ],
     "PLTR": [
@@ -1890,6 +1898,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 1.68
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 1.68
       }
@@ -1914,6 +1927,38 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 8.14
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 8.15
+      }
+    ],
+    "CSCO": [
+      {
+        "date": "2026-10-19",
+        "fy": "2027",
+        "eps": 5.1
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2027",
+        "eps": 5.1
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2027",
+        "eps": 5.12
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 5.1
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 5.43
       }
     ],
     "INTC": [
@@ -1934,6 +1979,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 1.5
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 1.5
       }
@@ -1958,50 +2008,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.82
-      }
-    ],
-    "PANW": [
+      },
       {
-        "date": "2026-10-19",
+        "date": "2026-11-16",
         "fy": "2027",
-        "eps": 4.19
-      },
-      {
-        "date": "2026-10-26",
-        "fy": "2027",
-        "eps": 4.18
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2027",
-        "eps": 4.18
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2027",
-        "eps": 4.18
-      }
-    ],
-    "TXN": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 8.52
-      },
-      {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 9.04
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 9.04
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 9.04
+        "eps": 19.12
       }
     ],
     "LRCX": [
@@ -2024,6 +2035,92 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 9.66
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 9.66
+      }
+    ],
+    "TXN": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 8.52
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 9.04
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 9.04
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 9.04
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 9.06
+      }
+    ],
+    "PANW": [
+      {
+        "date": "2026-10-19",
+        "fy": "2027",
+        "eps": 4.19
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2027",
+        "eps": 4.18
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2027",
+        "eps": 4.18
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 4.18
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 4.18
+      }
+    ],
+    "ANET": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 4.11
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 4.11
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 4.11
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 4.3
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.37
       }
     ],
     "IBM": [
@@ -2044,6 +2141,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 12.41
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 12.41
       }
@@ -2068,28 +2170,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 1.25
-      }
-    ],
-    "ANET": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 4.11
       },
       {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 4.11
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 4.11
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 4.3
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 1.25
       }
     ],
     "DELL": [
@@ -2112,28 +2197,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 25.92
-      }
-    ],
-    "APH": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 2.68
       },
       {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 2.69
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 2.8
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 2.82
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 25.92
       }
     ],
     "KLAC": [
@@ -2156,28 +2224,38 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 5.77
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 5.77
       }
     ],
-    "QCOM": [
+    "APH": [
       {
         "date": "2026-10-19",
         "fy": "2026",
-        "eps": 10.54
+        "eps": 2.68
       },
       {
         "date": "2026-10-26",
         "fy": "2026",
-        "eps": 10.54
+        "eps": 2.69
       },
       {
         "date": "2026-11-02",
         "fy": "2026",
-        "eps": 10.54
+        "eps": 2.8
       },
       {
         "date": "2026-11-09",
-        "fy": "2027",
-        "eps": 9.9
+        "fy": "2026",
+        "eps": 2.82
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.82
       }
     ],
     "ADI": [
@@ -2200,6 +2278,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.88
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.88
+      }
+    ],
+    "QCOM": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 10.54
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 10.54
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 10.54
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 9.9
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 9.69
       }
     ],
     "CRM": [
@@ -2220,6 +2330,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 16.75
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2027",
         "eps": 16.75
       }
@@ -2244,6 +2359,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 3.37
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 3.36
       }
     ],
     "MRVL": [
@@ -2266,30 +2386,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 4.21
-      }
-    ],
-    "ADP": [
-      {
-        "date": "2026-10-26",
-        "fy": "2027",
-        "eps": 12.26
       },
       {
-        "date": "2026-11-02",
+        "date": "2026-11-16",
         "fy": "2027",
-        "eps": 12.36
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2027",
-        "eps": 12.36
-      }
-    ],
-    "APP": [
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 15.81
+        "eps": 4.21
       }
     ],
     "SNDK": [
@@ -2312,28 +2413,45 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 227.09
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 227.09
       }
     ],
-    "NOW": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 4.07
-      },
-      {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 4.07
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 3.95
-      },
+    "APP": [
       {
         "date": "2026-11-09",
         "fy": "2026",
-        "eps": 3.95
+        "eps": 15.81
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 16.22
+      }
+    ],
+    "ADP": [
+      {
+        "date": "2026-10-26",
+        "fy": "2027",
+        "eps": 12.26
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2027",
+        "eps": 12.36
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 12.36
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 12.37
       }
     ],
     "WDC": [
@@ -2356,6 +2474,18 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 24.73
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 24.73
+      }
+    ],
+    "NET": [
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.35
       }
     ],
     "GOOG": [
@@ -2378,6 +2508,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 19.69
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 19.63
       }
     ],
     "META": [
@@ -2400,6 +2535,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 29.11
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 29.08
       }
     ],
     "NFLX": [
@@ -2420,6 +2560,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.58
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.58
       }
@@ -2444,6 +2589,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.92
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.92
       }
     ],
     "VZ": [
@@ -2464,6 +2614,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 5.05
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 5.05
       }
@@ -2488,6 +2643,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.18
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 11.18
       }
     ],
     "T": [
@@ -2508,6 +2668,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 2.4
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 2.4
       }
@@ -2532,6 +2697,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 3.47
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 3.47
       }
     ],
     "DASH": [
@@ -2554,6 +2724,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.77
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.8
       }
     ],
     "LYV": [
@@ -2576,6 +2751,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": -0.37
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": -0.37
       }
     ],
     "FOX": [
@@ -2583,6 +2763,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 5.97
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 5.84
       }
     ],
     "FWONA": [
@@ -2590,6 +2775,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 1.81
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.87
       }
     ],
     "LLY": [
@@ -2612,6 +2802,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 35.33
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 35.37
       }
     ],
     "JNJ": [
@@ -2632,6 +2827,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 11.11
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 11.11
       }
@@ -2656,28 +2856,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 13.97
-      }
-    ],
-    "MRK": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 2.65
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 2.64
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 2.75
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 2.77
+        "eps": 14
       }
     ],
     "UNH": [
@@ -2700,6 +2883,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 20.6
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 20.6
+      }
+    ],
+    "MRK": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 2.65
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 2.64
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 2.75
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 2.77
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.78
       }
     ],
     "TMO": [
@@ -2720,6 +2935,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 25.29
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 25.29
       }
@@ -2744,6 +2964,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 23.49
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 23.55
       }
     ],
     "GILD": [
@@ -2766,6 +2991,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": -0.85
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": -0.89
       }
     ],
     "ABT": [
@@ -2786,6 +3016,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 5.52
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 5.52
       }
@@ -2810,6 +3045,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 3.03
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 3.05
       }
     ],
     "DHR": [
@@ -2830,6 +3070,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 8.59
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 8.59
       }
@@ -2854,6 +3099,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.25
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 11.26
       }
     ],
     "VRTX": [
@@ -2876,6 +3126,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 18.23
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 18.16
       }
     ],
     "BMY": [
@@ -2898,13 +3153,18 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.44
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.44
       }
     ],
-    "SYK": [
+    "MCK": [
       {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 14.84
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 45.78
       }
     ],
     "BRK-B": [
@@ -2912,6 +3172,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 22.35
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 22.56
       }
     ],
     "JPM": [
@@ -2932,6 +3197,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 24.69
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 24.69
       }
@@ -2956,6 +3226,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 15.05
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 15.04
       }
     ],
     "MA": [
@@ -2978,6 +3253,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 20.05
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 20.07
       }
     ],
     "BAC": [
@@ -2998,6 +3278,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 4.36
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 4.36
       }
@@ -3022,28 +3307,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.9
-      }
-    ],
-    "WFC": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 7.33
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 7.33
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 7.33
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 7.33
+        "eps": 12.9
       }
     ],
     "GS": [
@@ -3066,6 +3334,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 71.35
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 71.44
+      }
+    ],
+    "WFC": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 7.33
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 7.33
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 7.33
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 7.33
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 7.33
       }
     ],
     "AXP": [
@@ -3086,6 +3386,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 18.35
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 18.35
       }
@@ -3110,6 +3415,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.4
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 11.4
       }
     ],
     "BLK": [
@@ -3130,6 +3440,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 57.75
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 57.75
       }
@@ -3154,45 +3469,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.46
-      }
-    ],
-    "BX": [
-      {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 5.91
       },
       {
-        "date": "2026-11-02",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 5.86
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 5.86
-      }
-    ],
-    "SPGI": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 17.85
-      },
-      {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 17.84
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 17.93
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 17.93
+        "eps": 6.45
       }
     ],
     "IBKR": [
@@ -3215,6 +3496,60 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.7
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.7
+      }
+    ],
+    "BX": [
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 5.91
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 5.86
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 5.86
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 5.85
+      }
+    ],
+    "SPGI": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 17.85
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 17.84
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 17.93
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 17.93
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 17.91
       }
     ],
     "SPCX": [
@@ -3237,6 +3572,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 0.19
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 0.22
       }
     ],
     "GE": [
@@ -3259,6 +3599,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.17
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.16
       }
     ],
     "CAT": [
@@ -3281,6 +3626,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 27.32
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 27.23
       }
     ],
     "RTX": [
@@ -3301,6 +3651,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 7.69
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 7.69
       }
@@ -3325,6 +3680,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 31.62
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 31.66
       }
     ],
     "DE": [
@@ -3345,6 +3705,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 18.08
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 18.08
       }
@@ -3369,28 +3734,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 13.18
-      }
-    ],
-    "BA": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": -1.08
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": -1.04
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": -1.75
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": -1.88
+        "eps": 13.18
       }
     ],
     "LMT": [
@@ -3413,6 +3761,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 30.66
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 30.67
+      }
+    ],
+    "BA": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": -1.08
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": -1.04
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": -1.75
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": -1.88
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": -1.88
       }
     ],
     "PH": [
@@ -3435,6 +3815,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 35.73
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 36.99
       }
     ],
     "GD": [
@@ -3457,13 +3842,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.26
-      }
-    ],
-    "MMM": [
+      },
       {
-        "date": "2026-11-09",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 9.12
+        "eps": 17.3
       }
     ],
     "WM": [
@@ -3484,6 +3867,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 8.06
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 8.06
       }
@@ -3508,6 +3896,23 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.06
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.06
+      }
+    ],
+    "MMM": [
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 9.12
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 9.12
       }
     ],
     "EMR": [
@@ -3530,6 +3935,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 7.28
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 7.3
       }
     ],
     "XOM": [
@@ -3552,6 +3962,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 13.46
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 13.69
       }
     ],
     "CVX": [
@@ -3574,6 +3989,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.99
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 18.18
       }
     ],
     "COP": [
@@ -3596,6 +4016,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.49
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 11.88
       }
     ],
     "MPC": [
@@ -3618,6 +4043,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 67.67
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 67.86
       }
     ],
     "VLO": [
@@ -3640,6 +4070,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 59.69
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 59.4
       }
     ],
     "PSX": [
@@ -3662,6 +4097,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 33.81
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 34.7
       }
     ],
     "WMB": [
@@ -3684,6 +4124,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.47
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.45
       }
     ],
     "EPD": [
@@ -3704,6 +4149,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.04
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.04
       }
@@ -3728,6 +4178,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.93
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 18.86
       }
     ],
     "SLB": [
@@ -3748,6 +4203,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 2.44
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 2.44
       }
@@ -3772,28 +4232,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 1.58
-      }
-    ],
-    "LNG": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 10.61
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 10.63
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 12.03
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 12.34
+        "eps": 1.58
       }
     ],
     "TRGP": [
@@ -3816,13 +4259,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.33
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 11.64
       }
     ],
-    "MPLX": [
+    "LNG": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 10.61
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 10.63
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 12.03
+      },
       {
         "date": "2026-11-09",
         "fy": "2026",
-        "eps": 4.28
+        "eps": 12.34
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.66
       }
     ],
     "OXY": [
@@ -3845,6 +4313,23 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.86
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 7.15
+      }
+    ],
+    "MPLX": [
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 4.28
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.28
       }
     ],
     "AMZN": [
@@ -3867,6 +4352,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.84
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.83
       }
     ],
     "TSLA": [
@@ -3887,6 +4377,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 1.68
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 1.68
       }
@@ -3911,6 +4406,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 15
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 14.99
       }
     ],
     "MCD": [
@@ -3933,6 +4433,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.92
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.94
       }
     ],
     "TJX": [
@@ -3955,6 +4460,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 5.26
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 5.25
       }
     ],
     "LOW": [
@@ -3977,28 +4487,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 12.27
-      }
-    ],
-    "BKNG": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 10.46
       },
       {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 10.46
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 10.46
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 10.47
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 12.27
       }
     ],
     "SBUX": [
@@ -4021,6 +4514,38 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 3.21
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 3.22
+      }
+    ],
+    "BKNG": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 10.46
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 10.46
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 10.46
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 10.47
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 10.47
       }
     ],
     "ABNB": [
@@ -4043,6 +4568,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 5.31
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 5.57
       }
     ],
     "MAR": [
@@ -4065,6 +4595,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 11.99
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.04
       }
     ],
     "RCL": [
@@ -4087,6 +4622,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.88
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 17.9
       }
     ],
     "HLT": [
@@ -4109,6 +4649,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 9.13
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 9.13
       }
     ],
     "CVNA": [
@@ -4119,6 +4664,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 1.55
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 1.55
       }
@@ -4143,28 +4693,18 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 8.45
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 8.49
       }
     ],
-    "GM": [
+    "ORLY": [
       {
-        "date": "2026-10-19",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 13.44
-      },
-      {
-        "date": "2026-10-26",
-        "fy": "2026",
-        "eps": 13.54
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 13.54
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 13.54
+        "eps": 3.32
       }
     ],
     "WMT": [
@@ -4185,6 +4725,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 2.89
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2027",
         "eps": 2.89
       }
@@ -4209,6 +4754,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 22.79
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 22.82
       }
     ],
     "KO": [
@@ -4229,6 +4779,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.34
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.34
       }
@@ -4253,6 +4808,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 6.98
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 6.98
       }
     ],
     "PM": [
@@ -4273,6 +4833,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 8.35
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 8.35
       }
@@ -4297,6 +4862,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.39
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.39
       }
     ],
     "MO": [
@@ -4319,6 +4889,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 5.69
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 5.7
       }
     ],
     "MNST": [
@@ -4341,6 +4916,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 1.16
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.15
       }
     ],
     "MDLZ": [
@@ -4361,6 +4941,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.06
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.06
       }
@@ -4385,6 +4970,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 3.92
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 3.92
       }
     ],
     "TGT": [
@@ -4407,6 +4997,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 10.21
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 10.23
       }
     ],
     "KDP": [
@@ -4429,6 +5024,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.3
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.3
       }
     ],
     "KR": [
@@ -4446,6 +5046,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 5.19
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 5.2
       }
     ],
     "EL": [
@@ -4468,6 +5073,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 3.43
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 3.44
       }
     ],
     "SYY": [
@@ -4488,6 +5098,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2027",
+        "eps": 5.07
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2027",
         "eps": 5.07
       }
@@ -4512,6 +5127,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 7.9
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 7.92
       }
     ],
     "NEM": [
@@ -4534,28 +5154,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 9.32
-      }
-    ],
-    "FCX": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 3.16
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 3.2
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 3.17
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 3.16
+        "eps": 9.3
       }
     ],
     "ECL": [
@@ -4578,6 +5181,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.16
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.16
+      }
+    ],
+    "FCX": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 3.16
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 3.2
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 3.17
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.16
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 3.13
       }
     ],
     "SHW": [
@@ -4598,6 +5233,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 12.04
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 12.04
       }
@@ -4622,6 +5262,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 14.45
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 14.38
       }
     ],
     "NUE": [
@@ -4644,6 +5289,18 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 19.84
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 19.94
+      }
+    ],
+    "VYLR": [
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.31
       }
     ],
     "AU": [
@@ -4666,6 +5323,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.67
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.58
       }
     ],
     "VMC": [
@@ -4688,6 +5350,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.78
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.79
       }
     ],
     "STLD": [
@@ -4710,6 +5377,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.66
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 17.67
       }
     ],
     "MLM": [
@@ -4732,6 +5404,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 17.09
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 15.74
       }
     ],
     "PPG": [
@@ -4742,6 +5419,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 8
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 8
       }
@@ -4766,6 +5448,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.83
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.78
       }
     ],
     "PLD": [
@@ -4786,6 +5473,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.76
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.76
       }
@@ -4810,6 +5502,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 18.12
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 18.12
       }
     ],
     "AMT": [
@@ -4832,6 +5529,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.96
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.97
       }
     ],
     "SPG": [
@@ -4854,6 +5556,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.65
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.63
       }
     ],
     "DLR": [
@@ -4876,6 +5583,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.8
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.81
       }
     ],
     "PSA": [
@@ -4898,6 +5610,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 9.64
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 9.17
       }
     ],
     "O": [
@@ -4920,6 +5637,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 1.53
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.54
       }
     ],
     "VTR": [
@@ -4942,28 +5664,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 0.57
-      }
-    ],
-    "CBRE": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 7.83
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 7.81
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 7.82
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 7.83
+        "eps": 0.55
       }
     ],
     "CCI": [
@@ -4986,28 +5691,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 1.93
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.93
       }
     ],
-    "EXR": [
+    "CBRE": [
       {
         "date": "2026-10-19",
         "fy": "2026",
-        "eps": 4.66
+        "eps": 7.83
       },
       {
         "date": "2026-10-26",
         "fy": "2026",
-        "eps": 4.66
+        "eps": 7.81
       },
       {
         "date": "2026-11-02",
         "fy": "2026",
-        "eps": 4.65
+        "eps": 7.82
       },
       {
         "date": "2026-11-09",
         "fy": "2026",
-        "eps": 4.65
+        "eps": 7.83
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 7.83
       }
     ],
     "IRM": [
@@ -5030,6 +5745,38 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.49
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.52
+      }
+    ],
+    "EXR": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 4.66
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 4.66
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 4.65
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 4.65
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.64
       }
     ],
     "VICI": [
@@ -5052,6 +5799,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.53
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 2.49
       }
     ],
     "NEE": [
@@ -5074,6 +5826,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 4.03
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.02
       }
     ],
     "SO": [
@@ -5081,6 +5838,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 4.59
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.64
       }
     ],
     "DUK": [
@@ -5103,6 +5865,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.72
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.73
       }
     ],
     "CEG": [
@@ -5125,6 +5892,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 12.17
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 12.26
       }
     ],
     "AEP": [
@@ -5147,6 +5919,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 6.47
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.49
       }
     ],
     "D": [
@@ -5167,6 +5944,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.6
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.6
       }
@@ -5191,6 +5973,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 4.42
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.42
       }
     ],
     "XEL": [
@@ -5211,6 +5998,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 4.14
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 4.14
       }
@@ -5235,6 +6027,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 5.13
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 5.17
       }
     ],
     "EXC": [
@@ -5257,28 +6054,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 2.87
-      }
-    ],
-    "ED": [
-      {
-        "date": "2026-10-19",
-        "fy": "2026",
-        "eps": 6.11
       },
       {
-        "date": "2026-10-26",
+        "date": "2026-11-16",
         "fy": "2026",
-        "eps": 6.11
-      },
-      {
-        "date": "2026-11-02",
-        "fy": "2026",
-        "eps": 6.11
-      },
-      {
-        "date": "2026-11-09",
-        "fy": "2026",
-        "eps": 6.11
+        "eps": 2.87
       }
     ],
     "VST": [
@@ -5301,11 +6081,48 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.59
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.4
+      }
+    ],
+    "ED": [
+      {
+        "date": "2026-10-19",
+        "fy": "2026",
+        "eps": 6.11
+      },
+      {
+        "date": "2026-10-26",
+        "fy": "2026",
+        "eps": 6.11
+      },
+      {
+        "date": "2026-11-02",
+        "fy": "2026",
+        "eps": 6.11
+      },
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 6.11
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 6.11
       }
     ],
     "WEC": [
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 5.62
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 5.62
       }
@@ -5315,6 +6132,18 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 4.37
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.36
+      }
+    ],
+    "PCG": [
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 1.65
       }
     ],
     "TSM": [
@@ -5337,6 +6166,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 545.56
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 545.11
       }
     ],
     "VRT": [
@@ -5359,6 +6193,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 7.16
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 7.17
       }
     ],
     "SMCI": [
@@ -5381,6 +6220,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 6.07
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 6.52
       }
     ],
     "TER": [
@@ -5403,6 +6247,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 9.49
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 9.5
       }
     ],
     "ONTO": [
@@ -5425,6 +6274,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 8.12
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 8.48
       }
     ],
     "COHR": [
@@ -5447,6 +6301,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 9.81
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 10.41
       }
     ],
     "CIEN": [
@@ -5467,6 +6326,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 7.17
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 7.17
       }
@@ -5491,6 +6355,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 6.3
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 6.3
       }
     ],
     "ALAB": [
@@ -5513,6 +6382,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 4.31
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 4.34
       }
     ],
     "SNPS": [
@@ -5533,6 +6407,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 15.16
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 15.16
       }
@@ -5557,6 +6436,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 8.41
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 8.41
       }
     ],
     "CRWV": [
@@ -5579,6 +6463,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": -4.13
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": -3.77
       }
     ],
     "NBIS": [
@@ -5601,6 +6490,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": -1.97
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": -1.2
       }
     ],
     "ARM": [
@@ -5623,6 +6517,11 @@
         "date": "2026-11-09",
         "fy": "2027",
         "eps": 2.22
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2027",
+        "eps": 2.24
       }
     ],
     "ASML": [
@@ -5643,6 +6542,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 41.19
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 41.19
       }
@@ -5667,6 +6571,11 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 29.12
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 29.2
       }
     ],
     "FTNT": [
@@ -5687,6 +6596,11 @@
       },
       {
         "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 3.56
+      },
+      {
+        "date": "2026-11-16",
         "fy": "2026",
         "eps": 3.56
       }
@@ -5711,6 +6625,23 @@
         "date": "2026-11-09",
         "fy": "2026",
         "eps": 5.44
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 5.45
+      }
+    ],
+    "SYK": [
+      {
+        "date": "2026-11-09",
+        "fy": "2026",
+        "eps": 14.84
+      },
+      {
+        "date": "2026-11-16",
+        "fy": "2026",
+        "eps": 14.84
       }
     ]
   }
