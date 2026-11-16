@@ -209,6 +209,85 @@ function Group({ title, items, open, toggle, showSector, emptyText }) {
   );
 }
 
+// Manual run for the halal list. Talks to /api/run-halal, which holds the GitHub token; the passphrase
+// is kept on this device only so it doesn't have to be retyped.
+const PIN_KEY = "halalRunPin";
+const readPin = () => { try { return window.localStorage.getItem(PIN_KEY) || ""; } catch { return ""; } };
+const savePin = (v) => { try { v ? window.localStorage.setItem(PIN_KEY, v) : window.localStorage.removeItem(PIN_KEY); } catch { /* storage unavailable */ } };
+
+function RunHalal() {
+  const [show, setShow] = useState(false);
+  const [pin, setPin] = useState(readPin);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState(null); // { text, color }
+
+  const call = async (action) => {
+    if (!pin) { setMsg({ text: "Enter the passphrase first.", color: palette.warn }); return; }
+    setBusy(true);
+    setMsg(null);
+    try {
+      const res = await fetch("/api/run-halal", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ pin, action }) });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.started) {
+        savePin(pin);
+        setMsg({ color: palette.success, text: data.started === "full"
+          ? "Full screen started. It takes about 35 minutes; reopen the app after that to see the new list."
+          : "Compliance refresh started. Reopen the app in about 5 minutes to see the new statuses." });
+      } else if (res.ok && data.latest !== undefined) {
+        savePin(pin);
+        const r = data.latest;
+        const when = r?.startedAt ? new Date(r.startedAt).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : "";
+        setMsg({ color: palette.textDim, text: !r ? "No runs yet." : r.status === "completed" ? `Last run ${when}: ${r.conclusion === "success" ? "finished" : r.conclusion}.` : `A run started ${when} is still going.` });
+      } else if (res.status === 401) {
+        savePin("");
+        setMsg({ color: palette.danger, text: "Wrong passphrase." });
+      } else if (res.status === 409) {
+        setMsg({ color: palette.warn, text: "A run is already going. Wait for it to finish." });
+      } else if (res.status === 503) {
+        setMsg({ color: palette.warn, text: "Not set up yet: add GITHUB_DISPATCH_TOKEN and RUN_PIN in Vercel." });
+      } else {
+        setMsg({ color: palette.danger, text: "GitHub didn't accept the request. Check the token in Vercel." });
+      }
+    } catch {
+      setMsg({ color: palette.danger, text: "Couldn't reach the server. Check your connection." });
+    }
+    setBusy(false);
+  };
+
+  if (!show) {
+    return (
+      <div style={{ marginBottom: 12 }}>
+        <button onClick={() => setShow(true)} style={s.pill(false)}>Run now</button>
+      </div>
+    );
+  }
+  return (
+    <div style={{ ...s.card, padding: "12px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <span style={{ fontFamily: fonts.display, fontSize: "0.85rem", fontWeight: 700, color: palette.accent }}>Run the halal list now</span>
+        <button onClick={() => { setShow(false); setMsg(null); }} style={{ ...s.pill(false), padding: "3px 10px" }}>Close</button>
+      </div>
+      <input
+        type="password"
+        value={pin}
+        onChange={(e) => setPin(e.target.value)}
+        placeholder="Passphrase"
+        autoComplete="off"
+        style={{ width: "100%", boxSizing: "border-box", padding: "8px 10px", marginBottom: 8, background: palette.bg, border: `1px solid ${palette.borderLight}`, borderRadius: 6, color: palette.text, fontFamily: fonts.mono, fontSize: "0.8rem" }}
+      />
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <button disabled={busy} onClick={() => call("compliance")} style={{ ...s.pill(true), opacity: busy ? 0.5 : 1 }}>Refresh compliance</button>
+        <button disabled={busy} onClick={() => call("full")} style={{ ...s.pill(false), opacity: busy ? 0.5 : 1 }}>Full screen</button>
+        <button disabled={busy} onClick={() => call("status")} style={{ ...s.pill(false), opacity: busy ? 0.5 : 1 }}>Last run</button>
+      </div>
+      <div style={{ fontSize: "0.68rem", color: palette.textMuted, marginTop: 8, lineHeight: 1.5 }}>
+        Refresh compliance checks 30 names in Halal Terminal (about 2 minutes). Full screen rebuilds the list (about 35 minutes). Each uses 30 of roughly 100 free Halal Terminal lookups a month.
+      </div>
+      {msg && <div style={{ fontSize: "0.74rem", color: msg.color, marginTop: 8, lineHeight: 1.5 }}>{msg.text}</div>}
+    </div>
+  );
+}
+
 const LISTS = [
   { id: "core", label: "Core", data: coreIdeas },
   { id: "halal", label: "Halal", data: halalIdeas },
@@ -273,7 +352,8 @@ export default function WeeklyIdeas() {
           ? " Each name's Zoya status is checked weekly and shown on its card; anything marked unverified still needs a manual check, and purification comes from Zoya's per-holding figure."
           : " Confirm every name in Zoya before use: Zoya's status governs, and purification comes from its per-holding figure."}
         {ideas.halalTerminal?.mode === "on" && ` Halal Terminal second opinion on ${ideas.halalTerminal.covered} of ${ideas.halalTerminal.total} names so far; a batch is rechecked each run.`}</div>
-      ) : (
+      ) : null}
+      {isHalal ? <RunHalal /> : (
         <div style={s.note}>Idea list only. Every name still runs through the firm's screeners and compliance review before it is considered for any client account.</div>
       )}
 
