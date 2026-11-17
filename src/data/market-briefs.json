@@ -2,6 +2,245 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-17",
+      "session": "morning",
+      "generatedAt": "2026-11-17T13:55:00Z",
+      "headline": "Futures mixed and fragile after Monday's tech rout: Nasdaq 100 bouncing, Dow dragged by Home Depot, with everything hinging on Nvidia's report after the close tonight. Retail sales were tame on the headline but hot underneath, and a Fed official floated up to four more hikes.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,441",
+          "change": "+0.0%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "27,410",
+          "change": "+0.5%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "51,375",
+          "change": "-0.6%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,734",
+          "change": "-0.3%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.12%",
+          "change": "-3 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "23.0",
+          "change": "+0.3%"
+        },
+        {
+          "label": "WTI",
+          "value": "$86.3",
+          "change": "+0.7%"
+        },
+        {
+          "label": "Brent",
+          "value": "$93.8",
+          "change": "+1.4%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,848",
+          "change": "-0.1%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$64,830",
+          "change": "+0.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Retail sales MoM (Oct)",
+          "actual": "+0.2%",
+          "consensus": "+0.2%",
+          "prior": "+0.8%",
+          "read": "In line; big-ticket and autos soft",
+          "reaction": "Futures little changed; 10-yr roughly flat near 5.12%"
+        },
+        {
+          "name": "Retail sales control group (Oct)",
+          "actual": "+0.6%",
+          "consensus": "+0.4%",
+          "prior": "+0.5% (rev. from +0.1%)",
+          "read": "Core consumer spending still firm",
+          "reaction": "Supports Fed hawks; muted market move"
+        },
+        {
+          "name": "Import prices MoM (Oct)",
+          "actual": "+1.1%",
+          "consensus": "+0.7%",
+          "prior": "+1.1%",
+          "read": "Another hot inflation input",
+          "reaction": "Little reaction"
+        }
+      ],
+      "drivers": [
+        "Nvidia reports after the bell, the first call since Jensen Huang resigned Nov 12; interim CEO Colette Kress hosts. Street looks for EPS near $2.47 and revenue near $109B. Stock is down about 28% over the past month and modestly higher premarket.",
+        "New US restrictions on China's access to advanced AI chips and servers hit semiconductors globally; a BofA survey shows fund managers cut tech exposure by the most since 2006.",
+        "Hawkish Fed: St. Louis Fed's Musalem said as many as four hikes may be needed by early next year; markets price better than 90% odds of a hike at the Dec 8-9 FOMC. Fed minutes come Wednesday.",
+        "Overseas: Europe lower, with the Stoxx 600 posting its biggest drop in over a week and Deutsche Bank down 5-6% on a report of further Epstein-linked payments; Asia closed lower on the chip curbs (Nikkei -1.3%, Hang Seng -1.0%, Kospi -2.6%, Taiwan -2.3%)."
+      ],
+      "calendar": [
+        {
+          "time": "8:15 CT",
+          "item": "Industrial production (Oct); capacity utilization",
+          "consensus": "+0.1% (prior +0.7%); 76.8%"
+        },
+        {
+          "time": "8:20 CT",
+          "item": "Fed's Waller speaks",
+          "consensus": "No FOMC blackout yet (meeting Dec 8-9)"
+        },
+        {
+          "time": "8:30 CT",
+          "item": "Fed's Hammack speaks",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "NAHB housing market index (Nov)",
+          "consensus": "29 (prior 29)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Business inventories (Sep)",
+          "consensus": "+0.5%"
+        },
+        {
+          "time": "1:25 CT",
+          "item": "Fed's Williams speaks",
+          "consensus": ""
+        },
+        {
+          "time": "3:30 CT",
+          "item": "API crude inventories",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Earnings reported: Home Depot, Disney, JD.com, Viking, Amer Sports",
+          "consensus": "HD EPS $3.86 in line, rev beat; DIS EPS $1.77 vs $1.67"
+        },
+        {
+          "time": "After bell",
+          "item": "Earnings: Nvidia",
+          "consensus": "EPS ~$2.48, revenue ~$109B"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "$156.14 prior close (-4.1% Mon), modestly higher premarket",
+          "why": "Reports after the close tonight; board reportedly not looking to bring Huang back."
+        },
+        {
+          "ticker": "DIS",
+          "move": "+2% premarket",
+          "why": "FQ4 EPS $1.77 vs $1.67 and revenue $25.9B beat; dividend raised 33% and $3B cost plan; parks and streaming strong."
+        },
+        {
+          "ticker": "HD",
+          "move": "Lower premarket, weighing on Dow",
+          "why": "EPS $3.86 in line, revenue $43.4B beat, comps +2.2% vs +1.6% est, but full-year outlook tweaked; CFO McPhail becomes CEO Nov 23."
+        },
+        {
+          "ticker": "DB",
+          "move": "-5% to -6% in Europe",
+          "why": "FT report on additional Epstein-linked payments and compliance lapses."
+        },
+        {
+          "ticker": "MU",
+          "move": "Rebounding premarket",
+          "why": "Memory names bouncing after Monday's 7-8% drops in the semi selloff."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fed's Musalem says four more rate hikes may be needed (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/17/alberto-musalem-fed-interest-rates.html"
+        },
+        {
+          "title": "Fed's Musalem: several rate hikes by spring (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/feds-musalem-us-likely-needs-several-rate-hikes-by-spring-control-inflation-2026-11-17/"
+        },
+        {
+          "title": "JPMorgan names Bregje de Best CFO (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/finance/jpmorgan-says-insider-bregje-de-best-will-succeed-barnum-cfo-2026-11-17/"
+        },
+        {
+          "title": "Investors slashed tech allocations by most since 2006 (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/global-markets-bofa-survey-2026-11-17/"
+        },
+        {
+          "title": "US stock futures fall ahead of Nvidia earnings (Invezz via FMP)",
+          "url": "https://invezz.com/news/2026/11/17/us-stock-futures-fall-ahead-of-nvidia-earnings-5-things-to-know-before-market-opens/"
+        },
+        {
+          "title": "Deutsche Bank falls on Epstein payments report (Benzinga via FMP)",
+          "url": "https://www.benzinga.com/trading-ideas/movers/26/11/63338004/deutsche-bank-stock-falls-on-reports-of-additional-epstein-payments-russia-expansion-plans"
+        },
+        {
+          "title": "Investors look to Nvidia earnings and Anthropic IPO (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/17/nvidia-earnings-anthropic-ipo-tech-rally.html"
+        },
+        {
+          "title": "Stock market today: futures mixed in countdown to Nvidia (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-17-dow-sp-500-nasdaq-nvidia-earnings-091546152.html"
+        },
+        {
+          "title": "US retail sales increase moderately in October (Reuters via Investing.com)",
+          "url": "https://www.investing.com/news/economy-news/us-retail-sales-increase-moderately-in-october-5033051"
+        },
+        {
+          "title": "Stock Market Today, Nov. 17: Stocks jittery ahead of Nvidia (TipRanks)",
+          "url": "https://www.tipranks.com/news/stock-market-today-nov-17-u-s-stocks-jittery-ahead-of-nvidia-results"
+        },
+        {
+          "title": "US futures steady, Asian stocks slide - Europe wrap (FinancialJuice)",
+          "url": "https://features.financialjuice.com/2026/11/17/us-futures-steady-asian-stocks-slide-europe-market-wrap/"
+        },
+        {
+          "title": "Stock Market News for Nov 17, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3031068/-stock-market-news-for-nov-17,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Pre-Markets Lower as Puzzle Pieces Sorted - Zacks",
+          "url": "https://www.zacks.com/stock/news/3030351/pre-markets-lower-as-puzzle-pieces-sorted?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Disney Q4 key metrics - Zacks",
+          "url": "https://www.zacks.com/stock/news/3031001/disney-(dis)-reports-q4-earnings:-what-key-metrics-have-to-say?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Home Depot Q3 key metrics - Zacks",
+          "url": "https://www.zacks.com/stock/news/3031004/home-depot-(hd)-q3-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/HD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DIS - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DIS?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-17-morning"
+    },
+    {
       "date": "2026-11-16",
       "session": "afternoon",
       "generatedAt": "2026-11-16T21:35:00Z",
@@ -6696,576 +6935,6 @@
         }
       ],
       "id": "2026-10-28-morning"
-    },
-    {
-      "date": "2026-10-27",
-      "session": "afternoon",
-      "generatedAt": "2026-10-27T20:35:00Z",
-      "headline": "Stocks closed higher, Nasdaq +1.2%, as a Broadcom-arranged $63B financing package for Anthropic's AI chips reignited the semiconductor trade ahead of Wednesday's Fed decision; the S&P climbed steadily all day with no reversal.",
-      "levels": [
-        {
-          "label": "S&P 500",
-          "value": "7,722.65",
-          "change": "+0.60%"
-        },
-        {
-          "label": "Nasdaq",
-          "value": "26,477.81",
-          "change": "+1.18%"
-        },
-        {
-          "label": "Dow",
-          "value": "52,377.57",
-          "change": "+0.03%"
-        },
-        {
-          "label": "Russell 2000",
-          "value": "2,818.87",
-          "change": "+1.16%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.99%",
-          "change": "-1 bp"
-        },
-        {
-          "label": "VIX",
-          "value": "17.51",
-          "change": "-4.8%"
-        },
-        {
-          "label": "WTI",
-          "value": "$100.08",
-          "change": "-1.7%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,075",
-          "change": "+0.9%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$80,600",
-          "change": "+0.7%"
-        }
-      ],
-      "data": [
-        {
-          "name": "CB Consumer Confidence (Oct)",
-          "actual": "91.7",
-          "consensus": "81.0",
-          "prior": "84.2",
-          "read": "much firmer; first rise in four months",
-          "reaction": "supported risk appetite"
-        },
-        {
-          "name": "Durable goods orders (Sep)",
-          "actual": "+1.8%",
-          "consensus": "+1.5%",
-          "prior": "+0.1%",
-          "read": "firmer",
-          "reaction": "growth looks resilient into the Fed"
-        },
-        {
-          "name": "New home sales (Sep)",
-          "actual": "676K",
-          "consensus": "650K",
-          "prior": "680K",
-          "read": "better than feared",
-          "reaction": "muted"
-        },
-        {
-          "name": "Case-Shiller 20-city home prices y/y (Aug)",
-          "actual": "+2.7%",
-          "consensus": "+2.5%",
-          "prior": "+2.5%",
-          "read": "slightly firmer",
-          "reaction": "muted"
-        }
-      ],
-      "drivers": [
-        "AI financing relief: Broadcom (+4%) unveiled a $63B special-purpose vehicle, funded by Bank of America, BlackRock, Citi and Morgan Stanley, that leases its AI hardware to Anthropic, easing worries about who pays for the buildout a day after Anthropic's IPO filing. Meta's plan to raise up to $95B (Nvidia committing $3B) added fuel; AMD +5.5%, Intel +3.6%, Micron +2.8%.",
-        "Firmer data: Conference Board confidence jumped to 91.7 vs 81 expected, durable goods rose 1.8% vs 1.5%, and new home sales beat at 676K. Growth looks resilient heading into the Fed decision.",
-        "Earnings split the tape: Boeing fell 10.7% on a wider loss and a 737 MAX ramp pushed to the second half of 2027, sinking the Dow; SoFi +13%, JetBlue +19% and UPS +2% on raised guidance; Coca-Cola -1.6% despite a beat on slower North American demand.",
-        "Fed day one: the decision comes Wednesday at 1:00 CT, with a hold at 4.00% the base case and roughly 10% odds of a hike after the hot CPI. Oil eased, with WTI near $100 and Brent below $110, on Middle East de-escalation hopes.",
-        "Changed since morning: Boeing was only down about 2% premarket and finished down 10.7%; the rotation back into AI flagged in the morning held all session."
-      ],
-      "sectors": {
-        "leaders": "Healthcare, Consumer Cyclical, Real Estate",
-        "laggards": "Consumer Staples, Financials, Communication Services (flat)"
-      },
-      "afterHours": [
-        {
-          "ticker": "V",
-          "move": "-1%",
-          "why": "EPS $3.48 vs $3.44 est; revenue $12.1B in line"
-        },
-        {
-          "ticker": "HOOD",
-          "move": "-5%",
-          "why": "Record revenue $1.42B (+12% y/y) but crypto revenue -55%; adj EPS $0.60 vs $0.56 est"
-        },
-        {
-          "ticker": "STX",
-          "move": "-7%",
-          "why": "EPS $7.68 vs $7.45 est; sold off on the print despite the beat"
-        },
-        {
-          "ticker": "NXPI",
-          "move": "-7%",
-          "why": "EPS $4.20 vs $4.12 est; shares slid after hours despite the beat"
-        },
-        {
-          "ticker": "CZR",
-          "move": "flat",
-          "why": "Loss of $0.61/share vs -$0.12 est; little after-hours move yet"
-        }
-      ],
-      "calendar": [
-        {
-          "time": "7:30 CT",
-          "item": "Goods trade balance (Sep)",
-          "consensus": "-$130B (prior -$132.1B)"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Wholesale inventories (Sep)",
-          "consensus": "+0.5%"
-        },
-        {
-          "time": "8:45 CT",
-          "item": "Bank of Canada rate decision",
-          "consensus": "hike to 2.50%"
-        },
-        {
-          "time": "9:30 CT",
-          "item": "EIA crude inventories",
-          "consensus": "+0.8M bbl"
-        },
-        {
-          "time": "1:00 CT",
-          "item": "FOMC decision (Powell presser 1:30 CT)",
-          "consensus": "hold at 4.00%"
-        },
-        {
-          "time": "Before open",
-          "item": "Earnings: T-Mobile, GE Vernova, ADP, Vertiv, Biogen, TE Connectivity, Garmin, Phillips 66",
-          "consensus": ""
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Alphabet, Microsoft, Ford, ServiceNow, KLA, Chipotle, eBay, Equinix, O'Reilly, Carvana, MGM",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "BA",
-          "move": "-10.7%",
-          "why": "Worst day since 2020: wider Q3 loss and 737 MAX production ramp delayed to 2H 2027"
-        },
-        {
-          "ticker": "SOFI",
-          "move": "+13.4%",
-          "why": "Revenue +44% y/y; beat and raised guidance"
-        },
-        {
-          "ticker": "JBLU",
-          "move": "+19%",
-          "why": "Loss wider than feared but Q4 unit revenue guided up as much as 22%"
-        },
-        {
-          "ticker": "AVGO",
-          "move": "+4%",
-          "why": "$63B SPV to finance Anthropic's AI hardware; Zacks rates it Hold citing margin pressure"
-        },
-        {
-          "ticker": "META",
-          "move": "-1.6%",
-          "why": "Digesting a planned capital raise of up to $95B for the AI buildout"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock market today: Dow, S&P 500, Nasdaq rise as tech gains for second day, chip stocks rally (Yahoo Finance)",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-27-dow-sp-500-nasdaq-081901995.html"
-        },
-        {
-          "title": "Nasdaq Jumps 308 Points on Broadcom's Big Anthropic Deal (Kiplinger)",
-          "url": "https://www.kiplinger.com/investing/stocks/nasdaq-jumps-308-points-on-broadcoms-big-gains-stock-market-today"
-        },
-        {
-          "title": "Robinhood Reports Third Quarter 2026 Results (GlobeNewswire)",
-          "url": "https://www.globenewswire.com/news-release/2026/10/27/3389611/0/en/robinhood-reports-third-quarter-2026-results.html"
-        },
-        {
-          "title": "U.S. Consumer Confidence Improved in October, Conference Board Says (WSJ via FMP)",
-          "url": "https://www.wsj.com/economy/central-banking/u-s-consumer-confidence-improved-in-october-conference-board-says-746458b3"
-        },
-        {
-          "title": "US new home sales fall in September (Reuters via FMP)",
-          "url": "https://www.reuters.com/business/us-new-home-sales-fall-september-median-house-price-drops-year-ago-2026-10-27/"
-        },
-        {
-          "title": "Federal Reserve expected to hold interest rates steady (Fox Business via FMP)",
-          "url": "https://www.foxbusiness.com/economy/federal-reserve-expected-hold-interest-rates-steady-midterm-elections-week-away"
-        },
-        {
-          "title": "Early third-quarter earnings show a resilient U.S. consumer (CNBC via FMP)",
-          "url": "https://www.cnbc.com/2026/10/27/q3-earnings-resilient-consumer.html"
-        },
-        {
-          "title": "Pre-Markets Up on Rotation Back into AI (Zacks, 10/27/2026)",
-          "url": "https://www.zacks.com/stock/news/3016133/pre-markets-up-on-rotation-back-into-ai?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Broadcom Drops 6% in a Month: Buy, Sell or Hold the AVGO Stock? (Zacks, 10/27/2026)",
-          "url": "https://www.zacks.com/stock/news/3016422/broadcom-drops-6-in-a-month:-buy,-sell-or-hold-the-avgo-stock?utm_source=zacks_mcp"
-        },
-        {
-          "title": "SoFi Technologies Q3 Earnings: Key Metrics (Zacks, 10/27/2026)",
-          "url": "https://www.zacks.com/stock/news/3015807/sofi-technologies-(sofi)-q3-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "BA - Zacks",
-          "url": "https://www.zacks.com/stock/quote/BA?utm_source=zacks_mcp"
-        },
-        {
-          "title": "SOFI - Zacks",
-          "url": "https://www.zacks.com/stock/quote/SOFI?utm_source=zacks_mcp"
-        },
-        {
-          "title": "AVGO - Zacks",
-          "url": "https://www.zacks.com/stock/quote/AVGO?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Index, yield, sector, calendar and price data: Financial Modeling Prep",
-          "url": "https://financialmodelingprep.com"
-        }
-      ],
-      "id": "2026-10-27-afternoon"
-    },
-    {
-      "date": "2026-10-27",
-      "session": "morning",
-      "generatedAt": "2026-10-27T12:55:00Z",
-      "headline": "Futures point modestly higher (+0.2% to +0.4%) ahead of the Fed as the AI rebound extends on Anthropic's S-1 and Nvidia's $3B stake in Meta's raise, and a mostly solid earnings morning offsets a wider Boeing loss; the FOMC starts its two-day meeting today with a hold expected Wednesday.",
-      "levels": [
-        {
-          "label": "S&P 500 fut",
-          "value": "7,737",
-          "change": "+0.3%"
-        },
-        {
-          "label": "Nasdaq 100 fut",
-          "value": "29,554",
-          "change": "+0.4%"
-        },
-        {
-          "label": "Dow fut",
-          "value": "52,687",
-          "change": "+0.3%"
-        },
-        {
-          "label": "Russell fut",
-          "value": "2,806",
-          "change": "+0.3%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.99%",
-          "change": "-1bp"
-        },
-        {
-          "label": "VIX",
-          "value": "17.75",
-          "change": "-3.5%"
-        },
-        {
-          "label": "WTI",
-          "value": "$101.10",
-          "change": "-0.6%"
-        },
-        {
-          "label": "Brent",
-          "value": "$115.16",
-          "change": "-0.6%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,038",
-          "change": "-0.0%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$80,280",
-          "change": "+0.3%"
-        }
-      ],
-      "data": [
-        {
-          "name": "Durable goods orders (Sep)",
-          "actual": "+1.8%",
-          "consensus": "+1.5%",
-          "prior": "+0.1%",
-          "read": "headline beat on transportation",
-          "reaction": "muted; futures held gains, 10-yr steady ~4.99%"
-        },
-        {
-          "name": "Durable goods ex-transport (Sep)",
-          "actual": "+0.5%",
-          "consensus": "+0.6%",
-          "prior": "+0.3%",
-          "read": "slight miss",
-          "reaction": "muted"
-        },
-        {
-          "name": "Core capex orders ex-air (Sep)",
-          "actual": "+0.5%",
-          "consensus": "+0.7%",
-          "prior": "+1.6%",
-          "read": "cooling from a strong August",
-          "reaction": "muted"
-        },
-        {
-          "name": "Building permits, revised (Sep)",
-          "actual": "1.398M (-0.4%)",
-          "consensus": "1.40M",
-          "prior": "1.403M",
-          "read": "in line",
-          "reaction": "none"
-        }
-      ],
-      "drivers": [
-        "Fed day 1: roughly 90% odds of a hold at 3.75-4.00% on Wednesday and 76-82% odds of a December hike per the CNBC Fed survey and FedWatch; Chair Warsh's press conference tone is the event. Blackout in effect, no Fed speakers.",
-        "AI trade bouncing: Anthropic's public S-1 (ticker ANT, about $1.5T valuation mooted), Meta upsizing its equity raise to about $97.5B with Nvidia committing $3B, and SpaceX's $40B chip financing. Semis firmer premarket; Microsoft and Alphabet report Wednesday.",
-        "Earnings mostly positive: Coca-Cola, UPS, HCA, Royal Caribbean, Hilton, PayPal, SoFi and Centene beat; Boeing's loss was wider than expected; HSBC missed and fell about 7%.",
-        "Oil near six-month highs on the US-Iran conflict: Houthis claimed an attack on Saudi Arabia's Ras Tanura refinery, partly offset by a reported Khamenei call for a deal.",
-        "Overseas: Europe mixed (FTSE -0.9% on HSBC, DAX +0.5%); Asia higher on the AI rebound (Nikkei +1.7%, KOSPI +3.1%) while China lagged (Shanghai -1.3%, Hang Seng -0.7%)."
-      ],
-      "calendar": [
-        {
-          "time": "8:00 CT",
-          "item": "S&P Case-Shiller home prices YoY (Aug); FHFA house price index",
-          "consensus": "2.5%"
-        },
-        {
-          "time": "9:00 CT",
-          "item": "New home sales (Sep)",
-          "consensus": "650K (prior 684K)"
-        },
-        {
-          "time": "9:00 CT",
-          "item": "Conference Board consumer confidence (Oct)",
-          "consensus": "81.0 (prior 81.9)"
-        },
-        {
-          "time": "9:00 CT",
-          "item": "Richmond Fed manufacturing (Oct)",
-          "consensus": "0 (prior -2)"
-        },
-        {
-          "time": "9:30 CT",
-          "item": "Dallas Fed services (Oct)",
-          "consensus": "-3 (prior -1.8)"
-        },
-        {
-          "time": "10:30 CT",
-          "item": "52-week bill auction",
-          "consensus": ""
-        },
-        {
-          "time": "12:00 CT",
-          "item": "5-year note auction",
-          "consensus": "prior 5.033%"
-        },
-        {
-          "time": "All day",
-          "item": "FOMC meeting day 1 of 2; decision Wed 1:00 CT. Fed blackout, no speakers",
-          "consensus": "hold at 3.75-4.00%"
-        },
-        {
-          "time": "3:30 CT",
-          "item": "API weekly crude inventories",
-          "consensus": "+0.8M bbl"
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Visa (V)",
-          "consensus": "EPS 3.44, rev $12.1B"
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Waste Management (WM)",
-          "consensus": "EPS 2.18, rev $6.8B"
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Robinhood (HOOD)",
-          "consensus": "EPS 0.56, rev $1.44B"
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: NXP Semi (NXPI)",
-          "consensus": "EPS 4.12, rev $3.76B"
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Teradyne (TER), Enphase (ENPH), CoStar (CSGP), Logitech (LOGI), Qorvo (QRVO)",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "CLS",
-          "move": "+16%",
-          "why": "Q3 revenue $5.83B (+83% y/y) and EPS 3.30 beat; FY26 revenue guide raised to $21B and first 2027 target of $40B."
-        },
-        {
-          "ticker": "HSBC",
-          "move": "-7%",
-          "why": "Q3 revenue and EPS missed despite pretax profit up 32%."
-        },
-        {
-          "ticker": "KO",
-          "move": "+0.3%",
-          "why": "EPS 0.91 vs 0.88, revenue $13.4B beat, volume +5%; FY EPS growth raised to at least 11%, though North America demand is slowing."
-        },
-        {
-          "ticker": "BA",
-          "move": "+1%",
-          "why": "Adjusted loss 0.34 vs -0.25 est on commercial airplane charges, but record $745B backlog, 737-7/-10 certified and F/A-XX fighter win."
-        },
-        {
-          "ticker": "PYPL",
-          "move": "flat",
-          "why": "EPS 1.45 beat, revenue $8.58B slightly light, full-year outlook raised and $700M cost-savings target."
-        },
-        {
-          "ticker": "UPS",
-          "move": "n/a",
-          "why": "EPS 1.69 vs 1.62 and revenue $22.9B beat; read as a positive signal for the US economy."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock market today: Dow, S&P 500, Nasdaq drift higher as tech bounces back - Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-27-dow-sp-500-nasdaq-081901995.html"
-        },
-        {
-          "title": "US Pre-Market: Futures rise, Celestica surges - TradingKey",
-          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262242150-us-ko-meta-spacex-nvda-intc-tradingkey"
-        },
-        {
-          "title": "Dow futures rise 129 points as traders weigh earnings, Fed meeting - Quartz",
-          "url": "https://qz.com/dow-futures-129-points-earnings-fed-meeting-102726"
-        },
-        {
-          "title": "Tech's relief rally extends as attention turns to the Fed - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/10/27/tech-rally-fed-decision.html"
-        },
-        {
-          "title": "Fed rate hikes are coming, but not this week: CNBC survey (via FMP)",
-          "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rate-hike-timing-expectations.html"
-        },
-        {
-          "title": "Fed expected to hold rates steady, but Warsh may point way to more hikes - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rates-kevin-warsh.html"
-        },
-        {
-          "title": "Nasdaq futures gain 140 points: 5 things to know - Invezz (via FMP)",
-          "url": "https://invezz.com/news/2026/10/27/nasdaq-futures-gain-140-points-5-things-to-know-before-wall-street-opens/"
-        },
-        {
-          "title": "Houthis say they attacked Saudi Ras Tanura refinery - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/energy/yemens-houthis-say-they-launched-an-attack-saudi-ras-tanura-oil-refinery-2026-10-27/"
-        },
-        {
-          "title": "Why reported Khamenei call moved markets - MarketWatch (via FMP)",
-          "url": "https://www.marketwatch.com/story/why-reported-khamenei-call-for-end-to-neither-war-nor-peace-moved-markets-a-bit-dd94b602"
-        },
-        {
-          "title": "Nvidia lands $3 billion Meta investment - GuruFocus (via FMP)",
-          "url": "https://www.gurufocus.com/news/9143933/nvidia-lands-3-billion-meta-investment-as-ai-partnership-expands"
-        },
-        {
-          "title": "KO stock rises as Coca-Cola raises 2026 outlook - Invezz (via FMP)",
-          "url": "https://invezz.com/news/2026/10/27/ko-stock-rises-slightly-as-coca-cola-raises-2026-outlook-for-third-straight-quarter/"
-        },
-        {
-          "title": "Why Boeing stock is up 1% after posting a $116M loss - Invezz (via FMP)",
-          "url": "https://invezz.com/news/2026/10/27/why-boeing-stock-is-up-1-after-posting-a-116m-loss/"
-        },
-        {
-          "title": "PayPal raises 2026 profit forecast - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/paypal-raises-2026-profit-forecast-turnaround-gains-traction-2026-10-27/"
-        },
-        {
-          "title": "UPS earnings deliver good news for the US economy - Barron's (via FMP)",
-          "url": "https://www.barrons.com/articles/ups-earnings-stock-price-4afc92ba"
-        },
-        {
-          "title": "MT Newswires - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/62E60D913144ABE35EE6610455F591C5?cnum=1"
-        },
-        {
-          "title": "MT Newswires - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/43746EF258874DD62DA506DC184F70D1?cnum=1"
-        },
-        {
-          "title": "Benzinga - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/88D5A7970FBA453EEA2ED7A6FBC5D5C9?cnum=7"
-        },
-        {
-          "title": "FXStreet - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/15CD56707FCC3C48BC27049143951756?cnum=1"
-        },
-        {
-          "title": "Alliance News - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/A25A29B01730A2511716115EE0925878?cnum=6"
-        },
-        {
-          "title": "Reuters via AOL - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/4AEEC4C7667BEBE60490C38305E6B7A3?cnum=1"
-        },
-        {
-          "title": "CNBC.com - Oct 27, 2026 (Bigdata.com)",
-          "url": "https://app.bigdata.com/documents/4980CBE6E771A7BC20D19FB78A214EED?cnum=2"
-        },
-        {
-          "title": "Boeing's Q3 loss wider than expected - Zacks, 10/27/2026",
-          "url": "https://www.zacks.com/stock/news/3015895/boeing's-q3-loss-wider-than-expected,-revenues-increase-y/y?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Celestica Q3 earnings and revenues top estimates - Zacks, 10/26/2026",
-          "url": "https://www.zacks.com/stock/news/3015358/celestica-(cls)-q3-earnings-and-revenues-top-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Stock Market News for Oct 27, 2026 - Zacks",
-          "url": "https://www.zacks.com/stock/news/3015467/stock-market-news-for-oct-27,-2026?utm_source=zacks_mcp"
-        },
-        {
-          "title": "CLS - Zacks",
-          "url": "https://www.zacks.com/stock/quote/CLS?utm_source=zacks_mcp"
-        },
-        {
-          "title": "BA - Zacks",
-          "url": "https://www.zacks.com/stock/quote/BA?utm_source=zacks_mcp"
-        },
-        {
-          "title": "AAPL - Zacks",
-          "url": "https://www.zacks.com/stock/quote/AAPL?utm_source=zacks_mcp"
-        },
-        {
-          "title": "PENG - Zacks",
-          "url": "https://www.zacks.com/stock/quote/PENG?utm_source=zacks_mcp"
-        },
-        {
-          "title": "GEV - Zacks",
-          "url": "https://www.zacks.com/stock/quote/GEV?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-10-27-morning"
     }
   ]
 }
