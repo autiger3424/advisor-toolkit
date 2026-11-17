@@ -3,6 +3,258 @@
   "briefs": [
     {
       "date": "2026-11-17",
+      "session": "afternoon",
+      "generatedAt": "2026-11-17T21:30:43Z",
+      "headline": "Stocks fell for a second day as the S&P 500 slid 1% to its lowest close since July, with investors de-risking into Nvidia's first earnings report since Jensen Huang's exit and digesting more hawkish Fed talk; after the bell Nvidia beat on every line and guided above consensus, lifting shares 2% to 4% after hours.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,340.63",
+          "change": "-1.02%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "24,329.09",
+          "change": "-0.74%"
+        },
+        {
+          "label": "Dow",
+          "value": "50,759.42",
+          "change": "-1.64%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,701.87",
+          "change": "-1.50%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.09%",
+          "change": "-3 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "25.50",
+          "change": "+11.3%"
+        },
+        {
+          "label": "WTI",
+          "value": "$86.40",
+          "change": "+0.8%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,850",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$64,000",
+          "change": "-2.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Retail sales (Oct, m/m)",
+          "actual": "+0.2%",
+          "consensus": "+0.2%",
+          "prior": "+0.8%",
+          "read": "in line; ex-autos +0.6% and control group +0.6% both beat +0.4%",
+          "reaction": "consumer still spending"
+        },
+        {
+          "name": "Industrial production (Oct, m/m)",
+          "actual": "-0.4%",
+          "consensus": "+0.1%",
+          "prior": "+0.7%",
+          "read": "softer",
+          "reaction": "manufacturing +0.3% held up"
+        },
+        {
+          "name": "NAHB housing market index (Nov)",
+          "actual": "25",
+          "consensus": "29",
+          "prior": "29",
+          "read": "lowest since 2012",
+          "reaction": "homebuilders heavy"
+        },
+        {
+          "name": "Import prices (Oct, m/m)",
+          "actual": "+1.1%",
+          "consensus": "+0.7%",
+          "prior": "+1.1%",
+          "read": "hotter; tariff pass-through",
+          "reaction": "supports Fed hawks"
+        }
+      ],
+      "drivers": [
+        "Nvidia and AI anxiety, round two: chips steadied into the print (NVDA -0.4%) but software was hit hard, with Salesforce -9.5%, as money rotated out of AI-adjacent names ahead of Thursday's Anthropic IPO. Monday's new US rule restricting China's remote access to advanced AI chips kept the sector on edge.",
+        "Hawkish Fed drumbeat: St. Louis Fed's Musalem said another hike is needed soon; NY Fed's Williams said he still favors tighter policy but not dramatic action. A December hike remains the base case in futures. The VIX rose a fourth straight day to its highest since April.",
+        "Mixed data: October retail sales +0.2% m/m in line, but ex-autos and the control group both beat at +0.6%. Industrial production -0.4% vs +0.1% expected. NAHB builder sentiment fell to 25, the lowest since 2012. Import prices +1.1% vs +0.7%.",
+        "Dow laggards: Home Depot (-2.4%) and Disney (-1.5%) both beat but sold off on soft traffic and park outlooks; JPMorgan -2.4% weighed on financials."
+      ],
+      "sectors": {
+        "leaders": "Industrials, Health Care, Consumer Staples",
+        "laggards": "Energy, Utilities, Financials"
+      },
+      "afterHours": [
+        {
+          "ticker": "NVDA",
+          "move": "+2% to +4%",
+          "why": "Q3 EPS $2.68 vs $2.48 est; revenue $115.8B vs ~$109B; data center $107.6B; Q4 guide ~$130B vs $125.2B. Gross-margin guide 71-72% (down from 74.9%) is the nitpick. No permanent-CEO announcement yet; Colette Kress remains interim."
+        }
+      ],
+      "calendar": [
+        {
+          "time": "6:00 CT",
+          "item": "MBA mortgage applications",
+          "consensus": "prior +6.2%"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Housing starts (Oct)",
+          "consensus": "1.27M vs 1.221M prior"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Building permits (Oct)",
+          "consensus": "1.38M vs 1.398M prior"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Pending home sales (Oct, m/m)",
+          "consensus": "-2.1% vs -7.3% prior"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "prior +4.7M bbl"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "20-yr Treasury auction",
+          "consensus": "prior 5.469%"
+        },
+        {
+          "time": "12:35 CT",
+          "item": "Fed's Barr speaks",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "FOMC minutes (Oct meeting)",
+          "consensus": "watch for hike debate"
+        },
+        {
+          "time": "1:30 CT",
+          "item": "Fed's Williams speaks",
+          "consensus": ""
+        },
+        {
+          "time": "3:15 CT",
+          "item": "Fed's Kashkari speaks",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-market",
+          "item": "Earnings: Lowe's, Target, TJX",
+          "consensus": "LOW $2.88, TGT $2.08, TJX $1.34"
+        },
+        {
+          "time": "After close",
+          "item": "Earnings: Palo Alto Networks, Woodward, Copa",
+          "consensus": "PANW $0.97, WWD $2.54, CPA $3.72"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "CRM",
+          "move": "-9.5%",
+          "why": "Software selloff; AI-disruption fears ahead of Anthropic's Thursday IPO."
+        },
+        {
+          "ticker": "NKE",
+          "move": "-6.3%",
+          "why": "China revenue down 26% last quarter; marketplace reset weighing on outlook."
+        },
+        {
+          "ticker": "HD",
+          "move": "-2.4%",
+          "why": "Beat and raised, but store visits fell on the weak housing market."
+        },
+        {
+          "ticker": "SNAP",
+          "move": "+8.0%",
+          "why": "Rare winner in the ad and software complex."
+        },
+        {
+          "ticker": "DIS",
+          "move": "-1.5%",
+          "why": "Beat on streaming and parks, but cautious park-attendance outlook."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow sinks 850 points, S&P 500 and Nasdaq drop with focus on Nvidia earnings (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-17-dow-sp-500-nasdaq-nvidia-earnings-retail-sales-143848454.html"
+        },
+        {
+          "title": "Dow drops more than 800 points, S&P 500 posts lowest close since July: Live updates (CNBC)",
+          "url": "https://www.cnbc.com/2026/11/16/stock-market-today-live-updates.html"
+        },
+        {
+          "title": "Nvidia beats on results and guidance in first earnings report since Huang's exit (CNBC)",
+          "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html"
+        },
+        {
+          "title": "Live: Will Nvidia's Q3 Earnings Tonight Bring Leadership Update After 28% Selloff? (24/7 Wall St.)",
+          "url": "https://247wallst.com/investing/2026/11/17/live-will-nvidias-q3-earnings-tonight-bring-leadership-update-after-28-selloff/"
+        },
+        {
+          "title": "Salesforce Sinks Ahead of Anthropic IPO: Stock Market Today (Benzinga)",
+          "url": "https://benzinga.com/markets/equities/26/11/63359152/stock-market-today-salesforce-software-selloff-anthropic-ipo-nvidia-november-17"
+        },
+        {
+          "title": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/17/wall-streets-fear-gauge-is-surging-again-and-this-time-its-not-just-about-ai-jitters.html"
+        },
+        {
+          "title": "Fed's Williams still favors tighter monetary policy, but says now is not the time for dramatic action (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/feds-williams-still-favors-tighter-monetary-policy-says-now-is-not-time-dramatic-2026-11-17/"
+        },
+        {
+          "title": "Motor vehicles, AI investment lift US factory production in October (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/motor-vehicles-ai-investment-lift-us-factory-production-october-2026-11-17/"
+        },
+        {
+          "title": "Stock Market News for Nov 17, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3031068/-stock-market-news-for-nov-17,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Retail Sales & Disney Numbers This Morning, NVIDIA This Afternoon (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3031188/retail-sales-&-disney-numbers-this-morning,-nvidia-this-afternoon?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NIKE's China Sales Decline 26% in Q1 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3031284/nike's-china-sales-decline-26-in-q1:-how-deep-is-the-challenge??utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "CRM - Zacks",
+          "url": "https://www.zacks.com/stock/quote/CRM?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NKE - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NKE?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-17-afternoon"
+    },
+    {
+      "date": "2026-11-17",
       "session": "morning",
       "generatedAt": "2026-11-17T13:55:00Z",
       "headline": "Futures mixed and fragile after Monday's tech rout: Nasdaq 100 bouncing, Dow dragged by Home Depot, with everything hinging on Nvidia's report after the close tonight. Retail sales were tame on the headline but hot underneath, and a Fed official floated up to four more hikes.",
