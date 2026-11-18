@@ -2,6 +2,246 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-18",
+      "session": "morning",
+      "generatedAt": "2026-11-18T14:05:00Z",
+      "headline": "Futures are up after Nvidia's beat-and-raise steadied the AI trade, with Nasdaq 100 futures leading at +1% ahead of Anthropic's IPO pricing tonight and the FOMC minutes at 1pm CT; October housing starts beat but permits fell sharply.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,403",
+          "change": "+0.5%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "27,370",
+          "change": "+1.0%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "50,940",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,716",
+          "change": "+0.2%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.10%",
+          "change": "+0 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "24.39",
+          "change": "-4.2%"
+        },
+        {
+          "label": "WTI",
+          "value": "$83.24",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Brent",
+          "value": "$92.39",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,775",
+          "change": "-2.4%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$64,200",
+          "change": "+0.3%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Housing starts (Oct)",
+          "actual": "1.309M",
+          "consensus": "1.25M",
+          "prior": "1.221M",
+          "read": "much stronger than expected, +9.9% m/m",
+          "reaction": "no distinct reaction; futures held gains, 10-yr about 5.10%"
+        },
+        {
+          "name": "Building permits (Oct)",
+          "actual": "1.295M",
+          "consensus": "1.38M",
+          "prior": "1.398M",
+          "read": "weak forward pipeline, -7.4% m/m with mortgage rates back at 7.35%",
+          "reaction": "no distinct reaction"
+        }
+      ],
+      "drivers": [
+        "Nvidia +3.7% pre-market: Q3 revenue $115.8B vs about $108B expected, EPS $2.68 vs $2.50; Q4 guide $130B vs about $125B; FY28 growth view raised to about 75%. Board says Jensen Huang will not return; SEC probe and a Senate appearance still overhang. Chips and AI infrastructure bid: AMD +3%, MU +3%, MRVL +4%, COHR +6%, DELL +5%.",
+        "Anthropic IPO (ANT, Nasdaq) prices tonight in a $70-78 range, reportedly more than 7x oversubscribed at a valuation of up to about $1.4T; first trade expected Thursday.",
+        "Fed: Governor Waller said this morning that hikes may need to be more aggressive; a December 25bp hike is about 97% priced. October FOMC minutes at 1pm CT. Trump-Xi summit in Shenzhen, with Putin joining, on the geopolitical tape.",
+        "Overseas: Europe roughly flat (Stoxx 600 near unchanged, chips up, miners -3%; UK CPI 3.6% vs 3.7% est). Asia closed lower Tuesday before Nvidia (Nikkei -1.3%, Kospi -2.6%); futures there bounced after the report."
+      ],
+      "calendar": [
+        {
+          "time": "9:00 CT",
+          "item": "Pending home sales (Oct, m/m)",
+          "consensus": "-2.0%"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "+0.4M bbl"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "20-year bond auction",
+          "consensus": "prior 5.469%"
+        },
+        {
+          "time": "12:35 CT",
+          "item": "Fed's Barr speaks (no FOMC blackout; Dec blackout starts about Dec 5)",
+          "consensus": ""
+        },
+        {
+          "time": "1:00 CT",
+          "item": "FOMC minutes (Oct 27-28 meeting)",
+          "consensus": ""
+        },
+        {
+          "time": "1:30 CT",
+          "item": "Fed's Williams speaks",
+          "consensus": ""
+        },
+        {
+          "time": "3:00 CT",
+          "item": "TIC flows (Sep)",
+          "consensus": "$160.7B"
+        },
+        {
+          "time": "3:15 CT",
+          "item": "Fed's Kashkari speaks",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Reported: TGT $2.65 vs $2.08 est, rev $27.1B vs $26.5B; LOW $3.10 vs $2.88 (includes $0.34 tariff refund), rev $22.8B; TJX $1.34 in line, raised FY outlook; Tencent beat",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "PANW Q1 FY27",
+          "consensus": "EPS $0.97, rev about $3.31B"
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "+3.7%",
+          "why": "Beat and raise, Q4 guide above the Street; CEO question unresolved"
+        },
+        {
+          "ticker": "LOW",
+          "move": "-4%",
+          "why": "Beat was mostly a tariff refund; margin guidance trimmed"
+        },
+        {
+          "ticker": "TGT",
+          "move": "-1%",
+          "why": "Big EPS beat but stock fading pre-market"
+        },
+        {
+          "ticker": "COHR",
+          "move": "+6%",
+          "why": "Optics and AI infrastructure rally after Nvidia"
+        },
+        {
+          "ticker": "AAOI",
+          "move": "-10%",
+          "why": "$550M share offering"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nasdaq futures rise as Nvidia forecast eases AI concerns (Reuters/Yahoo)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-jump-nvidia-forecast-103531610.html"
+        },
+        {
+          "title": "US Pre-Market: Nvidia boosts AI stocks, gold below $3,800 (TradingKey)",
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262311015-us-pre-market-nvda-anthropic-tradingkey"
+        },
+        {
+          "title": "Nasdaq futures up 250 pts: five things to know (Invezz, via FMP)",
+          "url": "https://invezz.com/news/2026/11/18/nasdaq-futures-up-250-pts-five-things-to-know-before-wall-street-opens/"
+        },
+        {
+          "title": "Fed officials set to raise rates again in December (CNBC, via FMP)",
+          "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html"
+        },
+        {
+          "title": "Mortgage demand turns lower as rates hit 3-week high (CNBC, via FMP)",
+          "url": "https://www.cnbc.com/2026/11/18/mortgage-demand-turns-lower-as-interest-rates-shoot-back-up-to-the-highest-level-in-three-weeks.html"
+        },
+        {
+          "title": "Jensen Huang agreed to appear before Senate banking committee (CNBC, via FMP)",
+          "url": "https://www.cnbc.com/2026/11/18/jensen-huang-nvidia-tim-scott-congress.html"
+        },
+        {
+          "title": "Lowe's stock falls 4% despite earnings beat (Invezz, via FMP)",
+          "url": "https://invezz.com/news/2026/11/18/lowes-stock-falls-4-despite-earnings-beat-as-tariff-refunds-lift-profit/"
+        },
+        {
+          "title": "TJX raises full-year outlook (WSJ, via FMP)",
+          "url": "https://www.wsj.com/business/retail/tjx-raises-full-year-outlook-expects-sales-trends-to-accelerate-through-holiday-season-e0542322"
+        },
+        {
+          "title": "European stocks subdued as tech offsets mining declines (MarketScreener/Reuters)",
+          "url": "https://www.marketscreener.com/news/european-shares-muted-as-tech-offsets-mining-weakness-ce785edcd08cf223"
+        },
+        {
+          "title": "Asia Market Quick Take - 18 Nov 2026 (Saxo)",
+          "url": "https://www.home.saxo/en-gb/content/articles/macro/asia-market-quick-take--18-november-2026-18112026"
+        },
+        {
+          "title": "Anthropic IPO live: ANT first trading day (StockTitan)",
+          "url": "https://www.stocktitan.net/articles/anthropic-ipo-live-ant-first-trading-day-2026"
+        },
+        {
+          "title": "Stock Market News for Nov 18, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3031665/-stock-market-news-for-nov-18,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVIDIA Q3 Earnings Beat on Data Center Demand - Zacks",
+          "url": "https://www.zacks.com/stock/news/3031586/nvidia-q3-earnings-beat-on-data-center-demand-&-rubin-ramp-up?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Lowe's Beat Comes With a Refund Inside It - Zacks",
+          "url": "https://www.zacks.com/commentary/3031668/lowe's-beat-comes-with-a-refund-inside-it?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "LOW - Zacks",
+          "url": "https://www.zacks.com/stock/quote/LOW?utm_source=zacks_mcp"
+        },
+        {
+          "title": "TGT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/TGT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "COHR - Zacks",
+          "url": "https://www.zacks.com/stock/quote/COHR?utm_source=zacks_mcp"
+        },
+        {
+          "title": "PANW - Zacks",
+          "url": "https://www.zacks.com/stock/quote/PANW?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-18-morning"
+    },
+    {
       "date": "2026-11-17",
       "session": "afternoon",
       "generatedAt": "2026-11-17T21:30:43Z",
@@ -6679,514 +6919,6 @@
         }
       ],
       "id": "2026-10-29-morning"
-    },
-    {
-      "date": "2026-10-28",
-      "session": "afternoon",
-      "generatedAt": "2026-10-28T20:29:45Z",
-      "headline": "Stocks closed modestly higher for a third day after the Fed held rates at 3.75-4.00% in a 10-2 vote; Oracle and an AI-capex rally carried the tape while yields climbed and Alphabet is sliding after the bell.",
-      "levels": [
-        {
-          "label": "S&P 500",
-          "value": "7,744",
-          "change": "+0.3%"
-        },
-        {
-          "label": "Nasdaq",
-          "value": "26,550",
-          "change": "+0.3%"
-        },
-        {
-          "label": "Dow",
-          "value": "52,475",
-          "change": "+0.2%"
-        },
-        {
-          "label": "Russell 2000",
-          "value": "2,831",
-          "change": "+0.4%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "5.05%",
-          "change": "+6 bp"
-        },
-        {
-          "label": "VIX",
-          "value": "16.8",
-          "change": "-4.2%"
-        },
-        {
-          "label": "WTI",
-          "value": "$102.6",
-          "change": "+2.7%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,082",
-          "change": "+0.2%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$81,100",
-          "change": "+0.4%"
-        }
-      ],
-      "data": [
-        {
-          "name": "Fed funds target",
-          "actual": "3.75-4.00% (hold, 10-2)",
-          "consensus": "hold",
-          "prior": "3.75-4.00%",
-          "read": "hawkish hold; two dissents for a hike",
-          "reaction": "10-yr +6 bp, stocks drifted higher"
-        },
-        {
-          "name": "Goods trade balance (Sep)",
-          "actual": "-$134.9B",
-          "consensus": "-$130.0B",
-          "prior": "-$132.1B",
-          "read": "wider than expected",
-          "reaction": "minimal"
-        },
-        {
-          "name": "Atlanta Fed GDPNow (Q4)",
-          "actual": "3.3%",
-          "consensus": "n/a",
-          "prior": "3.4%",
-          "read": "still strong",
-          "reaction": "minimal"
-        }
-      ],
-      "drivers": [
-        "Fed held at 3.75-4.00%; Hammack and Cook dissented in favor of a hike. Statement called growth strong and inflation elevated. Warsh said the pause reflects an information-rich stretch of data ahead; markets price roughly 85% odds of a hike Dec 9. He also trimmed the 2027 schedule to seven rate votes and six in 2028.",
-        "Treasury yields rose across the curve on the hawkish hold; the 10-year finished at 5.05% and the 30-year at 5.37%.",
-        "AI capex trade led: Oracle +10.6% on a FY2030 revenue target of $225B or more, SK hynix +13% as it sees the memory shortage lasting to 2030, Vertiv +17% on a 61% sales jump; semis were broadly bid.",
-        "Oil rose 2.7% back above $100 on the Iran conflict and an EIA crude draw. The September goods trade deficit widened to $134.9B vs $130B expected; Atlanta Fed GDPNow for Q4 sits at 3.3%."
-      ],
-      "sectors": {
-        "leaders": "Health Care (+2.1%), Materials, Tech",
-        "laggards": "Utilities (-1.0%), Industrials, Financials, Energy"
-      },
-      "afterHours": [
-        {
-          "ticker": "GOOGL",
-          "move": "about -7% AH",
-          "why": "Revenue $127.6B in line and Cloud +103% to $30.7B, but GAAP EPS hit by an $8.7B equity-securities loss; capex $51.4B."
-        },
-        {
-          "ticker": "MSFT",
-          "move": "n/a at send time",
-          "why": "EPS $4.89 vs $4.72 est, revenue $92.3B vs $90.6B est; after-hours reaction not yet available."
-        },
-        {
-          "ticker": "NOW",
-          "move": "n/a at send time",
-          "why": "EPS $1.00 vs $1.02 est; revenue $4.11B slightly ahead."
-        },
-        {
-          "ticker": "CMG",
-          "move": "n/a at send time",
-          "why": "EPS $0.27 vs $0.29 est; revenue in line."
-        },
-        {
-          "ticker": "F",
-          "move": "n/a at send time",
-          "why": "EPS $0.49 vs $0.41 est; revenue $49.5B ahead."
-        },
-        {
-          "ticker": "CVNA",
-          "move": "n/a at send time",
-          "why": "EPS $0.39 vs $0.44 est; revenue $8.0B beat."
-        },
-        {
-          "ticker": "TMUS",
-          "move": "n/a at send time",
-          "why": "EPS $3.22 vs $2.89 est; revenue $23.6B beat."
-        },
-        {
-          "ticker": "GEV",
-          "move": "n/a at send time",
-          "why": "EPS $4.81 vs $4.03 est; revenue $12.6B beat."
-        }
-      ],
-      "calendar": [
-        {
-          "time": "7:30 CT",
-          "item": "Q3 GDP (advance), annualized",
-          "consensus": "3.2% (prior 2.2%)"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Sept PCE price index, core m/m and y/y",
-          "consensus": "+0.3% m/m, 3.1% y/y (headline 3.6% y/y)"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Sept personal income / spending",
-          "consensus": "+0.3% / +0.6%"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Initial jobless claims",
-          "consensus": "199K (prior 194K)"
-        },
-        {
-          "time": "12:00 CT",
-          "item": "7-year Treasury note auction",
-          "consensus": "prior 5.085%"
-        },
-        {
-          "time": "Before open",
-          "item": "Earnings: Eli Lilly, Merck, Mastercard, Caterpillar, Linde, Bristol Myers, Starbucks, Altria, Hershey, Mondelez, ICE, L3Harris, D.R. Horton",
-          "consensus": ""
-        },
-        {
-          "time": "After close",
-          "item": "Earnings: Amazon, Intel, Gilead, Coinbase, Strategy, Reddit, Pinterest, Roblox, First Solar, Twilio",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "ORCL",
-          "move": "+10.6%",
-          "why": "FY2030 revenue target of $225B or more; free cash flow positive by 2H FY28."
-        },
-        {
-          "ticker": "VRT",
-          "move": "+17%",
-          "why": "Q3 sales +61%, organic orders more than doubled, full-year sales guide raised $650M."
-        },
-        {
-          "ticker": "SKHY",
-          "move": "+13%",
-          "why": "Operating profit up sixfold; sees memory shortage lasting into 2030."
-        },
-        {
-          "ticker": "FFIV",
-          "move": "-20%",
-          "why": "FY27 revenue growth guided to 8-9%, down from 11%."
-        },
-        {
-          "ticker": "ENPH",
-          "move": "-16%",
-          "why": "Q3 miss; Q4 revenue guide $225-255M vs about $303M consensus on weak residential solar."
-        },
-        {
-          "ticker": "LPLA",
-          "move": "-15%",
-          "why": "Shares sold off after results."
-        },
-        {
-          "ticker": "BSX",
-          "move": "-6%",
-          "why": "Q4 sales outlook 1-3% below a year ago."
-        },
-        {
-          "ticker": "WEN",
-          "move": "+14%",
-          "why": "Confirmed a non-binding $7.35 per share cash proposal from Trian."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock market today: Nasdaq wavers, S&P 500 and Dow climb as Fed holds (Yahoo Finance)",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-big-tech-earnings-130508769.html"
-        },
-        {
-          "title": "Stock Market Today Live Oct 28, 2026 (Stock Titan)",
-          "url": "https://www.stocktitan.net/articles/stock-market-today-live-october-28-2026"
-        },
-        {
-          "title": "Alphabet shares tumble as earnings miss overshadows cloud boom (Investing.com)",
-          "url": "https://www.investing.com/news/stock-market-news/alphabet-shares-tumble-65-as-earnings-miss-overshadows-cloud-boom-4980569"
-        },
-        {
-          "title": "Why did the Fed hold off on raising rates? (MarketWatch via FMP)",
-          "url": "https://www.marketwatch.com/story/why-did-the-fed-hold-off-on-raising-interest-rates-warsh-says-its-because-an-information-rich-period-is-coming-098ced8d"
-        },
-        {
-          "title": "Fed will hold fewer rate-setting meetings (NYT via FMP)",
-          "url": "https://www.nytimes.com/2026/10/28/business/economy/fed-meetings-2027-interest-rates-warsh.html"
-        },
-        {
-          "title": "Fed's Warsh says US economy not running too hot (Reuters via FMP)",
-          "url": "https://www.reuters.com/business/feds-warsh-says-us-economy-not-running-too-hot-2026-10-28/"
-        },
-        {
-          "title": "October FOMC: The Lull in Rate Trajectory (Seeking Alpha via FMP)",
-          "url": "https://seekingalpha.com/article/4958807-october-fomc-meeting-the-lull-in-rate-trajectory-likely-temporary"
-        },
-        {
-          "title": "Gundlach on the Fed's pause (CNBC via FMP)",
-          "url": "https://www.cnbc.com/2026/10/28/bond-investor-jeff-gundlach-talks-feds-rate-pause-with-cnbc.html"
-        },
-        {
-          "title": "Oracle autonomous database (Zacks, 10/28/2026)",
-          "url": "https://www.zacks.com/stock/news/3017612/is-oracle-stock-worth-buying-as-autonomous-database-use-keeps-growing?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Vertiv Q3 beats (Zacks, 10/28/2026)",
-          "url": "https://www.zacks.com/stock/news/3016720/vertiv-holdings-co.-(vrt)-q3-earnings-and-revenues-surpass-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Enphase Q3 lags (Zacks, 10/28/2026)",
-          "url": "https://www.zacks.com/stock/news/3017385/enphase-energy-q3-earnings-lag-estimates,-revenues-decline-y/y?utm_source=zacks_mcp"
-        },
-        {
-          "title": "ORCL - Zacks",
-          "url": "https://www.zacks.com/stock/quote/ORCL?utm_source=zacks_mcp"
-        },
-        {
-          "title": "VRT - Zacks",
-          "url": "https://www.zacks.com/stock/quote/VRT?utm_source=zacks_mcp"
-        },
-        {
-          "title": "ENPH - Zacks",
-          "url": "https://www.zacks.com/stock/quote/ENPH?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-10-28-afternoon"
-    },
-    {
-      "date": "2026-10-28",
-      "session": "morning",
-      "generatedAt": "2026-10-28T13:12:00Z",
-      "headline": "Futures mixed-to-flat with tech leading again on SK Hynix's record quarter, but the day hinges on the 1:00 CT Fed decision (hawkish hold expected) and Microsoft/Alphabet earnings after the close.",
-      "levels": [
-        {
-          "label": "S&P 500 fut",
-          "value": "~7,730",
-          "change": "+0.1%"
-        },
-        {
-          "label": "Nasdaq 100 fut",
-          "value": "~29,750",
-          "change": "+0.4%"
-        },
-        {
-          "label": "Dow fut",
-          "value": "~52,230",
-          "change": "-0.2%"
-        },
-        {
-          "label": "Russell fut",
-          "value": "n/a",
-          "change": "+0.0%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "5.00%",
-          "change": "+1bp"
-        },
-        {
-          "label": "VIX",
-          "value": "17.4",
-          "change": "-0.6%"
-        },
-        {
-          "label": "WTI",
-          "value": "$101.6",
-          "change": "+1.7%"
-        },
-        {
-          "label": "Brent",
-          "value": "$115.42",
-          "change": "+1.4%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,066",
-          "change": "-0.2%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$80,590",
-          "change": "-0.3%"
-        }
-      ],
-      "data": [
-        {
-          "name": "Goods trade balance (Sep)",
-          "actual": "-$134.9B",
-          "consensus": "-$130.0B",
-          "prior": "-$132.1B",
-          "read": "wider deficit, drag on Q3 GDP net exports",
-          "reaction": "no notable futures/yield reaction reported"
-        },
-        {
-          "name": "Wholesale inventories (Sep)",
-          "actual": "+0.6%",
-          "consensus": "+0.5%",
-          "prior": "+0.5%",
-          "read": "inventory build partly offsets trade drag",
-          "reaction": "muted"
-        },
-        {
-          "name": "Retail inventories ex-autos (Sep)",
-          "actual": "+0.4%",
-          "consensus": "-0.1%",
-          "prior": "+0.1%",
-          "read": "firmer than expected",
-          "reaction": "muted"
-        }
-      ],
-      "drivers": [
-        "Fed day: roughly 90% odds of a hold at 3.75-4.00% (CME, as of Tuesday); the question is whether Chair Warsh signals the next hike, with December hike odds near 73%. Decision 1:00 CT, press conference 1:30 CT; no SEP or dot plot this meeting; blackout in effect through Thursday.",
-        "AI trade re-ignited: SK Hynix posted a record quarter (profit up 632% y/y, $25B-plus in buybacks and dividends), sending Korean chip names and the Kospi (+6.6%) sharply higher, following Tuesday's $63B bank financing for Broadcom chips leased to Anthropic.",
-        "Oil back up after an attack on a Saudi refinery; Brent near a six-month high keeps the 10-year pinned at 5% and inflation worries front of mind into the Fed.",
-        "Overseas: Europe mixed to flat (DAX flat, CAC -0.1%, FTSE -0.3%) on UBS, Deutsche Bank and Stellantis earnings; Asia higher (Nikkei +1.1%, Shanghai +0.9%, Kospi +6.6%)."
-      ],
-      "calendar": [
-        {
-          "time": "8:45 CT",
-          "item": "Bank of Canada rate decision",
-          "consensus": "hike to 2.50% from 2.25%"
-        },
-        {
-          "time": "9:30 CT",
-          "item": "EIA weekly crude inventories",
-          "consensus": "~0.0M; gasoline -0.9M"
-        },
-        {
-          "time": "10:30 CT",
-          "item": "Treasury 17-week bill and 2-year FRN auctions",
-          "consensus": ""
-        },
-        {
-          "time": "1:00 CT",
-          "item": "FOMC rate decision and statement",
-          "consensus": "hold at 3.75-4.00%"
-        },
-        {
-          "time": "1:30 CT",
-          "item": "Chair Warsh press conference (Fed blackout in effect through Thu)",
-          "consensus": "watch for hawkish tilt / December hike signal"
-        },
-        {
-          "time": "After bell",
-          "item": "MSFT earnings",
-          "consensus": "EPS $4.72 / rev $90.6B"
-        },
-        {
-          "time": "After bell",
-          "item": "GOOGL earnings",
-          "consensus": "EPS $2.97 / rev $128.0B"
-        },
-        {
-          "time": "After bell",
-          "item": "NOW, CMG, EBAY, F, KLAC, ALGN, MGM, CVNA, TMUS",
-          "consensus": "NOW $1.02; CMG $0.29; EBAY $1.41; F $0.41; KLAC $1.19; TMUS $2.89"
-        },
-        {
-          "time": "Pre-bell (reported)",
-          "item": "GEV, VRT, PSX, ADP, OTIS, ODFL, ETSY, GRMN, WING beats; STLA, UBS, DB, SAN, GSK overseas",
-          "consensus": "GEV $4.81 vs $4.03; VRT $2.21 vs $1.82; PSX $14.08 vs $11.73"
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "SKHY",
-          "move": "+8-11%",
-          "why": "SK Hynix record Q3 profit and revenue plus $25B-plus capital return; lifting MU (+2%) and AVGO (+4%)."
-        },
-        {
-          "ticker": "HOOD",
-          "move": "-8%",
-          "why": "Q3 EPS beat ($0.60 vs $0.56) but revenue missed ($1.42B vs $1.44B); crypto revenue -55%; filing flagged AI-agent trading risk. Prior close $94.56."
-        },
-        {
-          "ticker": "STLA",
-          "move": "+6%",
-          "why": "Kept full-year guidance despite heavy turnaround costs."
-        },
-        {
-          "ticker": "PSX",
-          "move": "reported",
-          "why": "Big EPS beat ($14.08 vs $11.73) on refining margins; prior close $268.53 after a 7% drop Tuesday."
-        },
-        {
-          "ticker": "GEV",
-          "move": "reported",
-          "why": "Beat on EPS ($4.81 vs $4.03) and revenue ($12.6B); options implied ~6% move. VRT also beat ($2.21 vs $1.82, rev $4.3B). Prior closes $895.08 / $208.56."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock market today: Dow futures fall, S&P 500 and Nasdaq futures climb ahead of Fed decision - Yahoo Finance",
-          "url": "https://ca.finance.yahoo.com/news/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-080642111.html"
-        },
-        {
-          "title": "Stock Market Today, Oct. 28 - TipRanks",
-          "url": "https://www.tipranks.com/news/stock-market-today-oct-28-futures-mixed-as-investors-await-mega-cap-earnings-and-the-feds-policy-decision"
-        },
-        {
-          "title": "October Fed Meeting: Live Updates - Kiplinger",
-          "url": "https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-october-2026"
-        },
-        {
-          "title": "Before the Bell: Tech rally continues with Fed expected to hold - AP",
-          "url": "https://www.rockfmtriangle.com/2026/10/28/before-the-bell-tech-sector-rally-continues-with-fed-expected-to-leave-benchmark-interest-rate-alone/"
-        },
-        {
-          "title": "Global Economy Briefing Oct 28 - Rio Times",
-          "url": "https://www.riotimesonline.com/global-economy-briefing-october-28-2026/"
-        },
-        {
-          "title": "Investors brace for a hawkish hold and tech on tap - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/10/28/investors-brace-for-a-hawkish-hold-and-tech-on-tap.html"
-        },
-        {
-          "title": "Fed likely to go into wait-and-see mode on rates - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/fed-likely-go-into-wait-and-see-mode-rates-2026-10-28/"
-        },
-        {
-          "title": "Major brokerages expect Fed to hold rates - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/finance/wall-street-brokerages-pencil-fed-rate-cuts-mid2026-2026-10-28/"
-        },
-        {
-          "title": "Oil hits six-month high - Seeking Alpha (via FMP)",
-          "url": "https://seekingalpha.com/article/4958099-oil-hits-six-month-and-impact-could-be-felt-in-many-aspects-of-economy"
-        },
-        {
-          "title": "Mortgage rates fell for the second straight week - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/10/28/mortgage-rates-fell-for-the-second-straight-week.html"
-        },
-        {
-          "title": "Megacap earnings could spoil the market's appetite for AI - Barron's (via FMP)",
-          "url": "https://www.barrons.com/articles/stock-market-things-to-know-today-7b726c58"
-        },
-        {
-          "title": "HOOD Q3 Earnings Beat on Trading Strength, Stock Dips on Revenue Miss - Zacks",
-          "url": "https://www.zacks.com/stock/news/3016807/hood-q3-earnings-beat-on-trading-strength,-stock-dips-on-revenue-miss?utm_source=zacks_mcp"
-        },
-        {
-          "title": "GE Vernova Q3 Earnings and Revenues Top Estimates - Zacks",
-          "url": "https://www.zacks.com/stock/news/3016743/ge-vernova-(gev)-q3-earnings-and-revenues-top-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Vertiv Q3 Earnings and Revenues Surpass Estimates - Zacks",
-          "url": "https://www.zacks.com/stock/news/3016720/vertiv-holdings-co.-(vrt)-q3-earnings-and-revenues-surpass-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Alphabet & Microsoft Earnings Preview - Zacks",
-          "url": "https://www.zacks.com/commentary/3016398/alphabet-&-microsoft-earnings-preview:-ai-cloud-growth-takes-center-stage?utm_source=zacks_mcp"
-        },
-        {
-          "title": "HOOD - Zacks",
-          "url": "https://www.zacks.com/stock/quote/HOOD?utm_source=zacks_mcp"
-        },
-        {
-          "title": "GEV - Zacks",
-          "url": "https://www.zacks.com/stock/quote/GEV?utm_source=zacks_mcp"
-        },
-        {
-          "title": "VRT - Zacks",
-          "url": "https://www.zacks.com/stock/quote/VRT?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-10-28-morning"
     }
   ]
 }
