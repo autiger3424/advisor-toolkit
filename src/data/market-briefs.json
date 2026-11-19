@@ -3,6 +3,266 @@
   "briefs": [
     {
       "date": "2026-11-19",
+      "session": "afternoon",
+      "generatedAt": "2026-11-19T21:40:00Z",
+      "headline": "Stocks reversed a strong open and closed down about 2% across the board, the S&P 500's sixth straight loss, as Anthropic's record IPO pulled money out of the rest of AI and tech (AMD -7.7%) and the VIX jumped to 29.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,177",
+          "change": "-2.0%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "23,886",
+          "change": "-2.2%"
+        },
+        {
+          "label": "Dow",
+          "value": "49,097",
+          "change": "-2.2%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,655",
+          "change": "-2.2%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "5.04%",
+          "change": "-3 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "29.0",
+          "change": "+18%"
+        },
+        {
+          "label": "WTI",
+          "value": "$83",
+          "change": "+0.9%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,660",
+          "change": "-2.2%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$61.5K",
+          "change": "-2.3%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Initial jobless claims",
+          "actual": "203K",
+          "consensus": "197K",
+          "prior": "202K",
+          "read": "softer",
+          "reaction": "yields -3bp"
+        },
+        {
+          "name": "Continuing claims",
+          "actual": "1.763M",
+          "consensus": "1.710M",
+          "prior": "1.693M",
+          "read": "softer, cycle high",
+          "reaction": ""
+        },
+        {
+          "name": "Philly Fed index (Nov)",
+          "actual": "6.3",
+          "consensus": "20.0",
+          "prior": "20.9",
+          "read": "big miss; prices paid 58.2",
+          "reaction": ""
+        },
+        {
+          "name": "Leading index (Oct)",
+          "actual": "-0.3%",
+          "consensus": "0.0%",
+          "prior": "0.0%",
+          "read": "softer",
+          "reaction": ""
+        }
+      ],
+      "drivers": [
+        "Anthropic (ANT) priced at $83, raised a record $81B, opened at $111.50 (about $1.5T value), slid 13% in the first half hour and closed at $97.17, up 17% vs the IPO price; about $95.70 after hours. Retail sold other AI names, mainly AMD, to buy it; Amazon (-3.9%) and Alphabet (-3.5%), both large Anthropic holders, fell too.",
+        "Chips hit again: AMD -7.7% on a Hunterbrook short report questioning its China ties; Nvidia -3.3%, now down roughly a third quarter-to-date since the Huang exit. Intel (+1.9%) was one of the few chip names in the green.",
+        "Soft data with sticky prices: initial claims 203K vs 197K expected, continuing claims 1.763M (a cycle high), Philly Fed 6.3 vs 20 expected with prices paid rising to 58.2, LEI -0.3%. The 30-year mortgage rate rose to 7.28%.",
+        "Fed still hawkish: Goolsbee said the AI investment surge could strain capacity and overheat the economy and the Fed's job is to keep it from doing so; Barr flagged deregulation risk. The morning's relief-rally open was sold all day; indexes closed near session lows."
+      ],
+      "sectors": {
+        "leaders": "Consumer Staples (only sector up), Energy, Materials",
+        "laggards": "Communication Services, Consumer Discretionary, Technology, Utilities"
+      },
+      "afterHours": [
+        {
+          "ticker": "INTU",
+          "move": "-13%",
+          "why": "Q1 beat ($2.91 vs $2.46) but updated guidance and agreed to sell Mailchimp to Bending Spoons for $3.68B, under a third of the $12B paid in 2021"
+        },
+        {
+          "ticker": "ROST",
+          "move": "-5.5%",
+          "why": "Q3 beat ($1.91 vs $1.87) with updated Q4 and full-year outlook; shares slipped after the TJX-driven run-up"
+        },
+        {
+          "ticker": "GAP",
+          "move": "+3.5%",
+          "why": "Q3 EPS $0.82 vs $0.78, comps flat, full-year guidance lowered; named Ashley Kechter CEO of Athleta"
+        },
+        {
+          "ticker": "WMT",
+          "move": "-1% (regular session)",
+          "why": "Beat and raised full-year sales guidance but flagged about $2B of incremental fuel and transport costs"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "5:30 CT (overnight)",
+          "item": "Japan CPI (Oct)",
+          "consensus": "2.0% y/y headline, 2.3% core"
+        },
+        {
+          "time": "7:15 CT (overnight)",
+          "item": "China 1-yr and 5-yr loan prime rates",
+          "consensus": "unchanged at 3.0% / 3.5%"
+        },
+        {
+          "time": "1:00 CT",
+          "item": "UK retail sales (Oct)",
+          "consensus": "0.0% m/m"
+        },
+        {
+          "time": "7:25 CT",
+          "item": "Fed Gov. Waller speech",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-market",
+          "item": "BJ's Wholesale earnings",
+          "consensus": "EPS $1.26"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Euro-area consumer confidence (Nov)",
+          "consensus": "-17.9"
+        },
+        {
+          "time": "11:15 CT",
+          "item": "Fed Gov. Cook speech",
+          "consensus": ""
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Baker Hughes rig count",
+          "consensus": "prior 463 oil rigs"
+        },
+        {
+          "time": "All day",
+          "item": "Monthly options expiration; no 7:30 CT US data release",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "ANT",
+          "move": "+17% vs IPO price",
+          "why": "Record $81B IPO; opened $111.50, fell below the open within 30 minutes, closed $97.17; worst start among large US IPOs since 2008 by Yahoo's count"
+        },
+        {
+          "ticker": "AMD",
+          "move": "-7.7%",
+          "why": "Hunterbrook short report on China ties plus retail rotation into Anthropic"
+        },
+        {
+          "ticker": "UNH",
+          "move": "-5%",
+          "why": "Proposed CMS Medicare Advantage audit and repayment rule keeps hitting managed care; down about 18% in five days"
+        },
+        {
+          "ticker": "AMZN",
+          "move": "-3.9%",
+          "why": "Large Anthropic stakeholder sold on the debut; Alphabet (-3.5%) similar"
+        },
+        {
+          "ticker": "INTC",
+          "move": "+1.9%",
+          "why": "One of the few chip names higher as money rotated out of AI leaders"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow drops 1,100 points, S&P 500 and Nasdaq tank as Anthropic stock surges in public debut (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html"
+        },
+        {
+          "title": "Gap names new Athleta CEO, lowers full-year guidance (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html"
+        },
+        {
+          "title": "Intuit to sell Mailchimp to Bending Spoons for $3.68 billion (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/19/intuit-mailchimp-sale-bending-spoons.html"
+        },
+        {
+          "title": "Fed's Goolsbee says AI surge could strain US capacity, overheat economy (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/feds-goolsbee-says-ai-surge-could-strain-us-capacity-overheat-economy-2026-11-19/"
+        },
+        {
+          "title": "Fed's Barr worried regulation changes may increase financial sector risks (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/feds-barr-worried-regulation-changes-may-increase-financial-sector-risks-2026-11-19/"
+        },
+        {
+          "title": "Intuit Reports First-Quarter Results and Enters Agreement to Sell Mailchimp (Business Wire via FMP)",
+          "url": "https://www.businesswire.com/news/home/20261119334005/en/Intuit-Reports-First-Quarter-Results-and-Enters-Agreement-to-Sell-Mailchimp-to-Bending-Spoons/"
+        },
+        {
+          "title": "Ross Stores Reports Strong Third Quarter Sales and Earnings Results (PRNewswire via FMP)",
+          "url": "https://www.prnewswire.com/news-releases/ross-stores-reports-strong-third-quarter-sales-and-earnings-results-302946112.html"
+        },
+        {
+          "title": "Gap Inc. Reports Third Quarter Fiscal 2026 Results (PRNewswire via FMP)",
+          "url": "https://www.prnewswire.com/news-releases/gap-inc-reports-third-quarter-fiscal-2026-results-302946045.html"
+        },
+        {
+          "title": "Walmart warns high fuel costs threaten efforts to keep prices low (NY Post via FMP)",
+          "url": "https://nypost.com/2026/11/19/business/walmart-warns-of-fuel-cost-pressure-lifts-sales-forecast-ahead-of-holidays/"
+        },
+        {
+          "title": "UnitedHealth Stock Slips: What's Going On? (Benzinga via FMP)",
+          "url": "https://www.benzinga.com/trading-ideas/movers/26/11/63449242/unitedhealth-stock-slips-whats-going-on"
+        },
+        {
+          "title": "The Week Ahead: Thanksgiving Week Brings More Inflation Data (Schaeffer's via FMP)",
+          "url": "https://www.schaeffersresearch.com/content/news/2026/11/19/the-week-ahead-thanksgiving-week-brings-more-inflation-data"
+        },
+        {
+          "title": "Fed's Goolsbee says AI spending resembles demand shock (American Banker)",
+          "url": "https://www.americanbanker.com/news/feds-goolsbee-says-ai-spending-resembles-demand-shock"
+        },
+        {
+          "title": "Stock Market News for Nov 19, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3032345/stock-market-news-for-nov-19,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ETFs to Buy as NVIDIA Tops Q3 Earnings, Hikes Outlook Amid CEO Fallout (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3032377/etfs-to-buy-as-nvidia-tops-q3-earnings,-hikes-outlook-amid-ceo-fallout-?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-19-afternoon"
+    },
+    {
+      "date": "2026-11-19",
       "session": "morning",
       "generatedAt": "2026-11-19T13:58:00Z",
       "headline": "Futures up hard with Nasdaq 100 futures near +2% as Anthropic prices the largest IPO ever at $83 and pulls AI and chip names back after the S&P 500's five-day losing streak; a stagflation-flavored Philly Fed print and hawkish Fed minutes keeping the 10-year near 5.1% are the counterweight.",
