@@ -85,12 +85,7 @@
         {
           "ticker": "GAP",
           "move": "+12%",
-          "why": "Q3 beat led by Old Navy; the day's retail standout (reported pre-market)"
-        },
-        {
-          "ticker": "INTU",
-          "move": "-9%",
-          "why": "Sold Mailchimp to Bending Spoons for about $3.7 billion"
+          "why": "Q3 beat led by Old Navy; the day's retail standout (reported pre-market); no major after-the-bell reporters Friday"
         }
       ],
       "calendar": [
@@ -132,14 +127,14 @@
       ],
       "movers": [
         {
-          "ticker": "NVDA",
-          "move": "-14.0%",
-          "why": "SEC accounting-probe report on top of the CEO exit and China scrutiny; ~$490B of market value erased"
+          "ticker": "SOXX",
+          "move": "-10.5%",
+          "why": "Semis crushed after the Nvidia SEC-probe report; Sandisk -16%, Intel -8%, Micron and Broadcom down double digits"
         },
         {
-          "ticker": "AMD",
-          "move": "-13.2%",
-          "why": "Chip rout plus Hunterbrook short report on China server exposure"
+          "ticker": "INTU",
+          "move": "-9%",
+          "why": "Sold Mailchimp to Bending Spoons for about $3.7 billion"
         },
         {
           "ticker": "ANT",
