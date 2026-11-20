@@ -3,6 +3,246 @@
   "briefs": [
     {
       "date": "2026-11-20",
+      "session": "afternoon",
+      "generatedAt": "2026-11-20T21:31:29Z",
+      "headline": "Stocks were routed into the weekend: the Nasdaq fell 5.1% and the S&P 500 3.8% as Nvidia plunged 14% on a report that the SEC is examining its accounting, pushing the S&P 500 and Dow into correction and wiping out the Nasdaq's 2026 gain. Worst week for the majors since April 2025; the VIX closed above 37.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "6,901.86",
+          "change": "-3.8%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "22,654",
+          "change": "-5.1%"
+        },
+        {
+          "label": "Dow",
+          "value": "48,147",
+          "change": "-1.9%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,582",
+          "change": "-2.8%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.92%",
+          "change": "-12 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "37.29",
+          "change": "+31%"
+        },
+        {
+          "label": "WTI",
+          "value": "~$83.50",
+          "change": "+1.5%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,518",
+          "change": "-4.6%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$58,660",
+          "change": "-5.2%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Michigan consumer sentiment (Nov final)",
+          "actual": "51.5",
+          "consensus": "51.5",
+          "prior": "48.0",
+          "read": "in line",
+          "reaction": "ignored by stocks"
+        },
+        {
+          "name": "Michigan 1-yr inflation expectations (Nov)",
+          "actual": "3.7%",
+          "consensus": "4.3%",
+          "prior": "4.7%",
+          "read": "softer",
+          "reaction": "Treasuries rallied on safety bid"
+        }
+      ],
+      "drivers": [
+        "Nvidia SEC probe: Reuters reported SEC enforcement staff are examining potential accounting issues at Nvidia, after the WSJ flagged an unspecified probe on Tuesday. NVDA fell 14% to about $125.50, erasing roughly $490 billion of value, logging a seventh straight weekly loss and slipping behind Alphabet in market cap. Chips followed: SOXX -10.5%, AMD -13%, Sandisk -16%, Intel -8%.",
+        "Anthropic day two: ANT fell 8.5% to about $88.60, still above the $83 IPO price but roughly 23% below Thursday's peak. The profit-taking read through as a vote against the broader AI trade.",
+        "Trump data-center tax: the president said he will impose a substantial tax on US firms building data centers abroad and singled out Google's spending in Finland. Amazon -4.1%, Microsoft -2.8%, Alphabet -2.7%.",
+        "Fed stays hawkish: Governor Cook said waiting longer to hike risks falling behind the curve and that she preferred a hike in October; futures price about 98% odds of a December hike. Michigan sentiment landed in line at 51.5 while 1-year inflation expectations dropped to 3.7% versus 4.3% expected, a soft spot the market ignored. No intraday reversal: the S&P opened near flat, slid all day and broke lower after 1pm CT on the Nvidia headline."
+      ],
+      "sectors": {
+        "leaders": "Consumer Staples (only green sector, flat), Health Care, Energy",
+        "laggards": "Technology (-5.3%), Real Estate (-3.9%), Consumer Discretionary (-3.6%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "GAP",
+          "move": "+12%",
+          "why": "Q3 beat led by Old Navy; the day's retail standout (reported pre-market)"
+        },
+        {
+          "ticker": "INTU",
+          "move": "-9%",
+          "why": "Sold Mailchimp to Bending Spoons for about $3.7 billion"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Chicago Fed National Activity Index (Oct)",
+          "consensus": "0.40 (prior 0.07)"
+        },
+        {
+          "time": "8:45 CT",
+          "item": "S&P Global flash PMIs (Nov)",
+          "consensus": "Mfg prior 54.9, Services prior 56.1"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "2-year Treasury note auction",
+          "consensus": "Prior 4.708%"
+        },
+        {
+          "time": "3:00 CT",
+          "item": "Fed: NY Fed President Williams speaks",
+          "consensus": ""
+        },
+        {
+          "time": "Mon",
+          "item": "Earnings: HPE, Agilent, Zoom, Jacobs, Symbotic",
+          "consensus": "HPE $1.28, A $1.73, ZM $1.49, J $2.12"
+        },
+        {
+          "time": "Tue 9:00 CT",
+          "item": "Conference Board consumer confidence (Nov)",
+          "consensus": "92.0 (prior 91.7)"
+        },
+        {
+          "time": "Later this week",
+          "item": "October PCE inflation; Thanksgiving-shortened week",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "-14.0%",
+          "why": "SEC accounting-probe report on top of the CEO exit and China scrutiny; ~$490B of market value erased"
+        },
+        {
+          "ticker": "AMD",
+          "move": "-13.2%",
+          "why": "Chip rout plus Hunterbrook short report on China server exposure"
+        },
+        {
+          "ticker": "ANT",
+          "move": "-8.5%",
+          "why": "Second-day IPO profit-taking; still above $83 offer price"
+        },
+        {
+          "ticker": "CRWV",
+          "move": "-12%",
+          "why": "Neocloud and AI data-center names hit by financing fears; IREN -18%"
+        },
+        {
+          "ticker": "GAP",
+          "move": "+12%",
+          "why": "Q3 beat; staples such as General Mills (+4%) caught the defensive bid"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nvidia stock plunges 14%, longest weekly losing streak since 2008 - CNBC",
+          "url": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html"
+        },
+        {
+          "title": "S&P 500 and Dow close in correction; Nasdaq erases 2026 gain - CNBC",
+          "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
+        },
+        {
+          "title": "A massive bearish trade just happened in the chip stocks - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/20/a-massive-bearish-trade-just-happened-in-the-chip-stocks.html"
+        },
+        {
+          "title": "Nvidia plunge wipes out nearly $500B as SEC reportedly probes accounting - Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/20/nvidia-stock-plunge-wipes-out-nearly-usd500-billion-in-one-day-as-sec-reportedly-probes-its-accounting/"
+        },
+        {
+          "title": "Trump vows tax on US firms building data centers abroad - Investing.com",
+          "url": "https://ca.investing.com/news/stock-market-news/trump-vows-tax-on-us-firms-building-data-centers-abroad-4972982"
+        },
+        {
+          "title": "Stock Market Today Live, November 20, 2026 - StockTitan",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+        },
+        {
+          "title": "Stocks enter correction territory on AI fears - CBS News",
+          "url": "https://www.cbsnews.com/news/stocks-enter-correction-territory-ai-fears/"
+        },
+        {
+          "title": "US stock market today: AI selloff after Anthropic IPO - Beinsure",
+          "url": "https://beinsure.com/news/us-stock-market-today-dow-jones-sp-500-nasdaq-100-plunge-on-ai-selloff/"
+        },
+        {
+          "title": "Wall St futures slip as Anthropic debut fails to reassure - Reuters via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-anthropic-104746137.html"
+        },
+        {
+          "title": "Fed's Cook says central bank watching AI industry financing - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/feds-cook-says-central-bank-watching-ai-industry-financing-2026-11-20/"
+        },
+        {
+          "title": "Trump says US to penalize firms building data centers abroad - Reuters (via FMP)",
+          "url": "https://www.reuters.com/technology/trump-says-us-penalize-firms-building-data-centers-abroad-2026-11-20/"
+        },
+        {
+          "title": "AI tech rout prompts US investors to rush into value stocks - Reuters (via FMP)",
+          "url": "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/"
+        },
+        {
+          "title": "The Fed is too busy fighting inflation to rescue the stock market - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/the-fed-is-too-busy-fighting-inflation-to-rescue-the-stock-market-11dda598"
+        },
+        {
+          "title": "Stock Market News for Nov 20, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3032970/stock-market-news-for-nov-20,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD Stock Just Crashed Nearly 8%: Here's Why - Zacks",
+          "url": "https://www.zacks.com/stock/news/3033450/amd-stock-just-crashed-nearly-8:-here's-why-and-what-to-do-now-?utm_source=zacks_mcp"
+        },
+        {
+          "title": "What Goes Up (ANT), Must Come Down - Zacks",
+          "url": "https://www.zacks.com/stock/news/3033220/what-goes-up-(ant),-must-come-down?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD - Zacks",
+          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ANT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ANT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Index, sector, yield, gold and bitcoin data - Financial Modeling Prep",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-20-afternoon"
+    },
+    {
+      "date": "2026-11-20",
       "session": "morning",
       "generatedAt": "2026-11-20T13:55:00Z",
       "headline": "Risk-off again: futures point to a seventh straight down day as the AI and chip selloff that Anthropic's IPO failed to stop keeps spreading, with the VIX above 30 overnight.",
