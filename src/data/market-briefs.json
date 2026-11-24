@@ -3,6 +3,260 @@
   "briefs": [
     {
       "date": "2026-11-24",
+      "session": "afternoon",
+      "generatedAt": "2026-11-24T21:35:00Z",
+      "headline": "A split tape: chips gave back a chunk of Monday's Huang-reinstatement rally and dragged the Nasdaq down 1.5%, while the Dow reclaimed 50,000 on a rotation into health care, staples and financials sparked by Sanofi's $41B deal for Insmed. Indexes bounced off morning lows into the close.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,200.82",
+          "change": "-0.50%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "23,733.54",
+          "change": "-1.48%"
+        },
+        {
+          "label": "Dow",
+          "value": "50,018.70",
+          "change": "+0.85%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,684.94",
+          "change": "+0.57%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.91%",
+          "change": "-1 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "26.32",
+          "change": "-1.1%"
+        },
+        {
+          "label": "WTI (Jan, late-day)",
+          "value": "$81.6",
+          "change": "+1.7%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,550",
+          "change": "-2.8%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$59,900",
+          "change": "-2.2%"
+        }
+      ],
+      "data": [
+        {
+          "name": "CB Consumer Confidence (Nov)",
+          "actual": "103.3",
+          "consensus": "92.5",
+          "prior": "91.9",
+          "read": "much firmer",
+          "reaction": "supports Dec hike odds (~95% for 25 bp)"
+        },
+        {
+          "name": "Richmond Fed Mfg (Nov)",
+          "actual": "3",
+          "consensus": "2",
+          "prior": "-2",
+          "read": "firmer",
+          "reaction": "little"
+        },
+        {
+          "name": "Case-Shiller Home Prices m/m (Sep)",
+          "actual": "-0.5%",
+          "consensus": "-0.3%",
+          "prior": "-0.4%",
+          "read": "softer",
+          "reaction": "little"
+        }
+      ],
+      "drivers": [
+        "Chip hangover: NVDA -5.9% (gave back roughly a third of Monday's +31%), AMD -8.9%, INTC -8.1%, MU -11.6%, SNDK -11%, CRWV -12%; SOXX -8.3%. Losses deepened after 1pm ET while the rest of the market recovered.",
+        "Rotation, not retreat: Sanofi agreed to buy Insmed for $175 per share in cash (about $41B); INSM +14% and health care led all sectors at +4%. Retail beats (DKS +15%, KSS +15%, DLTR +10%, ANF +22%) kept the consumer bid alive.",
+        "Hot data: Conference Board consumer confidence 103.3 vs 92.5 expected (prior 91.9); Richmond Fed manufacturing 3 vs 2. Reinforces December hike odds, roughly 95% for 25 bp per futures. Case-Shiller September home prices -0.5% m/m.",
+        "Anthropic (ANT) -6.5% to about $82, below its $83 IPO price less than a week after listing; Needham flagged capital needs and possible insider selling."
+      ],
+      "sectors": {
+        "leaders": "Health Care (+4.1%), Consumer Staples (+1.8%), Financials (+0.8%), Energy (+0.7%)",
+        "laggards": "Industrials (-2.4%), Utilities (-0.6%), Technology (-0.5%), Communication Services (-0.4%)"
+      },
+      "afterHours": [
+        {
+          "ticker": "DELL",
+          "move": "+4.7%",
+          "why": "EPS $9.45 vs $6.60 est; revenue $54.9B vs $49.3B on AI server strength"
+        },
+        {
+          "ticker": "NTNX",
+          "move": "+9.6%",
+          "why": "Beat: EPS $0.73 vs $0.61 est, revenue $772M vs $763M"
+        },
+        {
+          "ticker": "HPQ",
+          "move": "-7.8%",
+          "why": "Beat ($0.83 vs $0.75 est) but shares sold off"
+        },
+        {
+          "ticker": "WDAY",
+          "move": "-4.3%",
+          "why": "Beat ($2.82 vs $2.74 est); muted reaction"
+        },
+        {
+          "ticker": "ADSK",
+          "move": "-3.5%",
+          "why": "Beat ($3.20 vs $3.07 est); muted reaction"
+        }
+      ],
+      "calendar": [
+        {
+          "time": "7:30 CT",
+          "item": "Oct PCE price index (core m/m; core y/y)",
+          "consensus": "+0.3%; 3.2% (headline 3.8% y/y)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Oct personal income / spending",
+          "consensus": "+0.4% / +0.4%"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Oct durable goods orders",
+          "consensus": "+0.4% (ex-transport +0.5%)"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Initial jobless claims (wk of Nov 21)",
+          "consensus": "200K (prior 203K)"
+        },
+        {
+          "time": "9:00 CT",
+          "item": "Oct new home sales",
+          "consensus": "650K (prior 676K)"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "prior +3.4M"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "7-year note auction",
+          "consensus": "prior 4.894%"
+        },
+        {
+          "time": "1:00 CT",
+          "item": "Fed Beige Book",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-mkt",
+          "item": "Deere (DE) earnings",
+          "consensus": "EPS $4.03, rev $10.4B"
+        },
+        {
+          "time": "Thu/Fri",
+          "item": "Markets closed Thursday (Thanksgiving); Friday early close 12:00 CT",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "INSM",
+          "move": "+14%",
+          "why": "Sanofi $175/sh cash takeout (~$41B), ~46% premium to pre-rumor price"
+        },
+        {
+          "ticker": "HPE",
+          "move": "-16%",
+          "why": "Beat on top and bottom line, but FY27 Cloud & AI margin outlook (~14% vs 18.4%) and a 2.2-pt gross margin drop"
+        },
+        {
+          "ticker": "ADI",
+          "move": "-17%",
+          "why": "Q4 beat and in-line guide; sold off with the semi complex"
+        },
+        {
+          "ticker": "ANT",
+          "move": "-6.5%",
+          "why": "Anthropic broke below its $83 IPO price less than a week after listing"
+        },
+        {
+          "ticker": "DKS",
+          "move": "+15%",
+          "why": "Beat and raised FY EPS outlook to $11.40-$12.25"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow rises, S&P 500 and Nasdaq decline as chip sector tumbles - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+        },
+        {
+          "title": "Stock Market Today Live, Nov 24, 2026: Chip Stocks Slide After Monday's Big Rally - StockTitan",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+        },
+        {
+          "title": "Megadeals Are Back. Why More Takeovers Could Be Coming - Barron's (via FMP)",
+          "url": "https://www.barrons.com/articles/mega-mergers-ma-outlook-crowdstrike-sanofi-68c9621d"
+        },
+        {
+          "title": "The AI debt market isn't convinced the worst is over - MarketWatch (via FMP)",
+          "url": "https://www.marketwatch.com/story/the-ai-debt-market-isnt-convinced-the-worst-is-over-for-investors-c70eaede"
+        },
+        {
+          "title": "Stock Market News for Nov 24, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3034189/stock-market-news-for-nov-24,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HPE Reports Q4 Earnings: What Key Metrics Have to Say - Zacks",
+          "url": "https://www.zacks.com/stock/news/3034156/hewlett-packard-enterprise-(hpe)-reports-q4-earnings:-what-key-metrics-have-to-say?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Insmed's Stock Rises 21% on Reports of Buyout Interest From Sanofi - Zacks",
+          "url": "https://www.zacks.com/stock/news/3033230/insmed's-stock-rises-21-on-reports-of-buyout-interest-from-sanofi?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Analog Devices (ADI) Q4 Earnings: A Look at Key Metrics - Zacks",
+          "url": "https://www.zacks.com/stock/news/3034415/compared-to-estimates,-analog-devices-(adi)-q4-earnings:-a-look-at-key-metrics?utm_source=zacks_mcp"
+        },
+        {
+          "title": "From Resignation to Reinstatement: Huang's Market Impact - Zacks",
+          "url": "https://www.zacks.com/commentary/3034142/from-resignation-to-reinstatement:-huang's-market-impact?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INSM - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INSM?utm_source=zacks_mcp"
+        },
+        {
+          "title": "HPE - Zacks",
+          "url": "https://www.zacks.com/stock/quote/HPE?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ADI - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ADI?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DELL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DELL?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-24-afternoon"
+    },
+    {
+      "date": "2026-11-24",
       "session": "morning",
       "generatedAt": "2026-11-24T13:52:00Z",
       "headline": "Futures give back part of Monday's historic Nvidia-driven rally, with Nasdaq 100 futures down about 1.9% and the VIX back near 30, as Huang's return meets ongoing investigations, a Dec. 3 Senate hearing and a Fed still leaning toward another December hike.",
