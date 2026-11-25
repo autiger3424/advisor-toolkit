@@ -2,6 +2,287 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-25",
+      "session": "morning",
+      "generatedAt": "2026-11-25T13:50:00Z",
+      "headline": "Sharply risk-off: Nasdaq futures down about 3% as the AI selloff deepens on buildout-cost and credit worries, while hot Q3 GDP and core PCE cement a December Fed hike and a new tariff proposal adds pressure. Market closed Thursday for Thanksgiving, half-day Friday.",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,068",
+          "change": "-2.1%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "25,400",
+          "change": "-3.1%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "49,360",
+          "change": "-1.3%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "2,651",
+          "change": "-1.4%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.84%",
+          "change": "-7bp"
+        },
+        {
+          "label": "VIX",
+          "value": "31.4",
+          "change": "+19%"
+        },
+        {
+          "label": "WTI",
+          "value": "$82.4",
+          "change": "+0.5%"
+        },
+        {
+          "label": "Brent",
+          "value": "$90.7",
+          "change": "-0.7%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,510",
+          "change": "-2.3%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$58,300",
+          "change": "-2.7%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Q3 GDP (2nd est.)",
+          "actual": "4.3%",
+          "consensus": "3.5%",
+          "prior": "2.2%",
+          "read": "much hotter; consumer spending 4.2%",
+          "reaction": "futures extended losses; 10-yr yield fell to ~4.84% on haven bid"
+        },
+        {
+          "name": "Oct PCE m/m",
+          "actual": "+0.3%",
+          "consensus": "+0.3%",
+          "prior": "+0.5%",
+          "read": "in line",
+          "reaction": "Dec 25bp hike odds ~97-98%"
+        },
+        {
+          "name": "Oct PCE y/y",
+          "actual": "3.8%",
+          "consensus": "3.8%",
+          "prior": "3.7%",
+          "read": "in line, still rising",
+          "reaction": "no relief for the Fed"
+        },
+        {
+          "name": "Oct core PCE y/y",
+          "actual": "3.3%",
+          "consensus": "3.2%",
+          "prior": "3.1%",
+          "read": "hotter; core re-accelerating",
+          "reaction": "NQ futures -2.9% to -3.1% after the print"
+        },
+        {
+          "name": "Initial claims (wk Nov 21)",
+          "actual": "189K",
+          "consensus": "200K",
+          "prior": "202K",
+          "read": "labor still tight",
+          "reaction": "continuing claims 1.697M vs 1.72M"
+        },
+        {
+          "name": "Durable goods (Oct)",
+          "actual": "+0.2%",
+          "consensus": "+0.6%",
+          "prior": "+2.0%",
+          "read": "softer headline; ex-transport +0.5% in line, core capex orders +1.2%",
+          "reaction": "little standalone reaction"
+        },
+        {
+          "name": "Personal income / spending (Oct)",
+          "actual": "+0.7% / +0.3%",
+          "consensus": "+0.4% / +0.4%",
+          "prior": "+0.3% / +0.5%",
+          "read": "income strong, spending a touch soft",
+          "reaction": "none notable"
+        }
+      ],
+      "drivers": [
+        "AI trade unwinding again: Monday's Huang-reinstatement bounce has fizzled and investors are punishing even beats (Dell raised guidance and still fell). Credit stress is the new angle, with CDS on Oracle, Alphabet and CoreWeave at records and CoreWeave 2031 bonds yielding near 18%.",
+        "Fed: core PCE at 3.3% plus 4.3% GDP leaves a December hike essentially fully priced (~97-98% for 25bp, ~63% for another in January). Bowman spoke at 6:25 CT.",
+        "Trade: the administration is preparing Section 301 tariffs of up to about 20% on China, the EU and 12 other partners over excess industrial capacity, possibly effective January; the China truce expires Jan 10.",
+        "Overseas: Asia rout with Kospi -6.2%, Taiex -4.8%, Nikkei -2.8%, Shanghai -2.0%, Hang Seng -1.1%. Europe mixed to flat: Stoxx 600 about -0.2%, DAX -0.3%, CAC +0.5%."
+      ],
+      "calendar": [
+        {
+          "time": "6:25 CT",
+          "item": "Fed Gov. Bowman speech (done); no FOMC blackout - meeting Dec 15-16, blackout starts about Dec 5",
+          "consensus": ""
+        },
+        {
+          "time": "Pre-bell",
+          "item": "Deere (DE) reported: EPS $3.89 vs $4.07 est (miss), revenue $10.51B vs $10.3B (beat); construction strong, large ag -15%",
+          "consensus": ""
+        },
+        {
+          "time": "9:00 CT",
+          "item": "New home sales (Oct)",
+          "consensus": "650K (676K prior)"
+        },
+        {
+          "time": "9:30 CT",
+          "item": "EIA crude inventories",
+          "consensus": "+1.5M bbl"
+        },
+        {
+          "time": "10:30 CT",
+          "item": "7-year note auction (plus 4/8/17-week bills)",
+          "consensus": ""
+        },
+        {
+          "time": "11:00 CT",
+          "item": "EIA natural gas storage (holiday-shifted)",
+          "consensus": "-19 bcf"
+        },
+        {
+          "time": "1:00 CT",
+          "item": "Fed Beige Book",
+          "consensus": ""
+        },
+        {
+          "time": "After bell",
+          "item": "No notable earnings; market closed Thursday, half-day Friday (noon CT close)",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "-5% to -6%",
+          "why": "Huang-rehire rally fades; AI capex and credit fears; about $147 vs $155 close"
+        },
+        {
+          "ticker": "AMBA",
+          "move": "-33%",
+          "why": "Q4 revenue guide $70-75M vs $112M expected"
+        },
+        {
+          "ticker": "DELL",
+          "move": "-5% to -7%",
+          "why": "Raised FY27 revenue outlook to about $202B plus $25B buyback; sold anyway"
+        },
+        {
+          "ticker": "WDAY",
+          "move": "-6% to -9%",
+          "why": "Free cash flow miss"
+        },
+        {
+          "ticker": "NTNX",
+          "move": "-14%",
+          "why": "CEO to step down once a successor is named"
+        },
+        {
+          "ticker": "URBN",
+          "move": "-12%",
+          "why": "Q3 comps +4.4% vs 5.3% expected"
+        },
+        {
+          "ticker": "ANT",
+          "move": "-4% to -6%",
+          "why": "About $78, below the $83 IPO price days after debut"
+        },
+        {
+          "ticker": "SNY",
+          "move": "+3.5%",
+          "why": "Follow-through on $41B Insmed deal"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq futures fall ahead of inflation data - Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+        },
+        {
+          "title": "US Stock Futures Extend Losses After Inflation Data - IUX24",
+          "url": "https://www.iux24.com/news/us-stock-futures-extend-losses-following-latest-inflation-and-economic-growth-data-20261125/"
+        },
+        {
+          "title": "US Pre-Market 25 Nov 2026: Nasdaq 100 Futures -3.03% - Swingfolio",
+          "url": "https://swingfolio.com/daily/us/2026-11-25/morning"
+        },
+        {
+          "title": "Nasdaq 100 futures sink 2.9% as tariff plans and a data-heavy morning hit the open - The Company Chronicle",
+          "url": "https://thecompanychronicle.com/story/before-the-bell-nasdaq-futures-down-2-9-percent-tariff-blitz-gdp-pce-november-25-2026"
+        },
+        {
+          "title": "Nasdaq Futures Slide 2.4% as Tech Losses Deepen Before PCE - Trading and Investment News",
+          "url": "https://www.tradingandinvestmentnews.co.uk/nasdaq-futures-slide-2-percent/"
+        },
+        {
+          "title": "AI stocks slide on fears over infrastructure buildout costs - Reuters via AOL",
+          "url": "https://www.aol.com/articles/ai-stocks-slide-fears-over-121708000.html"
+        },
+        {
+          "title": "Fed's preferred inflation gauge accelerated to 3.8% in October - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html"
+        },
+        {
+          "title": "U.S. proposes new tariffs on 14 trading partners - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/25/us-tariffs-trump-section-301.html"
+        },
+        {
+          "title": "Firm Inflation Upholds Fed's Plan to Raise Rates Again - NYT (via FMP)",
+          "url": "https://www.nytimes.com/2026/11/25/business/economy/inflation-pce-interest-rates.html"
+        },
+        {
+          "title": "Credit Markets Deteriorating At Concerning Rate - Seeking Alpha (via FMP)",
+          "url": "https://seekingalpha.com/article/4971584-credit-markets-deteriorating-at-concerning-rate"
+        },
+        {
+          "title": "Here's What Key Metrics Tell Us About Deere (DE) Q4 Earnings - Zacks, 11/25/2026",
+          "url": "https://www.zacks.com/stock/news/3035075/here's-what-key-metrics-tell-us-about-deere-(de)-q4-earnings?utm_source=zacks_mcp"
+        },
+        {
+          "title": "AMD Sees Server Revenues Doubling in 2027 - Zacks, 11/25/2026",
+          "url": "https://www.zacks.com/stock/news/3035006/amd-sees-server-revenues-doubling-in-2027:-will-the-momentum-last?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Dell Technologies (DELL) Q3 Earnings: Key Metrics - Zacks, 11/24/2026",
+          "url": "https://www.zacks.com/stock/news/3034852/dell-technologies-(dell)-q3-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DE - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DE?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DELL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DELL?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ANT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ANT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Economic calendar, treasury rates and prior closes - Financial Modeling Prep",
+          "url": "https://financialmodelingprep.com"
+        }
+      ],
+      "id": "2026-11-25-morning"
+    },
+    {
       "date": "2026-11-24",
       "session": "afternoon",
       "generatedAt": "2026-11-24T21:35:00Z",
@@ -6568,560 +6849,6 @@
         }
       ],
       "id": "2026-11-05-morning"
-    },
-    {
-      "date": "2026-11-04",
-      "session": "afternoon",
-      "generatedAt": "2026-11-04T21:35:00Z",
-      "headline": "Stocks ripped higher as the Democratic sweep of both chambers removed election uncertainty and crude collapsed; the Dow jumped 3% to its highest close since early September.",
-      "levels": [
-        {
-          "label": "S&P 500",
-          "value": "7,689",
-          "change": "+1.6%"
-        },
-        {
-          "label": "Nasdaq",
-          "value": "25,737",
-          "change": "+1.4%"
-        },
-        {
-          "label": "Dow",
-          "value": "53,356",
-          "change": "+3.0%"
-        },
-        {
-          "label": "Russell 2000",
-          "value": "2,857",
-          "change": "+1.6%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.90%",
-          "change": "-5 bp"
-        },
-        {
-          "label": "VIX",
-          "value": "16.8",
-          "change": "-19%"
-        },
-        {
-          "label": "WTI",
-          "value": "$88.6",
-          "change": "-7.8%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,076",
-          "change": "+3.4%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$80.1K",
-          "change": "+3.5%"
-        }
-      ],
-      "data": [
-        {
-          "name": "ADP private payrolls (Oct)",
-          "actual": "+86K",
-          "consensus": "+70K",
-          "prior": "+86K",
-          "read": "firmer",
-          "reaction": "little; election dominated"
-        },
-        {
-          "name": "ISM services PMI (Oct)",
-          "actual": "54.5",
-          "consensus": "54.8",
-          "prior": "54.9",
-          "read": "slightly softer",
-          "reaction": "yields -5bp with oil"
-        },
-        {
-          "name": "Trade balance (Sep)",
-          "actual": "-$105.0B",
-          "consensus": "-$108B",
-          "prior": "-$105.7B",
-          "read": "narrower",
-          "reaction": "none"
-        }
-      ],
-      "drivers": [
-        "Midterms: Democrats flipped the House and Senate. Market read it as gridlock with no big new spending, and the President said he would accept the results. SPY's opening gap was its second-largest ever after a midterm.",
-        "Oil freefall: WTI back under $90, down roughly $15 from Friday, on Iran de-escalation hopes plus expectations the new Congress reshapes Iran policy. Crude is tracking its worst week since 2020; yields eased with it.",
-        "AI backlash trade: a Democratic win in the Texas governor race, with a pledge to pause data-center buildouts, hammered AI-infrastructure names (HUT -23%, STRL -21%, MOD -21%, CRWV -10%, SMCI -6%). Defense and prison operators fell; health insurers, hospitals and solar rallied. The chip and data-center selloff deepened through the session.",
-        "Data: ADP +86K vs about 70K expected; ISM services 54.5 vs 54.8; Sept trade deficit narrowed to $105.0B; Atlanta Fed GDPNow Q4 at 3.4%. No Fed speakers today."
-      ],
-      "sectors": {
-        "leaders": "Financials, Real Estate, Staples, Health Care, megacap tech",
-        "laggards": "Energy, Utilities, semis and data-center"
-      },
-      "afterHours": [
-        {
-          "ticker": "ARM",
-          "move": "beat",
-          "why": "EPS $0.52 vs $0.48, revenue $1.44B vs $1.38B, sales +27% on AI demand; fell 5.3% in the regular session. After-hours quote not yet available."
-        },
-        {
-          "ticker": "QCOM",
-          "move": "beat, soft guide",
-          "why": "EPS $2.17, revenue $10.32B; outlook read as soft with a memory shortage weighing on handsets, non-handset outlook stronger. +5.3% in regular trade on the SpaceX Starlink deal."
-        },
-        {
-          "ticker": "APP",
-          "move": "beat",
-          "why": "EPS $4.30 vs $4.03, revenue $2.18B vs $2.07B; rallied 10.7% into the print."
-        },
-        {
-          "ticker": "MCK",
-          "move": "beat",
-          "why": "EPS $11.68 vs $10.72; +7.0% in the regular session. JOBY, MELI and CF also due tonight."
-        }
-      ],
-      "calendar": [
-        {
-          "time": "6:30 CT",
-          "item": "Challenger job cuts (Oct)",
-          "consensus": "51K (prior 43K)"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Initial jobless claims",
-          "consensus": "196K (prior 194K); continuing claims 1.71M"
-        },
-        {
-          "time": "7:30 CT",
-          "item": "Q3 productivity and unit labor costs",
-          "consensus": "+2.8% and +0.6%"
-        },
-        {
-          "time": "7:50 CT",
-          "item": "Fed's Hammack speaks",
-          "consensus": ""
-        },
-        {
-          "time": "8:10 CT",
-          "item": "Fed's Barkin speaks",
-          "consensus": ""
-        },
-        {
-          "time": "Earnings",
-          "item": "ConocoPhillips, Toyota, Cummins, Becton Dickinson, Zoetis, Tapestry, Monster, Warner Bros. Discovery",
-          "consensus": ""
-        },
-        {
-          "time": "Earnings",
-          "item": "Airbnb, Axon, DraftKings, Lyft, Peloton, Wynn, IonQ",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "AMZN",
-          "move": "+6.1%",
-          "why": "Megacaps led as money rotated out of AI-capex names; Apple +5.3% to a record above $5T."
-        },
-        {
-          "ticker": "FIS",
-          "move": "-23.7%",
-          "why": "Slashed 2026 EPS and revenue guidance, CFO stepping down, 2027 outlook flat-to-down."
-        },
-        {
-          "ticker": "DUOL",
-          "move": "+26%",
-          "why": "Daily active users +29% and bookings beat."
-        },
-        {
-          "ticker": "CVS",
-          "move": "-12%",
-          "why": "Plan to split into two companies by first-half 2028 overshadowed a guidance raise."
-        },
-        {
-          "ticker": "HUT",
-          "move": "-23%",
-          "why": "Texas data-center pause pledge hit AI-infrastructure names; STRL -21%, INTC -3.8%."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock market today: Dow surges 1,500 points after historic midterm election - Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-midterm-elections-earnings-140752043.html"
-        },
-        {
-          "title": "Stock Market Today Nov 4, 2026 - TheStreet",
-          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
-        },
-        {
-          "title": "Stock Market Today (Nov. 4, 2026) - Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-4-145445827.html"
-        },
-        {
-          "title": "Dow Pops as Oil Falls - StockTitan",
-          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
-        },
-        {
-          "title": "Dow Jones Forecast: Stocks Surge on Gridlock Bets - FXEmpire",
-          "url": "https://www.fxempire.com/forecasts/article/dow-jones-forecast-stocks-surge-on-gridlock-bets-as-oil-prices-retreat-1642601"
-        },
-        {
-          "title": "Arm beats second-quarter revenue estimates - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/arm-beats-second-quarter-revenue-estimates-ai-data-center-demand-2026-11-04/"
-        },
-        {
-          "title": "Arm Holdings Sales Climb 27% on AI Demand - WSJ (via FMP)",
-          "url": "https://www.wsj.com/business/earnings/arm-holdings-sales-climb-27-on-ai-demand-206782b6"
-        },
-        {
-          "title": "Qualcomm issues disappointing earnings forecast - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/04/qualcomm-qcom-earnings-report-q4-2026.html"
-        },
-        {
-          "title": "Qualcomm forecasts upbeat sales on non-smartphone strength - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/media-telecom/qualcomm-forecasts-upbeat-sales-strength-non-smartphone-segments-2026-11-04/"
-        },
-        {
-          "title": "Oil prices are in freefall - MarketWatch (via FMP)",
-          "url": "https://www.marketwatch.com/story/oil-prices-are-in-freefall-now-that-the-democratic-sweep-is-rewriting-the-iran-playbook-aa437b85"
-        },
-        {
-          "title": "AI Data Center Backlash Is Real - Barron's (via FMP)",
-          "url": "https://www.barrons.com/articles/ai-data-center-energy-utility-stocks-elections-37e63a25"
-        },
-        {
-          "title": "Every stock that's moving as a result of the election - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/04/every-stock-thats-moving-as-a-result-of-the-election.html"
-        },
-        {
-          "title": "Congress Flips And Stocks Rise - Seeking Alpha (via FMP)",
-          "url": "https://seekingalpha.com/article/4962433-congress-flips-stocks-rise"
-        },
-        {
-          "title": "Wall Street Lunch: Uncertainty Removed - Seeking Alpha (via FMP)",
-          "url": "https://seekingalpha.com/article/4962377-wall-street-lunch-uncertainty-removed-optimism-returns"
-        },
-        {
-          "title": "Private sector added 86,000 jobs in October: ADP - NY Post (via FMP)",
-          "url": "https://nypost.com/2026/11/04/business/private-sector-added-86000-jobs-in-october-exceeded-expectations-adp/"
-        },
-        {
-          "title": "AppLovin Is Still Down 60% This Year - 24/7 Wall St. (via FMP)",
-          "url": "https://247wallst.com/investing/2026/11/04/applovin-is-still-down-60-this-year-did-today-just-mark-the-bottom-for-app-stock/"
-        },
-        {
-          "title": "Stock Market News for Nov 4, 2026 - Zacks",
-          "url": "https://www.zacks.com/stock/news/3022827/stock-market-news-for-nov-4,-2026?utm_source=zacks_mcp"
-        },
-        {
-          "title": "AMD Stock: Buy, Hold or Sell After 97% AI Data Center Growth? - Zacks",
-          "url": "https://www.zacks.com/stock/news/3023396/amd-stock:-buy,-hold-or-sell-after-97-ai-data-center-growth?-?utm_source=zacks_mcp"
-        },
-        {
-          "title": "FIS Q3 Earnings Meet Estimates, Revenues Beat - Zacks",
-          "url": "https://www.zacks.com/stock/news/3023347/fis-q3-earnings-meet-estimates,-revenues-beat-on-banking-strength?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Duolingo (DUOL) Q3 Earnings: Key Metrics - Zacks",
-          "url": "https://www.zacks.com/stock/news/3022342/duolingo-(duol)-q3-earnings:-taking-a-look-at-key-metrics-versus-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "FIS - Zacks",
-          "url": "https://www.zacks.com/stock/quote/FIS?utm_source=zacks_mcp"
-        },
-        {
-          "title": "DUOL - Zacks",
-          "url": "https://www.zacks.com/stock/quote/DUOL?utm_source=zacks_mcp"
-        },
-        {
-          "title": "INTC - Zacks",
-          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
-        },
-        {
-          "title": "MRVL - Zacks",
-          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-11-04-afternoon"
-    },
-    {
-      "date": "2026-11-04",
-      "session": "morning",
-      "generatedAt": "2026-11-04T13:52:00Z",
-      "headline": "Risk-on reversal: futures erased overnight losses and are up about 1% after Democrats swept the House and Senate, with Treasuries, gold and renewables rallying on gridlock expectations while AI and data-center names lag.",
-      "levels": [
-        {
-          "label": "S&P 500 fut",
-          "value": "7,681",
-          "change": "+1.1%"
-        },
-        {
-          "label": "Nasdaq 100 fut",
-          "value": "n/a",
-          "change": "+0.9%"
-        },
-        {
-          "label": "Dow fut",
-          "value": "n/a",
-          "change": "+1.3%"
-        },
-        {
-          "label": "Russell fut",
-          "value": "not captured",
-          "change": "n/a"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.92%",
-          "change": "-3 bp"
-        },
-        {
-          "label": "VIX",
-          "value": "20.83 (prior close)",
-          "change": "-1.5%"
-        },
-        {
-          "label": "WTI",
-          "value": "$95.8",
-          "change": "-0.3%"
-        },
-        {
-          "label": "Brent",
-          "value": "$101.06",
-          "change": "-2.5%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,056",
-          "change": "+2.9%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$78,269",
-          "change": "+1.2%"
-        }
-      ],
-      "data": [
-        {
-          "name": "ADP private payrolls (Oct)",
-          "actual": "+86K",
-          "consensus": "+69K",
-          "prior": "+90K",
-          "read": "firmer than expected; labor market still low-hire, low-fire",
-          "reaction": "gold held above $4,000; yields stayed lower on the day, no hawkish repricing"
-        },
-        {
-          "name": "Trade balance (Sep)",
-          "actual": "-$105.0B",
-          "consensus": "-$108.0B",
-          "prior": "-$105.6B",
-          "read": "narrower than expected; exports $321.5B, imports $426.6B; small plus for Q3 GDP",
-          "reaction": "muted"
-        },
-        {
-          "name": "Treasury refunding announcement",
-          "actual": "auction sizes steady; signaled possible financing changes over coming quarters",
-          "consensus": "n/a",
-          "prior": "n/a",
-          "read": "no near-term supply surprise",
-          "reaction": "10-yr held near 4.92%"
-        }
-      ],
-      "drivers": [
-        "Blue wave equals gridlock trade: Democratic control of both chambers is read as a brake on the White House agenda; Treasuries and gold gained, the dollar fell, and Scope Ratings called the result a credit positive.",
-        "AI and data-center overhang: worries about tougher data-center scrutiny, including a Texas governor-elect proposing a pause on new projects, hit NVDA, MU, CoreWeave, Nebius and IREN early; renewables and healthcare rallied, defense slipped. AMD's blowout quarter is the offset.",
-        "Oil war premium leaking: Iran peace-talk hopes with Qatar mediating have Brent back near $101; euro-zone inflation hit 4% and an ECB hike looms.",
-        "Overseas: Europe opened higher led by renewables; Asia mixed with Hang Seng +1.7%, Shanghai +2.2%, Nikkei -1.4%."
-      ],
-      "calendar": [
-        {
-          "time": "9:00 CT",
-          "item": "ISM Services PMI (Oct)",
-          "consensus": "54.8 (prior 54.9); prices paid 75 (prior 74)"
-        },
-        {
-          "time": "9:30 CT",
-          "item": "EIA crude oil inventories",
-          "consensus": "+0.9M bbl"
-        },
-        {
-          "time": "10:30 CT",
-          "item": "Treasury 17-week bill auction",
-          "consensus": "n/a; refunding auctions (3/10/30-yr) run next week"
-        },
-        {
-          "time": "Intraday",
-          "item": "Total vehicle sales (Oct)",
-          "consensus": "15.9M (prior 16.0M)"
-        },
-        {
-          "time": "All day",
-          "item": "Fed: not in blackout (next FOMC Dec 8-9); no Fed speakers confirmed in calendar sources",
-          "consensus": "n/a"
-        },
-        {
-          "time": "Pre-bell (reported)",
-          "item": "CVS beat: EPS $2.09 vs $1.65, revenue $108.4B vs $104.8B",
-          "consensus": "beat"
-        },
-        {
-          "time": "Pre-bell (reported)",
-          "item": "MCD: EPS $3.57 vs $3.38, revenue $7.16B vs $7.28B (light)",
-          "consensus": "mixed"
-        },
-        {
-          "time": "Pre-bell (reported)",
-          "item": "UBER: EPS $0.88 vs $0.86, revenue $14.77B vs $14.66B; NVO and DDOG also beat",
-          "consensus": "beat"
-        },
-        {
-          "time": "Pre-bell (pending)",
-          "item": "MCK",
-          "consensus": "EPS $10.72, revenue $109.9B"
-        },
-        {
-          "time": "After bell",
-          "item": "QCOM",
-          "consensus": "EPS $2.16, revenue $10.1B"
-        },
-        {
-          "time": "After bell",
-          "item": "ARM",
-          "consensus": "EPS $0.48, revenue $1.38B"
-        },
-        {
-          "time": "After bell",
-          "item": "MELI / MET / ALL / EXPE / MSI",
-          "consensus": "EPS $9.27 / $2.77 / $6.89 / $8.85 / $4.42"
-        },
-        {
-          "time": "After bell",
-          "item": "JOBY",
-          "consensus": "EPS -$0.25, revenue $39M"
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "AMD",
-          "move": "+6% pre",
-          "why": "Q3 EPS $2.09 vs $1.95, revenue $13.4B (+45%); data-center sales nearly doubled; sees 2027 revenue growth above 80%. Prior close $483.90."
-        },
-        {
-          "ticker": "SMCI",
-          "move": "+8% pre",
-          "why": "FQ1 revenue $19.95B, about 26% above consensus; EPS $1.81 vs $1.24. Prior close $31.39."
-        },
-        {
-          "ticker": "TSLA",
-          "move": "lower pre",
-          "why": "Shares slide as Musk's heavy election spending backfires; investors brace for less favorable policy. Prior close $398.50."
-        },
-        {
-          "ticker": "CVS",
-          "move": "n/a",
-          "why": "Clean beat on EPS and revenue; Health Services revenue +9.5% y/y. Prior close $91.41."
-        },
-        {
-          "ticker": "QCOM",
-          "move": "n/a",
-          "why": "Multiyear deal to build 5G base stations for SpaceX's Starlink Mobile, its largest 5G initiative; reports after the close. Prior close $164.43."
-        },
-        {
-          "ticker": "NVDA",
-          "move": "-1% pre",
-          "why": "Data-center regulation worries after the Democratic sweep despite Tuesday's chip rebound; MU also lower."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Stock Market Today, Nov. 4: Futures Rise After Democrats Sweep Midterm Elections - TipRanks",
-          "url": "https://www.tipranks.com/news/stock-market-today-nov-4-futures-rise-after-democrats-sweep-midterm-elections"
-        },
-        {
-          "title": "Stock market today: Dow, S&P 500, Nasdaq futures after Democrats take control of House, Senate - Yahoo Finance",
-          "url": "https://ca.finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-midterm-elections-091834396.html"
-        },
-        {
-          "title": "US private payrolls rise in October, ADP says - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/us-private-payrolls-rise-october-adp-says-2026-11-04/"
-        },
-        {
-          "title": "Gold prices holding $4,000 as ADP says US economy created 86k jobs - Kitco (via FMP)",
-          "url": "https://www.kitco.com/news/article/2026-11-04/gold-prices-holding-4000-adp-says-us-economy-created-86k-jobs-october"
-        },
-        {
-          "title": "Treasury opens the door to changes in how it finances the growing U.S. debt - MarketWatch (via FMP)",
-          "url": "https://www.marketwatch.com/story/treasury-opens-the-door-to-changes-in-how-it-finances-the-growing-u-s-debt-heres-what-you-need-to-know-6001f7e1"
-        },
-        {
-          "title": "Democratic sweep positive for US credit rating outlook, Scope Ratings says - Reuters (via FMP)",
-          "url": "https://www.reuters.com/markets/us/democratic-sweep-positive-us-credit-rating-outlook-scope-ratings-says-2026-11-04/"
-        },
-        {
-          "title": "AI data center stocks dip, renewables surge after Democrat sweep - Reuters (via FMP)",
-          "url": "https://www.reuters.com/business/aerospace-defense/ai-data-center-stocks-dip-renewables-surge-after-democrat-sweep-us-midterm-2026-11-04/"
-        },
-        {
-          "title": "Democrats Win in Landslide, US Stock Futures Rebound - Bloomberg (via FMP)",
-          "url": "https://www.youtube.com/watch?v=6rNPwABCuMk"
-        },
-        {
-          "title": "Oil News: Crude Oil Futures Fall as Iran Peace Talks Pressure War Premium - FXEmpire (via FMP)",
-          "url": "https://www.fxempire.com/forecasts/article/oil-news-crude-oil-futures-fall-as-iran-peace-talks-pressure-war-premium-1642293"
-        },
-        {
-          "title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/04/euro-zone-cpi-inflation-october-ecb-rate-hike.html"
-        },
-        {
-          "title": "Tesla and SpaceX shares slide as Musk's political push falls flat - MarketWatch (via FMP)",
-          "url": "https://www.marketwatch.com/story/tesla-and-spacex-shares-slide-as-musks-political-push-falls-flat-c15d29a3"
-        },
-        {
-          "title": "SpaceX signs deal with Qualcomm to provide network technology for U.S. mobile service - CNBC (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/04/spacex-strikes-deal-with-qualcomm-for-mobile-network-infrastructure.html"
-        },
-        {
-          "title": "Stock Market News for Nov 4, 2026 - Zacks",
-          "url": "https://www.zacks.com/stock/news/3022827/stock-market-news-for-nov-4,-2026?utm_source=zacks_mcp"
-        },
-        {
-          "title": "CVS Health (CVS) Q3 Earnings: How Key Metrics Compare - Zacks",
-          "url": "https://www.zacks.com/stock/news/3022839/cvs-health-(cvs)-q3-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Super Micro Computer (SMCI) Beats Q1 Earnings and Revenue Estimates - Zacks",
-          "url": "https://www.zacks.com/stock/news/3022224/super-micro-computer-(smci)-beats-q1-earnings-and-revenue-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "AMD EPS: Intel's Drag Makes No Sense - Zacks",
-          "url": "https://www.zacks.com/commentary/3022320/amd-eps:-intel's-drag-makes-no-sense?utm_source=zacks_mcp"
-        },
-        {
-          "title": "AMD - Zacks",
-          "url": "https://www.zacks.com/stock/quote/AMD?utm_source=zacks_mcp"
-        },
-        {
-          "title": "SMCI - Zacks",
-          "url": "https://www.zacks.com/stock/quote/SMCI?utm_source=zacks_mcp"
-        },
-        {
-          "title": "TSLA - Zacks",
-          "url": "https://www.zacks.com/stock/quote/TSLA?utm_source=zacks_mcp"
-        },
-        {
-          "title": "CVS - Zacks",
-          "url": "https://www.zacks.com/stock/quote/CVS?utm_source=zacks_mcp"
-        },
-        {
-          "title": "QCOM - Zacks",
-          "url": "https://www.zacks.com/stock/quote/QCOM?utm_source=zacks_mcp"
-        },
-        {
-          "title": "NVDA - Zacks",
-          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-11-04-morning"
     }
   ]
 }
