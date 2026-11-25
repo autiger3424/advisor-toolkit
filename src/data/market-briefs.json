@@ -3,6 +3,241 @@
   "briefs": [
     {
       "date": "2026-11-25",
+      "session": "afternoon",
+      "generatedAt": "2026-11-25T21:35:00Z",
+      "headline": "Stocks clawed back a brutal open and finished mixed: the Dow erased a 1,100-point loss to close higher, while a hot core PCE print and more chip selling kept the Nasdaq red. Markets are closed Thursday for Thanksgiving; Friday is a half-day.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,185.96",
+          "change": "-0.21%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "23,585.80",
+          "change": "-0.62%"
+        },
+        {
+          "label": "Dow",
+          "value": "50,182.95",
+          "change": "+0.33%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,704.06",
+          "change": "+0.71%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.85%",
+          "change": "-6 bp"
+        },
+        {
+          "label": "VIX",
+          "value": "27.98",
+          "change": "+6.1%"
+        },
+        {
+          "label": "WTI",
+          "value": "$83.8",
+          "change": "+2.1%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,572",
+          "change": "+0.3%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$60,300",
+          "change": "+1.0%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Core PCE y/y (Oct)",
+          "actual": "3.3%",
+          "consensus": "3.2%",
+          "prior": "3.1%",
+          "read": "hotter",
+          "reaction": "Dec hike odds ~98%"
+        },
+        {
+          "name": "PCE y/y (Oct)",
+          "actual": "3.8%",
+          "consensus": "3.8%",
+          "prior": "3.7%",
+          "read": "in line",
+          "reaction": ""
+        },
+        {
+          "name": "Q3 GDP (revised)",
+          "actual": "4.3%",
+          "consensus": "3.5%",
+          "prior": "2.2%",
+          "read": "stronger",
+          "reaction": ""
+        },
+        {
+          "name": "Initial claims",
+          "actual": "189K",
+          "consensus": "200K",
+          "prior": "202K",
+          "read": "firmer",
+          "reaction": ""
+        },
+        {
+          "name": "Durable goods m/m (Oct)",
+          "actual": "+0.2%",
+          "consensus": "+0.6%",
+          "prior": "+2.0%",
+          "read": "softer",
+          "reaction": ""
+        },
+        {
+          "name": "New home sales (Oct)",
+          "actual": "701K",
+          "consensus": "650K",
+          "prior": "614K",
+          "read": "stronger",
+          "reaction": ""
+        }
+      ],
+      "drivers": [
+        "Tariff shock at the open: the White House floated new duties of up to 20% on China, the EU and a dozen-plus other partners (January at the earliest). Nasdaq was down 3.2% and the S&P 2.1% at the lows with chips off 6% at one point, before bargain-hunting turned most sectors green by afternoon.",
+        "Inflation is not cooperating: October core PCE 3.3% y/y vs 3.2% expected, Q3 GDP revised up to 4.3%, claims 189K and new home sales 701K. Durable goods were the soft spot. The Beige Book described slight-to-moderate growth with sticky inflation; markets price roughly 98% odds of a 25 bp hike on Dec 10.",
+        "AI trade still fragile: Nvidia fell a second day after Monday's 31% reinstatement pop (down 8% intraday, 3.9% at the close); memory names Micron and Sandisk led chip selling; Amazon fell 3.1% on hyperscaler capex worries. The Nasdaq-100 is flirting with bear-market territory.",
+        "Deere gained 4.4%: EPS of $3.89 missed by about 4%, revenue beat, and FY27 net income was guided to $4.5-5.25B. The stock swung from down 5% premarket to a gain."
+      ],
+      "sectors": {
+        "leaders": "Energy, Industrials, Financials, small caps",
+        "laggards": "Technology/semis, Consumer Staples"
+      },
+      "afterHours": [],
+      "calendar": [
+        {
+          "time": "All day",
+          "item": "Thursday Nov 26: US stock and bond markets closed for Thanksgiving",
+          "consensus": ""
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Friday: Oct goods trade balance",
+          "consensus": "-$133B"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Friday: Oct wholesale inventories m/m",
+          "consensus": "+0.7%"
+        },
+        {
+          "time": "7:30 CT",
+          "item": "Friday: Oct retail inventories ex-autos m/m",
+          "consensus": "+0.4%"
+        },
+        {
+          "time": "12:00 CT",
+          "item": "Friday: early close for stocks (bonds close 1:00 CT); no Fed speakers or notable US earnings",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "MU",
+          "move": "-4.5%",
+          "why": "Memory names led the chip rout; Micron is off roughly a third over three months"
+        },
+        {
+          "ticker": "SNDK",
+          "move": "-5.6%",
+          "why": "Sold alongside Micron as the AI-memory trade unwound"
+        },
+        {
+          "ticker": "AMZN",
+          "move": "-3.1%",
+          "why": "Negative free cash flow and no capex trim keep hyperscalers under pressure"
+        },
+        {
+          "ticker": "DE",
+          "move": "+4.4%",
+          "why": "EPS miss but revenue beat and FY27 outlook; reversed from down 5% premarket"
+        },
+        {
+          "ticker": "ANT",
+          "move": "+1.1%",
+          "why": "Anthropic held up as Zacks' top trending ticker; Nasdaq-100 inclusion talk for late December"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stock market today: Dow, S&P 500, Nasdaq pare losses as AI-fueled rout continues (Yahoo Finance)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+        },
+        {
+          "title": "Nasdaq futures slide over 2% on fresh US tariff concerns (Reuters via Yahoo)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-slide-over-2-100822079.html"
+        },
+        {
+          "title": "Dow closes higher Wednesday, wiping out 1,100-point loss (CNBC, headline only)",
+          "url": "https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html"
+        },
+        {
+          "title": "Fed survey shows continued growth and sticky inflation (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/fed-survey-shows-continued-growth-sticky-inflation-recent-weeks-2026-11-25/"
+        },
+        {
+          "title": "The Fed says inflation hasn't gotten any better ahead of December vote (MarketWatch via FMP)",
+          "url": "https://www.marketwatch.com/story/the-fed-says-inflation-hasnt-gotten-any-better-ahead-of-its-key-december-vote-to-raise-rates-65024d33"
+        },
+        {
+          "title": "New US tariff proposals keep markets on edge (Proactive via FMP)",
+          "url": "https://www.proactiveinvestors.com/companies/news/1102452"
+        },
+        {
+          "title": "Volatility-weary investors hammered as tariff mayhem adds to tech pain (Reuters via FMP)",
+          "url": "https://www.reuters.com/business/global-markets-risks-analysis-graphic-pix-2026-11-25/"
+        },
+        {
+          "title": "Bullish hopes spring as traders bet against a higher VIX (CNBC via FMP)",
+          "url": "https://www.cnbc.com/2026/11/25/bullish-hopes-spring-as-traders-bet-against-a-higher-vix-options-action-live.html"
+        },
+        {
+          "title": "Where AI Money Flows In 2027 After Anthropic's IPO (Seeking Alpha via FMP)",
+          "url": "https://seekingalpha.com/article/4972013-where-ai-money-flows-in-2027-after-anthropics-ipo"
+        },
+        {
+          "title": "Stock Market News for Nov 25, 2026 (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3034883/stock-market-news-for-nov-25,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Deere Q4 Earnings Miss Estimates on Large Agriculture Weakness (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3035382/deere-q4-earnings-miss-estimates-on-large-agriculture-weakness?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SK hynix vs Micron: Which AI Memory Player Has the Edge? (Zacks)",
+          "url": "https://www.zacks.com/stock/news/3035394/sk-hynix-vs-micron:-which-ai-memory-player-has-the-edge?&utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DE - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DE?utm_source=zacks_mcp"
+        },
+        {
+          "title": "MU - Zacks",
+          "url": "https://www.zacks.com/stock/quote/MU?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ANT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ANT?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-25-afternoon"
+    },
+    {
+      "date": "2026-11-25",
       "session": "morning",
       "generatedAt": "2026-11-25T13:50:00Z",
       "headline": "Sharply risk-off: Nasdaq futures down about 3% as the AI selloff deepens on buildout-cost and credit worries, while hot Q3 GDP and core PCE cement a December Fed hike and a new tariff proposal adds pressure. Market closed Thursday for Thanksgiving, half-day Friday.",
