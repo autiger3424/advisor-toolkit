@@ -2,6 +2,265 @@
   "keepDays": 15,
   "briefs": [
     {
+      "date": "2026-11-26",
+      "session": "morning",
+      "generatedAt": "2026-11-26T13:50:00Z",
+      "headline": "US stock and bond markets are closed for Thanksgiving; futures are modestly higher as the AI trade steadies after Wednesday's late rebound, and Friday is a half-day (stocks close 12:00 CT).",
+      "levels": [
+        {
+          "label": "S&P 500 fut",
+          "value": "7,225",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Nasdaq 100 fut",
+          "value": "26,254",
+          "change": "+0.6%"
+        },
+        {
+          "label": "Dow fut",
+          "value": "50,343",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Russell fut",
+          "value": "n/a",
+          "change": "n/a"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.85%",
+          "change": "-6bp (Wed close)"
+        },
+        {
+          "label": "VIX",
+          "value": "28.3",
+          "change": "+7.3%"
+        },
+        {
+          "label": "WTI",
+          "value": "$84.10",
+          "change": "+0.4%"
+        },
+        {
+          "label": "Brent",
+          "value": "$90.79",
+          "change": "+0.2%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,597",
+          "change": "+1.7%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "$60,800",
+          "change": "+0.7%"
+        }
+      ],
+      "data": [
+        {
+          "name": "No 7:30 releases today (Thanksgiving). Wednesday's pulled-forward prints below.",
+          "actual": "",
+          "consensus": "",
+          "prior": "",
+          "read": "",
+          "reaction": ""
+        },
+        {
+          "name": "Q3 GDP, 2nd est. (Wed)",
+          "actual": "4.3%",
+          "consensus": "3.5%",
+          "prior": "3.4%",
+          "read": "hot; keeps Fed-hike talk alive",
+          "reaction": "stocks sold midday then recovered; 10-yr fell to 4.85% from 4.91%"
+        },
+        {
+          "name": "Core PCE Oct y/y (Wed)",
+          "actual": "3.3%",
+          "consensus": "3.2%",
+          "prior": "3.1%",
+          "read": "sticky; highest since late 2023",
+          "reaction": "Dec 9 FOMC pricing leans to a 25bp hike"
+        },
+        {
+          "name": "Core PCE Oct m/m (Wed)",
+          "actual": "+0.3%",
+          "consensus": "+0.3%",
+          "prior": "+0.3%",
+          "read": "in line",
+          "reaction": ""
+        },
+        {
+          "name": "Initial jobless claims (Wed)",
+          "actual": "189K",
+          "consensus": "200K",
+          "prior": "202K",
+          "read": "labor still tight",
+          "reaction": ""
+        },
+        {
+          "name": "Durable goods Oct (Wed)",
+          "actual": "+0.2%",
+          "consensus": "+0.6%",
+          "prior": "+2.0%",
+          "read": "soft headline; ex-transport +0.5% in line",
+          "reaction": ""
+        },
+        {
+          "name": "New home sales Oct (Wed)",
+          "actual": "701K",
+          "consensus": "650K",
+          "prior": "614K",
+          "read": "big beat",
+          "reaction": ""
+        }
+      ],
+      "drivers": [
+        "AI trade stabilizing after Wednesday's whipsaw: S&P 500 fell as much as 3.2% intraday and the Nasdaq 100 touched the edge of bear-market territory before late dip-buying pulled indexes most of the way back.",
+        "Nvidia remains the swing factor: S&P placed its AA rating on CreditWatch Negative over governance, and the FT reports Nvidia halted server shipments to Malaysia, Singapore, Thailand and Indonesia under new US export rules.",
+        "Tariffs: the White House proposed new duties on 14 trading partners including China, Japan, the EU, Taiwan, Korea and India; markets took relief that they replace rather than stack on July duties and would not start before February. China vowed to respond.",
+        "Fed: with GDP at 4.3% and core PCE at 3.3%, futures price a 25bp hike at the Dec 9 FOMC. The pre-meeting blackout begins Saturday Nov 28.",
+        "Overseas: Europe strong (DAX +1.8%, CAC +1.6%, FTSE +1.3%); Asia higher (Nikkei +0.9%, Hang Seng +1.2%, Taiex +2.5%, Kospi +0.3% after Wednesday's 6.2% drop)."
+      ],
+      "calendar": [
+        {
+          "time": "Today",
+          "item": "US stock and bond markets closed (Thanksgiving); no US data, Fed speakers, auctions or notable earnings",
+          "consensus": ""
+        },
+        {
+          "time": "6:30 CT",
+          "item": "ECB monetary policy meeting accounts",
+          "consensus": ""
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "Goods trade balance (Oct)",
+          "consensus": "-$133B (prior -$135.1B)"
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "Wholesale inventories (Oct)",
+          "consensus": "+0.5% (prior +0.7%)"
+        },
+        {
+          "time": "Fri 7:30 CT",
+          "item": "Retail inventories ex-autos (Oct)",
+          "consensus": "+0.4% (prior +0.5%)"
+        },
+        {
+          "time": "Fri 12:00 CT",
+          "item": "Stock market early close (bonds close 1:00 CT); no notable earnings Friday",
+          "consensus": ""
+        },
+        {
+          "time": "Sat Nov 28",
+          "item": "FOMC blackout begins ahead of Dec 8-9 meeting",
+          "consensus": ""
+        },
+        {
+          "time": "Sun",
+          "item": "OPEC+ meeting on 2027 production targets",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "NVDA",
+          "move": "-3.9% Wed ($149.30)",
+          "why": "S&P CreditWatch Negative on governance; reported halt of server shipments to four Southeast Asian countries under new US export rules"
+        },
+        {
+          "ticker": "META",
+          "move": "+3.4% Wed, +2.5% pre-mkt ($609.89)",
+          "why": "AI infrastructure financing loan and reported talks with Amazon"
+        },
+        {
+          "ticker": "LRCX",
+          "move": "-5.7% Wed ($185.01)",
+          "why": "Congressional push for tighter curbs on chip-tool sales to China"
+        },
+        {
+          "ticker": "GOOGL",
+          "move": "-2.1% Wed ($273.10)",
+          "why": "Report of cuts to 2027 TPU orders"
+        },
+        {
+          "ticker": "DLTR / ANF / DKS",
+          "move": "+11% / +20% / +15% Tue",
+          "why": "Retail earnings beats still underpinning consumer names into Black Friday"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cornucopia of Econ Data Ahead of Thanksgiving - Zacks, Nov 25, 2026",
+          "url": "https://www.zacks.com/stock/news/3035259/cornucopia-of-econ-data-ahead-of-thanksgiving?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Stock Market News for Nov 25, 2026 - Zacks",
+          "url": "https://www.zacks.com/stock/news/3034883/stock-market-news-for-nov-25,-2026?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVIDIA's Data Center Sales Jump 110% - Zacks, Nov 26, 2026",
+          "url": "https://www.zacks.com/stock/news/3035632/nvidia's-data-center-sales-jump-110:-can-nvda-keep-the-pace-ahead?utm_source=zacks_mcp"
+        },
+        {
+          "title": "World shares push higher while US closed for Thanksgiving - AP via BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+        },
+        {
+          "title": "S&P 500 Futures Edge Higher as Tariff Relief Offsets Nvidia Risks - JournalArta",
+          "url": "https://journalarta.com/en/2026/11/26/sp-500-futures-edge-higher-as-tariff-relief-offsets-nvidia-risks/"
+        },
+        {
+          "title": "U.S. Stock Futures Higher as AI Trade Steadies - WSJ (via FMP)",
+          "url": "https://www.wsj.com/finance/stocks/u-s-stock-futures-higher-as-ai-trade-steadies-for-thanksgiving-break-8f712d82"
+        },
+        {
+          "title": "U.S. Treasurys Show Remarkable Resilience to Upbeat Data - WSJ (via FMP)",
+          "url": "https://www.wsj.com/finance/long-term-jgb-yields-rise-as-chip-stocks-rebound-c8e82816"
+        },
+        {
+          "title": "Nvidia Halts Sales to Southeast Asia - NYT (via FMP)",
+          "url": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html"
+        },
+        {
+          "title": "US tariff-hike threats put pressure on partners - CNBC (via FMP)",
+          "url": "https://www.cnbc.com/2026/11/26/us-tariffs-hike-trade-agreement.html"
+        },
+        {
+          "title": "OPEC, Allies Face Tough Choices - WSJ (via FMP)",
+          "url": "https://www.wsj.com/business/energy-oil/opec-allies-face-tough-choices-as-surplus-builds-hormuz-risks-persist-769f8d98"
+        },
+        {
+          "title": "Nasdaq teeters on brink of bear market - Sky News (via FMP)",
+          "url": "https://news.sky.com/story/nasdaq-100-teeters-on-brink-of-bear-market-as-wall-street-tech-stocks-fall-further-13616624"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "META - Zacks",
+          "url": "https://www.zacks.com/stock/quote/META?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DLTR - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DLTR?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ANF - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ANF?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DKS - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DKS?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-26-morning"
+    },
+    {
       "date": "2026-11-25",
       "session": "afternoon",
       "generatedAt": "2026-11-25T21:35:00Z",
@@ -6612,478 +6871,6 @@
         }
       ],
       "id": "2026-11-06-morning"
-    },
-    {
-      "date": "2026-11-05",
-      "session": "afternoon",
-      "generatedAt": "2026-11-05T21:27:43Z",
-      "headline": "Stocks had their worst day since the April 2025 tariff rout: the S&P 500 fell 4.3% and the Nasdaq 5.5% (now in correction) as investors priced in a Democratic Congress slowing the AI data-center buildout, erasing Wednesday's post-election rally.",
-      "levels": [
-        {
-          "label": "S&P 500",
-          "value": "7,355.84",
-          "change": "-4.33%"
-        },
-        {
-          "label": "Nasdaq",
-          "value": "24,315.00",
-          "change": "-5.52%"
-        },
-        {
-          "label": "Dow",
-          "value": "51,523.06",
-          "change": "-3.44%"
-        },
-        {
-          "label": "Russell 2000",
-          "value": "2,729.89",
-          "change": "-4.45%"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.84%",
-          "change": "-6 bp"
-        },
-        {
-          "label": "VIX",
-          "value": "28.15",
-          "change": "+69.5%"
-        },
-        {
-          "label": "WTI",
-          "value": "$90.66",
-          "change": "+2.9%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,098",
-          "change": "+0.6%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$75,766",
-          "change": "-5.8%"
-        }
-      ],
-      "drivers": [
-        "AI policy risk: with Democrats holding both chambers, the market fixed on campaign-trail calls from some Democrats to restrict or pause new data-center projects (power prices were a campaign issue). Traders read that as an AI buildout that gets slower and more expensive. The chip index fell more than 10% and the tech sector fund (XLK) lost 8%.",
-        "Changed since the morning: pre-market it looked like a chip-specific wobble on Qualcomm's light guidance, with Dow futures up 0.6%. It became broad liquidation: the Dow opened higher, then lost 1,833 points, and the indexes finished near session lows.",
-        "Flight to safety, not a growth scare: jobless claims (189K vs 196K est.) and Q3 productivity (+3.6% vs +2.8% est.) were solid and ignored. Treasuries rallied (10-yr -6 bp, 2-yr -12 bp), the VIX had its biggest one-day jump in over two years, and retail investors were on pace for their heaviest net selling since March 2020 (Vanda, via Yahoo).",
-        "Technicals: the Nasdaq closed below its 200-day average and more than 10% under its Oct. 6 record. The S&P 500 finished just above its 200-day (about 7,320). Oil rebounded about 3% after Wednesday's 8% drop; bitcoin fell 5.8%."
-      ],
-      "sectors": {
-        "leaders": "All 11 fell. Held up best: Communication Services (-0.6%), Utilities (-0.7%), Staples (-0.8%)",
-        "laggards": "Technology (-8.0%), Industrials (-4.1%), Consumer Discretionary (-3.8%)"
-      },
-      "afterHours": [
-        {
-          "ticker": "ABNB",
-          "move": "+12%",
-          "why": "EPS $3.16 vs $2.85 est., revenue $4.87B vs $4.75B; raised full-year revenue growth outlook to high-teens from mid-teens."
-        },
-        {
-          "ticker": "TEAM",
-          "move": "-17%",
-          "why": "EPS $1.65 vs $1.39 est. and revenue $1.77B vs $1.71B both topped estimates; reason for the drop not clear from headlines yet."
-        },
-        {
-          "ticker": "DKNG",
-          "move": "-18%",
-          "why": "Single early print. Loss of $0.53 a share vs $0.41 est.; revenue $1.33B vs $1.39B."
-        },
-        {
-          "ticker": "NET",
-          "move": "+17%",
-          "why": "Single early print. EPS $0.38 vs $0.34 est.; revenue $0.78B vs $0.74B."
-        },
-        {
-          "ticker": "AFRM",
-          "move": "-8%",
-          "why": "EPS $0.47 vs $0.38 est.; revenue $1.26B vs $1.21B. All after-hours moves are early, thin prints as of about 3:20 CT."
-        }
-      ],
-      "calendar": [
-        {
-          "time": "3:30 CT",
-          "item": "Fed's Williams speaks",
-          "consensus": ""
-        },
-        {
-          "time": "7:30 CT",
-          "item": "October jobs report: nonfarm payrolls, unemployment rate, average hourly earnings",
-          "consensus": "Payrolls +65K (prior +29K); unemployment 4.2% (prior 4.2%); hourly earnings +0.3% m/m, +2.9% y/y"
-        },
-        {
-          "time": "8:10 CT",
-          "item": "Fed's Musalem speaks",
-          "consensus": ""
-        },
-        {
-          "time": "9:00 CT",
-          "item": "U. Michigan consumer sentiment, November preliminary",
-          "consensus": "48.0 (prior 48.0); 1-yr inflation expectations 4.7%"
-        },
-        {
-          "time": "11:15 CT",
-          "item": "Fed's Bowman speaks",
-          "consensus": ""
-        },
-        {
-          "time": "2:00 CT",
-          "item": "Consumer credit, September",
-          "consensus": "+$12B (prior +$8.3B)"
-        },
-        {
-          "time": "Earnings",
-          "item": "Humana, Charter, Enbridge, Vistra, Brookfield Asset Mgmt, Franklin Resources, Fluor",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "MU",
-          "move": "-17.5%",
-          "why": "Hardest-hit large chip name in the AI liquidation; Marvell fell 16.4%."
-        },
-        {
-          "ticker": "TSLA",
-          "move": "-10.8%",
-          "why": "High-beta megacap sold with the group; Yahoo also cites merger and regulatory concerns (SpaceX -9%)."
-        },
-        {
-          "ticker": "QCOM",
-          "move": "-9.5%",
-          "why": "Beat the quarter but guided light, which started the chip selling."
-        },
-        {
-          "ticker": "PLTR",
-          "move": "-9.7%",
-          "why": "Software was dragged down with AI infrastructure."
-        },
-        {
-          "ticker": "APP",
-          "move": "+31.0%",
-          "why": "Q3 revenue $2.18B vs $2.07B est. and Q4 guidance above consensus; a rare winner."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Yahoo Finance: Stock market today live blog, Nov. 5",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
-        },
-        {
-          "title": "Fox Business: Stocks plunge as Dem midterm sweep fuels AI regulatory concerns",
-          "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
-        },
-        {
-          "title": "WSJ: Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks (via FMP)",
-          "url": "https://www.wsj.com/finance/stocks/wall-street-gets-2-5-trillion-ai-reality-check-with-historic-rout-of-tech-stocks-93985d7c"
-        },
-        {
-          "title": "CNBC: Qualcomm slides 9% after earnings, leading post-election chip stock sell-off (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
-        },
-        {
-          "title": "CNBC: Experts on whether the AI trade is ending (via FMP)",
-          "url": "https://www.cnbc.com/2026/11/05/cnbcs-experts-on-whether-the-ai-trade-is-ending-and-what-investors-should-do-next.html"
-        },
-        {
-          "title": "MarketWatch: After tech-stock rout, October jobs report could bring relief or more pain (via FMP)",
-          "url": "https://www.marketwatch.com/story/after-tech-stock-rout-october-jobs-report-could-bring-relief-or-more-pain-db93357e"
-        },
-        {
-          "title": "WSJ: Airbnb Raises Outlook as It Remains Insulated from Global Conflicts (via FMP)",
-          "url": "https://www.wsj.com/business/earnings/airbnb-raises-outlook-as-it-remains-insulated-from-global-conflicts-a8ffcbf8"
-        },
-        {
-          "title": "Reuters: Airbnb lifts annual revenue growth forecast (via FMP)",
-          "url": "https://www.reuters.com/business/airbnb-lifts-annual-revenue-growth-forecast-resilient-global-travel-demand-2026-11-05/"
-        },
-        {
-          "title": "Business Wire: Atlassian Announces First Quarter Fiscal Year 2027 Results (via FMP)",
-          "url": "https://www.businesswire.com/news/home/20261105890344/en/Atlassian-Announces-First-Quarter-Fiscal-Year-2027-Results/"
-        },
-        {
-          "title": "Business Wire: Affirm reports first fiscal quarter 2027 results (via FMP)",
-          "url": "https://www.businesswire.com/news/home/20261102297116/en/Affirm-reports-first-fiscal-quarter-2027-results/"
-        },
-        {
-          "title": "24/7 Wall St.: AppLovin Soars 30% on Record Quarter and Strong Outlook (via FMP)",
-          "url": "https://247wallst.com/investing/2026/11/05/applovin-soars-30-on-record-quarter-and-strong-outlook-magnite-surges-17-trade-desk-falls-2/"
-        },
-        {
-          "title": "Zacks: Stock Market News for Nov 5, 2026",
-          "url": "https://www.zacks.com/stock/news/3024095/stock-market-news-for-nov-5,-2026?utm_source=zacks_mcp"
-        },
-        {
-          "title": "MRVL - Zacks",
-          "url": "https://www.zacks.com/stock/quote/MRVL?utm_source=zacks_mcp"
-        },
-        {
-          "title": "MU - Zacks",
-          "url": "https://www.zacks.com/stock/quote/MU?utm_source=zacks_mcp"
-        }
-      ],
-      "id": "2026-11-05-afternoon"
-    },
-    {
-      "date": "2026-11-05",
-      "session": "morning",
-      "generatedAt": "2026-11-05T13:57:55Z",
-      "headline": "Mixed open after Wednesday's 1,569-point Dow surge: Dow futures up about 0.6%, S&P roughly flat and Nasdaq 100 down about 0.5% as Qualcomm and Arm guidance plus data-center permitting worries hit chips; jobless claims and productivity both came in strong and barely moved futures.",
-      "levels": [
-        {
-          "label": "S&P 500 fut",
-          "value": "7,731",
-          "change": "+0.1%"
-        },
-        {
-          "label": "Nasdaq 100 fut",
-          "value": "n/a",
-          "change": "-0.5% (news reports)"
-        },
-        {
-          "label": "Dow fut",
-          "value": "n/a",
-          "change": "+0.6% (news reports)"
-        },
-        {
-          "label": "Russell fut",
-          "value": "n/a",
-          "change": "+/- not captured"
-        },
-        {
-          "label": "10-yr yield",
-          "value": "4.90%",
-          "change": "-5 bp (Wed close; intraday not captured)"
-        },
-        {
-          "label": "VIX",
-          "value": "16.86",
-          "change": "+1.5%"
-        },
-        {
-          "label": "WTI",
-          "value": "$88.80",
-          "change": "+0.8% (news reports)"
-        },
-        {
-          "label": "Brent",
-          "value": "$96.80",
-          "change": "+2.3%"
-        },
-        {
-          "label": "Gold",
-          "value": "$4,123",
-          "change": "+1.2%"
-        },
-        {
-          "label": "Bitcoin",
-          "value": "$79,690",
-          "change": "-0.9%"
-        }
-      ],
-      "data": [
-        {
-          "name": "Initial jobless claims (wk Oct 31)",
-          "actual": "189K",
-          "consensus": "196K",
-          "prior": "195K",
-          "read": "low and falling; 4-week average 194.75K",
-          "reaction": "S&P futures flat, about 7,730 before and 7,731 ten minutes after; yield reaction not captured"
-        },
-        {
-          "name": "Continuing claims (wk Oct 24)",
-          "actual": "1.718M",
-          "consensus": "1.710M",
-          "prior": "1.695M",
-          "read": "a touch higher; rehiring still slow",
-          "reaction": "none visible"
-        },
-        {
-          "name": "Nonfarm productivity (Q3 prelim)",
-          "actual": "+3.6%",
-          "consensus": "+2.8%",
-          "prior": "+2.1%",
-          "read": "clear beat",
-          "reaction": "none visible; gold slipped about $8"
-        },
-        {
-          "name": "Unit labor costs (Q3 prelim)",
-          "actual": "-0.7%",
-          "consensus": "+0.6%",
-          "prior": "+1.9%",
-          "read": "soft for wage-driven inflation",
-          "reaction": "none visible"
-        },
-        {
-          "name": "Challenger job cuts (Oct, released earlier this morning)",
-          "actual": "44.0K",
-          "consensus": "51K",
-          "prior": "43.3K",
-          "read": "below expectations",
-          "reaction": "n/a"
-        }
-      ],
-      "drivers": [
-        "Post-election rally is cooling. Democrats took both chambers; on Wednesday the Dow rose 3.0% to 53,356 (best day since April 2025), the S&P rose 1.6% to 7,688.62 and the VIX fell from 20.8 to 16.6.",
-        "Chips are the drag. Qualcomm and Arm are down on weak handset demand, memory names are off 4-5% on fears of tighter data-center approvals, and Nvidia dipped below $200 pre-market. Financials, staples and healthcare are leading instead.",
-        "Oil is bouncing after Wednesday's 8%+ plunge, which was driven by hopes the election result speeds an end to the Iran war. Brent is back near $97.",
-        "Friday's October jobs report is next; ADP on Wednesday showed +86K.",
-        "Overseas: Europe firmer, FTSE 100 +0.8% (a headline says the Bank of England hiked to 4%; details not confirmed) and Maersk down about 10% on a Q3 miss. Asia split: Nikkei -1.8% on tech weakness, Hang Seng +3.7%."
-      ],
-      "calendar": [
-        {
-          "time": "7:50 CT",
-          "item": "Fed's Hammack speaks (no blackout; next FOMC Dec 8-9)",
-          "consensus": ""
-        },
-        {
-          "time": "8:10 CT",
-          "item": "Fed's Barkin speaks",
-          "consensus": ""
-        },
-        {
-          "time": "9:30 CT",
-          "item": "EIA natural gas storage",
-          "consensus": "+81 Bcf (prior +80)"
-        },
-        {
-          "time": "10:30 CT",
-          "item": "4-week and 8-week Treasury bill auctions",
-          "consensus": ""
-        },
-        {
-          "time": "11:00 CT",
-          "item": "Freddie Mac mortgage rates",
-          "consensus": "prior 30-yr 7.24%"
-        },
-        {
-          "time": "Pre-bell",
-          "item": "Earnings already reported: ConocoPhillips $3.27 vs $3.05, Cigna $7.98 vs $7.52, Parker-Hannifin $8.90 vs $8.21, Duke $1.99 vs $1.86, Southern $1.94 vs $1.71; Cummins missed at $7.71 vs $8.20",
-          "consensus": ""
-        },
-        {
-          "time": "After bell",
-          "item": "Earnings: Airbnb, EOG, Devon, Monster, Atlassian, Microchip, Cloudflare, Axon, DraftKings, Affirm (timing inferred; calendar has no report times)",
-          "consensus": "Airbnb EPS $2.85, EOG $4.47, Devon $1.33"
-        },
-        {
-          "time": "Fri 7:30 CT",
-          "item": "October jobs report",
-          "consensus": ""
-        }
-      ],
-      "movers": [
-        {
-          "ticker": "QCOM",
-          "move": "about -10% pre-market",
-          "why": "Revenue of $10.44B beat, but next-quarter EPS guide was below consensus and handset revenue fell 26%. Wednesday close $173.19."
-        },
-        {
-          "ticker": "APP",
-          "move": "+16% to +20% pre-market",
-          "why": "Q3 EPS $4.30 vs $3.94, revenue up 55%, Q4 revenue guide above estimates. Wednesday close $271.75."
-        },
-        {
-          "ticker": "ARM",
-          "move": "-5% to -7% pre-market",
-          "why": "Royalty revenue grew only 8% on smartphone weakness. Wednesday close $191.80."
-        },
-        {
-          "ticker": "SNAP",
-          "move": "-10%+ pre-market",
-          "why": "Q3 revenue of $1.72B was slightly light. Wednesday close $5.92."
-        },
-        {
-          "ticker": "MU",
-          "move": "about -4% pre-market",
-          "why": "Memory group sold on data-center approval fears; SanDisk and Western Digital also lower."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Yahoo Finance via AOL - Stock market today: Dow, S&P 500, Nasdaq trade mixed as post-election relief rally cools",
-          "url": "https://www.aol.com/articles/stock-market-today-dow-p-090519000.html"
-        },
-        {
-          "title": "TradingKey - US Pre-Market: Memory stocks extend losses; Qualcomm drops over 9%, AppLovin surges nearly 20%",
-          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262282182-memory-stocks-slide-sk-hynix-sandisk-5-qualcomm-9-applovin-20-tradingkey"
-        },
-        {
-          "title": "investingLive - Morning Kickstart: BOE hikes to 4% (headline only)",
-          "url": "https://investinglive.com/technical-analysis/morning-kickstart-boe-hikes-to-4-as-sterling-struggles-to-hold-its-gains/"
-        },
-        {
-          "title": "Invezz - Dow futures up, Nasdaq futures slide: Five things to know (via FMP)",
-          "url": "https://invezz.com/news/2026/11/05/dow-futures-up-nasdaq-futures-slide-five-things-to-know-before-wall-street-opens/"
-        },
-        {
-          "title": "CNBC International TV - The Blue Wave turns Wall Street green (via FMP)",
-          "url": "https://www.youtube.com/watch?v=8u03s9lCgGs"
-        },
-        {
-          "title": "Barron's - The Market Landscape Is Shifting, and the AI Trade Looks Lost (via FMP)",
-          "url": "https://www.barrons.com/articles/things-to-know-today-09e79395"
-        },
-        {
-          "title": "MarketWatch - Research firm declares end of the AI trade as we know it (via FMP)",
-          "url": "https://www.marketwatch.com/story/research-firm-declares-end-of-the-ai-trade-as-we-know-it-and-asian-tech-stocks-reflect-the-shift-25ac8e8f"
-        },
-        {
-          "title": "24/7 Wall St. - Qualcomm Sinks 11% as Soft Profit Guidance and Handset Slump Overshadow Beat (via FMP)",
-          "url": "https://247wallst.com/investing/2026/11/05/qualcomm-sinks-11-as-soft-profit-guidance-and-handset-slump-overshadow-beat-arm-holdings-drops-7-skyworks-slides-2/"
-        },
-        {
-          "title": "Seeking Alpha - Qualcomm Q4: This Dip Is Not The One To Buy Yet (via FMP)",
-          "url": "https://seekingalpha.com/article/4962912-qualcomm-q4-this-dip-is-not-the-one-to-buy-yet"
-        },
-        {
-          "title": "Benzinga - AppLovin Rallies 16% After Earnings (via FMP)",
-          "url": "https://www.benzinga.com/trading-ideas/movers/26/11/62908812/applovin-rallies-16-after-earnings-revenue-beat-and-strong-guidance"
-        },
-        {
-          "title": "Barron's - Arm Stock Has an Apple and Android Problem (via FMP)",
-          "url": "https://www.barrons.com/articles/arm-earnings-stock-price-0b2ba8d0"
-        },
-        {
-          "title": "24/7 Wall St. - How Worried Should Investors Be About Micron Right Now? (via FMP)",
-          "url": "https://247wallst.com/investing/2026/11/05/how-worried-should-investors-be-about-micron-right-now/"
-        },
-        {
-          "title": "24/7 Wall St. - Nvidia Just Dipped Below $200 for the First Time Since August (via FMP)",
-          "url": "https://247wallst.com/investing/2026/11/05/nvidia-just-dipped-below-200-for-the-first-time-since-august/"
-        },
-        {
-          "title": "Zacks - Stock Market News for Nov 5, 2026",
-          "url": "https://www.zacks.com/stock/news/3024095/stock-market-news-for-nov-5,-2026?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Zacks - Qualcomm (QCOM) Q4 Earnings: How Key Metrics Compare to Wall Street Estimates",
-          "url": "https://www.zacks.com/stock/news/3023459/qualcomm-(qcom)-q4-earnings:-how-key-metrics-compare-to-wall-street-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Zacks - AppLovin (APP) Q3 Earnings and Revenues Beat Estimates",
-          "url": "https://www.zacks.com/stock/news/3023451/applovin-(app)-q3-earnings-and-revenues-beat-estimates?utm_source=zacks_mcp"
-        },
-        {
-          "title": "QCOM - Zacks",
-          "url": "https://www.zacks.com/stock/quote/QCOM?utm_source=zacks_mcp"
-        },
-        {
-          "title": "APP - Zacks",
-          "url": "https://www.zacks.com/stock/quote/APP?utm_source=zacks_mcp"
-        },
-        {
-          "title": "ARM - Zacks",
-          "url": "https://www.zacks.com/stock/quote/ARM?utm_source=zacks_mcp"
-        },
-        {
-          "title": "Financial Modeling Prep - economic calendar, Treasury rates, index, futures, commodity and crypto prices, earnings calendar",
-          "url": "https://financialmodelingprep.com"
-        }
-      ],
-      "id": "2026-11-05-morning"
     }
   ]
 }
