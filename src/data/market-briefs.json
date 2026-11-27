@@ -3,6 +3,232 @@
   "briefs": [
     {
       "date": "2026-11-27",
+      "session": "afternoon",
+      "generatedAt": "2026-11-27T21:35:00Z",
+      "headline": "Stocks rallied into the half-day close as beaten-down chip and AI names bounced hard, capping the S&P 500's best week since April 2025 (+5.6%), though yields pushed higher and the Nasdaq remains well below its highs after a rough November.",
+      "levels": [
+        {
+          "label": "S&P 500",
+          "value": "7,297",
+          "change": "+1.6%"
+        },
+        {
+          "label": "Nasdaq",
+          "value": "24,130",
+          "change": "+2.3%"
+        },
+        {
+          "label": "Dow",
+          "value": "50,775",
+          "change": "+1.2%"
+        },
+        {
+          "label": "Russell 2000",
+          "value": "2,750",
+          "change": "+1.7%"
+        },
+        {
+          "label": "10-yr yield",
+          "value": "4.94%",
+          "change": "+9bp"
+        },
+        {
+          "label": "VIX",
+          "value": "23.8",
+          "change": "-11%"
+        },
+        {
+          "label": "WTI",
+          "value": "~$84",
+          "change": "+1%"
+        },
+        {
+          "label": "Gold",
+          "value": "$3,668",
+          "change": "+3%"
+        },
+        {
+          "label": "Bitcoin",
+          "value": "~$59.7K",
+          "change": "-1%"
+        }
+      ],
+      "data": [
+        {
+          "name": "Goods trade balance (Oct)",
+          "actual": "-$149.5B",
+          "consensus": "-$133B",
+          "prior": "-$135.1B",
+          "read": "wider; record AI-equipment imports",
+          "reaction": "Q4 GDP drag"
+        },
+        {
+          "name": "Wholesale inventories MoM (Oct)",
+          "actual": "+0.9%",
+          "consensus": "+0.5%",
+          "prior": "+0.8%",
+          "read": "firmer",
+          "reaction": "minor"
+        },
+        {
+          "name": "Retail inventories ex-autos MoM (Oct)",
+          "actual": "+0.6%",
+          "consensus": "+0.4%",
+          "prior": "+0.7%",
+          "read": "firmer",
+          "reaction": "minor"
+        }
+      ],
+      "drivers": [
+        "Semis and AI rebound: SOX up about 5%. Micron +7%, Sandisk +16%, Intel +5%, AMD +4.6%, Dell +6% as dip-buyers returned after Wednesday's AI selloff. Nvidia lagged at +0.8% after opening higher and briefly going red on reports it would halt chip orders to some Southeast Asian countries; Monday's Huang-return rally has mostly been given back.",
+        "Black Friday read-through: Amazon +3.8% and Walmart +0.9% on strong early online-spend data (Adobe sees holiday e-commerce +6.7%).",
+        "Rates kept rising: 10-yr at 4.94% as the Q3 GDP revision to 4.3% and hot October PCE (3.8% headline) keep Fed-tightening odds alive into the Dec 8-9 FOMC. TLT fell 1.2% even as stocks rallied.",
+        "Data at 7:30 CT: October goods trade deficit -$149.5B vs -$133B expected on record AI-equipment imports; wholesale inventories +0.9% vs +0.5%. Gold +3% snapped a three-week losing streak; oil firmed on Strait of Hormuz and Saudi attack headlines. Week: S&P +5.6%, Nasdaq +6.7%, Dow +5.5%, Russell +6.5%."
+      ],
+      "sectors": {
+        "leaders": "Semiconductors, Consumer Discretionary, Industrials, Materials (gold miners +7%)",
+        "laggards": "Utilities, Communication Services, Energy"
+      },
+      "afterHours": [],
+      "calendar": [
+        {
+          "time": "Sun",
+          "item": "OPEC+ meeting",
+          "consensus": "Output targets expected unchanged"
+        },
+        {
+          "time": "8:45 CT Mon 11/30",
+          "item": "Chicago PMI (Nov)",
+          "consensus": "54.6 (prior 55.3)"
+        },
+        {
+          "time": "9:30 CT Mon 11/30",
+          "item": "Dallas Fed Manufacturing (Nov)",
+          "consensus": "10.2 (prior 13.4)"
+        },
+        {
+          "time": "9:00 CT Tue 12/1",
+          "item": "ISM Manufacturing PMI (Nov)",
+          "consensus": "55.0 (prior 55.5)"
+        },
+        {
+          "time": "9:00 CT Tue 12/1",
+          "item": "JOLTS job openings (Oct)",
+          "consensus": "7.46M (prior 7.52M)"
+        },
+        {
+          "time": "9:00 CT Tue 12/1",
+          "item": "Fed Gov. Bowman testimony",
+          "consensus": ""
+        },
+        {
+          "time": "7:30 CT Fri 12/4",
+          "item": "November jobs report",
+          "consensus": "Key print of the week"
+        },
+        {
+          "time": "Next week",
+          "item": "Nvidia CEO Huang congressional hearings; FOMC Dec 8-9",
+          "consensus": ""
+        }
+      ],
+      "movers": [
+        {
+          "ticker": "SNDK",
+          "move": "+16%",
+          "why": "AI storage demand; biggest gainer in the semi bounce"
+        },
+        {
+          "ticker": "ANT",
+          "move": "+11%",
+          "why": "Anthropic led AI software higher; Zacks trending ticker"
+        },
+        {
+          "ticker": "INTC",
+          "move": "+5%",
+          "why": "Foundry and AI rebound; Zacks flags manufacturing recovery"
+        },
+        {
+          "ticker": "AMZN",
+          "move": "+3.8%",
+          "why": "Strong early Black Friday online-spend data"
+        },
+        {
+          "ticker": "VRTX",
+          "move": "-5%",
+          "why": "FDA pushed back decision on its kidney-disease drug"
+        }
+      ],
+      "sources": [
+        {
+          "title": "AP: How major US stock indexes fared Friday 11/27/2026",
+          "url": "https://mymotherlode.com/news/national/11344241/how-major-us-stock-indexes-fared-friday-11-27-2026.html"
+        },
+        {
+          "title": "Yahoo Finance: Dow, S&P 500, Nasdaq end holiday week with gains as AI stocks rebound",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-firday-november-27-dow-sp-500-nasdaq-black-friday-holiday-091152065.html"
+        },
+        {
+          "title": "Motley Fool: Stock Market Midday, Nov. 27 - Tech stocks recover and Amazon posts Black Friday gains",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/27/stock-market-midday-nov-27-tech-stocks-recover-and-amazon-posts-black-friday-gains/"
+        },
+        {
+          "title": "STL.News: U.S. Stock Market Today - 3 Strong Black Friday Gains",
+          "url": "https://www.stl.news/us-stock-market-today-november-27-2026/"
+        },
+        {
+          "title": "Eurasia Business News: Tech rebounds in shortened Black Friday session",
+          "url": "https://eurasiabusinessnews.com/2026/11/27/u-s-stock-market-today-november-27-2026-tech-rebounds-in-shortened-black-friday-session/"
+        },
+        {
+          "title": "Reuters: US goods trade deficit widens sharply in October (via FMP)",
+          "url": "https://www.reuters.com/business/us-goods-trade-deficit-widens-sharply-october-2026-11-27/"
+        },
+        {
+          "title": "Barron's: Review & Preview - Gratitude Trade (via FMP)",
+          "url": "https://www.barrons.com/articles/stocks-today-review-preview-560b235d"
+        },
+        {
+          "title": "Invezz: Nasdaq opens 1.5% higher as US equities head for weekly gains (via FMP)",
+          "url": "https://invezz.com/news/2026/11/27/nasdaq-opens-1-5-higher-as-us-equities-head-for-weekly-gains-despite-volatility/"
+        },
+        {
+          "title": "NVIDIA's AI Cloud Revenues Nearly Triple - Zacks, 11/27/2026",
+          "url": "https://www.zacks.com/stock/news/3036293/nvidia's-ai-cloud-revenues-nearly-triple:-can-nvda-keep-the-pace-ahead?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SNDK's Data Center Revenues Gain Momentum - Zacks, 11/24/2026",
+          "url": "https://www.zacks.com/stock/news/3034494/sndk's-data-center-revenues-gain-momentum-on-ai-demand:-what's-ahead?utm_source=zacks_mcp"
+        },
+        {
+          "title": "Top Analyst Reports for Apple, Philip Morris & Intel - Zacks, 11/24/2026",
+          "url": "https://www.zacks.com/commentary/3034628/top-analyst-reports-for-apple,-philip-morris-&-intel?utm_source=zacks_mcp"
+        },
+        {
+          "title": "NVDA - Zacks",
+          "url": "https://www.zacks.com/stock/quote/NVDA?utm_source=zacks_mcp"
+        },
+        {
+          "title": "SNDK - Zacks",
+          "url": "https://www.zacks.com/stock/quote/SNDK?utm_source=zacks_mcp"
+        },
+        {
+          "title": "INTC - Zacks",
+          "url": "https://www.zacks.com/stock/quote/INTC?utm_source=zacks_mcp"
+        },
+        {
+          "title": "ANT - Zacks",
+          "url": "https://www.zacks.com/stock/quote/ANT?utm_source=zacks_mcp"
+        },
+        {
+          "title": "DELL - Zacks",
+          "url": "https://www.zacks.com/stock/quote/DELL?utm_source=zacks_mcp"
+        }
+      ],
+      "id": "2026-11-27-afternoon"
+    },
+    {
+      "date": "2026-11-27",
       "session": "morning",
       "generatedAt": "2026-11-27T13:58:00Z",
       "headline": "Futures sharply higher into the Black Friday half-day (early close 12:00 CT) as the AI/tech rebound runs a third session, putting the S&P on track for its best week since April; gold, silver and copper are surging, the 10-yr is back above 4.90% and markets lean toward a Fed hike Dec 9.",
